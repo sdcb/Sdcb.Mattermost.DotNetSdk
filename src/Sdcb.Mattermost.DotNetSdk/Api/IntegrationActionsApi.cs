@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK ActionsDialogsOpenPost (InlineObject61 body);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> ActionsDialogsOpenPostWithHttpInfo (InlineObject61 body);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK ActionsDialogsSubmitPost (InlineObject62 body);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> ActionsDialogsSubmitPostWithHttpInfo (InlineObject62 body);
@@ -84,7 +84,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> ActionsDialogsOpenPostAsync (InlineObject61 body);
@@ -95,7 +95,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> ActionsDialogsOpenPostAsyncWithHttpInfo (InlineObject61 body);
@@ -105,7 +105,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> ActionsDialogsSubmitPostAsync (InlineObject62 body);
@@ -116,7 +116,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> ActionsDialogsSubmitPostAsyncWithHttpInfo (InlineObject62 body);
@@ -136,7 +136,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class IntegrationActionsApi : IIntegrationActionsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationActionsApi"/> class.
@@ -150,14 +150,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="IntegrationActionsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public IntegrationActionsApi(String basePath)
+        public IntegrationActionsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -167,7 +167,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public IntegrationActionsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public IntegrationActionsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -175,8 +175,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -187,7 +187,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public IntegrationActionsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public IntegrationActionsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -202,18 +202,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -222,12 +222,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -243,35 +243,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Open a dialog Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ActionsDialogsOpenPost (InlineObject61 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ActionsDialogsOpenPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = ActionsDialogsOpenPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Open a dialog Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ActionsDialogsOpenPostWithHttpInfo (InlineObject61 body)
+        public ApiResponse<StatusOK> ActionsDialogsOpenPostWithHttpInfo (InlineObject61 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsOpenPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsOpenPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -300,12 +300,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Open a dialog Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ActionsDialogsOpenPostAsync (InlineObject61 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ActionsDialogsOpenPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await ActionsDialogsOpenPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -313,24 +313,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Open a dialog Open an interactive dialog using a trigger ID provided by a slash command, or some other action payload. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ActionsDialogsOpenPostAsyncWithHttpInfo (InlineObject61 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ActionsDialogsOpenPostAsyncWithHttpInfo (InlineObject61 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsOpenPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsOpenPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -359,35 +359,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Submit a dialog Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ActionsDialogsSubmitPost (InlineObject62 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ActionsDialogsSubmitPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = ActionsDialogsSubmitPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Submit a dialog Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ActionsDialogsSubmitPostWithHttpInfo (InlineObject62 body)
+        public ApiResponse<StatusOK> ActionsDialogsSubmitPostWithHttpInfo (InlineObject62 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsSubmitPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsSubmitPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -416,12 +416,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Submit a dialog Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ActionsDialogsSubmitPostAsync (InlineObject62 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ActionsDialogsSubmitPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await ActionsDialogsSubmitPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -429,24 +429,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Submit a dialog Endpoint used by the Mattermost clients to submit a dialog. See https://docs.mattermost.com/developer/interactive-dialogs.html for more information on interactive dialogs. __Minimum server version: 5.6__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ActionsDialogsSubmitPostAsyncWithHttpInfo (InlineObject62 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ActionsDialogsSubmitPostAsyncWithHttpInfo (InlineObject62 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsSubmitPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationActionsApi->ActionsDialogsSubmitPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

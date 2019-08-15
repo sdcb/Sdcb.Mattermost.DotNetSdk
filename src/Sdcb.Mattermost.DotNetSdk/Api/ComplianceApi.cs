@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Compliance&gt;</returns>
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Compliance&gt;</returns>
@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Compliance</returns>
         Compliance ComplianceReportsPost ();
 
@@ -66,7 +66,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Compliance</returns>
         ApiResponse<Compliance> ComplianceReportsPostWithHttpInfo ();
         /// <summary>
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns></returns>
         void ComplianceReportsReportIdDownloadGet (string reportId);
@@ -86,17 +86,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ComplianceReportsReportIdDownloadGetWithHttpInfo (string reportId);
+        ApiResponse<object> ComplianceReportsReportIdDownloadGetWithHttpInfo (string reportId);
         /// <summary>
         /// Get a report
         /// </summary>
         /// <remarks>
         /// Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Compliance</returns>
         Compliance ComplianceReportsReportIdGet (string reportId);
@@ -107,7 +107,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>ApiResponse of Compliance</returns>
         ApiResponse<Compliance> ComplianceReportsReportIdGetWithHttpInfo (string reportId);
@@ -126,7 +126,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Compliance&gt;</returns>
@@ -138,7 +138,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Compliance&gt;)</returns>
@@ -149,7 +149,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Compliance</returns>
         System.Threading.Tasks.Task<Compliance> ComplianceReportsPostAsync ();
 
@@ -159,7 +159,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Compliance)</returns>
         System.Threading.Tasks.Task<ApiResponse<Compliance>> ComplianceReportsPostAsyncWithHttpInfo ();
         /// <summary>
@@ -168,7 +168,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ComplianceReportsReportIdDownloadGetAsync (string reportId);
@@ -179,17 +179,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ComplianceReportsReportIdDownloadGetAsyncWithHttpInfo (string reportId);
+        System.Threading.Tasks.Task<ApiResponse<object>> ComplianceReportsReportIdDownloadGetAsyncWithHttpInfo (string reportId);
         /// <summary>
         /// Get a report
         /// </summary>
         /// <remarks>
         /// Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of Compliance</returns>
         System.Threading.Tasks.Task<Compliance> ComplianceReportsReportIdGetAsync (string reportId);
@@ -200,7 +200,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of ApiResponse (Compliance)</returns>
         System.Threading.Tasks.Task<ApiResponse<Compliance>> ComplianceReportsReportIdGetAsyncWithHttpInfo (string reportId);
@@ -220,7 +220,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class ComplianceApi : IComplianceApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ComplianceApi"/> class.
@@ -234,14 +234,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="ComplianceApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ComplianceApi(String basePath)
+        public ComplianceApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -251,7 +251,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ComplianceApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public ComplianceApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -259,8 +259,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -271,7 +271,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public ComplianceApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public ComplianceApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -286,18 +286,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -306,12 +306,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -327,32 +327,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get reports Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Compliance&gt;</returns>
         public List<Compliance> ComplianceReportsGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Compliance>> localVarResponse = ComplianceReportsGetWithHttpInfo(page, perPage);
+            ApiResponse<List<Compliance>> localVarResponse = ComplianceReportsGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get reports Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Compliance&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Compliance> > ComplianceReportsGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<Compliance>> ComplianceReportsGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -400,13 +400,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get reports Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Compliance&gt;</returns>
         public async System.Threading.Tasks.Task<List<Compliance>> ComplianceReportsGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Compliance>> localVarResponse = await ComplianceReportsGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<Compliance>> localVarResponse = await ComplianceReportsGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -414,20 +414,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get reports Get a list of compliance reports previously created by page, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of reports per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Compliance&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Compliance>>> ComplianceReportsGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Compliance>>> ComplianceReportsGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -475,28 +475,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create report Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Compliance</returns>
         public Compliance ComplianceReportsPost ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance> localVarResponse = ComplianceReportsPostWithHttpInfo();
+            ApiResponse<Compliance> localVarResponse = ComplianceReportsPostWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create report Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Compliance</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Compliance > ComplianceReportsPostWithHttpInfo ()
+        public ApiResponse<Compliance> ComplianceReportsPostWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -524,11 +524,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create report Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Compliance</returns>
         public async System.Threading.Tasks.Task<Compliance> ComplianceReportsPostAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance> localVarResponse = await ComplianceReportsPostAsyncWithHttpInfo();
+            ApiResponse<Compliance> localVarResponse = await ComplianceReportsPostAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -536,18 +536,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create report Create and save a compliance report. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Compliance)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance>> ComplianceReportsPostAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Compliance>> ComplianceReportsPostAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -575,7 +575,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Download a report Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns></returns>
         public void ComplianceReportsReportIdDownloadGet (string reportId)
@@ -586,22 +586,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Download a report Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> ComplianceReportsReportIdDownloadGetWithHttpInfo (string reportId)
+        public ApiResponse<object> ComplianceReportsReportIdDownloadGetWithHttpInfo (string reportId)
         {
             // verify the required parameter 'reportId' is set
             if (reportId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdDownloadGet");
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdDownloadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -617,7 +617,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/compliance/reports/{report_id}/download", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/compliance/reports/{report_id}/download", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -631,7 +631,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Download a report Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ComplianceReportsReportIdDownloadGetAsync (string reportId)
@@ -643,23 +643,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Download a report Download the full contents of a report as a file. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> ComplianceReportsReportIdDownloadGetAsyncWithHttpInfo (string reportId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> ComplianceReportsReportIdDownloadGetAsyncWithHttpInfo (string reportId)
         {
             // verify the required parameter 'reportId' is set
             if (reportId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdDownloadGet");
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdDownloadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -675,7 +675,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/compliance/reports/{report_id}/download", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/compliance/reports/{report_id}/download", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -689,34 +689,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a report Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Compliance</returns>
         public Compliance ComplianceReportsReportIdGet (string reportId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance> localVarResponse = ComplianceReportsReportIdGetWithHttpInfo(reportId);
+            ApiResponse<Compliance> localVarResponse = ComplianceReportsReportIdGetWithHttpInfo(reportId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a report Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>ApiResponse of Compliance</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Compliance > ComplianceReportsReportIdGetWithHttpInfo (string reportId)
+        public ApiResponse<Compliance> ComplianceReportsReportIdGetWithHttpInfo (string reportId)
         {
             // verify the required parameter 'reportId' is set
             if (reportId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdGet");
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -746,12 +746,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a report Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of Compliance</returns>
         public async System.Threading.Tasks.Task<Compliance> ComplianceReportsReportIdGetAsync (string reportId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance> localVarResponse = await ComplianceReportsReportIdGetAsyncWithHttpInfo(reportId);
+            ApiResponse<Compliance> localVarResponse = await ComplianceReportsReportIdGetAsyncWithHttpInfo(reportId);
              return localVarResponse.Data;
 
         }
@@ -759,23 +759,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a report Get a compliance reports previously created. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">Compliance report GUID</param>
         /// <returns>Task of ApiResponse (Compliance)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Compliance>> ComplianceReportsReportIdGetAsyncWithHttpInfo (string reportId)
+        public async System.Threading.Tasks.Task<ApiResponse<Compliance>> ComplianceReportsReportIdGetAsyncWithHttpInfo (string reportId)
         {
             // verify the required parameter 'reportId' is set
             if (reportId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdGet");
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ComplianceApi->ComplianceReportsReportIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
         Dictionary<string, List<Reaction>> PostsIdsReactionsPost (List<string> postIds);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>ApiResponse of Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
         ApiResponse<Dictionary<string, List<Reaction>>> PostsIdsReactionsPostWithHttpInfo (List<string> postIds);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>List&lt;Reaction&gt;</returns>
         List<Reaction> PostsPostIdReactionsGet (string postId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>ApiResponse of List&lt;Reaction&gt;</returns>
         ApiResponse<List<Reaction>> PostsPostIdReactionsGetWithHttpInfo (string postId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Reaction</returns>
         Reaction ReactionsPost (Reaction reaction);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>ApiResponse of Reaction</returns>
         ApiResponse<Reaction> ReactionsPostWithHttpInfo (Reaction reaction);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
@@ -109,7 +109,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
@@ -130,7 +130,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Task of Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
         System.Threading.Tasks.Task<Dictionary<string, List<Reaction>>> PostsIdsReactionsPostAsync (List<string> postIds);
@@ -141,7 +141,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, List&lt;Reaction&gt;&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, List<Reaction>>>> PostsIdsReactionsPostAsyncWithHttpInfo (List<string> postIds);
@@ -151,7 +151,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>Task of List&lt;Reaction&gt;</returns>
         System.Threading.Tasks.Task<List<Reaction>> PostsPostIdReactionsGetAsync (string postId);
@@ -162,7 +162,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>Task of ApiResponse (List&lt;Reaction&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reaction>>> PostsPostIdReactionsGetAsyncWithHttpInfo (string postId);
@@ -172,7 +172,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Task of Reaction</returns>
         System.Threading.Tasks.Task<Reaction> ReactionsPostAsync (Reaction reaction);
@@ -183,7 +183,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Task of ApiResponse (Reaction)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reaction>> ReactionsPostAsyncWithHttpInfo (Reaction reaction);
@@ -193,7 +193,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
@@ -206,7 +206,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
@@ -228,7 +228,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class ReactionsApi : IReactionsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReactionsApi"/> class.
@@ -242,14 +242,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="ReactionsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ReactionsApi(String basePath)
+        public ReactionsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -259,7 +259,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ReactionsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public ReactionsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -267,8 +267,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -279,7 +279,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public ReactionsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public ReactionsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -294,18 +294,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -314,12 +314,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -335,35 +335,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Bulk get the reaction for posts Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
         public Dictionary<string, List<Reaction>> PostsIdsReactionsPost (List<string> postIds)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Dictionary<string, List<Reaction>>> localVarResponse = PostsIdsReactionsPostWithHttpInfo(postIds);
+            ApiResponse<Dictionary<string, List<Reaction>>> localVarResponse = PostsIdsReactionsPostWithHttpInfo(postIds);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Bulk get the reaction for posts Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>ApiResponse of Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Dictionary<string, List<Reaction>> > PostsIdsReactionsPostWithHttpInfo (List<string> postIds)
+        public ApiResponse<Dictionary<string, List<Reaction>>> PostsIdsReactionsPostWithHttpInfo (List<string> postIds)
         {
             // verify the required parameter 'postIds' is set
             if (postIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postIds' when calling ReactionsApi->PostsIdsReactionsPost");
+                throw new ApiException(400, "Missing required parameter 'postIds' when calling ReactionsApi->PostsIdsReactionsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -392,12 +392,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Bulk get the reaction for posts Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Task of Dictionary&lt;string, List&lt;Reaction&gt;&gt;</returns>
         public async System.Threading.Tasks.Task<Dictionary<string, List<Reaction>>> PostsIdsReactionsPostAsync (List<string> postIds)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Dictionary<string, List<Reaction>>> localVarResponse = await PostsIdsReactionsPostAsyncWithHttpInfo(postIds);
+            ApiResponse<Dictionary<string, List<Reaction>>> localVarResponse = await PostsIdsReactionsPostAsyncWithHttpInfo(postIds);
              return localVarResponse.Data;
 
         }
@@ -405,24 +405,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Bulk get the reaction for posts Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in.  __Minimum server version__: 5.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postIds">Array of post IDs</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, List&lt;Reaction&gt;&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Dictionary<string, List<Reaction>>>> PostsIdsReactionsPostAsyncWithHttpInfo (List<string> postIds)
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, List<Reaction>>>> PostsIdsReactionsPostAsyncWithHttpInfo (List<string> postIds)
         {
             // verify the required parameter 'postIds' is set
             if (postIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postIds' when calling ReactionsApi->PostsIdsReactionsPost");
+                throw new ApiException(400, "Missing required parameter 'postIds' when calling ReactionsApi->PostsIdsReactionsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -451,34 +451,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of reactions to a post Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>List&lt;Reaction&gt;</returns>
         public List<Reaction> PostsPostIdReactionsGet (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Reaction>> localVarResponse = PostsPostIdReactionsGetWithHttpInfo(postId);
+            ApiResponse<List<Reaction>> localVarResponse = PostsPostIdReactionsGetWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of reactions to a post Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>ApiResponse of List&lt;Reaction&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Reaction> > PostsPostIdReactionsGetWithHttpInfo (string postId)
+        public ApiResponse<List<Reaction>> PostsPostIdReactionsGetWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->PostsPostIdReactionsGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->PostsPostIdReactionsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -508,12 +508,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of reactions to a post Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>Task of List&lt;Reaction&gt;</returns>
         public async System.Threading.Tasks.Task<List<Reaction>> PostsPostIdReactionsGetAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Reaction>> localVarResponse = await PostsPostIdReactionsGetAsyncWithHttpInfo(postId);
+            ApiResponse<List<Reaction>> localVarResponse = await PostsPostIdReactionsGetAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -521,23 +521,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of reactions to a post Get a list of reactions made by all users to a given post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post</param>
         /// <returns>Task of ApiResponse (List&lt;Reaction&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Reaction>>> PostsPostIdReactionsGetAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Reaction>>> PostsPostIdReactionsGetAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->PostsPostIdReactionsGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->PostsPostIdReactionsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -567,35 +567,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a reaction Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Reaction</returns>
         public Reaction ReactionsPost (Reaction reaction)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Reaction> localVarResponse = ReactionsPostWithHttpInfo(reaction);
+            ApiResponse<Reaction> localVarResponse = ReactionsPostWithHttpInfo(reaction);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a reaction Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>ApiResponse of Reaction</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Reaction > ReactionsPostWithHttpInfo (Reaction reaction)
+        public ApiResponse<Reaction> ReactionsPostWithHttpInfo (Reaction reaction)
         {
             // verify the required parameter 'reaction' is set
             if (reaction == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reaction' when calling ReactionsApi->ReactionsPost");
+                throw new ApiException(400, "Missing required parameter 'reaction' when calling ReactionsApi->ReactionsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -624,12 +624,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a reaction Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Task of Reaction</returns>
         public async System.Threading.Tasks.Task<Reaction> ReactionsPostAsync (Reaction reaction)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Reaction> localVarResponse = await ReactionsPostAsyncWithHttpInfo(reaction);
+            ApiResponse<Reaction> localVarResponse = await ReactionsPostAsyncWithHttpInfo(reaction);
              return localVarResponse.Data;
 
         }
@@ -637,24 +637,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a reaction Create a reaction. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="reaction">The user&#39;s reaction with its post_id, user_id, and emoji_name fields set</param>
         /// <returns>Task of ApiResponse (Reaction)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Reaction>> ReactionsPostAsyncWithHttpInfo (Reaction reaction)
+        public async System.Threading.Tasks.Task<ApiResponse<Reaction>> ReactionsPostAsyncWithHttpInfo (Reaction reaction)
         {
             // verify the required parameter 'reaction' is set
             if (reaction == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'reaction' when calling ReactionsApi->ReactionsPost");
+                throw new ApiException(400, "Missing required parameter 'reaction' when calling ReactionsApi->ReactionsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -683,46 +683,46 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove a reaction from a post Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdPostsPostIdReactionsEmojiNameDelete (string userId, string postId, string emojiName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdPostsPostIdReactionsEmojiNameDeleteWithHttpInfo(userId, postId, emojiName);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdPostsPostIdReactionsEmojiNameDeleteWithHttpInfo(userId, postId, emojiName);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Remove a reaction from a post Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdPostsPostIdReactionsEmojiNameDeleteWithHttpInfo (string userId, string postId, string emojiName)
+        public ApiResponse<StatusOK> UsersUserIdPostsPostIdReactionsEmojiNameDeleteWithHttpInfo (string userId, string postId, string emojiName)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
             // verify the required parameter 'emojiName' is set
             if (emojiName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiName' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'emojiName' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -756,14 +756,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove a reaction from a post Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdPostsPostIdReactionsEmojiNameDeleteAsync (string userId, string postId, string emojiName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdPostsPostIdReactionsEmojiNameDeleteAsyncWithHttpInfo(userId, postId, emojiName);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdPostsPostIdReactionsEmojiNameDeleteAsyncWithHttpInfo(userId, postId, emojiName);
              return localVarResponse.Data;
 
         }
@@ -771,33 +771,33 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove a reaction from a post Deletes a reaction made by a user from the given post. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="postId">ID of the post</param>
         /// <param name="emojiName">emoji name</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdPostsPostIdReactionsEmojiNameDeleteAsyncWithHttpInfo (string userId, string postId, string emojiName)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdPostsPostIdReactionsEmojiNameDeleteAsyncWithHttpInfo (string userId, string postId, string emojiName)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
             // verify the required parameter 'emojiName' is set
             if (emojiName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiName' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
+                throw new ApiException(400, "Missing required parameter 'emojiName' when calling ReactionsApi->UsersUserIdPostsPostIdReactionsEmojiNameDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

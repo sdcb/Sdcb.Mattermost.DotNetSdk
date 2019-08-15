@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject53" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject53() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject53" /> class.
@@ -209,7 +209,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

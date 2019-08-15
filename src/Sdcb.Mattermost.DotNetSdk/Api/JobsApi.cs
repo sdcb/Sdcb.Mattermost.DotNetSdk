@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Job&gt;</returns>
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Job&gt;</returns>
@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK JobsJobIdCancelPost (string jobId);
@@ -67,7 +67,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> JobsJobIdCancelPostWithHttpInfo (string jobId);
@@ -77,7 +77,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Job</returns>
         Job JobsJobIdGet (string jobId);
@@ -88,7 +88,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>ApiResponse of Job</returns>
         ApiResponse<Job> JobsJobIdGetWithHttpInfo (string jobId);
@@ -98,7 +98,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Job</returns>
         Job JobsPost (InlineObject46 body);
@@ -109,7 +109,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Job</returns>
         ApiResponse<Job> JobsPostWithHttpInfo (InlineObject46 body);
@@ -119,7 +119,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
@@ -132,7 +132,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
@@ -153,7 +153,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Job&gt;</returns>
@@ -165,7 +165,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Job&gt;)</returns>
@@ -176,7 +176,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> JobsJobIdCancelPostAsync (string jobId);
@@ -187,7 +187,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> JobsJobIdCancelPostAsyncWithHttpInfo (string jobId);
@@ -197,7 +197,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of Job</returns>
         System.Threading.Tasks.Task<Job> JobsJobIdGetAsync (string jobId);
@@ -208,7 +208,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of ApiResponse (Job)</returns>
         System.Threading.Tasks.Task<ApiResponse<Job>> JobsJobIdGetAsyncWithHttpInfo (string jobId);
@@ -218,7 +218,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Job</returns>
         System.Threading.Tasks.Task<Job> JobsPostAsync (InlineObject46 body);
@@ -229,7 +229,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Job)</returns>
         System.Threading.Tasks.Task<ApiResponse<Job>> JobsPostAsyncWithHttpInfo (InlineObject46 body);
@@ -239,7 +239,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
@@ -252,7 +252,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
@@ -274,7 +274,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class JobsApi : IJobsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="JobsApi"/> class.
@@ -288,14 +288,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="JobsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public JobsApi(String basePath)
+        public JobsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -305,7 +305,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public JobsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public JobsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -313,8 +313,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -325,7 +325,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public JobsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public JobsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -340,18 +340,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -360,12 +360,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -381,32 +381,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs. Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Job&gt;</returns>
         public List<Job> JobsGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>> localVarResponse = JobsGetWithHttpInfo(page, perPage);
+            ApiResponse<List<Job>> localVarResponse = JobsGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the jobs. Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Job&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Job> > JobsGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<Job>> JobsGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -454,13 +454,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs. Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Job&gt;</returns>
         public async System.Threading.Tasks.Task<List<Job>> JobsGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>> localVarResponse = await JobsGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<Job>> localVarResponse = await JobsGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -468,20 +468,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs. Get a page of jobs. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Job&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>>> JobsGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Job>>> JobsGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -529,34 +529,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Cancel a job. Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK JobsJobIdCancelPost (string jobId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = JobsJobIdCancelPostWithHttpInfo(jobId);
+            ApiResponse<StatusOK> localVarResponse = JobsJobIdCancelPostWithHttpInfo(jobId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Cancel a job. Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > JobsJobIdCancelPostWithHttpInfo (string jobId)
+        public ApiResponse<StatusOK> JobsJobIdCancelPostWithHttpInfo (string jobId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdCancelPost");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdCancelPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -586,12 +586,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Cancel a job. Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> JobsJobIdCancelPostAsync (string jobId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await JobsJobIdCancelPostAsyncWithHttpInfo(jobId);
+            ApiResponse<StatusOK> localVarResponse = await JobsJobIdCancelPostAsyncWithHttpInfo(jobId);
              return localVarResponse.Data;
 
         }
@@ -599,23 +599,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Cancel a job. Cancel a job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> JobsJobIdCancelPostAsyncWithHttpInfo (string jobId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> JobsJobIdCancelPostAsyncWithHttpInfo (string jobId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdCancelPost");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdCancelPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -645,34 +645,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a job. Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Job</returns>
         public Job JobsJobIdGet (string jobId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job> localVarResponse = JobsJobIdGetWithHttpInfo(jobId);
+            ApiResponse<Job> localVarResponse = JobsJobIdGetWithHttpInfo(jobId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a job. Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>ApiResponse of Job</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Job > JobsJobIdGetWithHttpInfo (string jobId)
+        public ApiResponse<Job> JobsJobIdGetWithHttpInfo (string jobId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdGet");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -702,12 +702,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a job. Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of Job</returns>
         public async System.Threading.Tasks.Task<Job> JobsJobIdGetAsync (string jobId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job> localVarResponse = await JobsJobIdGetAsyncWithHttpInfo(jobId);
+            ApiResponse<Job> localVarResponse = await JobsJobIdGetAsyncWithHttpInfo(jobId);
              return localVarResponse.Data;
 
         }
@@ -715,23 +715,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a job. Gets a single job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job GUID</param>
         /// <returns>Task of ApiResponse (Job)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job>> JobsJobIdGetAsyncWithHttpInfo (string jobId)
+        public async System.Threading.Tasks.Task<ApiResponse<Job>> JobsJobIdGetAsyncWithHttpInfo (string jobId)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdGet");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->JobsJobIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -761,35 +761,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a new job. Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Job</returns>
         public Job JobsPost (InlineObject46 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job> localVarResponse = JobsPostWithHttpInfo(body);
+            ApiResponse<Job> localVarResponse = JobsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a new job. Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Job</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Job > JobsPostWithHttpInfo (InlineObject46 body)
+        public ApiResponse<Job> JobsPostWithHttpInfo (InlineObject46 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling JobsApi->JobsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling JobsApi->JobsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -818,12 +818,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a new job. Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Job</returns>
         public async System.Threading.Tasks.Task<Job> JobsPostAsync (InlineObject46 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job> localVarResponse = await JobsPostAsyncWithHttpInfo(body);
+            ApiResponse<Job> localVarResponse = await JobsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -831,24 +831,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a new job. Create a new job. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Job)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Job>> JobsPostAsyncWithHttpInfo (InlineObject46 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Job>> JobsPostAsyncWithHttpInfo (InlineObject46 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling JobsApi->JobsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling JobsApi->JobsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -877,38 +877,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs of the given type. Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Job&gt;</returns>
         public List<Job> JobsTypeTypeGet (string type, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>> localVarResponse = JobsTypeTypeGetWithHttpInfo(type, page, perPage);
+            ApiResponse<List<Job>> localVarResponse = JobsTypeTypeGetWithHttpInfo(type, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the jobs of the given type. Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Job&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Job> > JobsTypeTypeGetWithHttpInfo (string type, string page = null, string perPage = null)
+        public ApiResponse<List<Job>> JobsTypeTypeGetWithHttpInfo (string type, string page = null, string perPage = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'type' when calling JobsApi->JobsTypeTypeGet");
+                throw new ApiException(400, "Missing required parameter 'type' when calling JobsApi->JobsTypeTypeGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -958,14 +958,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs of the given type. Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Job&gt;</returns>
         public async System.Threading.Tasks.Task<List<Job>> JobsTypeTypeGetAsync (string type, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>> localVarResponse = await JobsTypeTypeGetAsyncWithHttpInfo(type, page, perPage);
+            ApiResponse<List<Job>> localVarResponse = await JobsTypeTypeGetAsyncWithHttpInfo(type, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -973,25 +973,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the jobs of the given type. Get a page of jobs of the given type. Use the query parameters to modify the behaviour of this endpoint. __Minimum server version: 4.1__ ##### Permissions Must have &#x60;manage_jobs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Job type</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of jobs per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Job&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Job>>> JobsTypeTypeGetAsyncWithHttpInfo (string type, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Job>>> JobsTypeTypeGetAsyncWithHttpInfo (string type, string page = null, string perPage = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'type' when calling JobsApi->JobsTypeTypeGet");
+                throw new ApiException(400, "Missing required parameter 'type' when calling JobsApi->JobsTypeTypeGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

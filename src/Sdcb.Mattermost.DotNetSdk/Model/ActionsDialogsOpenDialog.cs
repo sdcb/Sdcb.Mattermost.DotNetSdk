@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionsDialogsOpenDialog" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected ActionsDialogsOpenDialog() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionsDialogsOpenDialog" /> class.
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="submitLabel">Label on the submit button.</param>
         /// <param name="notifyOnCancel">Set true to receive payloads when user cancels a dialog.</param>
         /// <param name="state">Set some state to be echoed back with the dialog submission.</param>
-        public ActionsDialogsOpenDialog(string callbackId = default(string), string title = default(string), List<Object> elements = default(List<Object>), string submitLabel = default(string), bool notifyOnCancel = default(bool), string state = default(string))
+        public ActionsDialogsOpenDialog(string callbackId = default(string), string title = default(string), List<object> elements = default(List<object>), string submitLabel = default(string), bool notifyOnCancel = default(bool), string state = default(string))
         {
             // to ensure "title" is required (not null)
             if (title == null)
@@ -92,7 +92,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>Input elements, see https://docs.mattermost.com/developer/interactive-dialogs.html#elements</value>
         [DataMember(Name="elements", EmitDefaultValue=false)]
-        public List<Object> Elements { get; set; }
+        public List<object> Elements { get; set; }
 
         /// <summary>
         /// Label on the submit button
@@ -224,7 +224,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

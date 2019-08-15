@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="teamMembers">teamMembers.</param>
         /// <param name="token">token.</param>
         /// <param name="userId">userId.</param>
-        public Session(long createAt = default(long), string deviceId = default(string), long expiresAt = default(long), string id = default(string), bool isOauth = default(bool), long lastActivityAt = default(long), Object props = default(Object), string roles = default(string), List<TeamMember> teamMembers = default(List<TeamMember>), string token = default(string), string userId = default(string))
+        public Session(long createAt = default(long), string deviceId = default(string), long expiresAt = default(long), string id = default(string), bool isOauth = default(bool), long lastActivityAt = default(long), object props = default(object), string roles = default(string), List<TeamMember> teamMembers = default(List<TeamMember>), string token = default(string), string userId = default(string))
         {
             this.CreateAt = createAt;
             this.DeviceId = deviceId;
@@ -103,7 +103,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// Gets or Sets Props
         /// </summary>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Gets or Sets Roles
@@ -272,7 +272,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

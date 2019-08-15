@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2009</returns>
         InlineResponse2009 PluginsGet ();
 
@@ -43,7 +43,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2009</returns>
         ApiResponse<InlineResponse2009> PluginsGetWithHttpInfo ();
         /// <summary>
@@ -52,7 +52,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         StatusOK PluginsPluginIdDelete (string pluginId);
@@ -63,7 +63,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PluginsPluginIdDeleteWithHttpInfo (string pluginId);
@@ -73,7 +73,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         StatusOK PluginsPluginIdDisablePost (string pluginId);
@@ -84,7 +84,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PluginsPluginIdDisablePostWithHttpInfo (string pluginId);
@@ -94,7 +94,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         StatusOK PluginsPluginIdEnablePost (string pluginId);
@@ -105,7 +105,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PluginsPluginIdEnablePostWithHttpInfo (string pluginId);
@@ -115,7 +115,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>StatusOK</returns>
@@ -127,7 +127,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -138,7 +138,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;PluginManifestWebapp&gt;</returns>
         List<PluginManifestWebapp> PluginsWebappGet ();
 
@@ -148,7 +148,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;PluginManifestWebapp&gt;</returns>
         ApiResponse<List<PluginManifestWebapp>> PluginsWebappGetWithHttpInfo ();
         #endregion Synchronous Operations
@@ -166,7 +166,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2009</returns>
         System.Threading.Tasks.Task<InlineResponse2009> PluginsGetAsync ();
 
@@ -176,7 +176,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> PluginsGetAsyncWithHttpInfo ();
         /// <summary>
@@ -185,7 +185,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PluginsPluginIdDeleteAsync (string pluginId);
@@ -196,7 +196,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdDeleteAsyncWithHttpInfo (string pluginId);
@@ -206,7 +206,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PluginsPluginIdDisablePostAsync (string pluginId);
@@ -217,7 +217,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdDisablePostAsyncWithHttpInfo (string pluginId);
@@ -227,7 +227,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PluginsPluginIdEnablePostAsync (string pluginId);
@@ -238,7 +238,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdEnablePostAsyncWithHttpInfo (string pluginId);
@@ -248,7 +248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>Task of StatusOK</returns>
@@ -260,7 +260,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -271,7 +271,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;PluginManifestWebapp&gt;</returns>
         System.Threading.Tasks.Task<List<PluginManifestWebapp>> PluginsWebappGetAsync ();
 
@@ -281,7 +281,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;PluginManifestWebapp&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PluginManifestWebapp>>> PluginsWebappGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
@@ -300,7 +300,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class PluginsApi : IPluginsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PluginsApi"/> class.
@@ -314,14 +314,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="PluginsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PluginsApi(String basePath)
+        public PluginsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -331,7 +331,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PluginsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public PluginsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -339,8 +339,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -351,7 +351,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public PluginsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public PluginsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -366,18 +366,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -386,12 +386,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -407,28 +407,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get plugins Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2009</returns>
         public InlineResponse2009 PluginsGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2009> localVarResponse = PluginsGetWithHttpInfo();
+            ApiResponse<InlineResponse2009> localVarResponse = PluginsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get plugins Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2009</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2009 > PluginsGetWithHttpInfo ()
+        public ApiResponse<InlineResponse2009> PluginsGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -456,11 +456,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get plugins Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2009</returns>
         public async System.Threading.Tasks.Task<InlineResponse2009> PluginsGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2009> localVarResponse = await PluginsGetAsyncWithHttpInfo();
+            ApiResponse<InlineResponse2009> localVarResponse = await PluginsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -468,18 +468,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get plugins Get a list of inactive and a list of active plugin manifests. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2009>> PluginsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> PluginsGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -507,34 +507,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove plugin Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK PluginsPluginIdDelete (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PluginsPluginIdDeleteWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = PluginsPluginIdDeleteWithHttpInfo(pluginId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Remove plugin Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PluginsPluginIdDeleteWithHttpInfo (string pluginId)
+        public ApiResponse<StatusOK> PluginsPluginIdDeleteWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDelete");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -564,12 +564,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove plugin Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PluginsPluginIdDeleteAsync (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdDeleteAsyncWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdDeleteAsyncWithHttpInfo(pluginId);
              return localVarResponse.Data;
 
         }
@@ -577,23 +577,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove plugin Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PluginsPluginIdDeleteAsyncWithHttpInfo (string pluginId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdDeleteAsyncWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDelete");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -623,34 +623,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable plugin Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK PluginsPluginIdDisablePost (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PluginsPluginIdDisablePostWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = PluginsPluginIdDisablePostWithHttpInfo(pluginId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Disable plugin Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PluginsPluginIdDisablePostWithHttpInfo (string pluginId)
+        public ApiResponse<StatusOK> PluginsPluginIdDisablePostWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDisablePost");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDisablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -680,12 +680,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable plugin Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PluginsPluginIdDisablePostAsync (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdDisablePostAsyncWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdDisablePostAsyncWithHttpInfo(pluginId);
              return localVarResponse.Data;
 
         }
@@ -693,23 +693,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable plugin Disable a previously enabled plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PluginsPluginIdDisablePostAsyncWithHttpInfo (string pluginId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdDisablePostAsyncWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDisablePost");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdDisablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -739,34 +739,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable plugin Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK PluginsPluginIdEnablePost (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PluginsPluginIdEnablePostWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = PluginsPluginIdEnablePostWithHttpInfo(pluginId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Enable plugin Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PluginsPluginIdEnablePostWithHttpInfo (string pluginId)
+        public ApiResponse<StatusOK> PluginsPluginIdEnablePostWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdEnablePost");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdEnablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -796,12 +796,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable plugin Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PluginsPluginIdEnablePostAsync (string pluginId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdEnablePostAsyncWithHttpInfo(pluginId);
+            ApiResponse<StatusOK> localVarResponse = await PluginsPluginIdEnablePostAsyncWithHttpInfo(pluginId);
              return localVarResponse.Data;
 
         }
@@ -809,23 +809,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable plugin Enable a previously uploaded plugin. Plugins must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PluginsPluginIdEnablePostAsyncWithHttpInfo (string pluginId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPluginIdEnablePostAsyncWithHttpInfo (string pluginId)
         {
             // verify the required parameter 'pluginId' is set
             if (pluginId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdEnablePost");
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling PluginsApi->PluginsPluginIdEnablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -855,37 +855,37 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload plugin Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>StatusOK</returns>
         public StatusOK PluginsPost (System.IO.Stream plugin, string force = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PluginsPostWithHttpInfo(plugin, force);
+            ApiResponse<StatusOK> localVarResponse = PluginsPostWithHttpInfo(plugin, force);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Upload plugin Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PluginsPostWithHttpInfo (System.IO.Stream plugin, string force = null)
+        public ApiResponse<StatusOK> PluginsPostWithHttpInfo (System.IO.Stream plugin, string force = null)
         {
             // verify the required parameter 'plugin' is set
             if (plugin == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'plugin' when calling PluginsApi->PluginsPost");
+                throw new ApiException(400, "Missing required parameter 'plugin' when calling PluginsApi->PluginsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -921,13 +921,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload plugin Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PluginsPostAsync (System.IO.Stream plugin, string force = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PluginsPostAsyncWithHttpInfo(plugin, force);
+            ApiResponse<StatusOK> localVarResponse = await PluginsPostAsyncWithHttpInfo(plugin, force);
              return localVarResponse.Data;
 
         }
@@ -935,25 +935,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload plugin Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server&#39;s config settings.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="plugin">The plugin image to be uploaded</param>
         /// <param name="force">Set to &#39;true&#39; to overwrite a previously installed plugin with the same ID, if any (optional)</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PluginsPostAsyncWithHttpInfo (System.IO.Stream plugin, string force = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PluginsPostAsyncWithHttpInfo (System.IO.Stream plugin, string force = null)
         {
             // verify the required parameter 'plugin' is set
             if (plugin == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'plugin' when calling PluginsApi->PluginsPost");
+                throw new ApiException(400, "Missing required parameter 'plugin' when calling PluginsApi->PluginsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -989,28 +989,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get webapp plugins Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;PluginManifestWebapp&gt;</returns>
         public List<PluginManifestWebapp> PluginsWebappGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PluginManifestWebapp>> localVarResponse = PluginsWebappGetWithHttpInfo();
+            ApiResponse<List<PluginManifestWebapp>> localVarResponse = PluginsWebappGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get webapp plugins Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;PluginManifestWebapp&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<PluginManifestWebapp> > PluginsWebappGetWithHttpInfo ()
+        public ApiResponse<List<PluginManifestWebapp>> PluginsWebappGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1038,11 +1038,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get webapp plugins Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;PluginManifestWebapp&gt;</returns>
         public async System.Threading.Tasks.Task<List<PluginManifestWebapp>> PluginsWebappGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PluginManifestWebapp>> localVarResponse = await PluginsWebappGetAsyncWithHttpInfo();
+            ApiResponse<List<PluginManifestWebapp>> localVarResponse = await PluginsWebappGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1050,18 +1050,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get webapp plugins Get a list of web app plugins installed and activated on the server.  ##### Permissions No permissions required.  __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;PluginManifestWebapp&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PluginManifestWebapp>>> PluginsWebappGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<List<PluginManifestWebapp>>> PluginsWebappGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

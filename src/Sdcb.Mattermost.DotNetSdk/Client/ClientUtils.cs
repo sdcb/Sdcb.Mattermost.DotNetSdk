@@ -139,7 +139,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
                 return Uri.EscapeDataString(input);
             }
 
-            StringBuilder sb = new StringBuilder(input.Length * 2);
+            var sb = new StringBuilder(input.Length * 2);
             int index = 0;
 
             while (index < input.Length)
@@ -172,7 +172,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         public static byte[] ReadAsBytes(Stream inputStream)
         {
             byte[] buf = new byte[16*1024];
-            using (MemoryStream ms = new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 int count;
                 while ((count = inputStream.Read(buf, 0, buf.Length)) > 0)
@@ -201,7 +201,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// </summary>
         /// <param name="contentTypes">The Content-Type array to select from.</param>
         /// <returns>The Content-Type header to use.</returns>
-        public static String SelectHeaderContentType(String[] contentTypes)
+        public static string SelectHeaderContentType(string[] contentTypes)
         {
             if (contentTypes.Length == 0)
                 return "application/json";
@@ -222,7 +222,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// </summary>
         /// <param name="accepts">The accepts array to select from.</param>
         /// <returns>The Accept header to use.</returns>
-        public static String SelectHeaderAccept(String[] accepts)
+        public static string SelectHeaderAccept(string[] accepts)
         {
             if (accepts.Length == 0)
                 return null;
@@ -230,7 +230,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
             if (accepts.Contains("application/json", StringComparer.OrdinalIgnoreCase))
                 return "application/json";
 
-            return String.Join(",", accepts);
+            return string.Join(",", accepts);
         }
 
         /// <summary>
@@ -248,9 +248,9 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// </summary>
         /// <param name="mime">MIME</param>
         /// <returns>Returns True if MIME type is json.</returns>
-        public static bool IsJsonMime(String mime)
+        public static bool IsJsonMime(string mime)
         {
-            if (String.IsNullOrWhiteSpace(mime)) return false;
+            if (string.IsNullOrWhiteSpace(mime)) return false;
 
             return JsonRegex.IsMatch(mime) || mime.Equals("application/json-patch+json");
         }

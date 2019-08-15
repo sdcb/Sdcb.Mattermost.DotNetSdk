@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject41" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject41() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject41" /> class.
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="rootId">The post ID to comment on.</param>
         /// <param name="fileIds">A list of file IDs to associate with the post. Note that posts are limited to 5 files maximum. Please use additional posts for more files..</param>
         /// <param name="props">A general JSON property bag to attach to the post.</param>
-        public InlineObject41(string channelId = default(string), string message = default(string), string rootId = default(string), List<string> fileIds = default(List<string>), Object props = default(Object))
+        public InlineObject41(string channelId = default(string), string message = default(string), string rootId = default(string), List<string> fileIds = default(List<string>), object props = default(object))
         {
             // to ensure "channelId" is required (not null)
             if (channelId == null)
@@ -104,7 +104,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>A general JSON property bag to attach to the post</value>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -209,7 +209,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

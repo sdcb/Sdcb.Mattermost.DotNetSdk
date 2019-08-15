@@ -70,7 +70,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="type">The type of content that is embedded in this point..</param>
         /// <param name="url">The URL of the embedded content, if one exists..</param>
         /// <param name="data">Any additional information about the embedded content. Only used at this time to store OpenGraph metadata. This field will be null for non-OpenGraph embeds. .</param>
-        public PostMetadataEmbeds(TypeEnum? type = default(TypeEnum?), string url = default(string), Object data = default(Object))
+        public PostMetadataEmbeds(TypeEnum? type = default(TypeEnum?), string url = default(string), object data = default(object))
         {
             this.Type = type;
             this.Url = url;
@@ -89,7 +89,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>Any additional information about the embedded content. Only used at this time to store OpenGraph metadata. This field will be null for non-OpenGraph embeds. </value>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Object Data { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -175,7 +175,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

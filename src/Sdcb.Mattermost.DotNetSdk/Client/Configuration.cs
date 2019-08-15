@@ -71,7 +71,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// Defines the base path of the target API server.
         /// Example: http://localhost:3000/v1/
         /// </summary>
-        private String _basePath;
+        private string _basePath;
 
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
@@ -343,9 +343,9 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <summary>
         /// Returns a string with essential information for debugging.
         /// </summary>
-        public static String ToDebugReport()
+        public static string ToDebugReport()
         {
-            String report = "C# SDK (Sdcb.Mattermost.DotNetSdk) Debug Report:\n";
+            string report = "C# SDK (Sdcb.Mattermost.DotNetSdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 4.0.0\n";
@@ -388,9 +388,9 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         {
             if (second == null) return first ?? GlobalConfiguration.Instance;
             
-            Dictionary<string, string> apiKey = first.ApiKey.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            Dictionary<string, string> apiKeyPrefix = first.ApiKeyPrefix.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            Dictionary<string, string> defaultHeaders = first.DefaultHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            var apiKey = first.ApiKey.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            var apiKeyPrefix = first.ApiKeyPrefix.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            var defaultHeaders = first.DefaultHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             
             foreach (var kvp in second.ApiKey) apiKey[kvp.Key] = kvp.Value;
             foreach (var kvp in second.ApiKeyPrefix) apiKeyPrefix[kvp.Key] = kvp.Value;

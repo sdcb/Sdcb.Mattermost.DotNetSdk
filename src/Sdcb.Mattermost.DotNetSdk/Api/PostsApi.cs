@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -49,7 +49,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -64,7 +64,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Post</returns>
         Post PostsEphemeralPost (InlineObject42 ephemeralPost);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>ApiResponse of Post</returns>
         ApiResponse<Post> PostsEphemeralPostWithHttpInfo (InlineObject42 ephemeralPost);
@@ -85,7 +85,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Post</returns>
         Post PostsPost (InlineObject41 post);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>ApiResponse of Post</returns>
         ApiResponse<Post> PostsPostWithHttpInfo (InlineObject41 post);
@@ -106,7 +106,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>StatusOK</returns>
@@ -118,7 +118,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -129,7 +129,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>StatusOK</returns>
         StatusOK PostsPostIdDelete (string postId);
@@ -140,7 +140,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PostsPostIdDeleteWithHttpInfo (string postId);
@@ -150,7 +150,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>List&lt;FileInfo&gt;</returns>
         List<FileInfo> PostsPostIdFilesInfoGet (string postId);
@@ -161,7 +161,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>ApiResponse of List&lt;FileInfo&gt;</returns>
         ApiResponse<List<FileInfo>> PostsPostIdFilesInfoGetWithHttpInfo (string postId);
@@ -171,7 +171,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Post</returns>
         Post PostsPostIdGet (string postId);
@@ -182,7 +182,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>ApiResponse of Post</returns>
         ApiResponse<Post> PostsPostIdGetWithHttpInfo (string postId);
@@ -192,7 +192,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Post</returns>
@@ -204,7 +204,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Post</returns>
@@ -215,7 +215,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK PostsPostIdPinPost (string postId);
@@ -226,7 +226,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PostsPostIdPinPostWithHttpInfo (string postId);
@@ -236,7 +236,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Post</returns>
@@ -248,7 +248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Post</returns>
@@ -259,7 +259,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>PostList</returns>
         PostList PostsPostIdThreadGet (string postId);
@@ -270,7 +270,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>ApiResponse of PostList</returns>
         ApiResponse<PostList> PostsPostIdThreadGetWithHttpInfo (string postId);
@@ -280,7 +280,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK PostsPostIdUnpinPost (string postId);
@@ -291,7 +291,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> PostsPostIdUnpinPostWithHttpInfo (string postId);
@@ -301,7 +301,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>PostListWithSearchMatches</returns>
@@ -313,7 +313,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PostListWithSearchMatches</returns>
@@ -324,7 +324,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -338,7 +338,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -351,7 +351,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -366,7 +366,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -389,7 +389,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -405,7 +405,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -420,7 +420,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Task of Post</returns>
         System.Threading.Tasks.Task<Post> PostsEphemeralPostAsync (InlineObject42 ephemeralPost);
@@ -431,7 +431,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
         System.Threading.Tasks.Task<ApiResponse<Post>> PostsEphemeralPostAsyncWithHttpInfo (InlineObject42 ephemeralPost);
@@ -441,7 +441,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Task of Post</returns>
         System.Threading.Tasks.Task<Post> PostsPostAsync (InlineObject41 post);
@@ -452,7 +452,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
         System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostAsyncWithHttpInfo (InlineObject41 post);
@@ -462,7 +462,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>Task of StatusOK</returns>
@@ -474,7 +474,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -485,7 +485,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PostsPostIdDeleteAsync (string postId);
@@ -496,7 +496,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdDeleteAsyncWithHttpInfo (string postId);
@@ -506,7 +506,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>Task of List&lt;FileInfo&gt;</returns>
         System.Threading.Tasks.Task<List<FileInfo>> PostsPostIdFilesInfoGetAsync (string postId);
@@ -517,7 +517,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>Task of ApiResponse (List&lt;FileInfo&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<FileInfo>>> PostsPostIdFilesInfoGetAsyncWithHttpInfo (string postId);
@@ -527,7 +527,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Task of Post</returns>
         System.Threading.Tasks.Task<Post> PostsPostIdGetAsync (string postId);
@@ -538,7 +538,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Task of ApiResponse (Post)</returns>
         System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostIdGetAsyncWithHttpInfo (string postId);
@@ -548,7 +548,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Post</returns>
@@ -560,7 +560,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
@@ -571,7 +571,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PostsPostIdPinPostAsync (string postId);
@@ -582,7 +582,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdPinPostAsyncWithHttpInfo (string postId);
@@ -592,7 +592,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Task of Post</returns>
@@ -604,7 +604,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
@@ -615,7 +615,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>Task of PostList</returns>
         System.Threading.Tasks.Task<PostList> PostsPostIdThreadGetAsync (string postId);
@@ -626,7 +626,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
         System.Threading.Tasks.Task<ApiResponse<PostList>> PostsPostIdThreadGetAsyncWithHttpInfo (string postId);
@@ -636,7 +636,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> PostsPostIdUnpinPostAsync (string postId);
@@ -647,7 +647,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdUnpinPostAsyncWithHttpInfo (string postId);
@@ -657,7 +657,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of PostListWithSearchMatches</returns>
@@ -669,7 +669,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PostListWithSearchMatches)</returns>
@@ -680,7 +680,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -694,7 +694,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -707,7 +707,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -722,7 +722,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -746,7 +746,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class PostsApi : IPostsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PostsApi"/> class.
@@ -760,14 +760,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="PostsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PostsApi(String basePath)
+        public PostsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -777,7 +777,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PostsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public PostsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -785,8 +785,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -797,7 +797,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public PostsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public PostsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -812,18 +812,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -832,12 +832,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -853,7 +853,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts for a channel Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -863,14 +863,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>PostList</returns>
         public PostList ChannelsChannelIdPostsGet (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = ChannelsChannelIdPostsGetWithHttpInfo(channelId, page, perPage, since, before, after);
+            ApiResponse<PostList> localVarResponse = ChannelsChannelIdPostsGetWithHttpInfo(channelId, page, perPage, since, before, after);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get posts for a channel Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -878,19 +878,19 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="before">A post id to select the posts that came before this one (optional)</param>
         /// <param name="after">A post id to select the posts that came after this one (optional)</param>
         /// <returns>ApiResponse of PostList</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< PostList > ChannelsChannelIdPostsGetWithHttpInfo (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
+        public ApiResponse<PostList> ChannelsChannelIdPostsGetWithHttpInfo (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->ChannelsChannelIdPostsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->ChannelsChannelIdPostsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -970,7 +970,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts for a channel Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -980,7 +980,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of PostList</returns>
         public async System.Threading.Tasks.Task<PostList> ChannelsChannelIdPostsGetAsync (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = await ChannelsChannelIdPostsGetAsyncWithHttpInfo(channelId, page, perPage, since, before, after);
+            ApiResponse<PostList> localVarResponse = await ChannelsChannelIdPostsGetAsyncWithHttpInfo(channelId, page, perPage, since, before, after);
              return localVarResponse.Data;
 
         }
@@ -988,7 +988,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts for a channel Get a page of posts in a channel. Use the query parameters to modify the behaviour of this endpoint. The parameters &#x60;since&#x60;, &#x60;before&#x60; and &#x60;after&#x60; must not be used together. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
@@ -996,20 +996,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="before">A post id to select the posts that came before this one (optional)</param>
         /// <param name="after">A post id to select the posts that came after this one (optional)</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList>> ChannelsChannelIdPostsGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PostList>> ChannelsChannelIdPostsGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null, int? since = null, string before = null, string after = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->ChannelsChannelIdPostsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->ChannelsChannelIdPostsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1089,35 +1089,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a ephemeral post Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Post</returns>
         public Post PostsEphemeralPost (InlineObject42 ephemeralPost)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = PostsEphemeralPostWithHttpInfo(ephemeralPost);
+            ApiResponse<Post> localVarResponse = PostsEphemeralPostWithHttpInfo(ephemeralPost);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a ephemeral post Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>ApiResponse of Post</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Post > PostsEphemeralPostWithHttpInfo (InlineObject42 ephemeralPost)
+        public ApiResponse<Post> PostsEphemeralPostWithHttpInfo (InlineObject42 ephemeralPost)
         {
             // verify the required parameter 'ephemeralPost' is set
             if (ephemeralPost == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'ephemeralPost' when calling PostsApi->PostsEphemeralPost");
+                throw new ApiException(400, "Missing required parameter 'ephemeralPost' when calling PostsApi->PostsEphemeralPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1146,12 +1146,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a ephemeral post Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Task of Post</returns>
         public async System.Threading.Tasks.Task<Post> PostsEphemeralPostAsync (InlineObject42 ephemeralPost)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = await PostsEphemeralPostAsyncWithHttpInfo(ephemeralPost);
+            ApiResponse<Post> localVarResponse = await PostsEphemeralPostAsyncWithHttpInfo(ephemeralPost);
              return localVarResponse.Data;
 
         }
@@ -1159,24 +1159,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a ephemeral post Create a new ephemeral post in a channel. ##### Permissions Must have &#x60;create_post_ephemeral&#x60; permission (currently only given to system admin) 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="ephemeralPost"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post>> PostsEphemeralPostAsyncWithHttpInfo (InlineObject42 ephemeralPost)
+        public async System.Threading.Tasks.Task<ApiResponse<Post>> PostsEphemeralPostAsyncWithHttpInfo (InlineObject42 ephemeralPost)
         {
             // verify the required parameter 'ephemeralPost' is set
             if (ephemeralPost == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'ephemeralPost' when calling PostsApi->PostsEphemeralPost");
+                throw new ApiException(400, "Missing required parameter 'ephemeralPost' when calling PostsApi->PostsEphemeralPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1205,35 +1205,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a post Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Post</returns>
         public Post PostsPost (InlineObject41 post)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = PostsPostWithHttpInfo(post);
+            ApiResponse<Post> localVarResponse = PostsPostWithHttpInfo(post);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a post Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>ApiResponse of Post</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Post > PostsPostWithHttpInfo (InlineObject41 post)
+        public ApiResponse<Post> PostsPostWithHttpInfo (InlineObject41 post)
         {
             // verify the required parameter 'post' is set
             if (post == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'post' when calling PostsApi->PostsPost");
+                throw new ApiException(400, "Missing required parameter 'post' when calling PostsApi->PostsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1262,12 +1262,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a post Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Task of Post</returns>
         public async System.Threading.Tasks.Task<Post> PostsPostAsync (InlineObject41 post)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = await PostsPostAsyncWithHttpInfo(post);
+            ApiResponse<Post> localVarResponse = await PostsPostAsyncWithHttpInfo(post);
              return localVarResponse.Data;
 
         }
@@ -1275,24 +1275,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a post Create a new post in a channel. To create the post as a comment on another post, provide &#x60;root_id&#x60;. ##### Permissions Must have &#x60;create_post&#x60; permission for the channel the post is being created in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post>> PostsPostAsyncWithHttpInfo (InlineObject41 post)
+        public async System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostAsyncWithHttpInfo (InlineObject41 post)
         {
             // verify the required parameter 'post' is set
             if (post == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'post' when calling PostsApi->PostsPost");
+                throw new ApiException(400, "Missing required parameter 'post' when calling PostsApi->PostsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1321,40 +1321,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Perform a post action Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK PostsPostIdActionsActionIdPost (string postId, string actionId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PostsPostIdActionsActionIdPostWithHttpInfo(postId, actionId);
+            ApiResponse<StatusOK> localVarResponse = PostsPostIdActionsActionIdPostWithHttpInfo(postId, actionId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Perform a post action Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PostsPostIdActionsActionIdPostWithHttpInfo (string postId, string actionId)
+        public ApiResponse<StatusOK> PostsPostIdActionsActionIdPostWithHttpInfo (string postId, string actionId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdActionsActionIdPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdActionsActionIdPost");
 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'actionId' when calling PostsApi->PostsPostIdActionsActionIdPost");
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling PostsApi->PostsPostIdActionsActionIdPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1386,13 +1386,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Perform a post action Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PostsPostIdActionsActionIdPostAsync (string postId, string actionId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PostsPostIdActionsActionIdPostAsyncWithHttpInfo(postId, actionId);
+            ApiResponse<StatusOK> localVarResponse = await PostsPostIdActionsActionIdPostAsyncWithHttpInfo(postId, actionId);
              return localVarResponse.Data;
 
         }
@@ -1400,28 +1400,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Perform a post action Perform a post action, which allows users to interact with integrations through posts. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="actionId">Action GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PostsPostIdActionsActionIdPostAsyncWithHttpInfo (string postId, string actionId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdActionsActionIdPostAsyncWithHttpInfo (string postId, string actionId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdActionsActionIdPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdActionsActionIdPost");
 
             // verify the required parameter 'actionId' is set
             if (actionId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'actionId' when calling PostsApi->PostsPostIdActionsActionIdPost");
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling PostsApi->PostsPostIdActionsActionIdPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1453,34 +1453,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a post Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>StatusOK</returns>
         public StatusOK PostsPostIdDelete (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PostsPostIdDeleteWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = PostsPostIdDeleteWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a post Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PostsPostIdDeleteWithHttpInfo (string postId)
+        public ApiResponse<StatusOK> PostsPostIdDeleteWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdDelete");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1510,12 +1510,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a post Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PostsPostIdDeleteAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PostsPostIdDeleteAsyncWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = await PostsPostIdDeleteAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -1523,23 +1523,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a post Soft deletes a post, by marking the post as deleted in the database. Soft deleted posts will not be returned in post queries. ##### Permissions Must be logged in as the user or have &#x60;delete_others_posts&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PostsPostIdDeleteAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdDeleteAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdDelete");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1569,34 +1569,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get file info for post Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>List&lt;FileInfo&gt;</returns>
         public List<FileInfo> PostsPostIdFilesInfoGet (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<FileInfo>> localVarResponse = PostsPostIdFilesInfoGetWithHttpInfo(postId);
+            ApiResponse<List<FileInfo>> localVarResponse = PostsPostIdFilesInfoGetWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get file info for post Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>ApiResponse of List&lt;FileInfo&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<FileInfo> > PostsPostIdFilesInfoGetWithHttpInfo (string postId)
+        public ApiResponse<List<FileInfo>> PostsPostIdFilesInfoGetWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdFilesInfoGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdFilesInfoGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1626,12 +1626,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get file info for post Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>Task of List&lt;FileInfo&gt;</returns>
         public async System.Threading.Tasks.Task<List<FileInfo>> PostsPostIdFilesInfoGetAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<FileInfo>> localVarResponse = await PostsPostIdFilesInfoGetAsyncWithHttpInfo(postId);
+            ApiResponse<List<FileInfo>> localVarResponse = await PostsPostIdFilesInfoGetAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -1639,23 +1639,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get file info for post Gets a list of file information objects for the files attached to a post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post</param>
         /// <returns>Task of ApiResponse (List&lt;FileInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<FileInfo>>> PostsPostIdFilesInfoGetAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<FileInfo>>> PostsPostIdFilesInfoGetAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdFilesInfoGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdFilesInfoGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1685,34 +1685,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a post Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Post</returns>
         public Post PostsPostIdGet (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = PostsPostIdGetWithHttpInfo(postId);
+            ApiResponse<Post> localVarResponse = PostsPostIdGetWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a post Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>ApiResponse of Post</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Post > PostsPostIdGetWithHttpInfo (string postId)
+        public ApiResponse<Post> PostsPostIdGetWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1742,12 +1742,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a post Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Task of Post</returns>
         public async System.Threading.Tasks.Task<Post> PostsPostIdGetAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = await PostsPostIdGetAsyncWithHttpInfo(postId);
+            ApiResponse<Post> localVarResponse = await PostsPostIdGetAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -1755,23 +1755,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a post Get a single post. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to get</param>
         /// <returns>Task of ApiResponse (Post)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post>> PostsPostIdGetAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostIdGetAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1801,41 +1801,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a post Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Post</returns>
         public Post PostsPostIdPatchPut (string postId, InlineObject44 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = PostsPostIdPatchPutWithHttpInfo(postId, body);
+            ApiResponse<Post> localVarResponse = PostsPostIdPatchPutWithHttpInfo(postId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a post Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Post</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Post > PostsPostIdPatchPutWithHttpInfo (string postId, InlineObject44 body)
+        public ApiResponse<Post> PostsPostIdPatchPutWithHttpInfo (string postId, InlineObject44 body)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1866,13 +1866,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a post Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Post</returns>
         public async System.Threading.Tasks.Task<Post> PostsPostIdPatchPutAsync (string postId, InlineObject44 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = await PostsPostIdPatchPutAsyncWithHttpInfo(postId, body);
+            ApiResponse<Post> localVarResponse = await PostsPostIdPatchPutAsyncWithHttpInfo(postId, body);
              return localVarResponse.Data;
 
         }
@@ -1880,29 +1880,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a post Partially update a post by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;edit_post&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post>> PostsPostIdPatchPutAsyncWithHttpInfo (string postId, InlineObject44 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostIdPatchPutAsyncWithHttpInfo (string postId, InlineObject44 body)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1933,34 +1933,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Pin a post to the channel Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK PostsPostIdPinPost (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PostsPostIdPinPostWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = PostsPostIdPinPostWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Pin a post to the channel Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PostsPostIdPinPostWithHttpInfo (string postId)
+        public ApiResponse<StatusOK> PostsPostIdPinPostWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPinPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPinPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1990,12 +1990,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Pin a post to the channel Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PostsPostIdPinPostAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PostsPostIdPinPostAsyncWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = await PostsPostIdPinPostAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -2003,23 +2003,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Pin a post to the channel Pin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PostsPostIdPinPostAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdPinPostAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPinPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPinPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2049,41 +2049,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a post Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Post</returns>
         public Post PostsPostIdPut (string postId, InlineObject43 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = PostsPostIdPutWithHttpInfo(postId, body);
+            ApiResponse<Post> localVarResponse = PostsPostIdPutWithHttpInfo(postId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a post Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Post</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Post > PostsPostIdPutWithHttpInfo (string postId, InlineObject43 body)
+        public ApiResponse<Post> PostsPostIdPutWithHttpInfo (string postId, InlineObject43 body)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPut");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2114,13 +2114,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a post Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Task of Post</returns>
         public async System.Threading.Tasks.Task<Post> PostsPostIdPutAsync (string postId, InlineObject43 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post> localVarResponse = await PostsPostIdPutAsyncWithHttpInfo(postId, body);
+            ApiResponse<Post> localVarResponse = await PostsPostIdPutAsyncWithHttpInfo(postId, body);
              return localVarResponse.Data;
 
         }
@@ -2128,29 +2128,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a post Update a post. Only the fields listed below are updatable, omitted fields will be treated as blank. ##### Permissions Must have &#x60;edit_post&#x60; permission for the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of the post to update</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Post)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Post>> PostsPostIdPutAsyncWithHttpInfo (string postId, InlineObject43 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Post>> PostsPostIdPutAsyncWithHttpInfo (string postId, InlineObject43 body)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPut");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->PostsPostIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2181,34 +2181,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a thread Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>PostList</returns>
         public PostList PostsPostIdThreadGet (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = PostsPostIdThreadGetWithHttpInfo(postId);
+            ApiResponse<PostList> localVarResponse = PostsPostIdThreadGetWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a thread Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>ApiResponse of PostList</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< PostList > PostsPostIdThreadGetWithHttpInfo (string postId)
+        public ApiResponse<PostList> PostsPostIdThreadGetWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdThreadGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdThreadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2238,12 +2238,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a thread Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>Task of PostList</returns>
         public async System.Threading.Tasks.Task<PostList> PostsPostIdThreadGetAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = await PostsPostIdThreadGetAsyncWithHttpInfo(postId);
+            ApiResponse<PostList> localVarResponse = await PostsPostIdThreadGetAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -2251,23 +2251,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a thread Get a post and the rest of the posts in the same thread. ##### Permissions Must have &#x60;read_channel&#x60; permission for the channel the post is in or if the channel is public, have the &#x60;read_public_channels&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">ID of a post in the thread</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList>> PostsPostIdThreadGetAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<PostList>> PostsPostIdThreadGetAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdThreadGet");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdThreadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2297,34 +2297,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Unpin a post to the channel Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK PostsPostIdUnpinPost (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = PostsPostIdUnpinPostWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = PostsPostIdUnpinPostWithHttpInfo(postId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Unpin a post to the channel Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > PostsPostIdUnpinPostWithHttpInfo (string postId)
+        public ApiResponse<StatusOK> PostsPostIdUnpinPostWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdUnpinPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdUnpinPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2354,12 +2354,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Unpin a post to the channel Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> PostsPostIdUnpinPostAsync (string postId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await PostsPostIdUnpinPostAsyncWithHttpInfo(postId);
+            ApiResponse<StatusOK> localVarResponse = await PostsPostIdUnpinPostAsyncWithHttpInfo(postId);
              return localVarResponse.Data;
 
         }
@@ -2367,23 +2367,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Unpin a post to the channel Unpin a post to a channel it is in based from the provided post id string. ##### Permissions Must be authenticated and have the &#x60;read_channel&#x60; permission to the channel the post is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="postId">Post GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> PostsPostIdUnpinPostAsyncWithHttpInfo (string postId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> PostsPostIdUnpinPostAsyncWithHttpInfo (string postId)
         {
             // verify the required parameter 'postId' is set
             if (postId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdUnpinPost");
+                throw new ApiException(400, "Missing required parameter 'postId' when calling PostsApi->PostsPostIdUnpinPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2413,41 +2413,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search for team posts Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>PostListWithSearchMatches</returns>
         public PostListWithSearchMatches TeamsTeamIdPostsSearchPost (string teamId, InlineObject45 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostListWithSearchMatches> localVarResponse = TeamsTeamIdPostsSearchPostWithHttpInfo(teamId, body);
+            ApiResponse<PostListWithSearchMatches> localVarResponse = TeamsTeamIdPostsSearchPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search for team posts Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PostListWithSearchMatches</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< PostListWithSearchMatches > TeamsTeamIdPostsSearchPostWithHttpInfo (string teamId, InlineObject45 body)
+        public ApiResponse<PostListWithSearchMatches> TeamsTeamIdPostsSearchPostWithHttpInfo (string teamId, InlineObject45 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling PostsApi->TeamsTeamIdPostsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling PostsApi->TeamsTeamIdPostsSearchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->TeamsTeamIdPostsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->TeamsTeamIdPostsSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2478,13 +2478,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search for team posts Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of PostListWithSearchMatches</returns>
         public async System.Threading.Tasks.Task<PostListWithSearchMatches> TeamsTeamIdPostsSearchPostAsync (string teamId, InlineObject45 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostListWithSearchMatches> localVarResponse = await TeamsTeamIdPostsSearchPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<PostListWithSearchMatches> localVarResponse = await TeamsTeamIdPostsSearchPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -2492,29 +2492,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search for team posts Search posts in the team and from the provided terms string. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PostListWithSearchMatches)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostListWithSearchMatches>> TeamsTeamIdPostsSearchPostAsyncWithHttpInfo (string teamId, InlineObject45 body)
+        public async System.Threading.Tasks.Task<ApiResponse<PostListWithSearchMatches>> TeamsTeamIdPostsSearchPostAsyncWithHttpInfo (string teamId, InlineObject45 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling PostsApi->TeamsTeamIdPostsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling PostsApi->TeamsTeamIdPostsSearchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PostsApi->TeamsTeamIdPostsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PostsApi->TeamsTeamIdPostsSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2545,7 +2545,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts around last unread Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -2553,36 +2553,36 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>PostList</returns>
         public PostList UsersUserIdChannelsChannelIdPostsUnreadGet (string userId, string channelId, string limitBefore = null, string limitAfter = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = UsersUserIdChannelsChannelIdPostsUnreadGetWithHttpInfo(userId, channelId, limitBefore, limitAfter);
+            ApiResponse<PostList> localVarResponse = UsersUserIdChannelsChannelIdPostsUnreadGetWithHttpInfo(userId, channelId, limitBefore, limitAfter);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get posts around last unread Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
         /// <param name="limitAfter">Number of posts after and including the last unread post. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of PostList</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< PostList > UsersUserIdChannelsChannelIdPostsUnreadGetWithHttpInfo (string userId, string channelId, string limitBefore = null, string limitAfter = null)
+        public ApiResponse<PostList> UsersUserIdChannelsChannelIdPostsUnreadGetWithHttpInfo (string userId, string channelId, string limitBefore = null, string limitAfter = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2634,7 +2634,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts around last unread Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
@@ -2642,7 +2642,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of PostList</returns>
         public async System.Threading.Tasks.Task<PostList> UsersUserIdChannelsChannelIdPostsUnreadGetAsync (string userId, string channelId, string limitBefore = null, string limitAfter = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = await UsersUserIdChannelsChannelIdPostsUnreadGetAsyncWithHttpInfo(userId, channelId, limitBefore, limitAfter);
+            ApiResponse<PostList> localVarResponse = await UsersUserIdChannelsChannelIdPostsUnreadGetAsyncWithHttpInfo(userId, channelId, limitBefore, limitAfter);
              return localVarResponse.Data;
 
         }
@@ -2650,30 +2650,30 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get posts around last unread Get the oldest unread post in the channel for the given user as well as the posts around it. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission, and must have &#x60;read_channel&#x60; permission for the channel. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="channelId">The channel ID to get the posts for</param>
         /// <param name="limitBefore">Number of posts before the last unread posts. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
         /// <param name="limitAfter">Number of posts after and including the last unread post. Maximum is 200 posts if limit is set greater than that. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList>> UsersUserIdChannelsChannelIdPostsUnreadGetAsyncWithHttpInfo (string userId, string channelId, string limitBefore = null, string limitAfter = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PostList>> UsersUserIdChannelsChannelIdPostsUnreadGetAsyncWithHttpInfo (string userId, string channelId, string limitBefore = null, string limitAfter = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling PostsApi->UsersUserIdChannelsChannelIdPostsUnreadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2725,7 +2725,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of flagged posts Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -2734,33 +2734,33 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>List&lt;PostList&gt;</returns>
         public List<PostList> UsersUserIdPostsFlaggedGet (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PostList>> localVarResponse = UsersUserIdPostsFlaggedGetWithHttpInfo(userId, teamId, channelId, page, perPage);
+            ApiResponse<List<PostList>> localVarResponse = UsersUserIdPostsFlaggedGetWithHttpInfo(userId, teamId, channelId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of flagged posts Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;PostList&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<PostList> > UsersUserIdPostsFlaggedGetWithHttpInfo (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
+        public ApiResponse<List<PostList>> UsersUserIdPostsFlaggedGetWithHttpInfo (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdPostsFlaggedGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdPostsFlaggedGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2830,7 +2830,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of flagged posts Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -2839,7 +2839,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of List&lt;PostList&gt;</returns>
         public async System.Threading.Tasks.Task<List<PostList>> UsersUserIdPostsFlaggedGetAsync (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PostList>> localVarResponse = await UsersUserIdPostsFlaggedGetAsyncWithHttpInfo(userId, teamId, channelId, page, perPage);
+            ApiResponse<List<PostList>> localVarResponse = await UsersUserIdPostsFlaggedGetAsyncWithHttpInfo(userId, teamId, channelId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -2847,27 +2847,27 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of flagged posts Get a page of flagged posts of a user provided user id string. Selects from a channel, team or all flagged posts by a user. ##### Permissions Must be user or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID of the user</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
         /// <param name="page">The page to select (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of posts per page (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;PostList&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<PostList>>> UsersUserIdPostsFlaggedGetAsyncWithHttpInfo (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<PostList>>> UsersUserIdPostsFlaggedGetAsyncWithHttpInfo (string userId, string teamId = null, string channelId = null, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdPostsFlaggedGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PostsApi->UsersUserIdPostsFlaggedGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

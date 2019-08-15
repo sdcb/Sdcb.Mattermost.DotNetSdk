@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -46,7 +46,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -58,7 +58,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>IncomingWebhook</returns>
         IncomingWebhook HooksIncomingHookIdGet (string hookId);
@@ -69,7 +69,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
         ApiResponse<IncomingWebhook> HooksIncomingHookIdGetWithHttpInfo (string hookId);
@@ -79,7 +79,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>IncomingWebhook</returns>
@@ -91,7 +91,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
@@ -102,7 +102,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>IncomingWebhook</returns>
         IncomingWebhook HooksIncomingPost (InlineObject49 body);
@@ -113,7 +113,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
         ApiResponse<IncomingWebhook> HooksIncomingPostWithHttpInfo (InlineObject49 body);
@@ -123,7 +123,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -137,7 +137,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -150,7 +150,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK HooksOutgoingHookIdDelete (string hookId);
@@ -161,7 +161,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> HooksOutgoingHookIdDeleteWithHttpInfo (string hookId);
@@ -171,7 +171,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>OutgoingWebhook</returns>
         OutgoingWebhook HooksOutgoingHookIdGet (string hookId);
@@ -182,7 +182,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
         ApiResponse<OutgoingWebhook> HooksOutgoingHookIdGetWithHttpInfo (string hookId);
@@ -192,7 +192,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>OutgoingWebhook</returns>
@@ -204,7 +204,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
@@ -215,7 +215,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK HooksOutgoingHookIdRegenTokenPost (string hookId);
@@ -226,7 +226,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> HooksOutgoingHookIdRegenTokenPostWithHttpInfo (string hookId);
@@ -236,7 +236,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>OutgoingWebhook</returns>
         OutgoingWebhook HooksOutgoingPost (InlineObject51 body);
@@ -247,7 +247,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
         ApiResponse<OutgoingWebhook> HooksOutgoingPostWithHttpInfo (InlineObject51 body);
@@ -266,7 +266,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -279,7 +279,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -291,7 +291,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>Task of IncomingWebhook</returns>
         System.Threading.Tasks.Task<IncomingWebhook> HooksIncomingHookIdGetAsync (string hookId);
@@ -302,7 +302,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
         System.Threading.Tasks.Task<ApiResponse<IncomingWebhook>> HooksIncomingHookIdGetAsyncWithHttpInfo (string hookId);
@@ -312,7 +312,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of IncomingWebhook</returns>
@@ -324,7 +324,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
@@ -335,7 +335,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of IncomingWebhook</returns>
         System.Threading.Tasks.Task<IncomingWebhook> HooksIncomingPostAsync (InlineObject49 body);
@@ -346,7 +346,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
         System.Threading.Tasks.Task<ApiResponse<IncomingWebhook>> HooksIncomingPostAsyncWithHttpInfo (InlineObject49 body);
@@ -356,7 +356,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -370,7 +370,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -383,7 +383,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> HooksOutgoingHookIdDeleteAsync (string hookId);
@@ -394,7 +394,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> HooksOutgoingHookIdDeleteAsyncWithHttpInfo (string hookId);
@@ -404,7 +404,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of OutgoingWebhook</returns>
         System.Threading.Tasks.Task<OutgoingWebhook> HooksOutgoingHookIdGetAsync (string hookId);
@@ -415,7 +415,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
         System.Threading.Tasks.Task<ApiResponse<OutgoingWebhook>> HooksOutgoingHookIdGetAsyncWithHttpInfo (string hookId);
@@ -425,7 +425,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of OutgoingWebhook</returns>
@@ -437,7 +437,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
@@ -448,7 +448,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> HooksOutgoingHookIdRegenTokenPostAsync (string hookId);
@@ -459,7 +459,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> HooksOutgoingHookIdRegenTokenPostAsyncWithHttpInfo (string hookId);
@@ -469,7 +469,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of OutgoingWebhook</returns>
         System.Threading.Tasks.Task<OutgoingWebhook> HooksOutgoingPostAsync (InlineObject51 body);
@@ -480,7 +480,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
         System.Threading.Tasks.Task<ApiResponse<OutgoingWebhook>> HooksOutgoingPostAsyncWithHttpInfo (InlineObject51 body);
@@ -500,7 +500,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class WebhooksApi : IWebhooksApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhooksApi"/> class.
@@ -514,14 +514,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="WebhooksApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public WebhooksApi(String basePath)
+        public WebhooksApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -531,7 +531,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public WebhooksApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public WebhooksApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -539,8 +539,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -551,7 +551,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public WebhooksApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public WebhooksApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -566,18 +566,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -586,12 +586,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -607,34 +607,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List incoming webhooks Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <returns>List&lt;IncomingWebhook&gt;</returns>
         public List<IncomingWebhook> HooksIncomingGet (string page = null, string perPage = null, string teamId = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<IncomingWebhook>> localVarResponse = HooksIncomingGetWithHttpInfo(page, perPage, teamId);
+            ApiResponse<List<IncomingWebhook>> localVarResponse = HooksIncomingGetWithHttpInfo(page, perPage, teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// List incoming webhooks Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <returns>ApiResponse of List&lt;IncomingWebhook&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<IncomingWebhook> > HooksIncomingGetWithHttpInfo (string page = null, string perPage = null, string teamId = null)
+        public ApiResponse<List<IncomingWebhook>> HooksIncomingGetWithHttpInfo (string page = null, string perPage = null, string teamId = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -692,14 +692,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List incoming webhooks Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <returns>Task of List&lt;IncomingWebhook&gt;</returns>
         public async System.Threading.Tasks.Task<List<IncomingWebhook>> HooksIncomingGetAsync (string page = null, string perPage = null, string teamId = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<IncomingWebhook>> localVarResponse = await HooksIncomingGetAsyncWithHttpInfo(page, perPage, teamId);
+            ApiResponse<List<IncomingWebhook>> localVarResponse = await HooksIncomingGetAsyncWithHttpInfo(page, perPage, teamId);
              return localVarResponse.Data;
 
         }
@@ -707,21 +707,21 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List incoming webhooks Get a page of a list of incoming webhooks. Optionally filter for a specific team using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;IncomingWebhook&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<IncomingWebhook>>> HooksIncomingGetAsyncWithHttpInfo (string page = null, string perPage = null, string teamId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<IncomingWebhook>>> HooksIncomingGetAsyncWithHttpInfo (string page = null, string perPage = null, string teamId = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -779,34 +779,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an incoming webhook Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>IncomingWebhook</returns>
         public IncomingWebhook HooksIncomingHookIdGet (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingHookIdGetWithHttpInfo(hookId);
+            ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingHookIdGetWithHttpInfo(hookId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get an incoming webhook Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< IncomingWebhook > HooksIncomingHookIdGetWithHttpInfo (string hookId)
+        public ApiResponse<IncomingWebhook> HooksIncomingHookIdGetWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdGet");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -836,12 +836,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an incoming webhook Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>Task of IncomingWebhook</returns>
         public async System.Threading.Tasks.Task<IncomingWebhook> HooksIncomingHookIdGetAsync (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingHookIdGetAsyncWithHttpInfo(hookId);
+            ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingHookIdGetAsyncWithHttpInfo(hookId);
              return localVarResponse.Data;
 
         }
@@ -849,23 +849,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an incoming webhook Get an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook>> HooksIncomingHookIdGetAsyncWithHttpInfo (string hookId)
+        public async System.Threading.Tasks.Task<ApiResponse<IncomingWebhook>> HooksIncomingHookIdGetAsyncWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdGet");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -895,41 +895,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an incoming webhook Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>IncomingWebhook</returns>
         public IncomingWebhook HooksIncomingHookIdPut (string hookId, InlineObject50 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingHookIdPutWithHttpInfo(hookId, body);
+            ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingHookIdPutWithHttpInfo(hookId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update an incoming webhook Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< IncomingWebhook > HooksIncomingHookIdPutWithHttpInfo (string hookId, InlineObject50 body)
+        public ApiResponse<IncomingWebhook> HooksIncomingHookIdPutWithHttpInfo (string hookId, InlineObject50 body)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingHookIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -960,13 +960,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an incoming webhook Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of IncomingWebhook</returns>
         public async System.Threading.Tasks.Task<IncomingWebhook> HooksIncomingHookIdPutAsync (string hookId, InlineObject50 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingHookIdPutAsyncWithHttpInfo(hookId, body);
+            ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingHookIdPutAsyncWithHttpInfo(hookId, body);
              return localVarResponse.Data;
 
         }
@@ -974,29 +974,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an incoming webhook Update an incoming webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Incoming Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook>> HooksIncomingHookIdPutAsyncWithHttpInfo (string hookId, InlineObject50 body)
+        public async System.Threading.Tasks.Task<ApiResponse<IncomingWebhook>> HooksIncomingHookIdPutAsyncWithHttpInfo (string hookId, InlineObject50 body)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksIncomingHookIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingHookIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1027,35 +1027,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an incoming webhook Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>IncomingWebhook</returns>
         public IncomingWebhook HooksIncomingPost (InlineObject49 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingPostWithHttpInfo(body);
+            ApiResponse<IncomingWebhook> localVarResponse = HooksIncomingPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create an incoming webhook Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IncomingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< IncomingWebhook > HooksIncomingPostWithHttpInfo (InlineObject49 body)
+        public ApiResponse<IncomingWebhook> HooksIncomingPostWithHttpInfo (InlineObject49 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1084,12 +1084,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an incoming webhook Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of IncomingWebhook</returns>
         public async System.Threading.Tasks.Task<IncomingWebhook> HooksIncomingPostAsync (InlineObject49 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingPostAsyncWithHttpInfo(body);
+            ApiResponse<IncomingWebhook> localVarResponse = await HooksIncomingPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1097,24 +1097,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an incoming webhook Create an incoming webhook for a channel. ##### Permissions &#x60;manage_webhooks&#x60; for the channel the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IncomingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<IncomingWebhook>> HooksIncomingPostAsyncWithHttpInfo (InlineObject49 body)
+        public async System.Threading.Tasks.Task<ApiResponse<IncomingWebhook>> HooksIncomingPostAsyncWithHttpInfo (InlineObject49 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksIncomingPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1143,7 +1143,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List outgoing webhooks Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -1151,28 +1151,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>List&lt;OutgoingWebhook&gt;</returns>
         public List<OutgoingWebhook> HooksOutgoingGet (string page = null, string perPage = null, string teamId = null, string channelId = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OutgoingWebhook>> localVarResponse = HooksOutgoingGetWithHttpInfo(page, perPage, teamId, channelId);
+            ApiResponse<List<OutgoingWebhook>> localVarResponse = HooksOutgoingGetWithHttpInfo(page, perPage, teamId, channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// List outgoing webhooks Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <param name="channelId">The ID of the channel to get hooks for. (optional)</param>
         /// <returns>ApiResponse of List&lt;OutgoingWebhook&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<OutgoingWebhook> > HooksOutgoingGetWithHttpInfo (string page = null, string perPage = null, string teamId = null, string channelId = null)
+        public ApiResponse<List<OutgoingWebhook>> HooksOutgoingGetWithHttpInfo (string page = null, string perPage = null, string teamId = null, string channelId = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1240,7 +1240,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List outgoing webhooks Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
@@ -1248,7 +1248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of List&lt;OutgoingWebhook&gt;</returns>
         public async System.Threading.Tasks.Task<List<OutgoingWebhook>> HooksOutgoingGetAsync (string page = null, string perPage = null, string teamId = null, string channelId = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OutgoingWebhook>> localVarResponse = await HooksOutgoingGetAsyncWithHttpInfo(page, perPage, teamId, channelId);
+            ApiResponse<List<OutgoingWebhook>> localVarResponse = await HooksOutgoingGetAsyncWithHttpInfo(page, perPage, teamId, channelId);
              return localVarResponse.Data;
 
         }
@@ -1256,22 +1256,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List outgoing webhooks Get a page of a list of outgoing webhooks. Optionally filter for a specific team or channel using query parameters. ##### Permissions &#x60;manage_webhooks&#x60; for the system or &#x60;manage_webhooks&#x60; for the specific team/channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of hooks per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="teamId">The ID of the team to get hooks for. (optional)</param>
         /// <param name="channelId">The ID of the channel to get hooks for. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;OutgoingWebhook&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OutgoingWebhook>>> HooksOutgoingGetAsyncWithHttpInfo (string page = null, string perPage = null, string teamId = null, string channelId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OutgoingWebhook>>> HooksOutgoingGetAsyncWithHttpInfo (string page = null, string perPage = null, string teamId = null, string channelId = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1339,34 +1339,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an outgoing webhook Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK HooksOutgoingHookIdDelete (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = HooksOutgoingHookIdDeleteWithHttpInfo(hookId);
+            ApiResponse<StatusOK> localVarResponse = HooksOutgoingHookIdDeleteWithHttpInfo(hookId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete an outgoing webhook Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > HooksOutgoingHookIdDeleteWithHttpInfo (string hookId)
+        public ApiResponse<StatusOK> HooksOutgoingHookIdDeleteWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdDelete");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1396,12 +1396,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an outgoing webhook Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> HooksOutgoingHookIdDeleteAsync (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await HooksOutgoingHookIdDeleteAsyncWithHttpInfo(hookId);
+            ApiResponse<StatusOK> localVarResponse = await HooksOutgoingHookIdDeleteAsyncWithHttpInfo(hookId);
              return localVarResponse.Data;
 
         }
@@ -1409,23 +1409,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an outgoing webhook Delete an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> HooksOutgoingHookIdDeleteAsyncWithHttpInfo (string hookId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> HooksOutgoingHookIdDeleteAsyncWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdDelete");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1455,34 +1455,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an outgoing webhook Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>OutgoingWebhook</returns>
         public OutgoingWebhook HooksOutgoingHookIdGet (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingHookIdGetWithHttpInfo(hookId);
+            ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingHookIdGetWithHttpInfo(hookId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get an outgoing webhook Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OutgoingWebhook > HooksOutgoingHookIdGetWithHttpInfo (string hookId)
+        public ApiResponse<OutgoingWebhook> HooksOutgoingHookIdGetWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdGet");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1512,12 +1512,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an outgoing webhook Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of OutgoingWebhook</returns>
         public async System.Threading.Tasks.Task<OutgoingWebhook> HooksOutgoingHookIdGetAsync (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingHookIdGetAsyncWithHttpInfo(hookId);
+            ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingHookIdGetAsyncWithHttpInfo(hookId);
              return localVarResponse.Data;
 
         }
@@ -1525,23 +1525,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an outgoing webhook Get an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook>> HooksOutgoingHookIdGetAsyncWithHttpInfo (string hookId)
+        public async System.Threading.Tasks.Task<ApiResponse<OutgoingWebhook>> HooksOutgoingHookIdGetAsyncWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdGet");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1571,41 +1571,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an outgoing webhook Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>OutgoingWebhook</returns>
         public OutgoingWebhook HooksOutgoingHookIdPut (string hookId, InlineObject52 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingHookIdPutWithHttpInfo(hookId, body);
+            ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingHookIdPutWithHttpInfo(hookId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update an outgoing webhook Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OutgoingWebhook > HooksOutgoingHookIdPutWithHttpInfo (string hookId, InlineObject52 body)
+        public ApiResponse<OutgoingWebhook> HooksOutgoingHookIdPutWithHttpInfo (string hookId, InlineObject52 body)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingHookIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1636,13 +1636,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an outgoing webhook Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of OutgoingWebhook</returns>
         public async System.Threading.Tasks.Task<OutgoingWebhook> HooksOutgoingHookIdPutAsync (string hookId, InlineObject52 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingHookIdPutAsyncWithHttpInfo(hookId, body);
+            ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingHookIdPutAsyncWithHttpInfo(hookId, body);
              return localVarResponse.Data;
 
         }
@@ -1650,29 +1650,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an outgoing webhook Update an outgoing webhook given the hook id. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">outgoing Webhook GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook>> HooksOutgoingHookIdPutAsyncWithHttpInfo (string hookId, InlineObject52 body)
+        public async System.Threading.Tasks.Task<ApiResponse<OutgoingWebhook>> HooksOutgoingHookIdPutAsyncWithHttpInfo (string hookId, InlineObject52 body)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingHookIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingHookIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1703,34 +1703,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the token for the outgoing webhook. Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK HooksOutgoingHookIdRegenTokenPost (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = HooksOutgoingHookIdRegenTokenPostWithHttpInfo(hookId);
+            ApiResponse<StatusOK> localVarResponse = HooksOutgoingHookIdRegenTokenPostWithHttpInfo(hookId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Regenerate the token for the outgoing webhook. Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > HooksOutgoingHookIdRegenTokenPostWithHttpInfo (string hookId)
+        public ApiResponse<StatusOK> HooksOutgoingHookIdRegenTokenPostWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdRegenTokenPost");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdRegenTokenPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1760,12 +1760,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the token for the outgoing webhook. Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> HooksOutgoingHookIdRegenTokenPostAsync (string hookId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await HooksOutgoingHookIdRegenTokenPostAsyncWithHttpInfo(hookId);
+            ApiResponse<StatusOK> localVarResponse = await HooksOutgoingHookIdRegenTokenPostAsyncWithHttpInfo(hookId);
              return localVarResponse.Data;
 
         }
@@ -1773,23 +1773,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the token for the outgoing webhook. Regenerate the token for the outgoing webhook. ##### Permissions &#x60;manage_webhooks&#x60; for system or &#x60;manage_webhooks&#x60; for the specific team or &#x60;manage_webhooks&#x60; for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="hookId">Outgoing webhook GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> HooksOutgoingHookIdRegenTokenPostAsyncWithHttpInfo (string hookId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> HooksOutgoingHookIdRegenTokenPostAsyncWithHttpInfo (string hookId)
         {
             // verify the required parameter 'hookId' is set
             if (hookId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdRegenTokenPost");
+                throw new ApiException(400, "Missing required parameter 'hookId' when calling WebhooksApi->HooksOutgoingHookIdRegenTokenPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1819,35 +1819,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an outgoing webhook Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>OutgoingWebhook</returns>
         public OutgoingWebhook HooksOutgoingPost (InlineObject51 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingPostWithHttpInfo(body);
+            ApiResponse<OutgoingWebhook> localVarResponse = HooksOutgoingPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create an outgoing webhook Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OutgoingWebhook</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OutgoingWebhook > HooksOutgoingPostWithHttpInfo (InlineObject51 body)
+        public ApiResponse<OutgoingWebhook> HooksOutgoingPostWithHttpInfo (InlineObject51 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1876,12 +1876,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an outgoing webhook Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of OutgoingWebhook</returns>
         public async System.Threading.Tasks.Task<OutgoingWebhook> HooksOutgoingPostAsync (InlineObject51 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingPostAsyncWithHttpInfo(body);
+            ApiResponse<OutgoingWebhook> localVarResponse = await HooksOutgoingPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1889,24 +1889,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create an outgoing webhook Create an outgoing webhook for a team. ##### Permissions &#x60;manage_webhooks&#x60; for the team the webhook is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OutgoingWebhook)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OutgoingWebhook>> HooksOutgoingPostAsyncWithHttpInfo (InlineObject51 body)
+        public async System.Threading.Tasks.Task<ApiResponse<OutgoingWebhook>> HooksOutgoingPostAsyncWithHttpInfo (InlineObject51 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebhooksApi->HooksOutgoingPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

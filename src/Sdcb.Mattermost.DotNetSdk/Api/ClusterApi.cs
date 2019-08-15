@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;ClusterInfo&gt;</returns>
         List<ClusterInfo> ClusterStatusGet ();
 
@@ -43,7 +43,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;ClusterInfo&gt;</returns>
         ApiResponse<List<ClusterInfo>> ClusterStatusGetWithHttpInfo ();
         #endregion Synchronous Operations
@@ -61,7 +61,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;ClusterInfo&gt;</returns>
         System.Threading.Tasks.Task<List<ClusterInfo>> ClusterStatusGetAsync ();
 
@@ -71,7 +71,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;ClusterInfo&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ClusterInfo>>> ClusterStatusGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
@@ -90,7 +90,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class ClusterApi : IClusterApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ClusterApi"/> class.
@@ -104,14 +104,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="ClusterApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ClusterApi(String basePath)
+        public ClusterApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -121,7 +121,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ClusterApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public ClusterApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -129,8 +129,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -141,7 +141,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public ClusterApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public ClusterApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -156,18 +156,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -176,12 +176,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -197,28 +197,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get cluster status Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;ClusterInfo&gt;</returns>
         public List<ClusterInfo> ClusterStatusGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ClusterInfo>> localVarResponse = ClusterStatusGetWithHttpInfo();
+            ApiResponse<List<ClusterInfo>> localVarResponse = ClusterStatusGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get cluster status Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;ClusterInfo&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<ClusterInfo> > ClusterStatusGetWithHttpInfo ()
+        public ApiResponse<List<ClusterInfo>> ClusterStatusGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -246,11 +246,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get cluster status Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;ClusterInfo&gt;</returns>
         public async System.Threading.Tasks.Task<List<ClusterInfo>> ClusterStatusGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ClusterInfo>> localVarResponse = await ClusterStatusGetAsyncWithHttpInfo();
+            ApiResponse<List<ClusterInfo>> localVarResponse = await ClusterStatusGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -258,18 +258,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get cluster status Get a set of information for each node in the cluster, useful for checking the status and health of each node. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;ClusterInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ClusterInfo>>> ClusterStatusGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<List<ClusterInfo>>> ClusterStatusGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

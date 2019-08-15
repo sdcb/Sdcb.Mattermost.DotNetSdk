@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -47,7 +47,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -60,7 +60,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>User</returns>
         User UsersEmailEmailGet (string email);
@@ -71,7 +71,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> UsersEmailEmailGetWithHttpInfo (string email);
@@ -81,7 +81,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersEmailVerifyPost (InlineObject13 body);
@@ -92,7 +92,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersEmailVerifyPostWithHttpInfo (InlineObject13 body);
@@ -102,7 +102,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersEmailVerifySendPost (InlineObject14 body);
@@ -113,7 +113,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersEmailVerifySendPostWithHttpInfo (InlineObject14 body);
@@ -123,7 +123,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -142,7 +142,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -160,7 +160,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>InlineResponse200</returns>
         InlineResponse200 UsersGroupChannelsPost (List<string> body);
@@ -171,7 +171,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
         ApiResponse<InlineResponse200> UsersGroupChannelsPostWithHttpInfo (List<string> body);
@@ -181,7 +181,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
@@ -193,7 +193,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
@@ -204,7 +204,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>InlineResponse2003</returns>
         InlineResponse2003 UsersLoginSwitchPost (InlineObject15 body);
@@ -215,7 +215,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
         ApiResponse<InlineResponse2003> UsersLoginSwitchPostWithHttpInfo (InlineObject15 body);
@@ -225,7 +225,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>InlineResponse2002</returns>
         InlineResponse2002 UsersMfaPost (InlineObject8 body);
@@ -236,7 +236,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
         ApiResponse<InlineResponse2002> UsersMfaPostWithHttpInfo (InlineObject8 body);
@@ -246,7 +246,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersPasswordResetPost (InlineObject6 body);
@@ -257,7 +257,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersPasswordResetPostWithHttpInfo (InlineObject6 body);
@@ -267,7 +267,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersPasswordResetSendPost (InlineObject10 body);
@@ -278,7 +278,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersPasswordResetSendPostWithHttpInfo (InlineObject10 body);
@@ -288,7 +288,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
@@ -301,7 +301,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
@@ -313,7 +313,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;User&gt;</returns>
         List<User> UsersSearchPost (InlineObject1 body);
@@ -324,7 +324,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
         ApiResponse<List<User>> UsersSearchPostWithHttpInfo (InlineObject1 body);
@@ -334,7 +334,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersSessionsDevicePut (InlineObject12 body);
@@ -345,7 +345,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersSessionsDevicePutWithHttpInfo (InlineObject12 body);
@@ -355,7 +355,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>UsersStats</returns>
         UsersStats UsersStatsGet ();
 
@@ -365,7 +365,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UsersStats</returns>
         ApiResponse<UsersStats> UsersStatsGetWithHttpInfo ();
         /// <summary>
@@ -374,7 +374,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersTokensDisablePost (InlineObject18 tokenId);
@@ -385,7 +385,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersTokensDisablePostWithHttpInfo (InlineObject18 tokenId);
@@ -395,7 +395,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersTokensEnablePost (InlineObject19 tokenId);
@@ -406,7 +406,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersTokensEnablePostWithHttpInfo (InlineObject19 tokenId);
@@ -416,7 +416,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;UserAccessTokenSanitized&gt;</returns>
@@ -428,7 +428,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;UserAccessTokenSanitized&gt;</returns>
@@ -439,7 +439,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         StatusOK UsersTokensRevokePost (InlineObject17 tokenId);
@@ -450,7 +450,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersTokensRevokePostWithHttpInfo (InlineObject17 tokenId);
@@ -460,7 +460,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;UserAccessTokenSanitized&gt;</returns>
         List<UserAccessTokenSanitized> UsersTokensSearchPost (InlineObject20 body);
@@ -471,7 +471,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;UserAccessTokenSanitized&gt;</returns>
         ApiResponse<List<UserAccessTokenSanitized>> UsersTokensSearchPostWithHttpInfo (InlineObject20 body);
@@ -481,7 +481,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>UserAccessTokenSanitized</returns>
         UserAccessTokenSanitized UsersTokensTokenIdGet (string tokenId);
@@ -492,7 +492,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>ApiResponse of UserAccessTokenSanitized</returns>
         ApiResponse<UserAccessTokenSanitized> UsersTokensTokenIdGetWithHttpInfo (string tokenId);
@@ -502,7 +502,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -514,7 +514,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -525,7 +525,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Audit&gt;</returns>
         List<Audit> UsersUserIdAuditsGet (string userId);
@@ -536,7 +536,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Audit&gt;</returns>
         ApiResponse<List<Audit>> UsersUserIdAuditsGetWithHttpInfo (string userId);
@@ -546,7 +546,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>UserAuthData</returns>
@@ -558,7 +558,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of UserAuthData</returns>
@@ -569,7 +569,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK UsersUserIdDelete (string userId);
@@ -580,7 +580,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersUserIdDeleteWithHttpInfo (string userId);
@@ -590,7 +590,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>User</returns>
         User UsersUserIdGet (string userId);
@@ -601,7 +601,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> UsersUserIdGetWithHttpInfo (string userId);
@@ -611,7 +611,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns></returns>
         void UsersUserIdImageDefaultGet (string userId);
@@ -622,17 +622,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UsersUserIdImageDefaultGetWithHttpInfo (string userId);
+        ApiResponse<object> UsersUserIdImageDefaultGetWithHttpInfo (string userId);
         /// <summary>
         /// Delete user&#39;s profile image
         /// </summary>
         /// <remarks>
         /// Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK UsersUserIdImageDelete (string userId);
@@ -643,7 +643,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersUserIdImageDeleteWithHttpInfo (string userId);
@@ -653,7 +653,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns></returns>
         void UsersUserIdImageGet (string userId);
@@ -664,17 +664,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UsersUserIdImageGetWithHttpInfo (string userId);
+        ApiResponse<object> UsersUserIdImageGetWithHttpInfo (string userId);
         /// <summary>
         /// Set user&#39;s profile image
         /// </summary>
         /// <remarks>
         /// Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>StatusOK</returns>
@@ -686,7 +686,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -697,7 +697,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>InlineResponse2001</returns>
         InlineResponse2001 UsersUserIdMfaGeneratePost (string userId);
@@ -708,7 +708,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
         ApiResponse<InlineResponse2001> UsersUserIdMfaGeneratePostWithHttpInfo (string userId);
@@ -718,7 +718,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -730,7 +730,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -741,7 +741,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -753,7 +753,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -764,7 +764,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>User</returns>
@@ -776,7 +776,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of User</returns>
@@ -787,7 +787,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>User</returns>
@@ -799,7 +799,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of User</returns>
@@ -810,7 +810,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>StatusOK</returns>
@@ -822,7 +822,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -833,7 +833,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Session&gt;</returns>
         List<Session> UsersUserIdSessionsGet (string userId);
@@ -844,7 +844,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Session&gt;</returns>
         ApiResponse<List<Session>> UsersUserIdSessionsGetWithHttpInfo (string userId);
@@ -854,7 +854,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK UsersUserIdSessionsRevokeAllPost (string userId);
@@ -865,7 +865,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> UsersUserIdSessionsRevokeAllPostWithHttpInfo (string userId);
@@ -875,7 +875,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -887,7 +887,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -898,7 +898,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>UserTermsOfService</returns>
         UserTermsOfService UsersUserIdTermsOfServiceGet (string userId);
@@ -909,7 +909,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of UserTermsOfService</returns>
         ApiResponse<UserTermsOfService> UsersUserIdTermsOfServiceGetWithHttpInfo (string userId);
@@ -919,7 +919,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -931,7 +931,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -942,7 +942,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
@@ -955,7 +955,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
@@ -967,7 +967,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>UserAccessToken</returns>
@@ -979,7 +979,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>ApiResponse of UserAccessToken</returns>
@@ -990,7 +990,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>User</returns>
         User UsersUsernameUsernameGet (string username);
@@ -1001,7 +1001,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> UsersUsernameUsernameGetWithHttpInfo (string username);
@@ -1011,7 +1011,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>List&lt;User&gt;</returns>
         List<User> UsersUsernamesPost (List<string> body);
@@ -1022,7 +1022,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
         ApiResponse<List<User>> UsersUsernamesPostWithHttpInfo (List<string> body);
@@ -1041,7 +1041,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -1055,7 +1055,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -1068,7 +1068,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> UsersEmailEmailGetAsync (string email);
@@ -1079,7 +1079,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> UsersEmailEmailGetAsyncWithHttpInfo (string email);
@@ -1089,7 +1089,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersEmailVerifyPostAsync (InlineObject13 body);
@@ -1100,7 +1100,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersEmailVerifyPostAsyncWithHttpInfo (InlineObject13 body);
@@ -1110,7 +1110,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersEmailVerifySendPostAsync (InlineObject14 body);
@@ -1121,7 +1121,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersEmailVerifySendPostAsyncWithHttpInfo (InlineObject14 body);
@@ -1131,7 +1131,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -1150,7 +1150,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -1168,7 +1168,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>Task of InlineResponse200</returns>
         System.Threading.Tasks.Task<InlineResponse200> UsersGroupChannelsPostAsync (List<string> body);
@@ -1179,7 +1179,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> UsersGroupChannelsPostAsyncWithHttpInfo (List<string> body);
@@ -1189,7 +1189,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
@@ -1201,7 +1201,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
@@ -1212,7 +1212,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2003</returns>
         System.Threading.Tasks.Task<InlineResponse2003> UsersLoginSwitchPostAsync (InlineObject15 body);
@@ -1223,7 +1223,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> UsersLoginSwitchPostAsyncWithHttpInfo (InlineObject15 body);
@@ -1233,7 +1233,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2002</returns>
         System.Threading.Tasks.Task<InlineResponse2002> UsersMfaPostAsync (InlineObject8 body);
@@ -1244,7 +1244,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> UsersMfaPostAsyncWithHttpInfo (InlineObject8 body);
@@ -1254,7 +1254,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersPasswordResetPostAsync (InlineObject6 body);
@@ -1265,7 +1265,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersPasswordResetPostAsyncWithHttpInfo (InlineObject6 body);
@@ -1275,7 +1275,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersPasswordResetSendPostAsync (InlineObject10 body);
@@ -1286,7 +1286,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersPasswordResetSendPostAsyncWithHttpInfo (InlineObject10 body);
@@ -1296,7 +1296,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
@@ -1309,7 +1309,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
@@ -1321,7 +1321,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;User&gt;</returns>
         System.Threading.Tasks.Task<List<User>> UsersSearchPostAsync (InlineObject1 body);
@@ -1332,7 +1332,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersSearchPostAsyncWithHttpInfo (InlineObject1 body);
@@ -1342,7 +1342,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersSessionsDevicePutAsync (InlineObject12 body);
@@ -1353,7 +1353,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersSessionsDevicePutAsyncWithHttpInfo (InlineObject12 body);
@@ -1363,7 +1363,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UsersStats</returns>
         System.Threading.Tasks.Task<UsersStats> UsersStatsGetAsync ();
 
@@ -1373,7 +1373,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UsersStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersStats>> UsersStatsGetAsyncWithHttpInfo ();
         /// <summary>
@@ -1382,7 +1382,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersTokensDisablePostAsync (InlineObject18 tokenId);
@@ -1393,7 +1393,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensDisablePostAsyncWithHttpInfo (InlineObject18 tokenId);
@@ -1403,7 +1403,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersTokensEnablePostAsync (InlineObject19 tokenId);
@@ -1414,7 +1414,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensEnablePostAsyncWithHttpInfo (InlineObject19 tokenId);
@@ -1424,7 +1424,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;UserAccessTokenSanitized&gt;</returns>
@@ -1436,7 +1436,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;UserAccessTokenSanitized&gt;)</returns>
@@ -1447,7 +1447,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersTokensRevokePostAsync (InlineObject17 tokenId);
@@ -1458,7 +1458,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensRevokePostAsyncWithHttpInfo (InlineObject17 tokenId);
@@ -1468,7 +1468,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;UserAccessTokenSanitized&gt;</returns>
         System.Threading.Tasks.Task<List<UserAccessTokenSanitized>> UsersTokensSearchPostAsync (InlineObject20 body);
@@ -1479,7 +1479,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;UserAccessTokenSanitized&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserAccessTokenSanitized>>> UsersTokensSearchPostAsyncWithHttpInfo (InlineObject20 body);
@@ -1489,7 +1489,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>Task of UserAccessTokenSanitized</returns>
         System.Threading.Tasks.Task<UserAccessTokenSanitized> UsersTokensTokenIdGetAsync (string tokenId);
@@ -1500,7 +1500,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>Task of ApiResponse (UserAccessTokenSanitized)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserAccessTokenSanitized>> UsersTokensTokenIdGetAsyncWithHttpInfo (string tokenId);
@@ -1510,7 +1510,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1522,7 +1522,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1533,7 +1533,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Audit&gt;</returns>
         System.Threading.Tasks.Task<List<Audit>> UsersUserIdAuditsGetAsync (string userId);
@@ -1544,7 +1544,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Audit&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Audit>>> UsersUserIdAuditsGetAsyncWithHttpInfo (string userId);
@@ -1554,7 +1554,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of UserAuthData</returns>
@@ -1566,7 +1566,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (UserAuthData)</returns>
@@ -1577,7 +1577,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersUserIdDeleteAsync (string userId);
@@ -1588,7 +1588,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdDeleteAsyncWithHttpInfo (string userId);
@@ -1598,7 +1598,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> UsersUserIdGetAsync (string userId);
@@ -1609,7 +1609,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> UsersUserIdGetAsyncWithHttpInfo (string userId);
@@ -1619,7 +1619,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UsersUserIdImageDefaultGetAsync (string userId);
@@ -1630,17 +1630,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UsersUserIdImageDefaultGetAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<object>> UsersUserIdImageDefaultGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Delete user&#39;s profile image
         /// </summary>
         /// <remarks>
         /// Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersUserIdImageDeleteAsync (string userId);
@@ -1651,7 +1651,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdImageDeleteAsyncWithHttpInfo (string userId);
@@ -1661,7 +1661,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UsersUserIdImageGetAsync (string userId);
@@ -1672,17 +1672,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UsersUserIdImageGetAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<object>> UsersUserIdImageGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Set user&#39;s profile image
         /// </summary>
         /// <remarks>
         /// Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
@@ -1694,7 +1694,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1705,7 +1705,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of InlineResponse2001</returns>
         System.Threading.Tasks.Task<InlineResponse2001> UsersUserIdMfaGeneratePostAsync (string userId);
@@ -1716,7 +1716,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UsersUserIdMfaGeneratePostAsyncWithHttpInfo (string userId);
@@ -1726,7 +1726,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1738,7 +1738,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1749,7 +1749,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1761,7 +1761,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1772,7 +1772,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of User</returns>
@@ -1784,7 +1784,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (User)</returns>
@@ -1795,7 +1795,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of User</returns>
@@ -1807,7 +1807,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (User)</returns>
@@ -1818,7 +1818,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1830,7 +1830,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1841,7 +1841,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Session&gt;</returns>
         System.Threading.Tasks.Task<List<Session>> UsersUserIdSessionsGetAsync (string userId);
@@ -1852,7 +1852,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Session&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Session>>> UsersUserIdSessionsGetAsyncWithHttpInfo (string userId);
@@ -1862,7 +1862,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> UsersUserIdSessionsRevokeAllPostAsync (string userId);
@@ -1873,7 +1873,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdSessionsRevokeAllPostAsyncWithHttpInfo (string userId);
@@ -1883,7 +1883,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1895,7 +1895,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1906,7 +1906,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of UserTermsOfService</returns>
         System.Threading.Tasks.Task<UserTermsOfService> UsersUserIdTermsOfServiceGetAsync (string userId);
@@ -1917,7 +1917,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (UserTermsOfService)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId);
@@ -1927,7 +1927,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1939,7 +1939,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1950,7 +1950,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
@@ -1963,7 +1963,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
@@ -1975,7 +1975,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>Task of UserAccessToken</returns>
@@ -1987,7 +1987,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>Task of ApiResponse (UserAccessToken)</returns>
@@ -1998,7 +1998,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> UsersUsernameUsernameGetAsync (string username);
@@ -2009,7 +2009,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> UsersUsernameUsernameGetAsyncWithHttpInfo (string username);
@@ -2019,7 +2019,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         System.Threading.Tasks.Task<List<User>> UsersUsernamesPostAsync (List<string> body);
@@ -2030,7 +2030,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersUsernamesPostAsyncWithHttpInfo (List<string> body);
@@ -2050,7 +2050,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class UsersApi : IUsersApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersApi"/> class.
@@ -2064,14 +2064,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="UsersApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsersApi(String basePath)
+        public UsersApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -2081,7 +2081,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UsersApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public UsersApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -2089,8 +2089,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -2101,7 +2101,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public UsersApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public UsersApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -2116,18 +2116,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -2136,12 +2136,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -2157,7 +2157,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete users Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -2165,32 +2165,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>UserAutocomplete</returns>
         public UserAutocomplete UsersAutocompleteGet (string name, string teamId = null, string channelId = null, int? limit = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAutocomplete> localVarResponse = UsersAutocompleteGetWithHttpInfo(name, teamId, channelId, limit);
+            ApiResponse<UserAutocomplete> localVarResponse = UsersAutocompleteGetWithHttpInfo(name, teamId, channelId, limit);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Autocomplete users Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
         /// <param name="limit">The maximum number of users to return in each subresult  __Available as of server version 5.6. Defaults to &#x60;100&#x60; if not provided or on an earlier server version.__  (optional, default to 100)</param>
         /// <returns>ApiResponse of UserAutocomplete</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserAutocomplete > UsersAutocompleteGetWithHttpInfo (string name, string teamId = null, string channelId = null, int? limit = null)
+        public ApiResponse<UserAutocomplete> UsersAutocompleteGetWithHttpInfo (string name, string teamId = null, string channelId = null, int? limit = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->UsersAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling UsersApi->UsersAutocompleteGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2258,7 +2258,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete users Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
@@ -2266,7 +2266,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of UserAutocomplete</returns>
         public async System.Threading.Tasks.Task<UserAutocomplete> UsersAutocompleteGetAsync (string name, string teamId = null, string channelId = null, int? limit = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAutocomplete> localVarResponse = await UsersAutocompleteGetAsyncWithHttpInfo(name, teamId, channelId, limit);
+            ApiResponse<UserAutocomplete> localVarResponse = await UsersAutocompleteGetAsyncWithHttpInfo(name, teamId, channelId, limit);
              return localVarResponse.Data;
 
         }
@@ -2274,26 +2274,26 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete users Get a list of users for the purpose of autocompleting based on the provided search term. Specify a combination of &#x60;team_id&#x60; and &#x60;channel_id&#x60; to filter results further. ##### Permissions Requires an active session and &#x60;view_team&#x60; and &#x60;read_channel&#x60; on any teams or channels used to filter the results further. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Username, nickname first name or last name</param>
         /// <param name="teamId">Team ID (optional)</param>
         /// <param name="channelId">Channel ID (optional)</param>
         /// <param name="limit">The maximum number of users to return in each subresult  __Available as of server version 5.6. Defaults to &#x60;100&#x60; if not provided or on an earlier server version.__  (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (UserAutocomplete)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAutocomplete>> UsersAutocompleteGetAsyncWithHttpInfo (string name, string teamId = null, string channelId = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAutocomplete>> UsersAutocompleteGetAsyncWithHttpInfo (string name, string teamId = null, string channelId = null, int? limit = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->UsersAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling UsersApi->UsersAutocompleteGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2361,34 +2361,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by email Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>User</returns>
         public User UsersEmailEmailGet (string email)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersEmailEmailGetWithHttpInfo(email);
+            ApiResponse<User> localVarResponse = UsersEmailEmailGetWithHttpInfo(email);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a user by email Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersEmailEmailGetWithHttpInfo (string email)
+        public ApiResponse<User> UsersEmailEmailGetWithHttpInfo (string email)
         {
             // verify the required parameter 'email' is set
             if (email == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'email' when calling UsersApi->UsersEmailEmailGet");
+                throw new ApiException(400, "Missing required parameter 'email' when calling UsersApi->UsersEmailEmailGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2418,12 +2418,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by email Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersEmailEmailGetAsync (string email)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersEmailEmailGetAsyncWithHttpInfo(email);
+            ApiResponse<User> localVarResponse = await UsersEmailEmailGetAsyncWithHttpInfo(email);
              return localVarResponse.Data;
 
         }
@@ -2431,23 +2431,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by email Get a user object by providing a user email. Sensitive information will be sanitized out. ##### Permissions Requires an active session and for the current session to be able to view another user&#39;s email based on the server&#39;s privacy settings. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">User Email</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersEmailEmailGetAsyncWithHttpInfo (string email)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersEmailEmailGetAsyncWithHttpInfo (string email)
         {
             // verify the required parameter 'email' is set
             if (email == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'email' when calling UsersApi->UsersEmailEmailGet");
+                throw new ApiException(400, "Missing required parameter 'email' when calling UsersApi->UsersEmailEmailGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2477,35 +2477,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Verify user email Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersEmailVerifyPost (InlineObject13 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersEmailVerifyPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = UsersEmailVerifyPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Verify user email Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersEmailVerifyPostWithHttpInfo (InlineObject13 body)
+        public ApiResponse<StatusOK> UsersEmailVerifyPostWithHttpInfo (InlineObject13 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifyPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifyPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2534,12 +2534,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Verify user email Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersEmailVerifyPostAsync (InlineObject13 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersEmailVerifyPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await UsersEmailVerifyPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2547,24 +2547,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Verify user email Verify the email used by a user to sign-up their account with. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersEmailVerifyPostAsyncWithHttpInfo (InlineObject13 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersEmailVerifyPostAsyncWithHttpInfo (InlineObject13 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifyPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifyPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2593,35 +2593,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send verification email Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersEmailVerifySendPost (InlineObject14 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersEmailVerifySendPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = UsersEmailVerifySendPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Send verification email Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersEmailVerifySendPostWithHttpInfo (InlineObject14 body)
+        public ApiResponse<StatusOK> UsersEmailVerifySendPostWithHttpInfo (InlineObject14 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifySendPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifySendPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2650,12 +2650,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send verification email Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersEmailVerifySendPostAsync (InlineObject14 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersEmailVerifySendPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await UsersEmailVerifySendPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2663,24 +2663,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send verification email Send an email with a verification link to a user that has an email matching the one in the request body. This endpoint will return success even if the email does not match any users on the system. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersEmailVerifySendPostAsyncWithHttpInfo (InlineObject14 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersEmailVerifySendPostAsyncWithHttpInfo (InlineObject14 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifySendPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersEmailVerifySendPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2709,7 +2709,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -2722,14 +2722,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>List&lt;User&gt;</returns>
         public List<User> UsersGet (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = UsersGetWithHttpInfo(page, perPage, inTeam, notInTeam, inChannel, notInChannel, groupConstrained, withoutTeam, sort);
+            ApiResponse<List<User>> localVarResponse = UsersGetWithHttpInfo(page, perPage, inTeam, notInTeam, inChannel, notInChannel, groupConstrained, withoutTeam, sort);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get users Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -2740,15 +2740,15 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="withoutTeam">Whether or not to list users that are not on any team. This option takes precendence over &#x60;in_team&#x60;, &#x60;in_channel&#x60;, and &#x60;not_in_channel&#x60;. (optional)</param>
         /// <param name="sort">Sort is only available in conjunction with certain options below. The paging parameter is also always available.  ##### &#x60;in_team&#x60; Can be \&quot;\&quot;, \&quot;last_activity_at\&quot; or \&quot;create_at\&quot;. When left blank, sorting is done by username. __Minimum server version__: 4.0 ##### &#x60;in_channel&#x60; Can be \&quot;\&quot;, \&quot;status\&quot;. When left blank, sorting is done by username. &#x60;status&#x60; will sort by User&#39;s current status (Online, Away, DND, Offline), then by Username. __Minimum server version__: 4.7  (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<User> > UsersGetWithHttpInfo (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
+        public ApiResponse<List<User>> UsersGetWithHttpInfo (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2866,7 +2866,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -2879,7 +2879,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of List&lt;User&gt;</returns>
         public async System.Threading.Tasks.Task<List<User>> UsersGetAsync (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = await UsersGetAsyncWithHttpInfo(page, perPage, inTeam, notInTeam, inChannel, notInChannel, groupConstrained, withoutTeam, sort);
+            ApiResponse<List<User>> localVarResponse = await UsersGetAsyncWithHttpInfo(page, perPage, inTeam, notInTeam, inChannel, notInChannel, groupConstrained, withoutTeam, sort);
              return localVarResponse.Data;
 
         }
@@ -2887,7 +2887,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users Get a page of a list of users. Based on query string parameters, select users from a team, channel, or select users not in a specific channel.  Since server version 4.0, some basic sorting is available using the &#x60;sort&#x60; query parameter. Sorting is currently only supported when selecting users on a team. ##### Permissions Requires an active session and (if specified) membership to the channel or team being selected from. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="inTeam">The ID of the team to get users for. (optional)</param>
@@ -2898,16 +2898,16 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="withoutTeam">Whether or not to list users that are not on any team. This option takes precendence over &#x60;in_team&#x60;, &#x60;in_channel&#x60;, and &#x60;not_in_channel&#x60;. (optional)</param>
         /// <param name="sort">Sort is only available in conjunction with certain options below. The paging parameter is also always available.  ##### &#x60;in_team&#x60; Can be \&quot;\&quot;, \&quot;last_activity_at\&quot; or \&quot;create_at\&quot;. When left blank, sorting is done by username. __Minimum server version__: 4.0 ##### &#x60;in_channel&#x60; Can be \&quot;\&quot;, \&quot;status\&quot;. When left blank, sorting is done by username. &#x60;status&#x60; will sort by User&#39;s current status (Online, Away, DND, Offline), then by Username. __Minimum server version__: 4.7  (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>>> UsersGetAsyncWithHttpInfo (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersGetAsyncWithHttpInfo (string page = null, string perPage = null, string inTeam = null, string notInTeam = null, string inChannel = null, string notInChannel = null, bool? groupConstrained = null, bool? withoutTeam = null, string sort = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3025,35 +3025,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by group channels ids Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>InlineResponse200</returns>
         public InlineResponse200 UsersGroupChannelsPost (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse200> localVarResponse = UsersGroupChannelsPostWithHttpInfo(body);
+            ApiResponse<InlineResponse200> localVarResponse = UsersGroupChannelsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get users by group channels ids Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse200 > UsersGroupChannelsPostWithHttpInfo (List<string> body)
+        public ApiResponse<InlineResponse200> UsersGroupChannelsPostWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersGroupChannelsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersGroupChannelsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3082,12 +3082,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by group channels ids Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>Task of InlineResponse200</returns>
         public async System.Threading.Tasks.Task<InlineResponse200> UsersGroupChannelsPostAsync (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse200> localVarResponse = await UsersGroupChannelsPostAsyncWithHttpInfo(body);
+            ApiResponse<InlineResponse200> localVarResponse = await UsersGroupChannelsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3095,24 +3095,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by group channels ids Get an object containing a key per group channel id in the query and its value as a list of users members of that group channel.  The user must be a member of the group ids in the query, or they will be omitted from the response. ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of group channel ids</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse200>> UsersGroupChannelsPostAsyncWithHttpInfo (List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> UsersGroupChannelsPostAsyncWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersGroupChannelsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersGroupChannelsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3141,37 +3141,37 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by ids Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>List&lt;User&gt;</returns>
         public List<User> UsersIdsPost (List<string> body, int? since = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = UsersIdsPostWithHttpInfo(body, since);
+            ApiResponse<List<User>> localVarResponse = UsersIdsPostWithHttpInfo(body, since);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get users by ids Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<User> > UsersIdsPostWithHttpInfo (List<string> body, int? since = null)
+        public ApiResponse<List<User>> UsersIdsPostWithHttpInfo (List<string> body, int? since = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersIdsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3210,13 +3210,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by ids Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         public async System.Threading.Tasks.Task<List<User>> UsersIdsPostAsync (List<string> body, int? since = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = await UsersIdsPostAsyncWithHttpInfo(body, since);
+            ApiResponse<List<User>> localVarResponse = await UsersIdsPostAsyncWithHttpInfo(body, since);
              return localVarResponse.Data;
 
         }
@@ -3224,25 +3224,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by ids Get a list of users based on a provided list of user ids. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of user ids</param>
         /// <param name="since">Only return users that have been modified since the given Unix timestamp (in milliseconds).  __Minimum server version__: 5.14  (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>>> UsersIdsPostAsyncWithHttpInfo (List<string> body, int? since = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersIdsPostAsyncWithHttpInfo (List<string> body, int? since = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersIdsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3281,35 +3281,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Switch login method Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>InlineResponse2003</returns>
         public InlineResponse2003 UsersLoginSwitchPost (InlineObject15 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2003> localVarResponse = UsersLoginSwitchPostWithHttpInfo(body);
+            ApiResponse<InlineResponse2003> localVarResponse = UsersLoginSwitchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Switch login method Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2003 > UsersLoginSwitchPostWithHttpInfo (InlineObject15 body)
+        public ApiResponse<InlineResponse2003> UsersLoginSwitchPostWithHttpInfo (InlineObject15 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersLoginSwitchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersLoginSwitchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3338,12 +3338,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Switch login method Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2003</returns>
         public async System.Threading.Tasks.Task<InlineResponse2003> UsersLoginSwitchPostAsync (InlineObject15 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2003> localVarResponse = await UsersLoginSwitchPostAsyncWithHttpInfo(body);
+            ApiResponse<InlineResponse2003> localVarResponse = await UsersLoginSwitchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3351,24 +3351,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Switch login method Switch a user&#39;s login method from using email to OAuth2/SAML/LDAP or back to email. When switching to OAuth2/SAML, account switching is not complete until the user follows the returned link and completes any steps on the OAuth2/SAML service provider.  To switch from email to OAuth2/SAML, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;password&#x60;.  To switch from OAuth2/SAML to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60; and &#x60;new_password&#x60;.  To switch from email to LDAP/AD, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;email&#x60;, &#x60;password&#x60;, &#x60;ldap_ip&#x60; and &#x60;new_password&#x60; (this is the user&#39;s LDAP password).  To switch from LDAP/AD to email, specify &#x60;current_service&#x60;, &#x60;new_service&#x60;, &#x60;ldap_ip&#x60;, &#x60;password&#x60; (this is the user&#39;s LDAP password), &#x60;email&#x60;  and &#x60;new_password&#x60;.  Additionally, specify &#x60;mfa_code&#x60; when trying to switch an account on LDAP/AD or email that has MFA activated.  ##### Permissions No current authentication required except when switching from OAuth2/SAML to email. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2003>> UsersLoginSwitchPostAsyncWithHttpInfo (InlineObject15 body)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> UsersLoginSwitchPostAsyncWithHttpInfo (InlineObject15 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersLoginSwitchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersLoginSwitchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3397,35 +3397,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check MFA Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>InlineResponse2002</returns>
         public InlineResponse2002 UsersMfaPost (InlineObject8 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2002> localVarResponse = UsersMfaPostWithHttpInfo(body);
+            ApiResponse<InlineResponse2002> localVarResponse = UsersMfaPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Check MFA Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2002 > UsersMfaPostWithHttpInfo (InlineObject8 body)
+        public ApiResponse<InlineResponse2002> UsersMfaPostWithHttpInfo (InlineObject8 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersMfaPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersMfaPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3454,12 +3454,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check MFA Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2002</returns>
         public async System.Threading.Tasks.Task<InlineResponse2002> UsersMfaPostAsync (InlineObject8 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2002> localVarResponse = await UsersMfaPostAsyncWithHttpInfo(body);
+            ApiResponse<InlineResponse2002> localVarResponse = await UsersMfaPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3467,24 +3467,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check MFA Check if a user has multi-factor authentication active on their account by providing a login id. Used to check whether an MFA code needs to be provided when logging in. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2002>> UsersMfaPostAsyncWithHttpInfo (InlineObject8 body)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> UsersMfaPostAsyncWithHttpInfo (InlineObject8 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersMfaPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersMfaPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3513,35 +3513,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reset password Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersPasswordResetPost (InlineObject6 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersPasswordResetPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = UsersPasswordResetPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Reset password Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersPasswordResetPostWithHttpInfo (InlineObject6 body)
+        public ApiResponse<StatusOK> UsersPasswordResetPostWithHttpInfo (InlineObject6 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3570,12 +3570,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reset password Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersPasswordResetPostAsync (InlineObject6 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersPasswordResetPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await UsersPasswordResetPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3583,24 +3583,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reset password Update the password for a user using a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersPasswordResetPostAsyncWithHttpInfo (InlineObject6 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersPasswordResetPostAsyncWithHttpInfo (InlineObject6 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3629,35 +3629,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send password reset email Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersPasswordResetSendPost (InlineObject10 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersPasswordResetSendPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = UsersPasswordResetSendPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Send password reset email Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersPasswordResetSendPostWithHttpInfo (InlineObject10 body)
+        public ApiResponse<StatusOK> UsersPasswordResetSendPostWithHttpInfo (InlineObject10 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetSendPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetSendPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3686,12 +3686,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send password reset email Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersPasswordResetSendPostAsync (InlineObject10 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersPasswordResetSendPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await UsersPasswordResetSendPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3699,24 +3699,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send password reset email Send an email containing a link for resetting the user&#39;s password. The link will contain a one-use, timed recovery code tied to the user&#39;s account. Only works for non-SSO users. ##### Permissions No permissions required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersPasswordResetSendPostAsyncWithHttpInfo (InlineObject10 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersPasswordResetSendPostAsyncWithHttpInfo (InlineObject10 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetSendPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPasswordResetSendPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3745,39 +3745,39 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
         /// <returns>User</returns>
         public User UsersPost (InlineObject body, string t = null, string iid = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersPostWithHttpInfo(body, t, iid);
+            ApiResponse<User> localVarResponse = UsersPostWithHttpInfo(body, t, iid);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a user Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersPostWithHttpInfo (InlineObject body, string t = null, string iid = null)
+        public ApiResponse<User> UsersPostWithHttpInfo (InlineObject body, string t = null, string iid = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3826,14 +3826,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersPostAsync (InlineObject body, string t = null, string iid = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersPostAsyncWithHttpInfo(body, t, iid);
+            ApiResponse<User> localVarResponse = await UsersPostAsyncWithHttpInfo(body, t, iid);
              return localVarResponse.Data;
 
         }
@@ -3841,26 +3841,26 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user Create a new user on the system. Password is required for email login. For other authentication types such as LDAP or SAML, auth_data and auth_service fields are required. ##### Permissions No permission required but user creation can be controlled by server configuration. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="t">Token id from an email invitation (optional)</param>
         /// <param name="iid">Token id from an invitation link (optional)</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersPostAsyncWithHttpInfo (InlineObject body, string t = null, string iid = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersPostAsyncWithHttpInfo (InlineObject body, string t = null, string iid = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3909,35 +3909,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search users Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;User&gt;</returns>
         public List<User> UsersSearchPost (InlineObject1 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = UsersSearchPostWithHttpInfo(body);
+            ApiResponse<List<User>> localVarResponse = UsersSearchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search users Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<User> > UsersSearchPostWithHttpInfo (InlineObject1 body)
+        public ApiResponse<List<User>> UsersSearchPostWithHttpInfo (InlineObject1 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3966,12 +3966,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search users Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;User&gt;</returns>
         public async System.Threading.Tasks.Task<List<User>> UsersSearchPostAsync (InlineObject1 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = await UsersSearchPostAsyncWithHttpInfo(body);
+            ApiResponse<List<User>> localVarResponse = await UsersSearchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3979,24 +3979,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search users Get a list of users based on search criteria provided in the request body. Searches are typically done against username, full name, nickname and email unless otherwise configured by the server. ##### Permissions Requires an active session and &#x60;read_channel&#x60; and/or &#x60;view_team&#x60; permissions for any channels or teams specified in the request body. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>>> UsersSearchPostAsyncWithHttpInfo (InlineObject1 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersSearchPostAsyncWithHttpInfo (InlineObject1 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4025,35 +4025,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Attach mobile device Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersSessionsDevicePut (InlineObject12 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersSessionsDevicePutWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = UsersSessionsDevicePutWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Attach mobile device Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersSessionsDevicePutWithHttpInfo (InlineObject12 body)
+        public ApiResponse<StatusOK> UsersSessionsDevicePutWithHttpInfo (InlineObject12 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSessionsDevicePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSessionsDevicePut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4082,12 +4082,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Attach mobile device Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersSessionsDevicePutAsync (InlineObject12 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersSessionsDevicePutAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await UsersSessionsDevicePutAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4095,24 +4095,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Attach mobile device Attach a mobile device id to the currently logged in session. This will enable push notifications for a user, if configured by the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersSessionsDevicePutAsyncWithHttpInfo (InlineObject12 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersSessionsDevicePutAsyncWithHttpInfo (InlineObject12 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSessionsDevicePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersSessionsDevicePut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4141,28 +4141,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get total count of users in the system Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>UsersStats</returns>
         public UsersStats UsersStatsGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UsersStats> localVarResponse = UsersStatsGetWithHttpInfo();
+            ApiResponse<UsersStats> localVarResponse = UsersStatsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get total count of users in the system Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UsersStats</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UsersStats > UsersStatsGetWithHttpInfo ()
+        public ApiResponse<UsersStats> UsersStatsGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4190,11 +4190,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get total count of users in the system Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UsersStats</returns>
         public async System.Threading.Tasks.Task<UsersStats> UsersStatsGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UsersStats> localVarResponse = await UsersStatsGetAsyncWithHttpInfo();
+            ApiResponse<UsersStats> localVarResponse = await UsersStatsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -4202,18 +4202,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get total count of users in the system Get a total count of users in the system. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UsersStats)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UsersStats>> UsersStatsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<UsersStats>> UsersStatsGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4241,35 +4241,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable personal access token Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersTokensDisablePost (InlineObject18 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersTokensDisablePostWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = UsersTokensDisablePostWithHttpInfo(tokenId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Disable personal access token Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersTokensDisablePostWithHttpInfo (InlineObject18 tokenId)
+        public ApiResponse<StatusOK> UsersTokensDisablePostWithHttpInfo (InlineObject18 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensDisablePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensDisablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4298,12 +4298,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable personal access token Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersTokensDisablePostAsync (InlineObject18 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersTokensDisablePostAsyncWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = await UsersTokensDisablePostAsyncWithHttpInfo(tokenId);
              return localVarResponse.Data;
 
         }
@@ -4311,24 +4311,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable personal access token Disable a personal access token and delete any sessions using the token. The token can be re-enabled using &#x60;/users/tokens/enable&#x60;.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersTokensDisablePostAsyncWithHttpInfo (InlineObject18 tokenId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensDisablePostAsyncWithHttpInfo (InlineObject18 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensDisablePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensDisablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4357,35 +4357,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable personal access token Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersTokensEnablePost (InlineObject19 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersTokensEnablePostWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = UsersTokensEnablePostWithHttpInfo(tokenId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Enable personal access token Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersTokensEnablePostWithHttpInfo (InlineObject19 tokenId)
+        public ApiResponse<StatusOK> UsersTokensEnablePostWithHttpInfo (InlineObject19 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensEnablePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensEnablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4414,12 +4414,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable personal access token Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersTokensEnablePostAsync (InlineObject19 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersTokensEnablePostAsyncWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = await UsersTokensEnablePostAsyncWithHttpInfo(tokenId);
              return localVarResponse.Data;
 
         }
@@ -4427,24 +4427,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable personal access token Re-enable a personal access token that has been disabled.  __Minimum server version__: 4.4  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersTokensEnablePostAsyncWithHttpInfo (InlineObject19 tokenId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensEnablePostAsyncWithHttpInfo (InlineObject19 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensEnablePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensEnablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4473,32 +4473,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;UserAccessTokenSanitized&gt;</returns>
         public List<UserAccessTokenSanitized> UsersTokensGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersTokensGetWithHttpInfo(page, perPage);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersTokensGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user access tokens Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;UserAccessTokenSanitized&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<UserAccessTokenSanitized> > UsersTokensGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<UserAccessTokenSanitized>> UsersTokensGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4546,13 +4546,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;UserAccessTokenSanitized&gt;</returns>
         public async System.Threading.Tasks.Task<List<UserAccessTokenSanitized>> UsersTokensGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersTokensGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersTokensGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -4560,20 +4560,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a page of user access tokens for users on the system. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;UserAccessTokenSanitized&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>>> UsersTokensGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserAccessTokenSanitized>>> UsersTokensGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4621,35 +4621,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user access token Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersTokensRevokePost (InlineObject17 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersTokensRevokePostWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = UsersTokensRevokePostWithHttpInfo(tokenId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Revoke a user access token Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersTokensRevokePostWithHttpInfo (InlineObject17 tokenId)
+        public ApiResponse<StatusOK> UsersTokensRevokePostWithHttpInfo (InlineObject17 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensRevokePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensRevokePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4678,12 +4678,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user access token Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersTokensRevokePostAsync (InlineObject17 tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersTokensRevokePostAsyncWithHttpInfo(tokenId);
+            ApiResponse<StatusOK> localVarResponse = await UsersTokensRevokePostAsyncWithHttpInfo(tokenId);
              return localVarResponse.Data;
 
         }
@@ -4691,24 +4691,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user access token Revoke a user access token and delete any sessions using the token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;revoke_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersTokensRevokePostAsyncWithHttpInfo (InlineObject17 tokenId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersTokensRevokePostAsyncWithHttpInfo (InlineObject17 tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensRevokePost");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensRevokePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4737,35 +4737,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search tokens Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;UserAccessTokenSanitized&gt;</returns>
         public List<UserAccessTokenSanitized> UsersTokensSearchPost (InlineObject20 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersTokensSearchPostWithHttpInfo(body);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersTokensSearchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search tokens Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;UserAccessTokenSanitized&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<UserAccessTokenSanitized> > UsersTokensSearchPostWithHttpInfo (InlineObject20 body)
+        public ApiResponse<List<UserAccessTokenSanitized>> UsersTokensSearchPostWithHttpInfo (InlineObject20 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersTokensSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersTokensSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4794,12 +4794,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search tokens Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;UserAccessTokenSanitized&gt;</returns>
         public async System.Threading.Tasks.Task<List<UserAccessTokenSanitized>> UsersTokensSearchPostAsync (InlineObject20 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersTokensSearchPostAsyncWithHttpInfo(body);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersTokensSearchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4807,24 +4807,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search tokens Get a list of tokens based on search criteria provided in the request body. Searches are done against the token id, user id and username.  __Minimum server version__: 4.7  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;UserAccessTokenSanitized&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>>> UsersTokensSearchPostAsyncWithHttpInfo (InlineObject20 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserAccessTokenSanitized>>> UsersTokensSearchPostAsyncWithHttpInfo (InlineObject20 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersTokensSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersTokensSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4853,34 +4853,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user access token Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>UserAccessTokenSanitized</returns>
         public UserAccessTokenSanitized UsersTokensTokenIdGet (string tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessTokenSanitized> localVarResponse = UsersTokensTokenIdGetWithHttpInfo(tokenId);
+            ApiResponse<UserAccessTokenSanitized> localVarResponse = UsersTokensTokenIdGetWithHttpInfo(tokenId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a user access token Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>ApiResponse of UserAccessTokenSanitized</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserAccessTokenSanitized > UsersTokensTokenIdGetWithHttpInfo (string tokenId)
+        public ApiResponse<UserAccessTokenSanitized> UsersTokensTokenIdGetWithHttpInfo (string tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensTokenIdGet");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensTokenIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4910,12 +4910,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user access token Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>Task of UserAccessTokenSanitized</returns>
         public async System.Threading.Tasks.Task<UserAccessTokenSanitized> UsersTokensTokenIdGetAsync (string tokenId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessTokenSanitized> localVarResponse = await UsersTokensTokenIdGetAsyncWithHttpInfo(tokenId);
+            ApiResponse<UserAccessTokenSanitized> localVarResponse = await UsersTokensTokenIdGetAsyncWithHttpInfo(tokenId);
              return localVarResponse.Data;
 
         }
@@ -4923,23 +4923,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user access token Get a user access token. Does not include the actual authentication token.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenId">User access token GUID</param>
         /// <returns>Task of ApiResponse (UserAccessTokenSanitized)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessTokenSanitized>> UsersTokensTokenIdGetAsyncWithHttpInfo (string tokenId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAccessTokenSanitized>> UsersTokensTokenIdGetAsyncWithHttpInfo (string tokenId)
         {
             // verify the required parameter 'tokenId' is set
             if (tokenId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensTokenIdGet");
+                throw new ApiException(400, "Missing required parameter 'tokenId' when calling UsersApi->UsersTokensTokenIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4969,41 +4969,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user active status Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdActivePut (string userId, InlineObject5 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdActivePutWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdActivePutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update user active status Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdActivePutWithHttpInfo (string userId, InlineObject5 body)
+        public ApiResponse<StatusOK> UsersUserIdActivePutWithHttpInfo (string userId, InlineObject5 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdActivePut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdActivePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdActivePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdActivePut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5034,13 +5034,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user active status Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdActivePutAsync (string userId, InlineObject5 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdActivePutAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdActivePutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -5048,29 +5048,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user active status Update user active or inactive status.  __Since server version 4.6, users using a SSO provider to login can be activated or deactivated with this endpoint. However, if their activation status in Mattermost does not reflect their status in the SSO provider, the next synchronization or login by that user will reset the activation status to that of their account in the SSO provider. Server versions 4.5 and before do not allow activation or deactivation of SSO users from this endpoint.__ ##### Permissions User can deactivate themselves. User with &#x60;manage_system&#x60; permission can activate or deactivate a user. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdActivePutAsyncWithHttpInfo (string userId, InlineObject5 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdActivePutAsyncWithHttpInfo (string userId, InlineObject5 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdActivePut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdActivePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdActivePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdActivePut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5101,34 +5101,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s audits Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Audit&gt;</returns>
         public List<Audit> UsersUserIdAuditsGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>> localVarResponse = UsersUserIdAuditsGetWithHttpInfo(userId);
+            ApiResponse<List<Audit>> localVarResponse = UsersUserIdAuditsGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user&#39;s audits Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Audit&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Audit> > UsersUserIdAuditsGetWithHttpInfo (string userId)
+        public ApiResponse<List<Audit>> UsersUserIdAuditsGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuditsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuditsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5158,12 +5158,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s audits Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Audit&gt;</returns>
         public async System.Threading.Tasks.Task<List<Audit>> UsersUserIdAuditsGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>> localVarResponse = await UsersUserIdAuditsGetAsyncWithHttpInfo(userId);
+            ApiResponse<List<Audit>> localVarResponse = await UsersUserIdAuditsGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5171,23 +5171,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s audits Get a list of audit by providing the user GUID. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Audit&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>>> UsersUserIdAuditsGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Audit>>> UsersUserIdAuditsGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuditsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuditsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5217,41 +5217,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s authentication method Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>UserAuthData</returns>
         public UserAuthData UsersUserIdAuthPut (string userId, UserAuthData body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAuthData> localVarResponse = UsersUserIdAuthPutWithHttpInfo(userId, body);
+            ApiResponse<UserAuthData> localVarResponse = UsersUserIdAuthPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a user&#39;s authentication method Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of UserAuthData</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserAuthData > UsersUserIdAuthPutWithHttpInfo (string userId, UserAuthData body)
+        public ApiResponse<UserAuthData> UsersUserIdAuthPutWithHttpInfo (string userId, UserAuthData body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuthPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuthPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdAuthPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdAuthPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5282,13 +5282,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s authentication method Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of UserAuthData</returns>
         public async System.Threading.Tasks.Task<UserAuthData> UsersUserIdAuthPutAsync (string userId, UserAuthData body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAuthData> localVarResponse = await UsersUserIdAuthPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<UserAuthData> localVarResponse = await UsersUserIdAuthPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -5296,29 +5296,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s authentication method Updates a user&#39;s authentication method. This can be used to change them to/from LDAP authentication for example.  __Minimum server version__: 4.6 ##### Permissions Must have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (UserAuthData)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAuthData>> UsersUserIdAuthPutAsyncWithHttpInfo (string userId, UserAuthData body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthData>> UsersUserIdAuthPutAsyncWithHttpInfo (string userId, UserAuthData body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuthPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdAuthPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdAuthPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdAuthPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5349,34 +5349,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Deactivate a user account. Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdDelete (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdDeleteWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdDeleteWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Deactivate a user account. Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdDeleteWithHttpInfo (string userId)
+        public ApiResponse<StatusOK> UsersUserIdDeleteWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5406,12 +5406,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Deactivate a user account. Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdDeleteAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdDeleteAsyncWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdDeleteAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5419,23 +5419,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Deactivate a user account. Deactivates the user and revokes all its sessions by archiving its user object. ##### Permissions Must be logged in as the user being deactivated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdDeleteAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdDeleteAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5465,34 +5465,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>User</returns>
         public User UsersUserIdGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersUserIdGetWithHttpInfo(userId);
+            ApiResponse<User> localVarResponse = UsersUserIdGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a user Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersUserIdGetWithHttpInfo (string userId)
+        public ApiResponse<User> UsersUserIdGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5522,12 +5522,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersUserIdGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersUserIdGetAsyncWithHttpInfo(userId);
+            ApiResponse<User> localVarResponse = await UsersUserIdGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5535,23 +5535,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user Get a user a object. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersUserIdGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersUserIdGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5581,7 +5581,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Return user&#39;s default (generated) profile image Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns></returns>
         public void UsersUserIdImageDefaultGet (string userId)
@@ -5592,22 +5592,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Return user&#39;s default (generated) profile image Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> UsersUserIdImageDefaultGetWithHttpInfo (string userId)
+        public ApiResponse<object> UsersUserIdImageDefaultGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDefaultGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDefaultGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5623,7 +5623,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/users/{user_id}/image/default", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/users/{user_id}/image/default", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5637,7 +5637,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Return user&#39;s default (generated) profile image Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UsersUserIdImageDefaultGetAsync (string userId)
@@ -5649,23 +5649,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Return user&#39;s default (generated) profile image Returns the default (generated) user profile image based on user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> UsersUserIdImageDefaultGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> UsersUserIdImageDefaultGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDefaultGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDefaultGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5681,7 +5681,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/users/{user_id}/image/default", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/users/{user_id}/image/default", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5695,34 +5695,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s profile image Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdImageDelete (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdImageDeleteWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdImageDeleteWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete user&#39;s profile image Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdImageDeleteWithHttpInfo (string userId)
+        public ApiResponse<StatusOK> UsersUserIdImageDeleteWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5752,12 +5752,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s profile image Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdImageDeleteAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdImageDeleteAsyncWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdImageDeleteAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5765,23 +5765,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s profile image Delete user&#39;s profile image and reset to default image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 5.5 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdImageDeleteAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdImageDeleteAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5811,7 +5811,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s profile image Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns></returns>
         public void UsersUserIdImageGet (string userId)
@@ -5822,22 +5822,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s profile image Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> UsersUserIdImageGetWithHttpInfo (string userId)
+        public ApiResponse<object> UsersUserIdImageGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5853,7 +5853,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/users/{user_id}/image", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/users/{user_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5867,7 +5867,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s profile image Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UsersUserIdImageGetAsync (string userId)
@@ -5879,23 +5879,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s profile image Get a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> UsersUserIdImageGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> UsersUserIdImageGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImageGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5911,7 +5911,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/users/{user_id}/image", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/users/{user_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -5925,41 +5925,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set user&#39;s profile image Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdImagePost (string userId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdImagePostWithHttpInfo(userId, image);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdImagePostWithHttpInfo(userId, image);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Set user&#39;s profile image Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdImagePostWithHttpInfo (string userId, System.IO.Stream image)
+        public ApiResponse<StatusOK> UsersUserIdImagePostWithHttpInfo (string userId, System.IO.Stream image)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImagePost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling UsersApi->UsersUserIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling UsersApi->UsersUserIdImagePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5993,13 +5993,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set user&#39;s profile image Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdImagePostAsync (string userId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdImagePostAsyncWithHttpInfo(userId, image);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdImagePostAsyncWithHttpInfo(userId, image);
              return localVarResponse.Data;
 
         }
@@ -6007,29 +6007,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set user&#39;s profile image Set a user&#39;s profile image based on user_id string parameter. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdImagePostAsyncWithHttpInfo (string userId, System.IO.Stream image)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdImagePostAsyncWithHttpInfo (string userId, System.IO.Stream image)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdImagePost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling UsersApi->UsersUserIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling UsersApi->UsersUserIdImagePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6063,34 +6063,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate MFA secret Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>InlineResponse2001</returns>
         public InlineResponse2001 UsersUserIdMfaGeneratePost (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2001> localVarResponse = UsersUserIdMfaGeneratePostWithHttpInfo(userId);
+            ApiResponse<InlineResponse2001> localVarResponse = UsersUserIdMfaGeneratePostWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Generate MFA secret Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2001 > UsersUserIdMfaGeneratePostWithHttpInfo (string userId)
+        public ApiResponse<InlineResponse2001> UsersUserIdMfaGeneratePostWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaGeneratePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaGeneratePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6120,12 +6120,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate MFA secret Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of InlineResponse2001</returns>
         public async System.Threading.Tasks.Task<InlineResponse2001> UsersUserIdMfaGeneratePostAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2001> localVarResponse = await UsersUserIdMfaGeneratePostAsyncWithHttpInfo(userId);
+            ApiResponse<InlineResponse2001> localVarResponse = await UsersUserIdMfaGeneratePostAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -6133,23 +6133,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate MFA secret Generates an multi-factor authentication secret for a user and returns it as a string and as base64 encoded QR code image. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2001>> UsersUserIdMfaGeneratePostAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UsersUserIdMfaGeneratePostAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaGeneratePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaGeneratePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6179,41 +6179,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s MFA Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdMfaPut (string userId, InlineObject7 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdMfaPutWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdMfaPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a user&#39;s MFA Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdMfaPutWithHttpInfo (string userId, InlineObject7 body)
+        public ApiResponse<StatusOK> UsersUserIdMfaPutWithHttpInfo (string userId, InlineObject7 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdMfaPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdMfaPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6244,13 +6244,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s MFA Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdMfaPutAsync (string userId, InlineObject7 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdMfaPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdMfaPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -6258,29 +6258,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s MFA Activates multi-factor authentication for the user if &#x60;activate&#x60; is true and a valid &#x60;code&#x60; is provided. If activate is false, then &#x60;code&#x60; is not required and multi-factor authentication is disabled for the user. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdMfaPutAsyncWithHttpInfo (string userId, InlineObject7 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdMfaPutAsyncWithHttpInfo (string userId, InlineObject7 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdMfaPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdMfaPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdMfaPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6311,41 +6311,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s password Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdPasswordPut (string userId, InlineObject9 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdPasswordPutWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdPasswordPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a user&#39;s password Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdPasswordPutWithHttpInfo (string userId, InlineObject9 body)
+        public ApiResponse<StatusOK> UsersUserIdPasswordPutWithHttpInfo (string userId, InlineObject9 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPasswordPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPasswordPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPasswordPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPasswordPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6376,13 +6376,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s password Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdPasswordPutAsync (string userId, InlineObject9 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdPasswordPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdPasswordPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -6390,29 +6390,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s password Update a user&#39;s password. New password must meet password policy set by server configuration. Current password is required if you&#39;re updating your own password. ##### Permissions Must be logged in as the user the password is being changed for or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdPasswordPutAsyncWithHttpInfo (string userId, InlineObject9 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdPasswordPutAsyncWithHttpInfo (string userId, InlineObject9 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPasswordPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPasswordPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPasswordPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPasswordPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6443,41 +6443,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a user Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>User</returns>
         public User UsersUserIdPatchPut (string userId, InlineObject3 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersUserIdPatchPutWithHttpInfo(userId, body);
+            ApiResponse<User> localVarResponse = UsersUserIdPatchPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a user Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersUserIdPatchPutWithHttpInfo (string userId, InlineObject3 body)
+        public ApiResponse<User> UsersUserIdPatchPutWithHttpInfo (string userId, InlineObject3 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6508,13 +6508,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a user Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersUserIdPatchPutAsync (string userId, InlineObject3 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersUserIdPatchPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<User> localVarResponse = await UsersUserIdPatchPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -6522,29 +6522,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a user Partially update a user by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersUserIdPatchPutAsyncWithHttpInfo (string userId, InlineObject3 body)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersUserIdPatchPutAsyncWithHttpInfo (string userId, InlineObject3 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6575,41 +6575,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>User</returns>
         public User UsersUserIdPut (string userId, InlineObject2 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersUserIdPutWithHttpInfo(userId, body);
+            ApiResponse<User> localVarResponse = UsersUserIdPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a user Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersUserIdPutWithHttpInfo (string userId, InlineObject2 body)
+        public ApiResponse<User> UsersUserIdPutWithHttpInfo (string userId, InlineObject2 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6640,13 +6640,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersUserIdPutAsync (string userId, InlineObject2 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersUserIdPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<User> localVarResponse = await UsersUserIdPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -6654,29 +6654,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user Update a user by providing the user object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. Any fields not included in the request body will be set to null or reverted to default values. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersUserIdPutAsyncWithHttpInfo (string userId, InlineObject2 body)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersUserIdPutAsyncWithHttpInfo (string userId, InlineObject2 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6707,41 +6707,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s roles Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdRolesPut (string userId, InlineObject4 roles)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdRolesPutWithHttpInfo(userId, roles);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdRolesPutWithHttpInfo(userId, roles);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a user&#39;s roles Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdRolesPutWithHttpInfo (string userId, InlineObject4 roles)
+        public ApiResponse<StatusOK> UsersUserIdRolesPutWithHttpInfo (string userId, InlineObject4 roles)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdRolesPut");
 
             // verify the required parameter 'roles' is set
             if (roles == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roles' when calling UsersApi->UsersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'roles' when calling UsersApi->UsersUserIdRolesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6772,13 +6772,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s roles Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdRolesPutAsync (string userId, InlineObject4 roles)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdRolesPutAsyncWithHttpInfo(userId, roles);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdRolesPutAsyncWithHttpInfo(userId, roles);
              return localVarResponse.Data;
 
         }
@@ -6786,29 +6786,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a user&#39;s roles Update a user&#39;s system-level roles. Valid user roles are \&quot;system_user\&quot;, \&quot;system_admin\&quot; or both of them. Overwrites any previously assigned system-level roles. ##### Permissions Must have the &#x60;manage_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdRolesPutAsyncWithHttpInfo (string userId, InlineObject4 roles)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdRolesPutAsyncWithHttpInfo (string userId, InlineObject4 roles)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdRolesPut");
 
             // verify the required parameter 'roles' is set
             if (roles == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roles' when calling UsersApi->UsersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'roles' when calling UsersApi->UsersUserIdRolesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6839,34 +6839,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s sessions Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Session&gt;</returns>
         public List<Session> UsersUserIdSessionsGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Session>> localVarResponse = UsersUserIdSessionsGetWithHttpInfo(userId);
+            ApiResponse<List<Session>> localVarResponse = UsersUserIdSessionsGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user&#39;s sessions Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Session&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Session> > UsersUserIdSessionsGetWithHttpInfo (string userId)
+        public ApiResponse<List<Session>> UsersUserIdSessionsGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6896,12 +6896,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s sessions Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Session&gt;</returns>
         public async System.Threading.Tasks.Task<List<Session>> UsersUserIdSessionsGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Session>> localVarResponse = await UsersUserIdSessionsGetAsyncWithHttpInfo(userId);
+            ApiResponse<List<Session>> localVarResponse = await UsersUserIdSessionsGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -6909,23 +6909,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user&#39;s sessions Get a list of sessions by providing the user GUID. Sensitive information will be sanitized out. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Session&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Session>>> UsersUserIdSessionsGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Session>>> UsersUserIdSessionsGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6955,34 +6955,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke all active sessions for a user Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdSessionsRevokeAllPost (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdSessionsRevokeAllPostWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdSessionsRevokeAllPostWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Revoke all active sessions for a user Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdSessionsRevokeAllPostWithHttpInfo (string userId)
+        public ApiResponse<StatusOK> UsersUserIdSessionsRevokeAllPostWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokeAllPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokeAllPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7012,12 +7012,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke all active sessions for a user Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdSessionsRevokeAllPostAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdSessionsRevokeAllPostAsyncWithHttpInfo(userId);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdSessionsRevokeAllPostAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -7025,23 +7025,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke all active sessions for a user Revokes all user sessions from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. __Minimum server version__: 4.4 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdSessionsRevokeAllPostAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdSessionsRevokeAllPostAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokeAllPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokeAllPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7071,41 +7071,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user session Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdSessionsRevokePost (string userId, InlineObject11 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdSessionsRevokePostWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdSessionsRevokePostWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Revoke a user session Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdSessionsRevokePostWithHttpInfo (string userId, InlineObject11 body)
+        public ApiResponse<StatusOK> UsersUserIdSessionsRevokePostWithHttpInfo (string userId, InlineObject11 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdSessionsRevokePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdSessionsRevokePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7136,13 +7136,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user session Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdSessionsRevokePostAsync (string userId, InlineObject11 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdSessionsRevokePostAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdSessionsRevokePostAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -7150,29 +7150,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Revoke a user session Revokes a user session from the provided user id and session id strings. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdSessionsRevokePostAsyncWithHttpInfo (string userId, InlineObject11 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdSessionsRevokePostAsyncWithHttpInfo (string userId, InlineObject11 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdSessionsRevokePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdSessionsRevokePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdSessionsRevokePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7203,34 +7203,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>UserTermsOfService</returns>
         public UserTermsOfService UsersUserIdTermsOfServiceGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService> localVarResponse = UsersUserIdTermsOfServiceGetWithHttpInfo(userId);
+            ApiResponse<UserTermsOfService> localVarResponse = UsersUserIdTermsOfServiceGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of UserTermsOfService</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserTermsOfService > UsersUserIdTermsOfServiceGetWithHttpInfo (string userId)
+        public ApiResponse<UserTermsOfService> UsersUserIdTermsOfServiceGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServiceGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServiceGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7260,12 +7260,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of UserTermsOfService</returns>
         public async System.Threading.Tasks.Task<UserTermsOfService> UsersUserIdTermsOfServiceGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService> localVarResponse = await UsersUserIdTermsOfServiceGetAsyncWithHttpInfo(userId);
+            ApiResponse<UserTermsOfService> localVarResponse = await UsersUserIdTermsOfServiceGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -7273,23 +7273,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (UserTermsOfService)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServiceGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServiceGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7319,41 +7319,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdTermsOfServicePost (string userId, InlineObject21 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdTermsOfServicePostWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdTermsOfServicePostWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdTermsOfServicePostWithHttpInfo (string userId, InlineObject21 body)
+        public ApiResponse<StatusOK> UsersUserIdTermsOfServicePostWithHttpInfo (string userId, InlineObject21 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServicePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdTermsOfServicePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7384,13 +7384,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdTermsOfServicePostAsync (string userId, InlineObject21 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdTermsOfServicePostAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdTermsOfServicePostAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -7398,29 +7398,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdTermsOfServicePostAsyncWithHttpInfo (string userId, InlineObject21 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdTermsOfServicePostAsyncWithHttpInfo (string userId, InlineObject21 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTermsOfServicePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUserIdTermsOfServicePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7451,38 +7451,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;UserAccessTokenSanitized&gt;</returns>
         public List<UserAccessTokenSanitized> UsersUserIdTokensGet (string userId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersUserIdTokensGetWithHttpInfo(userId, page, perPage);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = UsersUserIdTokensGetWithHttpInfo(userId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user access tokens Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;UserAccessTokenSanitized&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<UserAccessTokenSanitized> > UsersUserIdTokensGetWithHttpInfo (string userId, string page = null, string perPage = null)
+        public ApiResponse<List<UserAccessTokenSanitized>> UsersUserIdTokensGetWithHttpInfo (string userId, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7532,14 +7532,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;UserAccessTokenSanitized&gt;</returns>
         public async System.Threading.Tasks.Task<List<UserAccessTokenSanitized>> UsersUserIdTokensGetAsync (string userId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersUserIdTokensGetAsyncWithHttpInfo(userId, page, perPage);
+            ApiResponse<List<UserAccessTokenSanitized>> localVarResponse = await UsersUserIdTokensGetAsyncWithHttpInfo(userId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -7547,25 +7547,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user access tokens Get a list of user access tokens for a user. Does not include the actual authentication tokens. Use query parameters for paging.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;read_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of tokens per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;UserAccessTokenSanitized&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<UserAccessTokenSanitized>>> UsersUserIdTokensGetAsyncWithHttpInfo (string userId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserAccessTokenSanitized>>> UsersUserIdTokensGetAsyncWithHttpInfo (string userId, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7615,41 +7615,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user access token Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>UserAccessToken</returns>
         public UserAccessToken UsersUserIdTokensPost (string userId, InlineObject16 token)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessToken> localVarResponse = UsersUserIdTokensPostWithHttpInfo(userId, token);
+            ApiResponse<UserAccessToken> localVarResponse = UsersUserIdTokensPostWithHttpInfo(userId, token);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a user access token Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>ApiResponse of UserAccessToken</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserAccessToken > UsersUserIdTokensPostWithHttpInfo (string userId, InlineObject16 token)
+        public ApiResponse<UserAccessToken> UsersUserIdTokensPostWithHttpInfo (string userId, InlineObject16 token)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensPost");
 
             // verify the required parameter 'token' is set
             if (token == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'token' when calling UsersApi->UsersUserIdTokensPost");
+                throw new ApiException(400, "Missing required parameter 'token' when calling UsersApi->UsersUserIdTokensPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7680,13 +7680,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user access token Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>Task of UserAccessToken</returns>
         public async System.Threading.Tasks.Task<UserAccessToken> UsersUserIdTokensPostAsync (string userId, InlineObject16 token)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessToken> localVarResponse = await UsersUserIdTokensPostAsyncWithHttpInfo(userId, token);
+            ApiResponse<UserAccessToken> localVarResponse = await UsersUserIdTokensPostAsyncWithHttpInfo(userId, token);
              return localVarResponse.Data;
 
         }
@@ -7694,29 +7694,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a user access token Generate a user access token that can be used to authenticate with the Mattermost REST API.  __Minimum server version__: 4.1  ##### Permissions Must have &#x60;create_user_access_token&#x60; permission. For non-self requests, must also have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="token"></param>
         /// <returns>Task of ApiResponse (UserAccessToken)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserAccessToken>> UsersUserIdTokensPostAsyncWithHttpInfo (string userId, InlineObject16 token)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAccessToken>> UsersUserIdTokensPostAsyncWithHttpInfo (string userId, InlineObject16 token)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersUserIdTokensPost");
 
             // verify the required parameter 'token' is set
             if (token == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'token' when calling UsersApi->UsersUserIdTokensPost");
+                throw new ApiException(400, "Missing required parameter 'token' when calling UsersApi->UsersUserIdTokensPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7747,34 +7747,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by username Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>User</returns>
         public User UsersUsernameUsernameGet (string username)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = UsersUsernameUsernameGetWithHttpInfo(username);
+            ApiResponse<User> localVarResponse = UsersUsernameUsernameGetWithHttpInfo(username);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a user by username Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>ApiResponse of User</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< User > UsersUsernameUsernameGetWithHttpInfo (string username)
+        public ApiResponse<User> UsersUsernameUsernameGetWithHttpInfo (string username)
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->UsersUsernameUsernameGet");
+                throw new ApiException(400, "Missing required parameter 'username' when calling UsersApi->UsersUsernameUsernameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7804,12 +7804,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by username Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> UsersUsernameUsernameGetAsync (string username)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User> localVarResponse = await UsersUsernameUsernameGetAsyncWithHttpInfo(username);
+            ApiResponse<User> localVarResponse = await UsersUsernameUsernameGetAsyncWithHttpInfo(username);
              return localVarResponse.Data;
 
         }
@@ -7817,23 +7817,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user by username Get a user object by providing a username. Sensitive information will be sanitized out. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">Username</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<User>> UsersUsernameUsernameGetAsyncWithHttpInfo (string username)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> UsersUsernameUsernameGetAsyncWithHttpInfo (string username)
         {
             // verify the required parameter 'username' is set
             if (username == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->UsersUsernameUsernameGet");
+                throw new ApiException(400, "Missing required parameter 'username' when calling UsersApi->UsersUsernameUsernameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -7863,35 +7863,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by usernames Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>List&lt;User&gt;</returns>
         public List<User> UsersUsernamesPost (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = UsersUsernamesPostWithHttpInfo(body);
+            ApiResponse<List<User>> localVarResponse = UsersUsernamesPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get users by usernames Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>ApiResponse of List&lt;User&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<User> > UsersUsernamesPostWithHttpInfo (List<string> body)
+        public ApiResponse<List<User>> UsersUsernamesPostWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUsernamesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUsernamesPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -7920,12 +7920,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by usernames Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         public async System.Threading.Tasks.Task<List<User>> UsersUsernamesPostAsync (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>> localVarResponse = await UsersUsernamesPostAsyncWithHttpInfo(body);
+            ApiResponse<List<User>> localVarResponse = await UsersUsernamesPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7933,24 +7933,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get users by usernames Get a list of users based on a provided list of usernames. ##### Permissions Requires an active session but no other permissions. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of usernames</param>
         /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<User>>> UsersUsernamesPostAsyncWithHttpInfo (List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> UsersUsernamesPostAsyncWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUsernamesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->UsersUsernamesPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

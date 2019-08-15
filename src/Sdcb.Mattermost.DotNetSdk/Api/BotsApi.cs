@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Bot</returns>
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>ApiResponse of Bot</returns>
@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Bot</returns>
         Bot BotsBotUserIdDisablePost (string botUserId);
@@ -67,7 +67,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Bot</returns>
         ApiResponse<Bot> BotsBotUserIdDisablePostWithHttpInfo (string botUserId);
@@ -77,7 +77,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Bot</returns>
         Bot BotsBotUserIdEnablePost (string botUserId);
@@ -88,7 +88,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Bot</returns>
         ApiResponse<Bot> BotsBotUserIdEnablePostWithHttpInfo (string botUserId);
@@ -98,7 +98,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Bot</returns>
@@ -110,7 +110,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>ApiResponse of Bot</returns>
@@ -121,7 +121,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>StatusOK</returns>
         StatusOK BotsBotUserIdIconDelete (string botUserId);
@@ -132,7 +132,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> BotsBotUserIdIconDeleteWithHttpInfo (string botUserId);
@@ -142,7 +142,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns></returns>
         void BotsBotUserIdIconGet (string botUserId);
@@ -153,17 +153,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> BotsBotUserIdIconGetWithHttpInfo (string botUserId);
+        ApiResponse<object> BotsBotUserIdIconGetWithHttpInfo (string botUserId);
         /// <summary>
         /// Set bot&#39;s LHS icon image
         /// </summary>
         /// <remarks>
         /// Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>StatusOK</returns>
@@ -175,7 +175,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -186,7 +186,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Bot</returns>
@@ -198,7 +198,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Bot</returns>
@@ -209,7 +209,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -223,7 +223,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -236,7 +236,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Bot</returns>
         Bot BotsPost (InlineObject63 body);
@@ -247,7 +247,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Bot</returns>
         ApiResponse<Bot> BotsPostWithHttpInfo (InlineObject63 body);
@@ -266,7 +266,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Task of Bot</returns>
@@ -278,7 +278,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
@@ -289,7 +289,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of Bot</returns>
         System.Threading.Tasks.Task<Bot> BotsBotUserIdDisablePostAsync (string botUserId);
@@ -300,7 +300,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
         System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdDisablePostAsyncWithHttpInfo (string botUserId);
@@ -310,7 +310,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of Bot</returns>
         System.Threading.Tasks.Task<Bot> BotsBotUserIdEnablePostAsync (string botUserId);
@@ -321,7 +321,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
         System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdEnablePostAsyncWithHttpInfo (string botUserId);
@@ -331,7 +331,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Task of Bot</returns>
@@ -343,7 +343,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
@@ -354,7 +354,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> BotsBotUserIdIconDeleteAsync (string botUserId);
@@ -365,7 +365,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> BotsBotUserIdIconDeleteAsyncWithHttpInfo (string botUserId);
@@ -375,7 +375,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task BotsBotUserIdIconGetAsync (string botUserId);
@@ -386,17 +386,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> BotsBotUserIdIconGetAsyncWithHttpInfo (string botUserId);
+        System.Threading.Tasks.Task<ApiResponse<object>> BotsBotUserIdIconGetAsyncWithHttpInfo (string botUserId);
         /// <summary>
         /// Set bot&#39;s LHS icon image
         /// </summary>
         /// <remarks>
         /// Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
@@ -408,7 +408,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -419,7 +419,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Bot</returns>
@@ -431,7 +431,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Bot)</returns>
@@ -442,7 +442,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -456,7 +456,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -469,7 +469,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Bot</returns>
         System.Threading.Tasks.Task<Bot> BotsPostAsync (InlineObject63 body);
@@ -480,7 +480,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Bot)</returns>
         System.Threading.Tasks.Task<ApiResponse<Bot>> BotsPostAsyncWithHttpInfo (InlineObject63 body);
@@ -500,7 +500,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class BotsApi : IBotsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BotsApi"/> class.
@@ -514,14 +514,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="BotsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public BotsApi(String basePath)
+        public BotsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -531,7 +531,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public BotsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public BotsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -539,8 +539,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -551,7 +551,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public BotsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public BotsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -566,18 +566,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -586,12 +586,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -607,40 +607,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Assign a bot to a user Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Bot</returns>
         public Bot BotsBotUserIdAssignUserIdPost (string botUserId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsBotUserIdAssignUserIdPostWithHttpInfo(botUserId, userId);
+            ApiResponse<Bot> localVarResponse = BotsBotUserIdAssignUserIdPostWithHttpInfo(botUserId, userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Assign a bot to a user Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsBotUserIdAssignUserIdPostWithHttpInfo (string botUserId, string userId)
+        public ApiResponse<Bot> BotsBotUserIdAssignUserIdPostWithHttpInfo (string botUserId, string userId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -672,13 +672,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Assign a bot to a user Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsBotUserIdAssignUserIdPostAsync (string botUserId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsBotUserIdAssignUserIdPostAsyncWithHttpInfo(botUserId, userId);
+            ApiResponse<Bot> localVarResponse = await BotsBotUserIdAssignUserIdPostAsyncWithHttpInfo(botUserId, userId);
              return localVarResponse.Data;
 
         }
@@ -686,28 +686,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Assign a bot to a user Assign a bot to a specified user. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="userId">The user ID to assign the bot to.</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsBotUserIdAssignUserIdPostAsyncWithHttpInfo (string botUserId, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdAssignUserIdPostAsyncWithHttpInfo (string botUserId, string userId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling BotsApi->BotsBotUserIdAssignUserIdPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -739,34 +739,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable a bot Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Bot</returns>
         public Bot BotsBotUserIdDisablePost (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsBotUserIdDisablePostWithHttpInfo(botUserId);
+            ApiResponse<Bot> localVarResponse = BotsBotUserIdDisablePostWithHttpInfo(botUserId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Disable a bot Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsBotUserIdDisablePostWithHttpInfo (string botUserId)
+        public ApiResponse<Bot> BotsBotUserIdDisablePostWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdDisablePost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdDisablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -796,12 +796,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable a bot Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsBotUserIdDisablePostAsync (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsBotUserIdDisablePostAsyncWithHttpInfo(botUserId);
+            ApiResponse<Bot> localVarResponse = await BotsBotUserIdDisablePostAsyncWithHttpInfo(botUserId);
              return localVarResponse.Data;
 
         }
@@ -809,23 +809,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Disable a bot Disable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsBotUserIdDisablePostAsyncWithHttpInfo (string botUserId)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdDisablePostAsyncWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdDisablePost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdDisablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -855,34 +855,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable a bot Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Bot</returns>
         public Bot BotsBotUserIdEnablePost (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsBotUserIdEnablePostWithHttpInfo(botUserId);
+            ApiResponse<Bot> localVarResponse = BotsBotUserIdEnablePostWithHttpInfo(botUserId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Enable a bot Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsBotUserIdEnablePostWithHttpInfo (string botUserId)
+        public ApiResponse<Bot> BotsBotUserIdEnablePostWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdEnablePost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdEnablePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -912,12 +912,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable a bot Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsBotUserIdEnablePostAsync (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsBotUserIdEnablePostAsyncWithHttpInfo(botUserId);
+            ApiResponse<Bot> localVarResponse = await BotsBotUserIdEnablePostAsyncWithHttpInfo(botUserId);
              return localVarResponse.Data;
 
         }
@@ -925,23 +925,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Enable a bot Enable a bot. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsBotUserIdEnablePostAsyncWithHttpInfo (string botUserId)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdEnablePostAsyncWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdEnablePost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdEnablePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -971,36 +971,36 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a bot Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Bot</returns>
         public Bot BotsBotUserIdGet (string botUserId, bool? includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsBotUserIdGetWithHttpInfo(botUserId, includeDeleted);
+            ApiResponse<Bot> localVarResponse = BotsBotUserIdGetWithHttpInfo(botUserId, includeDeleted);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a bot Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsBotUserIdGetWithHttpInfo (string botUserId, bool? includeDeleted = null)
+        public ApiResponse<Bot> BotsBotUserIdGetWithHttpInfo (string botUserId, bool? includeDeleted = null)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1040,13 +1040,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a bot Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsBotUserIdGetAsync (string botUserId, bool? includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsBotUserIdGetAsyncWithHttpInfo(botUserId, includeDeleted);
+            ApiResponse<Bot> localVarResponse = await BotsBotUserIdGetAsyncWithHttpInfo(botUserId, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -1054,24 +1054,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a bot Get a bot specified by its bot id. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsBotUserIdGetAsyncWithHttpInfo (string botUserId, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdGetAsyncWithHttpInfo (string botUserId, bool? includeDeleted = null)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1111,34 +1111,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete bot&#39;s LHS icon image Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>StatusOK</returns>
         public StatusOK BotsBotUserIdIconDelete (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = BotsBotUserIdIconDeleteWithHttpInfo(botUserId);
+            ApiResponse<StatusOK> localVarResponse = BotsBotUserIdIconDeleteWithHttpInfo(botUserId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete bot&#39;s LHS icon image Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > BotsBotUserIdIconDeleteWithHttpInfo (string botUserId)
+        public ApiResponse<StatusOK> BotsBotUserIdIconDeleteWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconDelete");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1168,12 +1168,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete bot&#39;s LHS icon image Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> BotsBotUserIdIconDeleteAsync (string botUserId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await BotsBotUserIdIconDeleteAsyncWithHttpInfo(botUserId);
+            ApiResponse<StatusOK> localVarResponse = await BotsBotUserIdIconDeleteAsyncWithHttpInfo(botUserId);
              return localVarResponse.Data;
 
         }
@@ -1181,23 +1181,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete bot&#39;s LHS icon image Delete bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> BotsBotUserIdIconDeleteAsyncWithHttpInfo (string botUserId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> BotsBotUserIdIconDeleteAsyncWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconDelete");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1227,7 +1227,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bot&#39;s LHS icon Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns></returns>
         public void BotsBotUserIdIconGet (string botUserId)
@@ -1238,22 +1238,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bot&#39;s LHS icon Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> BotsBotUserIdIconGetWithHttpInfo (string botUserId)
+        public ApiResponse<object> BotsBotUserIdIconGetWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconGet");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1269,7 +1269,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/bots/{bot_user_id}/icon", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/bots/{bot_user_id}/icon", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1283,7 +1283,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bot&#39;s LHS icon Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task BotsBotUserIdIconGetAsync (string botUserId)
@@ -1295,23 +1295,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bot&#39;s LHS icon Get a bot&#39;s LHS icon image based on bot_user_id string parameter. ##### Permissions Must be logged in. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> BotsBotUserIdIconGetAsyncWithHttpInfo (string botUserId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> BotsBotUserIdIconGetAsyncWithHttpInfo (string botUserId)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconGet");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1327,7 +1327,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/bots/{bot_user_id}/icon", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/bots/{bot_user_id}/icon", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1341,41 +1341,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set bot&#39;s LHS icon image Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>StatusOK</returns>
         public StatusOK BotsBotUserIdIconPost (string botUserId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = BotsBotUserIdIconPostWithHttpInfo(botUserId, image);
+            ApiResponse<StatusOK> localVarResponse = BotsBotUserIdIconPostWithHttpInfo(botUserId, image);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Set bot&#39;s LHS icon image Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > BotsBotUserIdIconPostWithHttpInfo (string botUserId, System.IO.Stream image)
+        public ApiResponse<StatusOK> BotsBotUserIdIconPostWithHttpInfo (string botUserId, System.IO.Stream image)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconPost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconPost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling BotsApi->BotsBotUserIdIconPost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling BotsApi->BotsBotUserIdIconPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1409,13 +1409,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set bot&#39;s LHS icon image Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> BotsBotUserIdIconPostAsync (string botUserId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await BotsBotUserIdIconPostAsyncWithHttpInfo(botUserId, image);
+            ApiResponse<StatusOK> localVarResponse = await BotsBotUserIdIconPostAsyncWithHttpInfo(botUserId, image);
              return localVarResponse.Data;
 
         }
@@ -1423,29 +1423,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set bot&#39;s LHS icon image Set a bot&#39;s LHS icon image based on bot_user_id string parameter. Icon image must be SVG format, all other formats are rejected. ##### Permissions Must have &#x60;manage_bots&#x60; permission. __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="image">SVG icon image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> BotsBotUserIdIconPostAsyncWithHttpInfo (string botUserId, System.IO.Stream image)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> BotsBotUserIdIconPostAsyncWithHttpInfo (string botUserId, System.IO.Stream image)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconPost");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdIconPost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling BotsApi->BotsBotUserIdIconPost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling BotsApi->BotsBotUserIdIconPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1479,41 +1479,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a bot Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Bot</returns>
         public Bot BotsBotUserIdPut (string botUserId, InlineObject64 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsBotUserIdPutWithHttpInfo(botUserId, body);
+            ApiResponse<Bot> localVarResponse = BotsBotUserIdPutWithHttpInfo(botUserId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a bot Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsBotUserIdPutWithHttpInfo (string botUserId, InlineObject64 body)
+        public ApiResponse<Bot> BotsBotUserIdPutWithHttpInfo (string botUserId, InlineObject64 body)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsBotUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsBotUserIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1544,13 +1544,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a bot Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsBotUserIdPutAsync (string botUserId, InlineObject64 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsBotUserIdPutAsyncWithHttpInfo(botUserId, body);
+            ApiResponse<Bot> localVarResponse = await BotsBotUserIdPutAsyncWithHttpInfo(botUserId, body);
              return localVarResponse.Data;
 
         }
@@ -1558,29 +1558,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a bot Partially update a bot by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have &#x60;manage_bots&#x60; permission.  __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="botUserId">Bot user ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsBotUserIdPutAsyncWithHttpInfo (string botUserId, InlineObject64 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsBotUserIdPutAsyncWithHttpInfo (string botUserId, InlineObject64 body)
         {
             // verify the required parameter 'botUserId' is set
             if (botUserId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'botUserId' when calling BotsApi->BotsBotUserIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsBotUserIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsBotUserIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1611,7 +1611,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bots Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -1619,28 +1619,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>List&lt;Bot&gt;</returns>
         public List<Bot> BotsGet (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Bot>> localVarResponse = BotsGetWithHttpInfo(page, perPage, includeDeleted, onlyOrphaned);
+            ApiResponse<List<Bot>> localVarResponse = BotsGetWithHttpInfo(page, perPage, includeDeleted, onlyOrphaned);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get bots Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <param name="onlyOrphaned">When true, only orphaned bots will be returned. A bot is consitered orphaned if it&#39;s owner has been deactivated. (optional)</param>
         /// <returns>ApiResponse of List&lt;Bot&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Bot> > BotsGetWithHttpInfo (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
+        public ApiResponse<List<Bot>> BotsGetWithHttpInfo (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1708,7 +1708,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bots Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
@@ -1716,7 +1716,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of List&lt;Bot&gt;</returns>
         public async System.Threading.Tasks.Task<List<Bot>> BotsGetAsync (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Bot>> localVarResponse = await BotsGetAsyncWithHttpInfo(page, perPage, includeDeleted, onlyOrphaned);
+            ApiResponse<List<Bot>> localVarResponse = await BotsGetAsyncWithHttpInfo(page, perPage, includeDeleted, onlyOrphaned);
              return localVarResponse.Data;
 
         }
@@ -1724,22 +1724,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get bots Get a page of a list of bots. ##### Permissions Must have &#x60;read_bots&#x60; permission for bots you are managing, and &#x60;read_others_bots&#x60; permission for bots others are managing. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. There is a maximum limit of 200 users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="includeDeleted">If deleted bots should be returned. (optional)</param>
         /// <param name="onlyOrphaned">When true, only orphaned bots will be returned. A bot is consitered orphaned if it&#39;s owner has been deactivated. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Bot&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Bot>>> BotsGetAsyncWithHttpInfo (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Bot>>> BotsGetAsyncWithHttpInfo (string page = null, string perPage = null, bool? includeDeleted = null, bool? onlyOrphaned = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1807,35 +1807,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a bot Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Bot</returns>
         public Bot BotsPost (InlineObject63 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = BotsPostWithHttpInfo(body);
+            ApiResponse<Bot> localVarResponse = BotsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a bot Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Bot</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Bot > BotsPostWithHttpInfo (InlineObject63 body)
+        public ApiResponse<Bot> BotsPostWithHttpInfo (InlineObject63 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1864,12 +1864,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a bot Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Bot</returns>
         public async System.Threading.Tasks.Task<Bot> BotsPostAsync (InlineObject63 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot> localVarResponse = await BotsPostAsyncWithHttpInfo(body);
+            ApiResponse<Bot> localVarResponse = await BotsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1877,24 +1877,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a bot Create a new bot account on the system. Username is required. ##### Permissions Must have &#x60;create_bot&#x60; permission. __Minimum server version__: 5.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Bot)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Bot>> BotsPostAsyncWithHttpInfo (InlineObject63 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Bot>> BotsPostAsyncWithHttpInfo (InlineObject63 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling BotsApi->BotsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

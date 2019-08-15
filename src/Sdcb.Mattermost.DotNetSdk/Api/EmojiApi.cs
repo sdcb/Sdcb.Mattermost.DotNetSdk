@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Emoji</returns>
         Emoji EmojiAutocompleteGet (string name);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>ApiResponse of Emoji</returns>
         ApiResponse<Emoji> EmojiAutocompleteGetWithHttpInfo (string name);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Emoji</returns>
         Emoji EmojiEmojiIdDelete (string emojiId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Emoji</returns>
         ApiResponse<Emoji> EmojiEmojiIdDeleteWithHttpInfo (string emojiId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Emoji</returns>
         Emoji EmojiEmojiIdGet (string emojiId);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Emoji</returns>
         ApiResponse<Emoji> EmojiEmojiIdGetWithHttpInfo (string emojiId);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns></returns>
         void EmojiEmojiIdImageGet (string emojiId);
@@ -107,17 +107,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> EmojiEmojiIdImageGetWithHttpInfo (string emojiId);
+        ApiResponse<object> EmojiEmojiIdImageGetWithHttpInfo (string emojiId);
         /// <summary>
         /// Get a list of custom emoji
         /// </summary>
         /// <remarks>
         /// Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
@@ -130,7 +130,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
@@ -142,7 +142,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Emoji</returns>
         Emoji EmojiNameEmojiNameGet (string emojiName);
@@ -153,7 +153,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>ApiResponse of Emoji</returns>
         ApiResponse<Emoji> EmojiNameEmojiNameGetWithHttpInfo (string emojiName);
@@ -163,7 +163,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Emoji</returns>
@@ -175,7 +175,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>ApiResponse of Emoji</returns>
@@ -186,7 +186,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Emoji&gt;</returns>
         List<Emoji> EmojiSearchPost (InlineObject48 body);
@@ -197,7 +197,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Emoji&gt;</returns>
         ApiResponse<List<Emoji>> EmojiSearchPostWithHttpInfo (InlineObject48 body);
@@ -216,7 +216,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Task of Emoji</returns>
         System.Threading.Tasks.Task<Emoji> EmojiAutocompleteGetAsync (string name);
@@ -227,7 +227,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
         System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiAutocompleteGetAsyncWithHttpInfo (string name);
@@ -237,7 +237,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of Emoji</returns>
         System.Threading.Tasks.Task<Emoji> EmojiEmojiIdDeleteAsync (string emojiId);
@@ -248,7 +248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
         System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiEmojiIdDeleteAsyncWithHttpInfo (string emojiId);
@@ -258,7 +258,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of Emoji</returns>
         System.Threading.Tasks.Task<Emoji> EmojiEmojiIdGetAsync (string emojiId);
@@ -269,7 +269,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
         System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiEmojiIdGetAsyncWithHttpInfo (string emojiId);
@@ -279,7 +279,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task EmojiEmojiIdImageGetAsync (string emojiId);
@@ -290,17 +290,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EmojiEmojiIdImageGetAsyncWithHttpInfo (string emojiId);
+        System.Threading.Tasks.Task<ApiResponse<object>> EmojiEmojiIdImageGetAsyncWithHttpInfo (string emojiId);
         /// <summary>
         /// Get a list of custom emoji
         /// </summary>
         /// <remarks>
         /// Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
@@ -313,7 +313,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
@@ -325,7 +325,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Task of Emoji</returns>
         System.Threading.Tasks.Task<Emoji> EmojiNameEmojiNameGetAsync (string emojiName);
@@ -336,7 +336,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
         System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiNameEmojiNameGetAsyncWithHttpInfo (string emojiName);
@@ -346,7 +346,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Task of Emoji</returns>
@@ -358,7 +358,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
@@ -369,7 +369,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Emoji&gt;</returns>
         System.Threading.Tasks.Task<List<Emoji>> EmojiSearchPostAsync (InlineObject48 body);
@@ -380,7 +380,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Emoji&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Emoji>>> EmojiSearchPostAsyncWithHttpInfo (InlineObject48 body);
@@ -400,7 +400,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class EmojiApi : IEmojiApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmojiApi"/> class.
@@ -414,14 +414,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="EmojiApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public EmojiApi(String basePath)
+        public EmojiApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -431,7 +431,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public EmojiApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public EmojiApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -439,8 +439,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -451,7 +451,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public EmojiApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public EmojiApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -466,18 +466,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -486,12 +486,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -507,34 +507,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete custom emoji Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiAutocompleteGet (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiAutocompleteGetWithHttpInfo(name);
+            ApiResponse<Emoji> localVarResponse = EmojiAutocompleteGetWithHttpInfo(name);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Autocomplete custom emoji Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiAutocompleteGetWithHttpInfo (string name)
+        public ApiResponse<Emoji> EmojiAutocompleteGetWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling EmojiApi->EmojiAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling EmojiApi->EmojiAutocompleteGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -572,12 +572,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete custom emoji Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiAutocompleteGetAsync (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiAutocompleteGetAsyncWithHttpInfo(name);
+            ApiResponse<Emoji> localVarResponse = await EmojiAutocompleteGetAsyncWithHttpInfo(name);
              return localVarResponse.Data;
 
         }
@@ -585,23 +585,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete custom emoji Get a list of custom emoji with names starting with or matching the provided name. Returns a maximum of 100 results. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The emoji name to search.</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiAutocompleteGetAsyncWithHttpInfo (string name)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiAutocompleteGetAsyncWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling EmojiApi->EmojiAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling EmojiApi->EmojiAutocompleteGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -639,34 +639,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a custom emoji Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiEmojiIdDelete (string emojiId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiEmojiIdDeleteWithHttpInfo(emojiId);
+            ApiResponse<Emoji> localVarResponse = EmojiEmojiIdDeleteWithHttpInfo(emojiId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a custom emoji Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiEmojiIdDeleteWithHttpInfo (string emojiId)
+        public ApiResponse<Emoji> EmojiEmojiIdDeleteWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdDelete");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -696,12 +696,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a custom emoji Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiEmojiIdDeleteAsync (string emojiId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiEmojiIdDeleteAsyncWithHttpInfo(emojiId);
+            ApiResponse<Emoji> localVarResponse = await EmojiEmojiIdDeleteAsyncWithHttpInfo(emojiId);
              return localVarResponse.Data;
 
         }
@@ -709,23 +709,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a custom emoji Delete a custom emoji. ##### Permissions Must have the &#x60;manage_team&#x60; or &#x60;manage_system&#x60; permissions or be the user who created the emoji. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiEmojiIdDeleteAsyncWithHttpInfo (string emojiId)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiEmojiIdDeleteAsyncWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdDelete");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -755,34 +755,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiEmojiIdGet (string emojiId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiEmojiIdGetWithHttpInfo(emojiId);
+            ApiResponse<Emoji> localVarResponse = EmojiEmojiIdGetWithHttpInfo(emojiId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a custom emoji Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiEmojiIdGetWithHttpInfo (string emojiId)
+        public ApiResponse<Emoji> EmojiEmojiIdGetWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdGet");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -812,12 +812,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiEmojiIdGetAsync (string emojiId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiEmojiIdGetAsyncWithHttpInfo(emojiId);
+            ApiResponse<Emoji> localVarResponse = await EmojiEmojiIdGetAsyncWithHttpInfo(emojiId);
              return localVarResponse.Data;
 
         }
@@ -825,23 +825,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji Get some metadata for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiEmojiIdGetAsyncWithHttpInfo (string emojiId)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiEmojiIdGetAsyncWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdGet");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -871,7 +871,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get custom emoji image Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns></returns>
         public void EmojiEmojiIdImageGet (string emojiId)
@@ -882,22 +882,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get custom emoji image Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> EmojiEmojiIdImageGetWithHttpInfo (string emojiId)
+        public ApiResponse<object> EmojiEmojiIdImageGetWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdImageGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -913,7 +913,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/emoji/{emoji_id}/image", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/emoji/{emoji_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -927,7 +927,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get custom emoji image Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task EmojiEmojiIdImageGetAsync (string emojiId)
@@ -939,23 +939,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get custom emoji image Get the image for a custom emoji. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiId">Emoji GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> EmojiEmojiIdImageGetAsyncWithHttpInfo (string emojiId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> EmojiEmojiIdImageGetAsyncWithHttpInfo (string emojiId)
         {
             // verify the required parameter 'emojiId' is set
             if (emojiId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'emojiId' when calling EmojiApi->EmojiEmojiIdImageGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -971,7 +971,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/emoji/{emoji_id}/image", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/emoji/{emoji_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -985,34 +985,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of custom emoji Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiGet (string page = null, string perPage = null, string sort = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiGetWithHttpInfo(page, perPage, sort);
+            ApiResponse<Emoji> localVarResponse = EmojiGetWithHttpInfo(page, perPage, sort);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of custom emoji Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiGetWithHttpInfo (string page = null, string perPage = null, string sort = null)
+        public ApiResponse<Emoji> EmojiGetWithHttpInfo (string page = null, string perPage = null, string sort = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1070,14 +1070,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of custom emoji Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiGetAsync (string page = null, string perPage = null, string sort = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiGetAsyncWithHttpInfo(page, perPage, sort);
+            ApiResponse<Emoji> localVarResponse = await EmojiGetAsyncWithHttpInfo(page, perPage, sort);
              return localVarResponse.Data;
 
         }
@@ -1085,21 +1085,21 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of custom emoji Get a page of metadata for custom emoji on the system. Since server version 4.7, sort using the &#x60;sort&#x60; query parameter. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <param name="sort">Either blank for no sorting or \&quot;name\&quot; to sort by emoji names. Minimum server version for sorting is 4.7. (optional)</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiGetAsyncWithHttpInfo (string page = null, string perPage = null, string sort = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiGetAsyncWithHttpInfo (string page = null, string perPage = null, string sort = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1157,34 +1157,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji by name Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiNameEmojiNameGet (string emojiName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiNameEmojiNameGetWithHttpInfo(emojiName);
+            ApiResponse<Emoji> localVarResponse = EmojiNameEmojiNameGetWithHttpInfo(emojiName);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a custom emoji by name Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiNameEmojiNameGetWithHttpInfo (string emojiName)
+        public ApiResponse<Emoji> EmojiNameEmojiNameGetWithHttpInfo (string emojiName)
         {
             // verify the required parameter 'emojiName' is set
             if (emojiName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiName' when calling EmojiApi->EmojiNameEmojiNameGet");
+                throw new ApiException(400, "Missing required parameter 'emojiName' when calling EmojiApi->EmojiNameEmojiNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1214,12 +1214,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji by name Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiNameEmojiNameGetAsync (string emojiName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiNameEmojiNameGetAsyncWithHttpInfo(emojiName);
+            ApiResponse<Emoji> localVarResponse = await EmojiNameEmojiNameGetAsyncWithHttpInfo(emojiName);
              return localVarResponse.Data;
 
         }
@@ -1227,23 +1227,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a custom emoji by name Get some metadata for a custom emoji using its name. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="emojiName">Emoji name</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiNameEmojiNameGetAsyncWithHttpInfo (string emojiName)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiNameEmojiNameGetAsyncWithHttpInfo (string emojiName)
         {
             // verify the required parameter 'emojiName' is set
             if (emojiName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emojiName' when calling EmojiApi->EmojiNameEmojiNameGet");
+                throw new ApiException(400, "Missing required parameter 'emojiName' when calling EmojiApi->EmojiNameEmojiNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1273,41 +1273,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a custom emoji Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Emoji</returns>
         public Emoji EmojiPost (System.IO.Stream image, string emoji)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = EmojiPostWithHttpInfo(image, emoji);
+            ApiResponse<Emoji> localVarResponse = EmojiPostWithHttpInfo(image, emoji);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a custom emoji Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>ApiResponse of Emoji</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Emoji > EmojiPostWithHttpInfo (System.IO.Stream image, string emoji)
+        public ApiResponse<Emoji> EmojiPostWithHttpInfo (System.IO.Stream image, string emoji)
         {
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling EmojiApi->EmojiPost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling EmojiApi->EmojiPost");
 
             // verify the required parameter 'emoji' is set
             if (emoji == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emoji' when calling EmojiApi->EmojiPost");
+                throw new ApiException(400, "Missing required parameter 'emoji' when calling EmojiApi->EmojiPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1343,13 +1343,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a custom emoji Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Task of Emoji</returns>
         public async System.Threading.Tasks.Task<Emoji> EmojiPostAsync (System.IO.Stream image, string emoji)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji> localVarResponse = await EmojiPostAsyncWithHttpInfo(image, emoji);
+            ApiResponse<Emoji> localVarResponse = await EmojiPostAsyncWithHttpInfo(image, emoji);
              return localVarResponse.Data;
 
         }
@@ -1357,29 +1357,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a custom emoji Create a custom emoji for the team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">A file to be uploaded</param>
         /// <param name="emoji">A JSON object containing a &#x60;name&#x60; field with the name of the emoji and a &#x60;creator_id&#x60; field with the id of the authenticated user.</param>
         /// <returns>Task of ApiResponse (Emoji)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Emoji>> EmojiPostAsyncWithHttpInfo (System.IO.Stream image, string emoji)
+        public async System.Threading.Tasks.Task<ApiResponse<Emoji>> EmojiPostAsyncWithHttpInfo (System.IO.Stream image, string emoji)
         {
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling EmojiApi->EmojiPost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling EmojiApi->EmojiPost");
 
             // verify the required parameter 'emoji' is set
             if (emoji == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'emoji' when calling EmojiApi->EmojiPost");
+                throw new ApiException(400, "Missing required parameter 'emoji' when calling EmojiApi->EmojiPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1415,35 +1415,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search custom emoji Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Emoji&gt;</returns>
         public List<Emoji> EmojiSearchPost (InlineObject48 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Emoji>> localVarResponse = EmojiSearchPostWithHttpInfo(body);
+            ApiResponse<List<Emoji>> localVarResponse = EmojiSearchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search custom emoji Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Emoji&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Emoji> > EmojiSearchPostWithHttpInfo (InlineObject48 body)
+        public ApiResponse<List<Emoji>> EmojiSearchPostWithHttpInfo (InlineObject48 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling EmojiApi->EmojiSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling EmojiApi->EmojiSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1472,12 +1472,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search custom emoji Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Emoji&gt;</returns>
         public async System.Threading.Tasks.Task<List<Emoji>> EmojiSearchPostAsync (InlineObject48 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Emoji>> localVarResponse = await EmojiSearchPostAsyncWithHttpInfo(body);
+            ApiResponse<List<Emoji>> localVarResponse = await EmojiSearchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1485,24 +1485,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search custom emoji Search for custom emoji by name based on search criteria provided in the request body. A maximum of 200 results are returned. ##### Permissions Must be authenticated.  __Minimum server version__: 4.7 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Emoji&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Emoji>>> EmojiSearchPostAsyncWithHttpInfo (InlineObject48 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Emoji>>> EmojiSearchPostAsyncWithHttpInfo (InlineObject48 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling EmojiApi->EmojiSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling EmojiApi->EmojiSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

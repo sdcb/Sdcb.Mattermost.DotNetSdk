@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -46,7 +46,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -58,7 +58,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -71,7 +71,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -92,7 +92,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -105,7 +105,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -117,7 +117,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -130,7 +130,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
@@ -152,7 +152,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class GroupsApi : IGroupsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupsApi"/> class.
@@ -166,14 +166,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="GroupsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public GroupsApi(String basePath)
+        public GroupsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -183,7 +183,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public GroupsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public GroupsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -191,8 +191,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -203,7 +203,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public GroupsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public GroupsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -218,18 +218,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -238,12 +238,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -259,38 +259,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel groups Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Group&gt;</returns>
         public List<Group> ChannelsChannelIdGroupsGet (string channelId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>> localVarResponse = ChannelsChannelIdGroupsGetWithHttpInfo(channelId, page, perPage);
+            ApiResponse<List<Group>> localVarResponse = ChannelsChannelIdGroupsGetWithHttpInfo(channelId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel groups Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Group&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Group> > ChannelsChannelIdGroupsGetWithHttpInfo (string channelId, string page = null, string perPage = null)
+        public ApiResponse<List<Group>> ChannelsChannelIdGroupsGetWithHttpInfo (string channelId, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling GroupsApi->ChannelsChannelIdGroupsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling GroupsApi->ChannelsChannelIdGroupsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -340,14 +340,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel groups Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Group&gt;</returns>
         public async System.Threading.Tasks.Task<List<Group>> ChannelsChannelIdGroupsGetAsync (string channelId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>> localVarResponse = await ChannelsChannelIdGroupsGetAsyncWithHttpInfo(channelId, page, perPage);
+            ApiResponse<List<Group>> localVarResponse = await ChannelsChannelIdGroupsGetAsyncWithHttpInfo(channelId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -355,25 +355,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel groups Retrieve the list of groups associated with a given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Group&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>>> ChannelsChannelIdGroupsGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Group>>> ChannelsChannelIdGroupsGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling GroupsApi->ChannelsChannelIdGroupsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling GroupsApi->ChannelsChannelIdGroupsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -423,38 +423,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team groups Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Group&gt;</returns>
         public List<Group> TeamsTeamIdGroupsGet (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>> localVarResponse = TeamsTeamIdGroupsGetWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Group>> localVarResponse = TeamsTeamIdGroupsGetWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get team groups Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Group&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Group> > TeamsTeamIdGroupsGetWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public ApiResponse<List<Group>> TeamsTeamIdGroupsGetWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling GroupsApi->TeamsTeamIdGroupsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling GroupsApi->TeamsTeamIdGroupsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -504,14 +504,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team groups Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Group&gt;</returns>
         public async System.Threading.Tasks.Task<List<Group>> TeamsTeamIdGroupsGetAsync (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>> localVarResponse = await TeamsTeamIdGroupsGetAsyncWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Group>> localVarResponse = await TeamsTeamIdGroupsGetAsyncWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -519,25 +519,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team groups Retrieve the list of groups associated with a given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.11 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of groups per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Group&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Group>>> TeamsTeamIdGroupsGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Group>>> TeamsTeamIdGroupsGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling GroupsApi->TeamsTeamIdGroupsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling GroupsApi->TeamsTeamIdGroupsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

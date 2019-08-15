@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>List&lt;Preference&gt;</returns>
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>ApiResponse of List&lt;Preference&gt;</returns>
@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
@@ -69,7 +69,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
@@ -81,7 +81,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>StatusOK</returns>
@@ -93,7 +93,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -104,7 +104,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Preference&gt;</returns>
         List<Preference> UsersUserIdPreferencesGet (string userId);
@@ -115,7 +115,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Preference&gt;</returns>
         ApiResponse<List<Preference>> UsersUserIdPreferencesGetWithHttpInfo (string userId);
@@ -125,7 +125,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>StatusOK</returns>
@@ -137,7 +137,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -157,7 +157,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>Task of List&lt;Preference&gt;</returns>
@@ -169,7 +169,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>Task of ApiResponse (List&lt;Preference&gt;)</returns>
@@ -180,7 +180,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
@@ -193,7 +193,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
@@ -205,7 +205,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of StatusOK</returns>
@@ -217,7 +217,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -228,7 +228,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Preference&gt;</returns>
         System.Threading.Tasks.Task<List<Preference>> UsersUserIdPreferencesGetAsync (string userId);
@@ -239,7 +239,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Preference&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Preference>>> UsersUserIdPreferencesGetAsyncWithHttpInfo (string userId);
@@ -249,7 +249,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of StatusOK</returns>
@@ -261,7 +261,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -282,7 +282,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class PreferencesApi : IPreferencesApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PreferencesApi"/> class.
@@ -296,14 +296,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="PreferencesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public PreferencesApi(String basePath)
+        public PreferencesApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -313,7 +313,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PreferencesApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public PreferencesApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -321,8 +321,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -333,7 +333,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public PreferencesApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public PreferencesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -348,18 +348,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -368,12 +368,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -389,40 +389,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List a user&#39;s preferences by category Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>List&lt;Preference&gt;</returns>
         public List<Preference> UsersUserIdPreferencesCategoryGet (string userId, string category)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>> localVarResponse = UsersUserIdPreferencesCategoryGetWithHttpInfo(userId, category);
+            ApiResponse<List<Preference>> localVarResponse = UsersUserIdPreferencesCategoryGetWithHttpInfo(userId, category);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// List a user&#39;s preferences by category Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>ApiResponse of List&lt;Preference&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Preference> > UsersUserIdPreferencesCategoryGetWithHttpInfo (string userId, string category)
+        public ApiResponse<List<Preference>> UsersUserIdPreferencesCategoryGetWithHttpInfo (string userId, string category)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
 
             // verify the required parameter 'category' is set
             if (category == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
+                throw new ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -454,13 +454,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List a user&#39;s preferences by category Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>Task of List&lt;Preference&gt;</returns>
         public async System.Threading.Tasks.Task<List<Preference>> UsersUserIdPreferencesCategoryGetAsync (string userId, string category)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>> localVarResponse = await UsersUserIdPreferencesCategoryGetAsyncWithHttpInfo(userId, category);
+            ApiResponse<List<Preference>> localVarResponse = await UsersUserIdPreferencesCategoryGetAsyncWithHttpInfo(userId, category);
              return localVarResponse.Data;
 
         }
@@ -468,28 +468,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List a user&#39;s preferences by category Lists the current user&#39;s stored preferences in the given category. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <returns>Task of ApiResponse (List&lt;Preference&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>>> UsersUserIdPreferencesCategoryGetAsyncWithHttpInfo (string userId, string category)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Preference>>> UsersUserIdPreferencesCategoryGetAsyncWithHttpInfo (string userId, string category)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
 
             // verify the required parameter 'category' is set
             if (category == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
+                throw new ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -521,46 +521,46 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a specific user preference Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
         /// <returns>Preference</returns>
         public Preference UsersUserIdPreferencesCategoryNamePreferenceNameGet (string userId, string category, string preferenceName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Preference> localVarResponse = UsersUserIdPreferencesCategoryNamePreferenceNameGetWithHttpInfo(userId, category, preferenceName);
+            ApiResponse<Preference> localVarResponse = UsersUserIdPreferencesCategoryNamePreferenceNameGetWithHttpInfo(userId, category, preferenceName);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a specific user preference Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
         /// <returns>ApiResponse of Preference</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Preference > UsersUserIdPreferencesCategoryNamePreferenceNameGetWithHttpInfo (string userId, string category, string preferenceName)
+        public ApiResponse<Preference> UsersUserIdPreferencesCategoryNamePreferenceNameGetWithHttpInfo (string userId, string category, string preferenceName)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
             // verify the required parameter 'category' is set
             if (category == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
             // verify the required parameter 'preferenceName' is set
             if (preferenceName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'preferenceName' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'preferenceName' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -594,14 +594,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a specific user preference Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
         /// <returns>Task of Preference</returns>
         public async System.Threading.Tasks.Task<Preference> UsersUserIdPreferencesCategoryNamePreferenceNameGetAsync (string userId, string category, string preferenceName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Preference> localVarResponse = await UsersUserIdPreferencesCategoryNamePreferenceNameGetAsyncWithHttpInfo(userId, category, preferenceName);
+            ApiResponse<Preference> localVarResponse = await UsersUserIdPreferencesCategoryNamePreferenceNameGetAsyncWithHttpInfo(userId, category, preferenceName);
              return localVarResponse.Data;
 
         }
@@ -609,33 +609,33 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a specific user preference Gets a single preference for the current user with the given category and name. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="category">The category of a group of preferences</param>
         /// <param name="preferenceName">The name of the preference</param>
         /// <returns>Task of ApiResponse (Preference)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Preference>> UsersUserIdPreferencesCategoryNamePreferenceNameGetAsyncWithHttpInfo (string userId, string category, string preferenceName)
+        public async System.Threading.Tasks.Task<ApiResponse<Preference>> UsersUserIdPreferencesCategoryNamePreferenceNameGetAsyncWithHttpInfo (string userId, string category, string preferenceName)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
             // verify the required parameter 'category' is set
             if (category == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'category' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
             // verify the required parameter 'preferenceName' is set
             if (preferenceName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'preferenceName' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
+                throw new ApiException(400, "Missing required parameter 'preferenceName' when calling PreferencesApi->UsersUserIdPreferencesCategoryNamePreferenceNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -669,41 +669,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s preferences Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdPreferencesDeletePost (string userId, List<Preference> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdPreferencesDeletePostWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdPreferencesDeletePostWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete user&#39;s preferences Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdPreferencesDeletePostWithHttpInfo (string userId, List<Preference> body)
+        public ApiResponse<StatusOK> UsersUserIdPreferencesDeletePostWithHttpInfo (string userId, List<Preference> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -734,13 +734,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s preferences Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdPreferencesDeletePostAsync (string userId, List<Preference> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdPreferencesDeletePostAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdPreferencesDeletePostAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -748,29 +748,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete user&#39;s preferences Delete a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdPreferencesDeletePostAsyncWithHttpInfo (string userId, List<Preference> body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdPreferencesDeletePostAsyncWithHttpInfo (string userId, List<Preference> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesDeletePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -801,34 +801,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the user&#39;s preferences Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Preference&gt;</returns>
         public List<Preference> UsersUserIdPreferencesGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>> localVarResponse = UsersUserIdPreferencesGetWithHttpInfo(userId);
+            ApiResponse<List<Preference>> localVarResponse = UsersUserIdPreferencesGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the user&#39;s preferences Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Preference&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Preference> > UsersUserIdPreferencesGetWithHttpInfo (string userId)
+        public ApiResponse<List<Preference>> UsersUserIdPreferencesGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -858,12 +858,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the user&#39;s preferences Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Preference&gt;</returns>
         public async System.Threading.Tasks.Task<List<Preference>> UsersUserIdPreferencesGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>> localVarResponse = await UsersUserIdPreferencesGetAsyncWithHttpInfo(userId);
+            ApiResponse<List<Preference>> localVarResponse = await UsersUserIdPreferencesGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -871,23 +871,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the user&#39;s preferences Get a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Preference&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Preference>>> UsersUserIdPreferencesGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Preference>>> UsersUserIdPreferencesGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -917,41 +917,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Save the user&#39;s preferences Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdPreferencesPut (string userId, List<Preference> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdPreferencesPutWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdPreferencesPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Save the user&#39;s preferences Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdPreferencesPutWithHttpInfo (string userId, List<Preference> body)
+        public ApiResponse<StatusOK> UsersUserIdPreferencesPutWithHttpInfo (string userId, List<Preference> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -982,13 +982,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Save the user&#39;s preferences Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdPreferencesPutAsync (string userId, List<Preference> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdPreferencesPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdPreferencesPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -996,29 +996,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Save the user&#39;s preferences Save a list of the user&#39;s preferences. ##### Permissions Must be logged in as the user being updated or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body">List of preference object</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdPreferencesPutAsyncWithHttpInfo (string userId, List<Preference> body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdPreferencesPutAsyncWithHttpInfo (string userId, List<Preference> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PreferencesApi->UsersUserIdPreferencesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PreferencesApi->UsersUserIdPreferencesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

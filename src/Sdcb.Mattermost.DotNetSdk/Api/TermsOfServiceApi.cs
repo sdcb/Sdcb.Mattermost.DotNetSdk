@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>UserTermsOfService</returns>
         UserTermsOfService UsersUserIdTermsOfServiceGet (string userId);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of UserTermsOfService</returns>
         ApiResponse<UserTermsOfService> UsersUserIdTermsOfServiceGetWithHttpInfo (string userId);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -66,7 +66,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of UserTermsOfService</returns>
         System.Threading.Tasks.Task<UserTermsOfService> UsersUserIdTermsOfServiceGetAsync (string userId);
@@ -97,7 +97,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (UserTermsOfService)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId);
@@ -107,7 +107,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -119,7 +119,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -140,7 +140,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class TermsOfServiceApi : ITermsOfServiceApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TermsOfServiceApi"/> class.
@@ -154,14 +154,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="TermsOfServiceApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TermsOfServiceApi(String basePath)
+        public TermsOfServiceApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -171,7 +171,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TermsOfServiceApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public TermsOfServiceApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -179,8 +179,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -191,7 +191,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public TermsOfServiceApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public TermsOfServiceApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -206,18 +206,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -226,12 +226,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -247,34 +247,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>UserTermsOfService</returns>
         public UserTermsOfService UsersUserIdTermsOfServiceGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService> localVarResponse = UsersUserIdTermsOfServiceGetWithHttpInfo(userId);
+            ApiResponse<UserTermsOfService> localVarResponse = UsersUserIdTermsOfServiceGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of UserTermsOfService</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< UserTermsOfService > UsersUserIdTermsOfServiceGetWithHttpInfo (string userId)
+        public ApiResponse<UserTermsOfService> UsersUserIdTermsOfServiceGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServiceGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServiceGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -304,12 +304,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of UserTermsOfService</returns>
         public async System.Threading.Tasks.Task<UserTermsOfService> UsersUserIdTermsOfServiceGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService> localVarResponse = await UsersUserIdTermsOfServiceGetAsyncWithHttpInfo(userId);
+            ApiResponse<UserTermsOfService> localVarResponse = await UsersUserIdTermsOfServiceGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -317,23 +317,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Fetches user&#39;s latest terms of service action if the latest action was for acceptance. Will be deprecated in v6.0 Fetches user&#39;s latest terms of service action if the latest action was for acceptance.  __Minimum server version__: 5.6 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (UserTermsOfService)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserTermsOfService>> UsersUserIdTermsOfServiceGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServiceGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServiceGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -363,41 +363,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK UsersUserIdTermsOfServicePost (string userId, InlineObject21 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = UsersUserIdTermsOfServicePostWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = UsersUserIdTermsOfServicePostWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > UsersUserIdTermsOfServicePostWithHttpInfo (string userId, InlineObject21 body)
+        public ApiResponse<StatusOK> UsersUserIdTermsOfServicePostWithHttpInfo (string userId, InlineObject21 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -428,13 +428,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> UsersUserIdTermsOfServicePostAsync (string userId, InlineObject21 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await UsersUserIdTermsOfServicePostAsyncWithHttpInfo(userId, body);
+            ApiResponse<StatusOK> localVarResponse = await UsersUserIdTermsOfServicePostAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -442,29 +442,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Records user action when they accept or decline custom terms of service Records user action when they accept or decline custom terms of service. Records the action in audit table. Updates user&#39;s last accepted terms of service ID if they accepted it.  __Minimum server version__: 5.4 ##### Permissions Must be logged in as the user being acted on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> UsersUserIdTermsOfServicePostAsyncWithHttpInfo (string userId, InlineObject21 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> UsersUserIdTermsOfServicePostAsyncWithHttpInfo (string userId, InlineObject21 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TermsOfServiceApi->UsersUserIdTermsOfServicePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>StatusOK</returns>
         StatusOK OauthAppsAppIdDelete (string appId);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> OauthAppsAppIdDeleteWithHttpInfo (string appId);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         OAuthApp OauthAppsAppIdGet (string appId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
         ApiResponse<OAuthApp> OauthAppsAppIdGetWithHttpInfo (string appId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         OAuthApp OauthAppsAppIdInfoGet (string appId);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
         ApiResponse<OAuthApp> OauthAppsAppIdInfoGetWithHttpInfo (string appId);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>OAuthApp</returns>
@@ -108,7 +108,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OAuthApp</returns>
@@ -119,7 +119,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         OAuthApp OauthAppsAppIdRegenSecretPost (string appId);
@@ -130,7 +130,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
         ApiResponse<OAuthApp> OauthAppsAppIdRegenSecretPostWithHttpInfo (string appId);
@@ -140,7 +140,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;OAuthApp&gt;</returns>
@@ -152,7 +152,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;OAuthApp&gt;</returns>
@@ -163,7 +163,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>OAuthApp</returns>
         OAuthApp OauthAppsPost (InlineObject55 body);
@@ -174,7 +174,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OAuthApp</returns>
         ApiResponse<OAuthApp> OauthAppsPostWithHttpInfo (InlineObject55 body);
@@ -184,7 +184,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
@@ -197,7 +197,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
@@ -218,7 +218,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> OauthAppsAppIdDeleteAsync (string appId);
@@ -229,7 +229,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> OauthAppsAppIdDeleteAsyncWithHttpInfo (string appId);
@@ -239,7 +239,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdGetAsync (string appId);
@@ -250,7 +250,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdGetAsyncWithHttpInfo (string appId);
@@ -260,7 +260,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdInfoGetAsync (string appId);
@@ -271,7 +271,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdInfoGetAsyncWithHttpInfo (string appId);
@@ -281,7 +281,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>Task of OAuthApp</returns>
@@ -293,7 +293,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
@@ -304,7 +304,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdRegenSecretPostAsync (string appId);
@@ -315,7 +315,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdRegenSecretPostAsyncWithHttpInfo (string appId);
@@ -325,7 +325,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;OAuthApp&gt;</returns>
@@ -337,7 +337,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;OAuthApp&gt;)</returns>
@@ -348,7 +348,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of OAuthApp</returns>
         System.Threading.Tasks.Task<OAuthApp> OauthAppsPostAsync (InlineObject55 body);
@@ -359,7 +359,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsPostAsyncWithHttpInfo (InlineObject55 body);
@@ -369,7 +369,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
@@ -382,7 +382,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
@@ -404,7 +404,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class OAuthApi : IOAuthApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthApi"/> class.
@@ -418,14 +418,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="OAuthApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public OAuthApi(String basePath)
+        public OAuthApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -435,7 +435,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public OAuthApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public OAuthApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -443,8 +443,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -455,7 +455,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public OAuthApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public OAuthApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -470,18 +470,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -490,12 +490,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -511,34 +511,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an OAuth app Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>StatusOK</returns>
         public StatusOK OauthAppsAppIdDelete (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = OauthAppsAppIdDeleteWithHttpInfo(appId);
+            ApiResponse<StatusOK> localVarResponse = OauthAppsAppIdDeleteWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete an OAuth app Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > OauthAppsAppIdDeleteWithHttpInfo (string appId)
+        public ApiResponse<StatusOK> OauthAppsAppIdDeleteWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdDelete");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -568,12 +568,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an OAuth app Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> OauthAppsAppIdDeleteAsync (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await OauthAppsAppIdDeleteAsyncWithHttpInfo(appId);
+            ApiResponse<StatusOK> localVarResponse = await OauthAppsAppIdDeleteAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -581,23 +581,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete an OAuth app Delete and unregister an OAuth 2.0 client application  ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> OauthAppsAppIdDeleteAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> OauthAppsAppIdDeleteAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdDelete");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -627,34 +627,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an OAuth app Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         public OAuthApp OauthAppsAppIdGet (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdGetWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdGetWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get an OAuth app Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OAuthApp > OauthAppsAppIdGetWithHttpInfo (string appId)
+        public ApiResponse<OAuthApp> OauthAppsAppIdGetWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdGet");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -684,12 +684,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an OAuth app Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         public async System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdGetAsync (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdGetAsyncWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdGetAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -697,23 +697,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get an OAuth app Get an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp>> OauthAppsAppIdGetAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdGetAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdGet");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -743,34 +743,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get info on an OAuth app Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         public OAuthApp OauthAppsAppIdInfoGet (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdInfoGetWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdInfoGetWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get info on an OAuth app Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OAuthApp > OauthAppsAppIdInfoGetWithHttpInfo (string appId)
+        public ApiResponse<OAuthApp> OauthAppsAppIdInfoGetWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdInfoGet");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdInfoGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -800,12 +800,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get info on an OAuth app Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         public async System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdInfoGetAsync (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdInfoGetAsyncWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdInfoGetAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -813,23 +813,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get info on an OAuth app Get public information about an OAuth 2.0 client application registered with Mattermost. The application&#39;s client secret will be blanked out. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp>> OauthAppsAppIdInfoGetAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdInfoGetAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdInfoGet");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdInfoGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -859,41 +859,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an OAuth app Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>OAuthApp</returns>
         public OAuthApp OauthAppsAppIdPut (string appId, InlineObject56 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdPutWithHttpInfo(appId, body);
+            ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdPutWithHttpInfo(appId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update an OAuth app Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OAuthApp</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OAuthApp > OauthAppsAppIdPutWithHttpInfo (string appId, InlineObject56 body)
+        public ApiResponse<OAuthApp> OauthAppsAppIdPutWithHttpInfo (string appId, InlineObject56 body)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdPut");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsAppIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsAppIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -924,13 +924,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an OAuth app Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>Task of OAuthApp</returns>
         public async System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdPutAsync (string appId, InlineObject56 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdPutAsyncWithHttpInfo(appId, body);
+            ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdPutAsyncWithHttpInfo(appId, body);
              return localVarResponse.Data;
 
         }
@@ -938,29 +938,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update an OAuth app Update an OAuth 2.0 client application based on OAuth struct. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp>> OauthAppsAppIdPutAsyncWithHttpInfo (string appId, InlineObject56 body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdPutAsyncWithHttpInfo (string appId, InlineObject56 body)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdPut");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsAppIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsAppIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -991,34 +991,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate OAuth app secret Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>OAuthApp</returns>
         public OAuthApp OauthAppsAppIdRegenSecretPost (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdRegenSecretPostWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = OauthAppsAppIdRegenSecretPostWithHttpInfo(appId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Regenerate OAuth app secret Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>ApiResponse of OAuthApp</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OAuthApp > OauthAppsAppIdRegenSecretPostWithHttpInfo (string appId)
+        public ApiResponse<OAuthApp> OauthAppsAppIdRegenSecretPostWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdRegenSecretPost");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdRegenSecretPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1048,12 +1048,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate OAuth app secret Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of OAuthApp</returns>
         public async System.Threading.Tasks.Task<OAuthApp> OauthAppsAppIdRegenSecretPostAsync (string appId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdRegenSecretPostAsyncWithHttpInfo(appId);
+            ApiResponse<OAuthApp> localVarResponse = await OauthAppsAppIdRegenSecretPostAsyncWithHttpInfo(appId);
              return localVarResponse.Data;
 
         }
@@ -1061,23 +1061,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate OAuth app secret Regenerate the client secret for an OAuth 2.0 client application registered with Mattermost. ##### Permissions If app creator, must have &#x60;mange_oauth&#x60; permission otherwise &#x60;manage_system_wide_oauth&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="appId">Application client id</param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp>> OauthAppsAppIdRegenSecretPostAsyncWithHttpInfo (string appId)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsAppIdRegenSecretPostAsyncWithHttpInfo (string appId)
         {
             // verify the required parameter 'appId' is set
             if (appId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdRegenSecretPost");
+                throw new ApiException(400, "Missing required parameter 'appId' when calling OAuthApi->OauthAppsAppIdRegenSecretPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1107,32 +1107,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get OAuth apps Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;OAuthApp&gt;</returns>
         public List<OAuthApp> OauthAppsGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>> localVarResponse = OauthAppsGetWithHttpInfo(page, perPage);
+            ApiResponse<List<OAuthApp>> localVarResponse = OauthAppsGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get OAuth apps Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;OAuthApp&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<OAuthApp> > OauthAppsGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<OAuthApp>> OauthAppsGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1180,13 +1180,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get OAuth apps Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;OAuthApp&gt;</returns>
         public async System.Threading.Tasks.Task<List<OAuthApp>> OauthAppsGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>> localVarResponse = await OauthAppsGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<OAuthApp>> localVarResponse = await OauthAppsGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1194,20 +1194,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get OAuth apps Get a page of OAuth 2.0 client applications registered with Mattermost. ##### Permissions With &#x60;manage_oauth&#x60; permission, the apps registered by the logged in user are returned. With &#x60;manage_system_wide_oauth&#x60; permission, all apps regardless of creator are returned. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;OAuthApp&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>>> OauthAppsGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OAuthApp>>> OauthAppsGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1255,35 +1255,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Register OAuth app Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>OAuthApp</returns>
         public OAuthApp OauthAppsPost (InlineObject55 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = OauthAppsPostWithHttpInfo(body);
+            ApiResponse<OAuthApp> localVarResponse = OauthAppsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Register OAuth app Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OAuthApp</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< OAuthApp > OauthAppsPostWithHttpInfo (InlineObject55 body)
+        public ApiResponse<OAuthApp> OauthAppsPostWithHttpInfo (InlineObject55 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1312,12 +1312,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Register OAuth app Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of OAuthApp</returns>
         public async System.Threading.Tasks.Task<OAuthApp> OauthAppsPostAsync (InlineObject55 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp> localVarResponse = await OauthAppsPostAsyncWithHttpInfo(body);
+            ApiResponse<OAuthApp> localVarResponse = await OauthAppsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1325,24 +1325,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Register OAuth app Register an OAuth 2.0 client application with Mattermost as the service provider. ##### Permissions Must have &#x60;manage_oauth&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OAuthApp)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<OAuthApp>> OauthAppsPostAsyncWithHttpInfo (InlineObject55 body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthApp>> OauthAppsPostAsyncWithHttpInfo (InlineObject55 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->OauthAppsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1371,38 +1371,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get authorized OAuth apps Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;OAuthApp&gt;</returns>
         public List<OAuthApp> UsersUserIdOauthAppsAuthorizedGet (string userId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>> localVarResponse = UsersUserIdOauthAppsAuthorizedGetWithHttpInfo(userId, page, perPage);
+            ApiResponse<List<OAuthApp>> localVarResponse = UsersUserIdOauthAppsAuthorizedGetWithHttpInfo(userId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get authorized OAuth apps Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;OAuthApp&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<OAuthApp> > UsersUserIdOauthAppsAuthorizedGetWithHttpInfo (string userId, string page = null, string perPage = null)
+        public ApiResponse<List<OAuthApp>> UsersUserIdOauthAppsAuthorizedGetWithHttpInfo (string userId, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling OAuthApi->UsersUserIdOauthAppsAuthorizedGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling OAuthApi->UsersUserIdOauthAppsAuthorizedGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1452,14 +1452,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get authorized OAuth apps Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;OAuthApp&gt;</returns>
         public async System.Threading.Tasks.Task<List<OAuthApp>> UsersUserIdOauthAppsAuthorizedGetAsync (string userId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>> localVarResponse = await UsersUserIdOauthAppsAuthorizedGetAsyncWithHttpInfo(userId, page, perPage);
+            ApiResponse<List<OAuthApp>> localVarResponse = await UsersUserIdOauthAppsAuthorizedGetAsyncWithHttpInfo(userId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1467,25 +1467,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get authorized OAuth apps Get a page of OAuth 2.0 client applications authorized to access a user&#39;s account. ##### Permissions Must be authenticated as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of apps per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;OAuthApp&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<OAuthApp>>> UsersUserIdOauthAppsAuthorizedGetAsyncWithHttpInfo (string userId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OAuthApp>>> UsersUserIdOauthAppsAuthorizedGetAsyncWithHttpInfo (string userId, string page = null, string perPage = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling OAuthApi->UsersUserIdOauthAppsAuthorizedGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling OAuthApi->UsersUserIdOauthAppsAuthorizedGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

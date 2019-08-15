@@ -52,7 +52,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="fileIds">fileIds.</param>
         /// <param name="pendingPostId">pendingPostId.</param>
         /// <param name="metadata">metadata.</param>
-        public Post(string id = default(string), long createAt = default(long), long updateAt = default(long), long deleteAt = default(long), long editAt = default(long), string userId = default(string), string channelId = default(string), string rootId = default(string), string parentId = default(string), string originalId = default(string), string message = default(string), string type = default(string), Object props = default(Object), string hashtag = default(string), List<string> filenames = default(List<string>), List<string> fileIds = default(List<string>), string pendingPostId = default(string), PostMetadata metadata = default(PostMetadata))
+        public Post(string id = default(string), long createAt = default(long), long updateAt = default(long), long deleteAt = default(long), long editAt = default(long), string userId = default(string), string channelId = default(string), string rootId = default(string), string parentId = default(string), string originalId = default(string), string message = default(string), string type = default(string), object props = default(object), string hashtag = default(string), List<string> filenames = default(List<string>), List<string> fileIds = default(List<string>), string pendingPostId = default(string), PostMetadata metadata = default(PostMetadata))
         {
             this.Id = id;
             this.CreateAt = createAt;
@@ -153,7 +153,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// Gets or Sets Props
         /// </summary>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Gets or Sets Hashtag
@@ -386,7 +386,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

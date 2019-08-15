@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>List&lt;Status&gt;</returns>
         List<Status> UsersStatusIdsPost (List<string> post);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>ApiResponse of List&lt;Status&gt;</returns>
         ApiResponse<List<Status>> UsersStatusIdsPostWithHttpInfo (List<string> post);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Status</returns>
         Status UsersUserIdStatusGet (string userId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Status</returns>
         ApiResponse<Status> UsersUserIdStatusGetWithHttpInfo (string userId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Status</returns>
@@ -87,7 +87,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Status</returns>
@@ -107,7 +107,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>Task of List&lt;Status&gt;</returns>
         System.Threading.Tasks.Task<List<Status>> UsersStatusIdsPostAsync (List<string> post);
@@ -118,7 +118,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>Task of ApiResponse (List&lt;Status&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Status>>> UsersStatusIdsPostAsyncWithHttpInfo (List<string> post);
@@ -128,7 +128,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of Status</returns>
         System.Threading.Tasks.Task<Status> UsersUserIdStatusGetAsync (string userId);
@@ -139,7 +139,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (Status)</returns>
         System.Threading.Tasks.Task<ApiResponse<Status>> UsersUserIdStatusGetAsyncWithHttpInfo (string userId);
@@ -149,7 +149,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Status</returns>
@@ -161,7 +161,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Status)</returns>
@@ -182,7 +182,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class StatusApi : IStatusApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StatusApi"/> class.
@@ -196,14 +196,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="StatusApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public StatusApi(String basePath)
+        public StatusApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -213,7 +213,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public StatusApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public StatusApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -221,8 +221,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -233,7 +233,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public StatusApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public StatusApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -248,18 +248,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -268,12 +268,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -289,35 +289,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user statuses by id Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>List&lt;Status&gt;</returns>
         public List<Status> UsersStatusIdsPost (List<string> post)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Status>> localVarResponse = UsersStatusIdsPostWithHttpInfo(post);
+            ApiResponse<List<Status>> localVarResponse = UsersStatusIdsPostWithHttpInfo(post);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user statuses by id Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>ApiResponse of List&lt;Status&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Status> > UsersStatusIdsPostWithHttpInfo (List<string> post)
+        public ApiResponse<List<Status>> UsersStatusIdsPostWithHttpInfo (List<string> post)
         {
             // verify the required parameter 'post' is set
             if (post == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'post' when calling StatusApi->UsersStatusIdsPost");
+                throw new ApiException(400, "Missing required parameter 'post' when calling StatusApi->UsersStatusIdsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -346,12 +346,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user statuses by id Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>Task of List&lt;Status&gt;</returns>
         public async System.Threading.Tasks.Task<List<Status>> UsersStatusIdsPostAsync (List<string> post)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Status>> localVarResponse = await UsersStatusIdsPostAsyncWithHttpInfo(post);
+            ApiResponse<List<Status>> localVarResponse = await UsersStatusIdsPostAsyncWithHttpInfo(post);
              return localVarResponse.Data;
 
         }
@@ -359,24 +359,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user statuses by id Get a list of user statuses by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="post">List of user ids to fetch</param>
         /// <returns>Task of ApiResponse (List&lt;Status&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Status>>> UsersStatusIdsPostAsyncWithHttpInfo (List<string> post)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Status>>> UsersStatusIdsPostAsyncWithHttpInfo (List<string> post)
         {
             // verify the required parameter 'post' is set
             if (post == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'post' when calling StatusApi->UsersStatusIdsPost");
+                throw new ApiException(400, "Missing required parameter 'post' when calling StatusApi->UsersStatusIdsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -405,34 +405,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user status Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Status</returns>
         public Status UsersUserIdStatusGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status> localVarResponse = UsersUserIdStatusGetWithHttpInfo(userId);
+            ApiResponse<Status> localVarResponse = UsersUserIdStatusGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user status Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Status</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Status > UsersUserIdStatusGetWithHttpInfo (string userId)
+        public ApiResponse<Status> UsersUserIdStatusGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -462,12 +462,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user status Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of Status</returns>
         public async System.Threading.Tasks.Task<Status> UsersUserIdStatusGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status> localVarResponse = await UsersUserIdStatusGetAsyncWithHttpInfo(userId);
+            ApiResponse<Status> localVarResponse = await UsersUserIdStatusGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -475,23 +475,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get user status Get user status by id from the server. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (Status)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status>> UsersUserIdStatusGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<Status>> UsersUserIdStatusGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -521,41 +521,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user status Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Status</returns>
         public Status UsersUserIdStatusPut (string userId, InlineObject22 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status> localVarResponse = UsersUserIdStatusPutWithHttpInfo(userId, body);
+            ApiResponse<Status> localVarResponse = UsersUserIdStatusPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update user status Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Status</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Status > UsersUserIdStatusPutWithHttpInfo (string userId, InlineObject22 body)
+        public ApiResponse<Status> UsersUserIdStatusPutWithHttpInfo (string userId, InlineObject22 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling StatusApi->UsersUserIdStatusPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling StatusApi->UsersUserIdStatusPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -586,13 +586,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user status Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Status</returns>
         public async System.Threading.Tasks.Task<Status> UsersUserIdStatusPutAsync (string userId, InlineObject22 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status> localVarResponse = await UsersUserIdStatusPutAsyncWithHttpInfo(userId, body);
+            ApiResponse<Status> localVarResponse = await UsersUserIdStatusPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -600,29 +600,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update user status Manually set a user&#39;s status. When setting a user&#39;s status, the status will remain that value until set \&quot;online\&quot; again, which will return the status to being automatically updated based on user activity. ##### Permissions Must have &#x60;edit_other_users&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Status)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Status>> UsersUserIdStatusPutAsyncWithHttpInfo (string userId, InlineObject22 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Status>> UsersUserIdStatusPutAsyncWithHttpInfo (string userId, InlineObject22 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling StatusApi->UsersUserIdStatusPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling StatusApi->UsersUserIdStatusPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling StatusApi->UsersUserIdStatusPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

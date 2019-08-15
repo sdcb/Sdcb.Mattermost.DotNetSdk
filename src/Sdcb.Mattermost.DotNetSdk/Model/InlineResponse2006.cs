@@ -36,7 +36,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="status">Value should be \&quot;OK\&quot; if successful.</param>
         /// <param name="lastViewedAtTimes">A JSON object mapping channel IDs to the channel view times.</param>
-        public InlineResponse2006(string status = default(string), Object lastViewedAtTimes = default(Object))
+        public InlineResponse2006(string status = default(string), object lastViewedAtTimes = default(object))
         {
             this.Status = status;
             this.LastViewedAtTimes = lastViewedAtTimes;
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>A JSON object mapping channel IDs to the channel view times</value>
         [DataMember(Name="last_viewed_at_times", EmitDefaultValue=false)]
-        public Object LastViewedAtTimes { get; set; }
+        public object LastViewedAtTimes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -134,7 +134,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

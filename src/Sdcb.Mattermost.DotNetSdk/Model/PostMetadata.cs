@@ -39,7 +39,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="files">The FileInfo objects for any files attached to the post. This field will be null if the post does not have any file attachments. .</param>
         /// <param name="images">An object mapping the URL of an external image to an object containing the dimensions of that image. This field will be null if the post or its embedded content does not reference any external images. .</param>
         /// <param name="reactions">Any reactions made to this point. This field will be null if no reactions have been made to this post. .</param>
-        public PostMetadata(List<PostMetadataEmbeds> embeds = default(List<PostMetadataEmbeds>), List<Emoji> emojis = default(List<Emoji>), List<FileInfo> files = default(List<FileInfo>), Object images = default(Object), List<Reaction> reactions = default(List<Reaction>))
+        public PostMetadata(List<PostMetadataEmbeds> embeds = default(List<PostMetadataEmbeds>), List<Emoji> emojis = default(List<Emoji>), List<FileInfo> files = default(List<FileInfo>), object images = default(object), List<Reaction> reactions = default(List<Reaction>))
         {
             this.Embeds = embeds;
             this.Emojis = emojis;
@@ -74,7 +74,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>An object mapping the URL of an external image to an object containing the dimensions of that image. This field will be null if the post or its embedded content does not reference any external images. </value>
         [DataMember(Name="images", EmitDefaultValue=false)]
-        public Object Images { get; set; }
+        public object Images { get; set; }
 
         /// <summary>
         /// Any reactions made to this point. This field will be null if no reactions have been made to this post. 
@@ -189,7 +189,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

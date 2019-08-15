@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
@@ -46,7 +46,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
@@ -58,7 +58,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Scheme</returns>
         Scheme SchemesPost (InlineObject58 scheme);
@@ -69,7 +69,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>ApiResponse of Scheme</returns>
         ApiResponse<Scheme> SchemesPostWithHttpInfo (InlineObject58 scheme);
@@ -79,7 +79,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
@@ -92,7 +92,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
@@ -104,7 +104,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>StatusOK</returns>
         StatusOK SchemesSchemeIdDelete (string schemeId);
@@ -115,7 +115,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> SchemesSchemeIdDeleteWithHttpInfo (string schemeId);
@@ -125,7 +125,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Scheme</returns>
         Scheme SchemesSchemeIdGet (string schemeId);
@@ -136,7 +136,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>ApiResponse of Scheme</returns>
         ApiResponse<Scheme> SchemesSchemeIdGetWithHttpInfo (string schemeId);
@@ -146,7 +146,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Scheme</returns>
@@ -158,7 +158,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Scheme</returns>
@@ -169,7 +169,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
@@ -182,7 +182,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
@@ -203,7 +203,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
@@ -216,7 +216,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
@@ -228,7 +228,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Task of Scheme</returns>
         System.Threading.Tasks.Task<Scheme> SchemesPostAsync (InlineObject58 scheme);
@@ -239,7 +239,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
         System.Threading.Tasks.Task<ApiResponse<Scheme>> SchemesPostAsyncWithHttpInfo (InlineObject58 scheme);
@@ -249,7 +249,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
@@ -262,7 +262,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
@@ -274,7 +274,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> SchemesSchemeIdDeleteAsync (string schemeId);
@@ -285,7 +285,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> SchemesSchemeIdDeleteAsyncWithHttpInfo (string schemeId);
@@ -295,7 +295,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Task of Scheme</returns>
         System.Threading.Tasks.Task<Scheme> SchemesSchemeIdGetAsync (string schemeId);
@@ -306,7 +306,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
         System.Threading.Tasks.Task<ApiResponse<Scheme>> SchemesSchemeIdGetAsyncWithHttpInfo (string schemeId);
@@ -316,7 +316,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Scheme</returns>
@@ -328,7 +328,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
@@ -339,7 +339,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
@@ -352,7 +352,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
@@ -374,7 +374,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class SchemesApi : ISchemesApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SchemesApi"/> class.
@@ -388,14 +388,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="SchemesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public SchemesApi(String basePath)
+        public SchemesApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -405,7 +405,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SchemesApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public SchemesApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -413,8 +413,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -425,7 +425,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public SchemesApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public SchemesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -440,18 +440,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -460,12 +460,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -481,34 +481,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the schemes. Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Scheme&gt;</returns>
         public List<Scheme> SchemesGet (string scope = null, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Scheme>> localVarResponse = SchemesGetWithHttpInfo(scope, page, perPage);
+            ApiResponse<List<Scheme>> localVarResponse = SchemesGetWithHttpInfo(scope, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the schemes. Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Scheme&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Scheme> > SchemesGetWithHttpInfo (string scope = null, string page = null, string perPage = null)
+        public ApiResponse<List<Scheme>> SchemesGetWithHttpInfo (string scope = null, string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -566,14 +566,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the schemes. Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Scheme&gt;</returns>
         public async System.Threading.Tasks.Task<List<Scheme>> SchemesGetAsync (string scope = null, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Scheme>> localVarResponse = await SchemesGetAsyncWithHttpInfo(scope, page, perPage);
+            ApiResponse<List<Scheme>> localVarResponse = await SchemesGetAsyncWithHttpInfo(scope, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -581,21 +581,21 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the schemes. Get a page of schemes. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Limit the results returned to the provided scope, either &#x60;team&#x60; or &#x60;channel&#x60;. (optional)</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of schemes per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Scheme&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Scheme>>> SchemesGetAsyncWithHttpInfo (string scope = null, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Scheme>>> SchemesGetAsyncWithHttpInfo (string scope = null, string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -653,35 +653,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a scheme Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Scheme</returns>
         public Scheme SchemesPost (InlineObject58 scheme)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = SchemesPostWithHttpInfo(scheme);
+            ApiResponse<Scheme> localVarResponse = SchemesPostWithHttpInfo(scheme);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a scheme Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>ApiResponse of Scheme</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Scheme > SchemesPostWithHttpInfo (InlineObject58 scheme)
+        public ApiResponse<Scheme> SchemesPostWithHttpInfo (InlineObject58 scheme)
         {
             // verify the required parameter 'scheme' is set
             if (scheme == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'scheme' when calling SchemesApi->SchemesPost");
+                throw new ApiException(400, "Missing required parameter 'scheme' when calling SchemesApi->SchemesPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -710,12 +710,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a scheme Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Task of Scheme</returns>
         public async System.Threading.Tasks.Task<Scheme> SchemesPostAsync (InlineObject58 scheme)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = await SchemesPostAsyncWithHttpInfo(scheme);
+            ApiResponse<Scheme> localVarResponse = await SchemesPostAsyncWithHttpInfo(scheme);
              return localVarResponse.Data;
 
         }
@@ -723,24 +723,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a scheme Create a new scheme.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheme"></param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme>> SchemesPostAsyncWithHttpInfo (InlineObject58 scheme)
+        public async System.Threading.Tasks.Task<ApiResponse<Scheme>> SchemesPostAsyncWithHttpInfo (InlineObject58 scheme)
         {
             // verify the required parameter 'scheme' is set
             if (scheme == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'scheme' when calling SchemesApi->SchemesPost");
+                throw new ApiException(400, "Missing required parameter 'scheme' when calling SchemesApi->SchemesPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -769,38 +769,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of channels which use this scheme. Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> SchemesSchemeIdChannelsGet (string schemeId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = SchemesSchemeIdChannelsGetWithHttpInfo(schemeId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = SchemesSchemeIdChannelsGetWithHttpInfo(schemeId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a page of channels which use this scheme. Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > SchemesSchemeIdChannelsGetWithHttpInfo (string schemeId, string page = null, string perPage = null)
+        public ApiResponse<List<Channel>> SchemesSchemeIdChannelsGetWithHttpInfo (string schemeId, string page = null, string perPage = null)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdChannelsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -850,14 +850,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of channels which use this scheme. Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> SchemesSchemeIdChannelsGetAsync (string schemeId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await SchemesSchemeIdChannelsGetAsyncWithHttpInfo(schemeId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = await SchemesSchemeIdChannelsGetAsyncWithHttpInfo(schemeId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -865,25 +865,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of channels which use this scheme. Get a page of channels which use this scheme. The provided Scheme ID should be for a Channel-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> SchemesSchemeIdChannelsGetAsyncWithHttpInfo (string schemeId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> SchemesSchemeIdChannelsGetAsyncWithHttpInfo (string schemeId, string page = null, string perPage = null)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdChannelsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -933,34 +933,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a scheme Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>StatusOK</returns>
         public StatusOK SchemesSchemeIdDelete (string schemeId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = SchemesSchemeIdDeleteWithHttpInfo(schemeId);
+            ApiResponse<StatusOK> localVarResponse = SchemesSchemeIdDeleteWithHttpInfo(schemeId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a scheme Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > SchemesSchemeIdDeleteWithHttpInfo (string schemeId)
+        public ApiResponse<StatusOK> SchemesSchemeIdDeleteWithHttpInfo (string schemeId)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdDelete");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -990,12 +990,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a scheme Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> SchemesSchemeIdDeleteAsync (string schemeId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await SchemesSchemeIdDeleteAsyncWithHttpInfo(schemeId);
+            ApiResponse<StatusOK> localVarResponse = await SchemesSchemeIdDeleteAsyncWithHttpInfo(schemeId);
              return localVarResponse.Data;
 
         }
@@ -1003,23 +1003,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a scheme Soft deletes a scheme, by marking the scheme as deleted in the database.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">ID of the scheme to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> SchemesSchemeIdDeleteAsyncWithHttpInfo (string schemeId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> SchemesSchemeIdDeleteAsyncWithHttpInfo (string schemeId)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdDelete");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1049,34 +1049,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a scheme Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Scheme</returns>
         public Scheme SchemesSchemeIdGet (string schemeId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = SchemesSchemeIdGetWithHttpInfo(schemeId);
+            ApiResponse<Scheme> localVarResponse = SchemesSchemeIdGetWithHttpInfo(schemeId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a scheme Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>ApiResponse of Scheme</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Scheme > SchemesSchemeIdGetWithHttpInfo (string schemeId)
+        public ApiResponse<Scheme> SchemesSchemeIdGetWithHttpInfo (string schemeId)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1106,12 +1106,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a scheme Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Task of Scheme</returns>
         public async System.Threading.Tasks.Task<Scheme> SchemesSchemeIdGetAsync (string schemeId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = await SchemesSchemeIdGetAsyncWithHttpInfo(schemeId);
+            ApiResponse<Scheme> localVarResponse = await SchemesSchemeIdGetAsyncWithHttpInfo(schemeId);
              return localVarResponse.Data;
 
         }
@@ -1119,23 +1119,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a scheme Get a scheme from the provided scheme id.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme>> SchemesSchemeIdGetAsyncWithHttpInfo (string schemeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Scheme>> SchemesSchemeIdGetAsyncWithHttpInfo (string schemeId)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1165,41 +1165,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a scheme Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Scheme</returns>
         public Scheme SchemesSchemeIdPatchPut (string schemeId, InlineObject59 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = SchemesSchemeIdPatchPutWithHttpInfo(schemeId, body);
+            ApiResponse<Scheme> localVarResponse = SchemesSchemeIdPatchPutWithHttpInfo(schemeId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a scheme Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Scheme</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Scheme > SchemesSchemeIdPatchPutWithHttpInfo (string schemeId, InlineObject59 body)
+        public ApiResponse<Scheme> SchemesSchemeIdPatchPutWithHttpInfo (string schemeId, InlineObject59 body)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SchemesApi->SchemesSchemeIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SchemesApi->SchemesSchemeIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1230,13 +1230,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a scheme Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Scheme</returns>
         public async System.Threading.Tasks.Task<Scheme> SchemesSchemeIdPatchPutAsync (string schemeId, InlineObject59 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme> localVarResponse = await SchemesSchemeIdPatchPutAsyncWithHttpInfo(schemeId, body);
+            ApiResponse<Scheme> localVarResponse = await SchemesSchemeIdPatchPutAsyncWithHttpInfo(schemeId, body);
              return localVarResponse.Data;
 
         }
@@ -1244,29 +1244,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a scheme Partially update a scheme by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Scheme)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Scheme>> SchemesSchemeIdPatchPutAsyncWithHttpInfo (string schemeId, InlineObject59 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Scheme>> SchemesSchemeIdPatchPutAsyncWithHttpInfo (string schemeId, InlineObject59 body)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SchemesApi->SchemesSchemeIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SchemesApi->SchemesSchemeIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1297,38 +1297,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of teams which use this scheme. Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Team&gt;</returns>
         public List<Team> SchemesSchemeIdTeamsGet (string schemeId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = SchemesSchemeIdTeamsGetWithHttpInfo(schemeId, page, perPage);
+            ApiResponse<List<Team>> localVarResponse = SchemesSchemeIdTeamsGetWithHttpInfo(schemeId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a page of teams which use this scheme. Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Team> > SchemesSchemeIdTeamsGetWithHttpInfo (string schemeId, string page = null, string perPage = null)
+        public ApiResponse<List<Team>> SchemesSchemeIdTeamsGetWithHttpInfo (string schemeId, string page = null, string perPage = null)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdTeamsGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdTeamsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1378,14 +1378,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of teams which use this scheme. Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         public async System.Threading.Tasks.Task<List<Team>> SchemesSchemeIdTeamsGetAsync (string schemeId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = await SchemesSchemeIdTeamsGetAsyncWithHttpInfo(schemeId, page, perPage);
+            ApiResponse<List<Team>> localVarResponse = await SchemesSchemeIdTeamsGetAsyncWithHttpInfo(schemeId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1393,25 +1393,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a page of teams which use this scheme. Get a page of teams which use this scheme. The provided Scheme ID should be for a Team-scoped Scheme. Use the query parameters to modify the behaviour of this endpoint.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemeId">Scheme GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>>> SchemesSchemeIdTeamsGetAsyncWithHttpInfo (string schemeId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Team>>> SchemesSchemeIdTeamsGetAsyncWithHttpInfo (string schemeId, string page = null, string perPage = null)
         {
             // verify the required parameter 'schemeId' is set
             if (schemeId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdTeamsGet");
+                throw new ApiException(400, "Missing required parameter 'schemeId' when calling SchemesApi->SchemesSchemeIdTeamsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

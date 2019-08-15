@@ -28,7 +28,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <summary>
         /// The content of this response
         /// </summary>
-        Object Content { get; }
+        object Content { get; }
 
         /// <summary>
         /// Gets or sets the status code (HTTP status code)
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <summary>
         /// Gets or sets any error text defined by the calling client.
         /// </summary>
-        String ErrorText { get; set; }
+        string ErrorText { get; set; }
 
         /// <summary>
         /// Gets or sets any cookies passed along on the response.
@@ -81,7 +81,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <summary>
         /// Gets or sets any error text defined by the calling client.
         /// </summary>
-        public String ErrorText { get; set; }
+        public string ErrorText { get; set; }
 
         /// <summary>
         /// Gets or sets any cookies passed along on the response.

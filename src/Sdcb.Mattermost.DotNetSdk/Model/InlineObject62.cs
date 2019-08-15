@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject62" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject62() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject62" /> class.
@@ -46,7 +46,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="callbackId">Callback ID sent when the dialog was opened.</param>
         /// <param name="state">State sent when the dialog was opened.</param>
         /// <param name="cancelled">Set to true if the dialog was cancelled.</param>
-        public InlineObject62(string url = default(string), string channelId = default(string), string teamId = default(string), Object submission = default(Object), string callbackId = default(string), string state = default(string), bool cancelled = default(bool))
+        public InlineObject62(string url = default(string), string channelId = default(string), string teamId = default(string), object submission = default(object), string callbackId = default(string), string state = default(string), bool cancelled = default(bool))
         {
             // to ensure "url" is required (not null)
             if (url == null)
@@ -119,7 +119,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>String map where keys are element names and values are the element input values</value>
         [DataMember(Name="submission", EmitDefaultValue=false)]
-        public Object Submission { get; set; }
+        public object Submission { get; set; }
 
         /// <summary>
         /// Callback ID sent when the dialog was opened
@@ -258,7 +258,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

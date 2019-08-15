@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         Channel ChannelsChannelIdConvertPost (string channelId);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsChannelIdConvertPostWithHttpInfo (string channelId);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK ChannelsChannelIdDelete (string channelId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> ChannelsChannelIdDeleteWithHttpInfo (string channelId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         Channel ChannelsChannelIdGet (string channelId);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsChannelIdGetWithHttpInfo (string channelId);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
@@ -109,7 +109,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
@@ -121,7 +121,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>List&lt;ChannelMember&gt;</returns>
@@ -133,7 +133,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>ApiResponse of List&lt;ChannelMember&gt;</returns>
@@ -144,7 +144,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -158,20 +158,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChannelsChannelIdMembersMinusGroupMembersGetWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null);
+        ApiResponse<object> ChannelsChannelIdMembersMinusGroupMembersGetWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null);
         /// <summary>
         /// Add user to channel
         /// </summary>
         /// <remarks>
         /// Add a user to a channel by creating a channel member object.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>ChannelMember</returns>
@@ -183,7 +183,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a user to a channel by creating a channel member object.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ChannelMember</returns>
@@ -194,7 +194,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
@@ -206,7 +206,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -217,7 +217,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ChannelMember</returns>
@@ -229,7 +229,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of ChannelMember</returns>
@@ -240,7 +240,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
@@ -253,7 +253,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
@@ -265,7 +265,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
@@ -278,7 +278,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
@@ -290,7 +290,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -303,7 +303,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -315,7 +315,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
@@ -327,7 +327,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
@@ -338,7 +338,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of pinned posts for channel.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>PostList</returns>
         PostList ChannelsChannelIdPinnedGet (string channelId);
@@ -349,7 +349,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of pinned posts for channel.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of PostList</returns>
         ApiResponse<PostList> ChannelsChannelIdPinnedGetWithHttpInfo (string channelId);
@@ -359,7 +359,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
@@ -371,7 +371,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
@@ -382,7 +382,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         Channel ChannelsChannelIdRestorePost (string channelId);
@@ -393,7 +393,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsChannelIdRestorePostWithHttpInfo (string channelId);
@@ -403,7 +403,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -415,7 +415,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -426,7 +426,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ChannelStats</returns>
         ChannelStats ChannelsChannelIdStatsGet (string channelId);
@@ -437,7 +437,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of ChannelStats</returns>
         ApiResponse<ChannelStats> ChannelsChannelIdStatsGetWithHttpInfo (string channelId);
@@ -447,7 +447,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>List&lt;string&gt;</returns>
         List<string> ChannelsChannelIdTimezonesGet (string channelId);
@@ -458,7 +458,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         ApiResponse<List<string>> ChannelsChannelIdTimezonesGetWithHttpInfo (string channelId);
@@ -468,7 +468,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Channel</returns>
         Channel ChannelsDirectPost (List<string> body);
@@ -479,7 +479,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsDirectPostWithHttpInfo (List<string> body);
@@ -489,7 +489,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Channel</returns>
         Channel ChannelsGroupPost (List<string> body);
@@ -500,7 +500,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsGroupPostWithHttpInfo (List<string> body);
@@ -510,7 +510,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>InlineResponse2006</returns>
@@ -522,7 +522,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2006</returns>
@@ -533,7 +533,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
         Channel ChannelsPost (InlineObject31 body);
@@ -544,7 +544,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> ChannelsPostWithHttpInfo (InlineObject31 body);
@@ -554,7 +554,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Channel&gt;</returns>
         List<Channel> GroupSearchPost (InlineObject32 body);
@@ -565,7 +565,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
         ApiResponse<List<Channel>> GroupSearchPostWithHttpInfo (InlineObject32 body);
@@ -575,7 +575,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -588,7 +588,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -600,7 +600,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>List&lt;Channel&gt;</returns>
@@ -612,7 +612,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
@@ -623,7 +623,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -636,7 +636,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -648,7 +648,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -661,7 +661,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -673,7 +673,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>List&lt;Channel&gt;</returns>
@@ -685,7 +685,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
@@ -696,7 +696,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -709,7 +709,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -721,7 +721,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>List&lt;Channel&gt;</returns>
@@ -733,7 +733,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
@@ -744,7 +744,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;Channel&gt;</returns>
@@ -756,7 +756,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
@@ -767,7 +767,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ChannelUnread</returns>
@@ -779,7 +779,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of ChannelUnread</returns>
@@ -790,7 +790,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;Channel&gt;</returns>
@@ -802,7 +802,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
@@ -813,7 +813,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;ChannelMember&gt;</returns>
@@ -825,7 +825,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;ChannelMember&gt;</returns>
@@ -845,7 +845,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsChannelIdConvertPostAsync (string channelId);
@@ -856,7 +856,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdConvertPostAsyncWithHttpInfo (string channelId);
@@ -866,7 +866,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdDeleteAsync (string channelId);
@@ -877,7 +877,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdDeleteAsyncWithHttpInfo (string channelId);
@@ -887,7 +887,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsChannelIdGetAsync (string channelId);
@@ -898,7 +898,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdGetAsyncWithHttpInfo (string channelId);
@@ -908,7 +908,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
@@ -921,7 +921,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
@@ -933,7 +933,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>Task of List&lt;ChannelMember&gt;</returns>
@@ -945,7 +945,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>Task of ApiResponse (List&lt;ChannelMember&gt;)</returns>
@@ -956,7 +956,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -970,20 +970,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChannelsChannelIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<object>> ChannelsChannelIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null);
         /// <summary>
         /// Add user to channel
         /// </summary>
         /// <remarks>
         /// Add a user to a channel by creating a channel member object.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ChannelMember</returns>
@@ -995,7 +995,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a user to a channel by creating a channel member object.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ChannelMember)</returns>
@@ -1006,7 +1006,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
@@ -1018,7 +1018,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1029,7 +1029,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ChannelMember</returns>
@@ -1041,7 +1041,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (ChannelMember)</returns>
@@ -1052,7 +1052,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
@@ -1065,7 +1065,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
@@ -1077,7 +1077,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
@@ -1090,7 +1090,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
@@ -1102,7 +1102,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1115,7 +1115,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1127,7 +1127,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
@@ -1139,7 +1139,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
@@ -1150,7 +1150,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of pinned posts for channel.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of PostList</returns>
         System.Threading.Tasks.Task<PostList> ChannelsChannelIdPinnedGetAsync (string channelId);
@@ -1161,7 +1161,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of pinned posts for channel.
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
         System.Threading.Tasks.Task<ApiResponse<PostList>> ChannelsChannelIdPinnedGetAsyncWithHttpInfo (string channelId);
@@ -1171,7 +1171,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
@@ -1183,7 +1183,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
@@ -1194,7 +1194,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsChannelIdRestorePostAsync (string channelId);
@@ -1205,7 +1205,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdRestorePostAsyncWithHttpInfo (string channelId);
@@ -1215,7 +1215,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1227,7 +1227,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1238,7 +1238,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ChannelStats</returns>
         System.Threading.Tasks.Task<ChannelStats> ChannelsChannelIdStatsGetAsync (string channelId);
@@ -1249,7 +1249,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (ChannelStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelStats>> ChannelsChannelIdStatsGetAsyncWithHttpInfo (string channelId);
@@ -1259,7 +1259,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         System.Threading.Tasks.Task<List<string>> ChannelsChannelIdTimezonesGetAsync (string channelId);
@@ -1270,7 +1270,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<string>>> ChannelsChannelIdTimezonesGetAsyncWithHttpInfo (string channelId);
@@ -1280,7 +1280,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsDirectPostAsync (List<string> body);
@@ -1291,7 +1291,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsDirectPostAsyncWithHttpInfo (List<string> body);
@@ -1301,7 +1301,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsGroupPostAsync (List<string> body);
@@ -1312,7 +1312,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsGroupPostAsyncWithHttpInfo (List<string> body);
@@ -1322,7 +1322,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2006</returns>
@@ -1334,7 +1334,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
@@ -1345,7 +1345,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
         System.Threading.Tasks.Task<Channel> ChannelsPostAsync (InlineObject31 body);
@@ -1356,7 +1356,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsPostAsyncWithHttpInfo (InlineObject31 body);
@@ -1366,7 +1366,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         System.Threading.Tasks.Task<List<Channel>> GroupSearchPostAsync (InlineObject32 body);
@@ -1377,7 +1377,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Channel>>> GroupSearchPostAsyncWithHttpInfo (InlineObject32 body);
@@ -1387,7 +1387,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -1400,7 +1400,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -1412,7 +1412,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
@@ -1424,7 +1424,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
@@ -1435,7 +1435,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -1448,7 +1448,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -1460,7 +1460,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -1473,7 +1473,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
@@ -1485,7 +1485,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
@@ -1497,7 +1497,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
@@ -1508,7 +1508,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -1521,7 +1521,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
@@ -1533,7 +1533,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
@@ -1545,7 +1545,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
@@ -1556,7 +1556,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
@@ -1568,7 +1568,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
@@ -1579,7 +1579,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ChannelUnread</returns>
@@ -1591,7 +1591,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (ChannelUnread)</returns>
@@ -1602,7 +1602,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
@@ -1614,7 +1614,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
@@ -1625,7 +1625,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;ChannelMember&gt;</returns>
@@ -1637,7 +1637,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;ChannelMember&gt;)</returns>
@@ -1658,7 +1658,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class ChannelsApi : IChannelsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ChannelsApi"/> class.
@@ -1672,14 +1672,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="ChannelsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ChannelsApi(String basePath)
+        public ChannelsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -1689,7 +1689,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ChannelsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public ChannelsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -1697,8 +1697,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -1709,7 +1709,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public ChannelsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public ChannelsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -1724,18 +1724,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -1744,12 +1744,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -1765,34 +1765,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Convert a channel from public to private Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         public Channel ChannelsChannelIdConvertPost (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsChannelIdConvertPostWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = ChannelsChannelIdConvertPostWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Convert a channel from public to private Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsChannelIdConvertPostWithHttpInfo (string channelId)
+        public ApiResponse<Channel> ChannelsChannelIdConvertPostWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdConvertPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdConvertPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1822,12 +1822,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Convert a channel from public to private Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsChannelIdConvertPostAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsChannelIdConvertPostAsyncWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = await ChannelsChannelIdConvertPostAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -1835,23 +1835,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Convert a channel from public to private Convert into private channel from the provided channel id string.  __Minimum server version__: 4.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsChannelIdConvertPostAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdConvertPostAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdConvertPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdConvertPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1881,34 +1881,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a channel Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdDelete (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdDeleteWithHttpInfo(channelId);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdDeleteWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a channel Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdDeleteWithHttpInfo (string channelId)
+        public ApiResponse<StatusOK> ChannelsChannelIdDeleteWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdDelete");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1938,12 +1938,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a channel Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdDeleteAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdDeleteAsyncWithHttpInfo(channelId);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdDeleteAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -1951,23 +1951,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a channel Soft deletes a channel, by marking the channel as deleted in the database. Soft deleted channels will not be accessible in the user interface. Direct and group message channels cannot be deleted. ##### Permissions &#x60;delete_public_channel&#x60; permission if the channel is public, &#x60;delete_private_channel&#x60; permission if the channel is private, or have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdDeleteAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdDeleteAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdDelete");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1997,34 +1997,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         public Channel ChannelsChannelIdGet (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsChannelIdGetWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = ChannelsChannelIdGetWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a channel Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsChannelIdGetWithHttpInfo (string channelId)
+        public ApiResponse<Channel> ChannelsChannelIdGetWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2054,12 +2054,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsChannelIdGetAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsChannelIdGetAsyncWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = await ChannelsChannelIdGetAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -2067,23 +2067,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel Get channel from the provided channel id string. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsChannelIdGetAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdGetAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2113,38 +2113,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;ChannelMember&gt;</returns>
         public List<ChannelMember> ChannelsChannelIdMembersGet (string channelId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = ChannelsChannelIdMembersGetWithHttpInfo(channelId, page, perPage);
+            ApiResponse<List<ChannelMember>> localVarResponse = ChannelsChannelIdMembersGetWithHttpInfo(channelId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel members Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;ChannelMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<ChannelMember> > ChannelsChannelIdMembersGetWithHttpInfo (string channelId, string page = null, string perPage = null)
+        public ApiResponse<List<ChannelMember>> ChannelsChannelIdMembersGetWithHttpInfo (string channelId, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2194,14 +2194,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;ChannelMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<ChannelMember>> ChannelsChannelIdMembersGetAsync (string channelId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = await ChannelsChannelIdMembersGetAsyncWithHttpInfo(channelId, page, perPage);
+            ApiResponse<List<ChannelMember>> localVarResponse = await ChannelsChannelIdMembersGetAsyncWithHttpInfo(channelId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -2209,25 +2209,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members Get a page of members for a channel. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of members per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;ChannelMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>>> ChannelsChannelIdMembersGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ChannelMember>>> ChannelsChannelIdMembersGetAsyncWithHttpInfo (string channelId, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2277,41 +2277,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members by ids Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>List&lt;ChannelMember&gt;</returns>
         public List<ChannelMember> ChannelsChannelIdMembersIdsPost (string channelId, List<string> userIds)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = ChannelsChannelIdMembersIdsPostWithHttpInfo(channelId, userIds);
+            ApiResponse<List<ChannelMember>> localVarResponse = ChannelsChannelIdMembersIdsPostWithHttpInfo(channelId, userIds);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel members by ids Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>ApiResponse of List&lt;ChannelMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<ChannelMember> > ChannelsChannelIdMembersIdsPostWithHttpInfo (string channelId, List<string> userIds)
+        public ApiResponse<List<ChannelMember>> ChannelsChannelIdMembersIdsPostWithHttpInfo (string channelId, List<string> userIds)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
 
             // verify the required parameter 'userIds' is set
             if (userIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userIds' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2342,13 +2342,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members by ids Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>Task of List&lt;ChannelMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<ChannelMember>> ChannelsChannelIdMembersIdsPostAsync (string channelId, List<string> userIds)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = await ChannelsChannelIdMembersIdsPostAsyncWithHttpInfo(channelId, userIds);
+            ApiResponse<List<ChannelMember>> localVarResponse = await ChannelsChannelIdMembersIdsPostAsyncWithHttpInfo(channelId, userIds);
              return localVarResponse.Data;
 
         }
@@ -2356,29 +2356,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members by ids Get a list of channel members based on the provided user ids. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userIds">List of user ids</param>
         /// <returns>Task of ApiResponse (List&lt;ChannelMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>>> ChannelsChannelIdMembersIdsPostAsyncWithHttpInfo (string channelId, List<string> userIds)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ChannelMember>>> ChannelsChannelIdMembersIdsPostAsyncWithHttpInfo (string channelId, List<string> userIds)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
 
             // verify the required parameter 'userIds' is set
             if (userIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userIds' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ChannelsApi->ChannelsChannelIdMembersIdsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2409,7 +2409,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Channel members minus group members. Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -2423,29 +2423,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Channel members minus group members. Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> ChannelsChannelIdMembersMinusGroupMembersGetWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null)
+        public ApiResponse<object> ChannelsChannelIdMembersMinusGroupMembersGetWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
 
             // verify the required parameter 'groupIds' is set
             if (groupIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'groupIds' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'groupIds' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2491,7 +2491,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/channels/{channel_id}/members_minus_group_members", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/channels/{channel_id}/members_minus_group_members", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2505,7 +2505,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Channel members minus group members. Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -2520,30 +2520,30 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Channel members minus group members. Get the set of users who are members of the channel minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given channel.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> ChannelsChannelIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> ChannelsChannelIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string channelId, string groupIds, string page = null, string perPage = null)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
 
             // verify the required parameter 'groupIds' is set
             if (groupIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'groupIds' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'groupIds' when calling ChannelsApi->ChannelsChannelIdMembersMinusGroupMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2589,7 +2589,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/channels/{channel_id}/members_minus_group_members", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/channels/{channel_id}/members_minus_group_members", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2603,41 +2603,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to channel Add a user to a channel by creating a channel member object.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>ChannelMember</returns>
         public ChannelMember ChannelsChannelIdMembersPost (string channelId, InlineObject36 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember> localVarResponse = ChannelsChannelIdMembersPostWithHttpInfo(channelId, body);
+            ApiResponse<ChannelMember> localVarResponse = ChannelsChannelIdMembersPostWithHttpInfo(channelId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Add user to channel Add a user to a channel by creating a channel member object.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ChannelMember</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< ChannelMember > ChannelsChannelIdMembersPostWithHttpInfo (string channelId, InlineObject36 body)
+        public ApiResponse<ChannelMember> ChannelsChannelIdMembersPostWithHttpInfo (string channelId, InlineObject36 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2668,13 +2668,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to channel Add a user to a channel by creating a channel member object.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ChannelMember</returns>
         public async System.Threading.Tasks.Task<ChannelMember> ChannelsChannelIdMembersPostAsync (string channelId, InlineObject36 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember> localVarResponse = await ChannelsChannelIdMembersPostAsyncWithHttpInfo(channelId, body);
+            ApiResponse<ChannelMember> localVarResponse = await ChannelsChannelIdMembersPostAsyncWithHttpInfo(channelId, body);
              return localVarResponse.Data;
 
         }
@@ -2682,29 +2682,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to channel Add a user to a channel by creating a channel member object.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The channel ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ChannelMember)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember>> ChannelsChannelIdMembersPostAsyncWithHttpInfo (string channelId, InlineObject36 body)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelMember>> ChannelsChannelIdMembersPostAsyncWithHttpInfo (string channelId, InlineObject36 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2735,40 +2735,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from channel Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdMembersUserIdDelete (string channelId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdDeleteWithHttpInfo(channelId, userId);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdDeleteWithHttpInfo(channelId, userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Remove user from channel Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdMembersUserIdDeleteWithHttpInfo (string channelId, string userId)
+        public ApiResponse<StatusOK> ChannelsChannelIdMembersUserIdDeleteWithHttpInfo (string channelId, string userId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2800,13 +2800,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from channel Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdMembersUserIdDeleteAsync (string channelId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdDeleteAsyncWithHttpInfo(channelId, userId);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdDeleteAsyncWithHttpInfo(channelId, userId);
              return localVarResponse.Data;
 
         }
@@ -2814,28 +2814,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from channel Delete a channel member, effectively removing them from a channel.  In server version 5.3 and later, channel members can only be deleted from public or private channels. ##### Permissions &#x60;manage_public_channel_members&#x60; permission if the channel is public. &#x60;manage_private_channel_members&#x60; permission if the channel is private. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdDeleteAsyncWithHttpInfo (string channelId, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdDeleteAsyncWithHttpInfo (string channelId, string userId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2867,40 +2867,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel member Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ChannelMember</returns>
         public ChannelMember ChannelsChannelIdMembersUserIdGet (string channelId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember> localVarResponse = ChannelsChannelIdMembersUserIdGetWithHttpInfo(channelId, userId);
+            ApiResponse<ChannelMember> localVarResponse = ChannelsChannelIdMembersUserIdGetWithHttpInfo(channelId, userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel member Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of ChannelMember</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< ChannelMember > ChannelsChannelIdMembersUserIdGetWithHttpInfo (string channelId, string userId)
+        public ApiResponse<ChannelMember> ChannelsChannelIdMembersUserIdGetWithHttpInfo (string channelId, string userId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2932,13 +2932,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel member Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ChannelMember</returns>
         public async System.Threading.Tasks.Task<ChannelMember> ChannelsChannelIdMembersUserIdGetAsync (string channelId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember> localVarResponse = await ChannelsChannelIdMembersUserIdGetAsyncWithHttpInfo(channelId, userId);
+            ApiResponse<ChannelMember> localVarResponse = await ChannelsChannelIdMembersUserIdGetAsyncWithHttpInfo(channelId, userId);
              return localVarResponse.Data;
 
         }
@@ -2946,28 +2946,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel member Get a channel member. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (ChannelMember)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelMember>> ChannelsChannelIdMembersUserIdGetAsyncWithHttpInfo (string channelId, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelMember>> ChannelsChannelIdMembersUserIdGetAsyncWithHttpInfo (string channelId, string userId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2999,47 +2999,47 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel notifications Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdMembersUserIdNotifyPropsPut (string channelId, string userId, ChannelNotifyProps notifyProps)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdNotifyPropsPutWithHttpInfo(channelId, userId, notifyProps);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdNotifyPropsPutWithHttpInfo(channelId, userId, notifyProps);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update channel notifications Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdMembersUserIdNotifyPropsPutWithHttpInfo (string channelId, string userId, ChannelNotifyProps notifyProps)
+        public ApiResponse<StatusOK> ChannelsChannelIdMembersUserIdNotifyPropsPutWithHttpInfo (string channelId, string userId, ChannelNotifyProps notifyProps)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
             // verify the required parameter 'notifyProps' is set
             if (notifyProps == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'notifyProps' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'notifyProps' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3072,14 +3072,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel notifications Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdMembersUserIdNotifyPropsPutAsync (string channelId, string userId, ChannelNotifyProps notifyProps)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdNotifyPropsPutAsyncWithHttpInfo(channelId, userId, notifyProps);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdNotifyPropsPutAsyncWithHttpInfo(channelId, userId, notifyProps);
              return localVarResponse.Data;
 
         }
@@ -3087,34 +3087,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel notifications Update a user&#39;s notification properties for a channel. Only the provided fields are updated. ##### Permissions Must be logged in as the user or have &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="notifyProps"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdNotifyPropsPutAsyncWithHttpInfo (string channelId, string userId, ChannelNotifyProps notifyProps)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdNotifyPropsPutAsyncWithHttpInfo (string channelId, string userId, ChannelNotifyProps notifyProps)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
             // verify the required parameter 'notifyProps' is set
             if (notifyProps == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'notifyProps' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
+                throw new ApiException(400, "Missing required parameter 'notifyProps' when calling ChannelsApi->ChannelsChannelIdMembersUserIdNotifyPropsPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3147,47 +3147,47 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel roles Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdMembersUserIdRolesPut (string channelId, string userId, InlineObject37 roles)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdRolesPutWithHttpInfo(channelId, userId, roles);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdRolesPutWithHttpInfo(channelId, userId, roles);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update channel roles Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdMembersUserIdRolesPutWithHttpInfo (string channelId, string userId, InlineObject37 roles)
+        public ApiResponse<StatusOK> ChannelsChannelIdMembersUserIdRolesPutWithHttpInfo (string channelId, string userId, InlineObject37 roles)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
             // verify the required parameter 'roles' is set
             if (roles == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roles' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'roles' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3220,14 +3220,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel roles Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdMembersUserIdRolesPutAsync (string channelId, string userId, InlineObject37 roles)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdRolesPutAsyncWithHttpInfo(channelId, userId, roles);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdRolesPutAsyncWithHttpInfo(channelId, userId, roles);
              return localVarResponse.Data;
 
         }
@@ -3235,34 +3235,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update channel roles Update a user&#39;s roles for a channel. ##### Permissions Must have &#x60;manage_channel_roles&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="roles"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdRolesPutAsyncWithHttpInfo (string channelId, string userId, InlineObject37 roles)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdRolesPutAsyncWithHttpInfo (string channelId, string userId, InlineObject37 roles)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
             // verify the required parameter 'roles' is set
             if (roles == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roles' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'roles' when calling ChannelsApi->ChannelsChannelIdMembersUserIdRolesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3295,47 +3295,47 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a channel member. Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdMembersUserIdSchemeRolesPut (string channelId, string userId, InlineObject38 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdSchemeRolesPutWithHttpInfo(channelId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdMembersUserIdSchemeRolesPutWithHttpInfo(channelId, userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update the scheme-derived roles of a channel member. Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdMembersUserIdSchemeRolesPutWithHttpInfo (string channelId, string userId, InlineObject38 body)
+        public ApiResponse<StatusOK> ChannelsChannelIdMembersUserIdSchemeRolesPutWithHttpInfo (string channelId, string userId, InlineObject38 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3368,14 +3368,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a channel member. Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdMembersUserIdSchemeRolesPutAsync (string channelId, string userId, InlineObject38 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo(channelId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo(channelId, userId, body);
              return localVarResponse.Data;
 
         }
@@ -3383,34 +3383,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a channel member. Update a channel member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary channel member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a channel admin. __Minimum server version__: 5.0 ##### Permissions Must be authenticated and have the &#x60;manage_channel_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo (string channelId, string userId, InlineObject38 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo (string channelId, string userId, InlineObject38 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdMembersUserIdSchemeRolesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3443,41 +3443,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a channel Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
         public Channel ChannelsChannelIdPatchPut (string channelId, InlineObject34 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsChannelIdPatchPutWithHttpInfo(channelId, body);
+            ApiResponse<Channel> localVarResponse = ChannelsChannelIdPatchPutWithHttpInfo(channelId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a channel Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsChannelIdPatchPutWithHttpInfo (string channelId, InlineObject34 body)
+        public ApiResponse<Channel> ChannelsChannelIdPatchPutWithHttpInfo (string channelId, InlineObject34 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3508,13 +3508,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a channel Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsChannelIdPatchPutAsync (string channelId, InlineObject34 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsChannelIdPatchPutAsyncWithHttpInfo(channelId, body);
+            ApiResponse<Channel> localVarResponse = await ChannelsChannelIdPatchPutAsyncWithHttpInfo(channelId, body);
              return localVarResponse.Data;
 
         }
@@ -3522,29 +3522,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a channel Partially update a channel by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsChannelIdPatchPutAsyncWithHttpInfo (string channelId, InlineObject34 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdPatchPutAsyncWithHttpInfo (string channelId, InlineObject34 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3575,34 +3575,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel&#39;s pinned posts Get a list of pinned posts for channel.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>PostList</returns>
         public PostList ChannelsChannelIdPinnedGet (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = ChannelsChannelIdPinnedGetWithHttpInfo(channelId);
+            ApiResponse<PostList> localVarResponse = ChannelsChannelIdPinnedGetWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a channel&#39;s pinned posts Get a list of pinned posts for channel.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of PostList</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< PostList > ChannelsChannelIdPinnedGetWithHttpInfo (string channelId)
+        public ApiResponse<PostList> ChannelsChannelIdPinnedGetWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPinnedGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPinnedGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3632,12 +3632,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel&#39;s pinned posts Get a list of pinned posts for channel.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of PostList</returns>
         public async System.Threading.Tasks.Task<PostList> ChannelsChannelIdPinnedGetAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList> localVarResponse = await ChannelsChannelIdPinnedGetAsyncWithHttpInfo(channelId);
+            ApiResponse<PostList> localVarResponse = await ChannelsChannelIdPinnedGetAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -3645,23 +3645,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel&#39;s pinned posts Get a list of pinned posts for channel.
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (PostList)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<PostList>> ChannelsChannelIdPinnedGetAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<PostList>> ChannelsChannelIdPinnedGetAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPinnedGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPinnedGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3691,41 +3691,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a channel Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
         public Channel ChannelsChannelIdPut (string channelId, InlineObject33 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsChannelIdPutWithHttpInfo(channelId, body);
+            ApiResponse<Channel> localVarResponse = ChannelsChannelIdPutWithHttpInfo(channelId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a channel Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsChannelIdPutWithHttpInfo (string channelId, InlineObject33 body)
+        public ApiResponse<Channel> ChannelsChannelIdPutWithHttpInfo (string channelId, InlineObject33 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3756,13 +3756,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a channel Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsChannelIdPutAsync (string channelId, InlineObject33 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsChannelIdPutAsyncWithHttpInfo(channelId, body);
+            ApiResponse<Channel> localVarResponse = await ChannelsChannelIdPutAsyncWithHttpInfo(channelId, body);
              return localVarResponse.Data;
 
         }
@@ -3770,29 +3770,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a channel Update a channel. The fields that can be updated are listed as parameters. Omitted fields will be treated as blanks. ##### Permissions If updating a public channel, &#x60;manage_public_channel_members&#x60; permission is required. If updating a private channel, &#x60;manage_private_channel_members&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsChannelIdPutAsyncWithHttpInfo (string channelId, InlineObject33 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdPutAsyncWithHttpInfo (string channelId, InlineObject33 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3823,34 +3823,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Restore a channel Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Channel</returns>
         public Channel ChannelsChannelIdRestorePost (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsChannelIdRestorePostWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = ChannelsChannelIdRestorePostWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Restore a channel Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsChannelIdRestorePostWithHttpInfo (string channelId)
+        public ApiResponse<Channel> ChannelsChannelIdRestorePostWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdRestorePost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdRestorePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3880,12 +3880,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Restore a channel Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsChannelIdRestorePostAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsChannelIdRestorePostAsyncWithHttpInfo(channelId);
+            ApiResponse<Channel> localVarResponse = await ChannelsChannelIdRestorePostAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -3893,23 +3893,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Restore a channel Restore channel from the provided channel id string.  __Minimum server version__: 3.10  ##### Permissions &#x60;manage_team&#x60; permission for the team of the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsChannelIdRestorePostAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsChannelIdRestorePostAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdRestorePost");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdRestorePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3939,41 +3939,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a channel&#39;s scheme Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK ChannelsChannelIdSchemePut (string channelId, InlineObject40 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdSchemePutWithHttpInfo(channelId, body);
+            ApiResponse<StatusOK> localVarResponse = ChannelsChannelIdSchemePutWithHttpInfo(channelId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Set a channel&#39;s scheme Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ChannelsChannelIdSchemePutWithHttpInfo (string channelId, InlineObject40 body)
+        public ApiResponse<StatusOK> ChannelsChannelIdSchemePutWithHttpInfo (string channelId, InlineObject40 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdSchemePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdSchemePut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4004,13 +4004,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a channel&#39;s scheme Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ChannelsChannelIdSchemePutAsync (string channelId, InlineObject40 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdSchemePutAsyncWithHttpInfo(channelId, body);
+            ApiResponse<StatusOK> localVarResponse = await ChannelsChannelIdSchemePutAsyncWithHttpInfo(channelId, body);
              return localVarResponse.Data;
 
         }
@@ -4018,29 +4018,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a channel&#39;s scheme Set a channel&#39;s scheme, more specifically sets the scheme_id value of a channel record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 4.10 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ChannelsChannelIdSchemePutAsyncWithHttpInfo (string channelId, InlineObject40 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ChannelsChannelIdSchemePutAsyncWithHttpInfo (string channelId, InlineObject40 body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdSchemePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsChannelIdSchemePut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4071,34 +4071,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel statistics Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ChannelStats</returns>
         public ChannelStats ChannelsChannelIdStatsGet (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelStats> localVarResponse = ChannelsChannelIdStatsGetWithHttpInfo(channelId);
+            ApiResponse<ChannelStats> localVarResponse = ChannelsChannelIdStatsGetWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel statistics Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of ChannelStats</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< ChannelStats > ChannelsChannelIdStatsGetWithHttpInfo (string channelId)
+        public ApiResponse<ChannelStats> ChannelsChannelIdStatsGetWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdStatsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4128,12 +4128,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel statistics Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ChannelStats</returns>
         public async System.Threading.Tasks.Task<ChannelStats> ChannelsChannelIdStatsGetAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelStats> localVarResponse = await ChannelsChannelIdStatsGetAsyncWithHttpInfo(channelId);
+            ApiResponse<ChannelStats> localVarResponse = await ChannelsChannelIdStatsGetAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -4141,23 +4141,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel statistics Get statistics for a channel. ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (ChannelStats)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelStats>> ChannelsChannelIdStatsGetAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelStats>> ChannelsChannelIdStatsGetAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdStatsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4187,34 +4187,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get timezones in a channel Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>List&lt;string&gt;</returns>
         public List<string> ChannelsChannelIdTimezonesGet (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>> localVarResponse = ChannelsChannelIdTimezonesGetWithHttpInfo(channelId);
+            ApiResponse<List<string>> localVarResponse = ChannelsChannelIdTimezonesGetWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get timezones in a channel Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<string> > ChannelsChannelIdTimezonesGetWithHttpInfo (string channelId)
+        public ApiResponse<List<string>> ChannelsChannelIdTimezonesGetWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdTimezonesGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdTimezonesGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4244,12 +4244,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get timezones in a channel Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<List<string>> ChannelsChannelIdTimezonesGetAsync (string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>> localVarResponse = await ChannelsChannelIdTimezonesGetAsyncWithHttpInfo(channelId);
+            ApiResponse<List<string>> localVarResponse = await ChannelsChannelIdTimezonesGetAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -4257,23 +4257,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get timezones in a channel Get a list of timezones for the users who are in this channel.  __Minimum server version__: 5.6  ##### Permissions Must have the &#x60;read_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>>> ChannelsChannelIdTimezonesGetAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> ChannelsChannelIdTimezonesGetAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdTimezonesGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->ChannelsChannelIdTimezonesGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4303,35 +4303,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a direct message channel Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Channel</returns>
         public Channel ChannelsDirectPost (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsDirectPostWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = ChannelsDirectPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a direct message channel Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsDirectPostWithHttpInfo (List<string> body)
+        public ApiResponse<Channel> ChannelsDirectPostWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsDirectPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsDirectPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4360,12 +4360,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a direct message channel Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsDirectPostAsync (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsDirectPostAsyncWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = await ChannelsDirectPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4373,24 +4373,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a direct message channel Create a new direct message channel between two users. ##### Permissions Must be one of the two users and have &#x60;create_direct_channel&#x60; permission. Having the &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The two user ids to be in the direct message</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsDirectPostAsyncWithHttpInfo (List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsDirectPostAsyncWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsDirectPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsDirectPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4419,35 +4419,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a group message channel Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Channel</returns>
         public Channel ChannelsGroupPost (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsGroupPostWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = ChannelsGroupPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a group message channel Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsGroupPostWithHttpInfo (List<string> body)
+        public ApiResponse<Channel> ChannelsGroupPostWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsGroupPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsGroupPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4476,12 +4476,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a group message channel Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsGroupPostAsync (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsGroupPostAsyncWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = await ChannelsGroupPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4489,24 +4489,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a group message channel Create a new group message channel to group of users. If the logged in user&#39;s id is not included in the list, it will be appended to the end. ##### Permissions Must have &#x60;create_group_channel&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User ids to be in the group message channel</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsGroupPostAsyncWithHttpInfo (List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsGroupPostAsyncWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsGroupPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsGroupPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4535,41 +4535,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// View channel Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>InlineResponse2006</returns>
         public InlineResponse2006 ChannelsMembersUserIdViewPost (string userId, InlineObject39 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2006> localVarResponse = ChannelsMembersUserIdViewPostWithHttpInfo(userId, body);
+            ApiResponse<InlineResponse2006> localVarResponse = ChannelsMembersUserIdViewPostWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// View channel Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of InlineResponse2006</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2006 > ChannelsMembersUserIdViewPostWithHttpInfo (string userId, InlineObject39 body)
+        public ApiResponse<InlineResponse2006> ChannelsMembersUserIdViewPostWithHttpInfo (string userId, InlineObject39 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4600,13 +4600,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// View channel Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>Task of InlineResponse2006</returns>
         public async System.Threading.Tasks.Task<InlineResponse2006> ChannelsMembersUserIdViewPostAsync (string userId, InlineObject39 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2006> localVarResponse = await ChannelsMembersUserIdViewPostAsyncWithHttpInfo(userId, body);
+            ApiResponse<InlineResponse2006> localVarResponse = await ChannelsMembersUserIdViewPostAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -4614,29 +4614,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// View channel Perform all the actions involved in viewing a channel. This includes marking channels as read, clearing push notifications, and updating the active channel. ##### Permissions Must be logged in as user or have &#x60;edit_other_users&#x60; permission.  __Response only includes &#x60;last_viewed_at_times&#x60; in Mattermost server 4.3 and newer.__ 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID to perform the view action for</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2006>> ChannelsMembersUserIdViewPostAsyncWithHttpInfo (string userId, InlineObject39 body)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ChannelsMembersUserIdViewPostAsyncWithHttpInfo (string userId, InlineObject39 body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsMembersUserIdViewPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4667,35 +4667,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a channel Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Channel</returns>
         public Channel ChannelsPost (InlineObject31 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = ChannelsPostWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = ChannelsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a channel Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > ChannelsPostWithHttpInfo (InlineObject31 body)
+        public ApiResponse<Channel> ChannelsPostWithHttpInfo (InlineObject31 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4724,12 +4724,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a channel Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> ChannelsPostAsync (InlineObject31 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await ChannelsPostAsyncWithHttpInfo(body);
+            ApiResponse<Channel> localVarResponse = await ChannelsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4737,24 +4737,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a channel Create a new channel. ##### Permissions If creating a public channel, &#x60;create_public_channel&#x60; permission is required. If creating a private channel, &#x60;create_private_channel&#x60; permission is required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> ChannelsPostAsyncWithHttpInfo (InlineObject31 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> ChannelsPostAsyncWithHttpInfo (InlineObject31 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->ChannelsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4783,35 +4783,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search Group Channels Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> GroupSearchPost (InlineObject32 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = GroupSearchPostWithHttpInfo(body);
+            ApiResponse<List<Channel>> localVarResponse = GroupSearchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search Group Channels Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > GroupSearchPostWithHttpInfo (InlineObject32 body)
+        public ApiResponse<List<Channel>> GroupSearchPostWithHttpInfo (InlineObject32 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->GroupSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->GroupSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4840,12 +4840,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search Group Channels Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> GroupSearchPostAsync (InlineObject32 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await GroupSearchPostAsyncWithHttpInfo(body);
+            ApiResponse<List<Channel>> localVarResponse = await GroupSearchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -4853,24 +4853,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search Group Channels Get a list of group channels for a user which members&#39; usernames match the search term.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> GroupSearchPostAsyncWithHttpInfo (InlineObject32 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> GroupSearchPostAsyncWithHttpInfo (InlineObject32 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->GroupSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->GroupSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4899,42 +4899,42 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name and team name Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Channel</returns>
         public Channel TeamsNameTeamNameChannelsNameChannelNameGet (string teamName, string channelName, string includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = TeamsNameTeamNameChannelsNameChannelNameGetWithHttpInfo(teamName, channelName, includeDeleted);
+            ApiResponse<Channel> localVarResponse = TeamsNameTeamNameChannelsNameChannelNameGetWithHttpInfo(teamName, channelName, includeDeleted);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a channel by name and team name Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > TeamsNameTeamNameChannelsNameChannelNameGetWithHttpInfo (string teamName, string channelName, string includeDeleted = null)
+        public ApiResponse<Channel> TeamsNameTeamNameChannelsNameChannelNameGetWithHttpInfo (string teamName, string channelName, string includeDeleted = null)
         {
             // verify the required parameter 'teamName' is set
             if (teamName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'teamName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
 
             // verify the required parameter 'channelName' is set
             if (channelName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4976,14 +4976,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name and team name Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> TeamsNameTeamNameChannelsNameChannelNameGetAsync (string teamName, string channelName, string includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await TeamsNameTeamNameChannelsNameChannelNameGetAsyncWithHttpInfo(teamName, channelName, includeDeleted);
+            ApiResponse<Channel> localVarResponse = await TeamsNameTeamNameChannelsNameChannelNameGetAsyncWithHttpInfo(teamName, channelName, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -4991,29 +4991,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name and team name Gets a channel from the provided team name and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamName">Team Name</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> TeamsNameTeamNameChannelsNameChannelNameGetAsyncWithHttpInfo (string teamName, string channelName, string includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> TeamsNameTeamNameChannelsNameChannelNameGetAsyncWithHttpInfo (string teamName, string channelName, string includeDeleted = null)
         {
             // verify the required parameter 'teamName' is set
             if (teamName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'teamName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
 
             // verify the required parameter 'channelName' is set
             if (channelName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsNameTeamNameChannelsNameChannelNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5055,40 +5055,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsAutocompleteGet (string teamId, string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsAutocompleteGetWithHttpInfo(teamId, name);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsAutocompleteGetWithHttpInfo(teamId, name);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Autocomplete channels Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsAutocompleteGetWithHttpInfo (string teamId, string name)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsAutocompleteGetWithHttpInfo (string teamId, string name)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
 
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5128,13 +5128,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsAutocompleteGetAsync (string teamId, string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsAutocompleteGetAsyncWithHttpInfo(teamId, name);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsAutocompleteGetAsyncWithHttpInfo(teamId, name);
              return localVarResponse.Data;
 
         }
@@ -5142,28 +5142,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels Autocomplete public channels on a team based on the search term provided in the request URL.  __Minimum server version__: 4.7  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsAutocompleteGetAsyncWithHttpInfo (string teamId, string name)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsAutocompleteGetAsyncWithHttpInfo (string teamId, string name)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
 
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsAutocompleteGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5203,38 +5203,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get deleted channels Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsDeletedGet (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsDeletedGetWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsDeletedGetWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get deleted channels Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsDeletedGetWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsDeletedGetWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsDeletedGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsDeletedGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5284,14 +5284,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get deleted channels Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsDeletedGetAsync (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsDeletedGetAsyncWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsDeletedGetAsyncWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -5299,25 +5299,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get deleted channels Get a page of deleted channels on a team based on query string parameters - team_id, page and per_page.  __Minimum server version__: 3.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsDeletedGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsDeletedGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsDeletedGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsDeletedGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5367,38 +5367,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get public channels Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsGet (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsGetWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsGetWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get public channels Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsGetWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsGetWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5448,14 +5448,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get public channels Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsGetAsync (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsGetAsyncWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsGetAsyncWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -5463,25 +5463,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get public channels Get a page of public channels on a team based on query string parameters - page and per_page. ##### Permissions Must be authenticated and have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of public channels per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5531,41 +5531,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of channels by ids Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsIdsPost (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsIdsPostWithHttpInfo(teamId, body);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsIdsPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of channels by ids Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsIdsPostWithHttpInfo (string teamId, List<string> body)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsIdsPostWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5596,13 +5596,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of channels by ids Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsIdsPostAsync (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsIdsPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsIdsPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -5610,29 +5610,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of channels by ids Get a list of public channels on a team by id. ##### Permissions &#x60;view_team&#x60; for the team the channels are on. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of channel ids</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsIdsPostAsyncWithHttpInfo (string teamId, List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsIdsPostAsyncWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsIdsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5663,42 +5663,42 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Channel</returns>
         public Channel TeamsTeamIdChannelsNameChannelNameGet (string teamId, string channelName, string includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = TeamsTeamIdChannelsNameChannelNameGetWithHttpInfo(teamId, channelName, includeDeleted);
+            ApiResponse<Channel> localVarResponse = TeamsTeamIdChannelsNameChannelNameGetWithHttpInfo(teamId, channelName, includeDeleted);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a channel by name Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>ApiResponse of Channel</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Channel > TeamsTeamIdChannelsNameChannelNameGetWithHttpInfo (string teamId, string channelName, string includeDeleted = null)
+        public ApiResponse<Channel> TeamsTeamIdChannelsNameChannelNameGetWithHttpInfo (string teamId, string channelName, string includeDeleted = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
 
             // verify the required parameter 'channelName' is set
             if (channelName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5740,14 +5740,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Task of Channel</returns>
         public async System.Threading.Tasks.Task<Channel> TeamsTeamIdChannelsNameChannelNameGetAsync (string teamId, string channelName, string includeDeleted = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel> localVarResponse = await TeamsTeamIdChannelsNameChannelNameGetAsyncWithHttpInfo(teamId, channelName, includeDeleted);
+            ApiResponse<Channel> localVarResponse = await TeamsTeamIdChannelsNameChannelNameGetAsyncWithHttpInfo(teamId, channelName, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -5755,29 +5755,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a channel by name Gets channel from the provided team id and channel name strings. ##### Permissions &#x60;read_channel&#x60; permission for the channel. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="channelName">Channel Name</param>
         /// <param name="includeDeleted">Defines if deleted channels should be returned or not (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Channel)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Channel>> TeamsTeamIdChannelsNameChannelNameGetAsyncWithHttpInfo (string teamId, string channelName, string includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Channel>> TeamsTeamIdChannelsNameChannelNameGetAsyncWithHttpInfo (string teamId, string channelName, string includeDeleted = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
 
             // verify the required parameter 'channelName' is set
             if (channelName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
+                throw new ApiException(400, "Missing required parameter 'channelName' when calling ChannelsApi->TeamsTeamIdChannelsNameChannelNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5819,40 +5819,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels for search Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsSearchAutocompleteGet (string teamId, string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsSearchAutocompleteGetWithHttpInfo(teamId, name);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsSearchAutocompleteGetWithHttpInfo(teamId, name);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Autocomplete channels for search Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsSearchAutocompleteGetWithHttpInfo (string teamId, string name)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsSearchAutocompleteGetWithHttpInfo (string teamId, string name)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
 
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5892,13 +5892,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels for search Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsSearchAutocompleteGetAsync (string teamId, string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsSearchAutocompleteGetAsyncWithHttpInfo(teamId, name);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsSearchAutocompleteGetAsyncWithHttpInfo(teamId, name);
              return localVarResponse.Data;
 
         }
@@ -5906,28 +5906,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Autocomplete channels for search Autocomplete your channels on a team based on the search term provided in the request URL.  __Minimum server version__: 5.4  ##### Permissions Must have the &#x60;list_team_channels&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="name">Name or display name</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsSearchAutocompleteGetAsyncWithHttpInfo (string teamId, string name)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsSearchAutocompleteGetAsyncWithHttpInfo (string teamId, string name)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
 
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling ChannelsApi->TeamsTeamIdChannelsSearchAutocompleteGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5967,41 +5967,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search channels Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> TeamsTeamIdChannelsSearchPost (string teamId, InlineObject35 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsSearchPostWithHttpInfo(teamId, body);
+            ApiResponse<List<Channel>> localVarResponse = TeamsTeamIdChannelsSearchPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search channels Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > TeamsTeamIdChannelsSearchPostWithHttpInfo (string teamId, InlineObject35 body)
+        public ApiResponse<List<Channel>> TeamsTeamIdChannelsSearchPostWithHttpInfo (string teamId, InlineObject35 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6032,13 +6032,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search channels Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> TeamsTeamIdChannelsSearchPostAsync (string teamId, InlineObject35 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsSearchPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<List<Channel>> localVarResponse = await TeamsTeamIdChannelsSearchPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -6046,29 +6046,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search channels Search public channels on a team based on the search term provided in the request body. ##### Permissions Must have the &#x60;list_team_channels&#x60; permission.  In server version 5.16 and later, a user without the &#x60;list_team_channels&#x60; permission will be able to use this endpoint, with the search results limited to the channels that the user is a member of. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> TeamsTeamIdChannelsSearchPostAsyncWithHttpInfo (string teamId, InlineObject35 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> TeamsTeamIdChannelsSearchPostAsyncWithHttpInfo (string teamId, InlineObject35 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChannelsApi->TeamsTeamIdChannelsSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6099,40 +6099,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unread messages Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ChannelUnread</returns>
         public ChannelUnread UsersUserIdChannelsChannelIdUnreadGet (string userId, string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelUnread> localVarResponse = UsersUserIdChannelsChannelIdUnreadGetWithHttpInfo(userId, channelId);
+            ApiResponse<ChannelUnread> localVarResponse = UsersUserIdChannelsChannelIdUnreadGetWithHttpInfo(userId, channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get unread messages Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>ApiResponse of ChannelUnread</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< ChannelUnread > UsersUserIdChannelsChannelIdUnreadGetWithHttpInfo (string userId, string channelId)
+        public ApiResponse<ChannelUnread> UsersUserIdChannelsChannelIdUnreadGetWithHttpInfo (string userId, string channelId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6164,13 +6164,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unread messages Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ChannelUnread</returns>
         public async System.Threading.Tasks.Task<ChannelUnread> UsersUserIdChannelsChannelIdUnreadGetAsync (string userId, string channelId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelUnread> localVarResponse = await UsersUserIdChannelsChannelIdUnreadGetAsyncWithHttpInfo(userId, channelId);
+            ApiResponse<ChannelUnread> localVarResponse = await UsersUserIdChannelsChannelIdUnreadGetAsyncWithHttpInfo(userId, channelId);
              return localVarResponse.Data;
 
         }
@@ -6178,28 +6178,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unread messages Get the total unread messages and mentions for a channel for a user. ##### Permissions Must be logged in as user and have the &#x60;read_channel&#x60; permission, or have &#x60;edit_other_usrs&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="channelId">Channel GUID</param>
         /// <returns>Task of ApiResponse (ChannelUnread)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<ChannelUnread>> UsersUserIdChannelsChannelIdUnreadGetAsyncWithHttpInfo (string userId, string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelUnread>> UsersUserIdChannelsChannelIdUnreadGetAsyncWithHttpInfo (string userId, string channelId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling ChannelsApi->UsersUserIdChannelsChannelIdUnreadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6231,40 +6231,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channels for user Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;Channel&gt;</returns>
         public List<Channel> UsersUserIdTeamsTeamIdChannelsGet (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = UsersUserIdTeamsTeamIdChannelsGetWithHttpInfo(userId, teamId);
+            ApiResponse<List<Channel>> localVarResponse = UsersUserIdTeamsTeamIdChannelsGetWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channels for user Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;Channel&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Channel> > UsersUserIdTeamsTeamIdChannelsGetWithHttpInfo (string userId, string teamId)
+        public ApiResponse<List<Channel>> UsersUserIdTeamsTeamIdChannelsGetWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6296,13 +6296,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channels for user Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;Channel&gt;</returns>
         public async System.Threading.Tasks.Task<List<Channel>> UsersUserIdTeamsTeamIdChannelsGetAsync (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>> localVarResponse = await UsersUserIdTeamsTeamIdChannelsGetAsyncWithHttpInfo(userId, teamId);
+            ApiResponse<List<Channel>> localVarResponse = await UsersUserIdTeamsTeamIdChannelsGetAsyncWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
 
         }
@@ -6310,28 +6310,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channels for user Get all the channels on a team for a user. ##### Permissions Logged in as the user, or have &#x60;edit_other_users&#x60; permission, and &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Channel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Channel>>> UsersUserIdTeamsTeamIdChannelsGetAsyncWithHttpInfo (string userId, string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Channel>>> UsersUserIdTeamsTeamIdChannelsGetAsyncWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -6363,40 +6363,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members for user Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;ChannelMember&gt;</returns>
         public List<ChannelMember> UsersUserIdTeamsTeamIdChannelsMembersGet (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = UsersUserIdTeamsTeamIdChannelsMembersGetWithHttpInfo(userId, teamId);
+            ApiResponse<List<ChannelMember>> localVarResponse = UsersUserIdTeamsTeamIdChannelsMembersGetWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get channel members for user Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;ChannelMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<ChannelMember> > UsersUserIdTeamsTeamIdChannelsMembersGetWithHttpInfo (string userId, string teamId)
+        public ApiResponse<List<ChannelMember>> UsersUserIdTeamsTeamIdChannelsMembersGetWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -6428,13 +6428,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members for user Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;ChannelMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<ChannelMember>> UsersUserIdTeamsTeamIdChannelsMembersGetAsync (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>> localVarResponse = await UsersUserIdTeamsTeamIdChannelsMembersGetAsyncWithHttpInfo(userId, teamId);
+            ApiResponse<List<ChannelMember>> localVarResponse = await UsersUserIdTeamsTeamIdChannelsMembersGetAsyncWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
 
         }
@@ -6442,28 +6442,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get channel members for user Get all channel members on a team for a user. ##### Permissions Logged in as the user and &#x60;view_team&#x60; permission for the team. Having &#x60;manage_system&#x60; permission voids the previous requirements. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;ChannelMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<ChannelMember>>> UsersUserIdTeamsTeamIdChannelsMembersGetAsyncWithHttpInfo (string userId, string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ChannelMember>>> UsersUserIdTeamsTeamIdChannelsMembersGetAsyncWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling ChannelsApi->UsersUserIdTeamsTeamIdChannelsMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

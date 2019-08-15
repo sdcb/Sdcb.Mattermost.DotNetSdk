@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Role</returns>
         Role RolesNameRoleNameGet (string roleName);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>ApiResponse of Role</returns>
         ApiResponse<Role> RolesNameRoleNameGetWithHttpInfo (string roleName);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>List&lt;Role&gt;</returns>
         List<Role> RolesNamesPost (List<string> body);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>ApiResponse of List&lt;Role&gt;</returns>
         ApiResponse<List<Role>> RolesNamesPostWithHttpInfo (List<string> body);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Role</returns>
         Role RolesRoleIdGet (string roleId);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>ApiResponse of Role</returns>
         ApiResponse<Role> RolesRoleIdGetWithHttpInfo (string roleId);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Role</returns>
@@ -108,7 +108,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Role</returns>
@@ -128,7 +128,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Task of Role</returns>
         System.Threading.Tasks.Task<Role> RolesNameRoleNameGetAsync (string roleName);
@@ -139,7 +139,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Task of ApiResponse (Role)</returns>
         System.Threading.Tasks.Task<ApiResponse<Role>> RolesNameRoleNameGetAsyncWithHttpInfo (string roleName);
@@ -149,7 +149,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>Task of List&lt;Role&gt;</returns>
         System.Threading.Tasks.Task<List<Role>> RolesNamesPostAsync (List<string> body);
@@ -160,7 +160,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>Task of ApiResponse (List&lt;Role&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Role>>> RolesNamesPostAsyncWithHttpInfo (List<string> body);
@@ -170,7 +170,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Task of Role</returns>
         System.Threading.Tasks.Task<Role> RolesRoleIdGetAsync (string roleId);
@@ -181,7 +181,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Task of ApiResponse (Role)</returns>
         System.Threading.Tasks.Task<ApiResponse<Role>> RolesRoleIdGetAsyncWithHttpInfo (string roleId);
@@ -191,7 +191,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Role</returns>
@@ -203,7 +203,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Role)</returns>
@@ -224,7 +224,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class RolesApi : IRolesApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RolesApi"/> class.
@@ -238,14 +238,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="RolesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public RolesApi(String basePath)
+        public RolesApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -255,7 +255,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public RolesApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public RolesApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -263,8 +263,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -275,7 +275,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public RolesApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public RolesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -290,18 +290,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -310,12 +310,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -331,34 +331,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Role</returns>
         public Role RolesNameRoleNameGet (string roleName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = RolesNameRoleNameGetWithHttpInfo(roleName);
+            ApiResponse<Role> localVarResponse = RolesNameRoleNameGetWithHttpInfo(roleName);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a role Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>ApiResponse of Role</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Role > RolesNameRoleNameGetWithHttpInfo (string roleName)
+        public ApiResponse<Role> RolesNameRoleNameGetWithHttpInfo (string roleName)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleName' when calling RolesApi->RolesNameRoleNameGet");
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling RolesApi->RolesNameRoleNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -388,12 +388,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Task of Role</returns>
         public async System.Threading.Tasks.Task<Role> RolesNameRoleNameGetAsync (string roleName)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = await RolesNameRoleNameGetAsyncWithHttpInfo(roleName);
+            ApiResponse<Role> localVarResponse = await RolesNameRoleNameGetAsyncWithHttpInfo(roleName);
              return localVarResponse.Data;
 
         }
@@ -401,23 +401,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role name.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Role Name</param>
         /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role>> RolesNameRoleNameGetAsyncWithHttpInfo (string roleName)
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> RolesNameRoleNameGetAsyncWithHttpInfo (string roleName)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleName' when calling RolesApi->RolesNameRoleNameGet");
+                throw new ApiException(400, "Missing required parameter 'roleName' when calling RolesApi->RolesNameRoleNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -447,35 +447,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of roles by name Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>List&lt;Role&gt;</returns>
         public List<Role> RolesNamesPost (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Role>> localVarResponse = RolesNamesPostWithHttpInfo(body);
+            ApiResponse<List<Role>> localVarResponse = RolesNamesPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of roles by name Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>ApiResponse of List&lt;Role&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Role> > RolesNamesPostWithHttpInfo (List<string> body)
+        public ApiResponse<List<Role>> RolesNamesPostWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesNamesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesNamesPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -504,12 +504,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of roles by name Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>Task of List&lt;Role&gt;</returns>
         public async System.Threading.Tasks.Task<List<Role>> RolesNamesPostAsync (List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Role>> localVarResponse = await RolesNamesPostAsyncWithHttpInfo(body);
+            ApiResponse<List<Role>> localVarResponse = await RolesNamesPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -517,24 +517,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a list of roles by name Get a list of roles from their names.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">List of role names</param>
         /// <returns>Task of ApiResponse (List&lt;Role&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Role>>> RolesNamesPostAsyncWithHttpInfo (List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Role>>> RolesNamesPostAsyncWithHttpInfo (List<string> body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesNamesPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesNamesPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -563,34 +563,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Role</returns>
         public Role RolesRoleIdGet (string roleId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = RolesRoleIdGetWithHttpInfo(roleId);
+            ApiResponse<Role> localVarResponse = RolesRoleIdGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a role Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>ApiResponse of Role</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Role > RolesRoleIdGetWithHttpInfo (string roleId)
+        public ApiResponse<Role> RolesRoleIdGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdGet");
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -620,12 +620,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Task of Role</returns>
         public async System.Threading.Tasks.Task<Role> RolesRoleIdGetAsync (string roleId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = await RolesRoleIdGetAsyncWithHttpInfo(roleId);
+            ApiResponse<Role> localVarResponse = await RolesRoleIdGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -633,23 +633,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a role Get a role from the provided role id.  ##### Permissions Requires an active session but no other permissions.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role>> RolesRoleIdGetAsyncWithHttpInfo (string roleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> RolesRoleIdGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdGet");
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -679,41 +679,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a role Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Role</returns>
         public Role RolesRoleIdPatchPut (string roleId, InlineObject57 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = RolesRoleIdPatchPutWithHttpInfo(roleId, body);
+            ApiResponse<Role> localVarResponse = RolesRoleIdPatchPutWithHttpInfo(roleId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a role Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Role</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Role > RolesRoleIdPatchPutWithHttpInfo (string roleId, InlineObject57 body)
+        public ApiResponse<Role> RolesRoleIdPatchPutWithHttpInfo (string roleId, InlineObject57 body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesRoleIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesRoleIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -744,13 +744,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a role Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Role</returns>
         public async System.Threading.Tasks.Task<Role> RolesRoleIdPatchPutAsync (string roleId, InlineObject57 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role> localVarResponse = await RolesRoleIdPatchPutAsyncWithHttpInfo(roleId, body);
+            ApiResponse<Role> localVarResponse = await RolesRoleIdPatchPutAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
 
         }
@@ -758,29 +758,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a role Partially update a role by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored.  ##### Permissions &#x60;manage_system&#x60; permission is required.  __Minimum server version__: 4.9 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Role>> RolesRoleIdPatchPutAsyncWithHttpInfo (string roleId, InlineObject57 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> RolesRoleIdPatchPutAsyncWithHttpInfo (string roleId, InlineObject57 body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling RolesApi->RolesRoleIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesRoleIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RolesApi->RolesRoleIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

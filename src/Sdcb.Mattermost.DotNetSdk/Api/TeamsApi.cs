@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Team&gt;</returns>
@@ -45,7 +45,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>InlineResponse2005</returns>
         InlineResponse2005 TeamsInviteInviteIdGet (string inviteId);
@@ -67,7 +67,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>ApiResponse of InlineResponse2005</returns>
         ApiResponse<InlineResponse2005> TeamsInviteInviteIdGetWithHttpInfo (string inviteId);
@@ -77,7 +77,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         StatusOK TeamsInvitesEmailDelete ();
 
@@ -87,7 +87,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> TeamsInvitesEmailDeleteWithHttpInfo ();
         /// <summary>
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>TeamMember</returns>
         TeamMember TeamsMembersInvitePost (string token);
@@ -107,7 +107,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>ApiResponse of TeamMember</returns>
         ApiResponse<TeamMember> TeamsMembersInvitePostWithHttpInfo (string token);
@@ -117,7 +117,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>TeamExists</returns>
         TeamExists TeamsNameNameExistsGet (string name);
@@ -128,7 +128,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>ApiResponse of TeamExists</returns>
         ApiResponse<TeamExists> TeamsNameNameExistsGetWithHttpInfo (string name);
@@ -138,7 +138,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Team</returns>
         Team TeamsNameNameGet (string name);
@@ -149,7 +149,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> TeamsNameNameGetWithHttpInfo (string name);
@@ -159,7 +159,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Team</returns>
         Team TeamsPost (InlineObject23 body);
@@ -170,7 +170,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> TeamsPostWithHttpInfo (InlineObject23 body);
@@ -180,7 +180,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Team&gt;</returns>
         List<Team> TeamsSearchPost (InlineObject26 body);
@@ -191,7 +191,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
         ApiResponse<List<Team>> TeamsSearchPostWithHttpInfo (InlineObject26 body);
@@ -201,7 +201,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>StatusOK</returns>
@@ -213,7 +213,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -224,7 +224,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Team</returns>
         Team TeamsTeamIdGet (string teamId);
@@ -235,7 +235,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> TeamsTeamIdGetWithHttpInfo (string teamId);
@@ -245,7 +245,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>StatusOK</returns>
         StatusOK TeamsTeamIdImageDelete (string teamId);
@@ -256,7 +256,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> TeamsTeamIdImageDeleteWithHttpInfo (string teamId);
@@ -266,7 +266,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns></returns>
         void TeamsTeamIdImageGet (string teamId);
@@ -277,17 +277,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TeamsTeamIdImageGetWithHttpInfo (string teamId);
+        ApiResponse<object> TeamsTeamIdImageGetWithHttpInfo (string teamId);
         /// <summary>
         /// Sets the team icon
         /// </summary>
         /// <remarks>
         /// Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>StatusOK</returns>
@@ -299,7 +299,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -310,7 +310,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -324,7 +324,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -337,7 +337,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>StatusOK</returns>
@@ -349,7 +349,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -360,7 +360,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;TeamMember&gt;</returns>
@@ -372,7 +372,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
@@ -383,7 +383,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
@@ -396,7 +396,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
@@ -408,7 +408,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>List&lt;TeamMember&gt;</returns>
@@ -420,7 +420,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
@@ -431,7 +431,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -445,20 +445,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TeamsTeamIdMembersMinusGroupMembersGetWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null);
+        ApiResponse<object> TeamsTeamIdMembersMinusGroupMembersGetWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null);
         /// <summary>
         /// Add user to team
         /// </summary>
         /// <remarks>
         /// Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>TeamMember</returns>
@@ -470,7 +470,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of TeamMember</returns>
@@ -481,7 +481,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
@@ -493,7 +493,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -504,7 +504,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>TeamMember</returns>
@@ -516,7 +516,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of TeamMember</returns>
@@ -527,7 +527,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -540,7 +540,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -552,7 +552,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -565,7 +565,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -577,7 +577,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Team</returns>
@@ -589,7 +589,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
@@ -600,7 +600,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Team</returns>
@@ -612,7 +612,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
@@ -623,7 +623,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Team</returns>
         Team TeamsTeamIdRegenerateInviteIdPost (string teamId);
@@ -634,7 +634,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> TeamsTeamIdRegenerateInviteIdPostWithHttpInfo (string teamId);
@@ -644,7 +644,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
@@ -656,7 +656,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
@@ -667,7 +667,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>TeamStats</returns>
         TeamStats TeamsTeamIdStatsGet (string teamId);
@@ -678,7 +678,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of TeamStats</returns>
         ApiResponse<TeamStats> TeamsTeamIdStatsGetWithHttpInfo (string teamId);
@@ -688,7 +688,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Team&gt;</returns>
         List<Team> UsersUserIdTeamsGet (string userId);
@@ -699,7 +699,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
         ApiResponse<List<Team>> UsersUserIdTeamsGetWithHttpInfo (string userId);
@@ -709,7 +709,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;TeamMember&gt;</returns>
         List<TeamMember> UsersUserIdTeamsMembersGet (string userId);
@@ -720,7 +720,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
         ApiResponse<List<TeamMember>> UsersUserIdTeamsMembersGetWithHttpInfo (string userId);
@@ -730,7 +730,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>TeamUnread</returns>
@@ -742,7 +742,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of TeamUnread</returns>
@@ -753,7 +753,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>List&lt;TeamUnread&gt;</returns>
@@ -765,7 +765,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>ApiResponse of List&lt;TeamUnread&gt;</returns>
@@ -785,7 +785,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Team&gt;</returns>
@@ -797,7 +797,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
@@ -808,7 +808,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>Task of InlineResponse2005</returns>
         System.Threading.Tasks.Task<InlineResponse2005> TeamsInviteInviteIdGetAsync (string inviteId);
@@ -819,7 +819,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> TeamsInviteInviteIdGetAsyncWithHttpInfo (string inviteId);
@@ -829,7 +829,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> TeamsInvitesEmailDeleteAsync ();
 
@@ -839,7 +839,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsInvitesEmailDeleteAsyncWithHttpInfo ();
         /// <summary>
@@ -848,7 +848,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>Task of TeamMember</returns>
         System.Threading.Tasks.Task<TeamMember> TeamsMembersInvitePostAsync (string token);
@@ -859,7 +859,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
         System.Threading.Tasks.Task<ApiResponse<TeamMember>> TeamsMembersInvitePostAsyncWithHttpInfo (string token);
@@ -869,7 +869,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of TeamExists</returns>
         System.Threading.Tasks.Task<TeamExists> TeamsNameNameExistsGetAsync (string name);
@@ -880,7 +880,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of ApiResponse (TeamExists)</returns>
         System.Threading.Tasks.Task<ApiResponse<TeamExists>> TeamsNameNameExistsGetAsyncWithHttpInfo (string name);
@@ -890,7 +890,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of Team</returns>
         System.Threading.Tasks.Task<Team> TeamsNameNameGetAsync (string name);
@@ -901,7 +901,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> TeamsNameNameGetAsyncWithHttpInfo (string name);
@@ -911,7 +911,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
         System.Threading.Tasks.Task<Team> TeamsPostAsync (InlineObject23 body);
@@ -922,7 +922,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> TeamsPostAsyncWithHttpInfo (InlineObject23 body);
@@ -932,7 +932,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         System.Threading.Tasks.Task<List<Team>> TeamsSearchPostAsync (InlineObject26 body);
@@ -943,7 +943,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Team>>> TeamsSearchPostAsyncWithHttpInfo (InlineObject26 body);
@@ -953,7 +953,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>Task of StatusOK</returns>
@@ -965,7 +965,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -976,7 +976,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of Team</returns>
         System.Threading.Tasks.Task<Team> TeamsTeamIdGetAsync (string teamId);
@@ -987,7 +987,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdGetAsyncWithHttpInfo (string teamId);
@@ -997,7 +997,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> TeamsTeamIdImageDeleteAsync (string teamId);
@@ -1008,7 +1008,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdImageDeleteAsyncWithHttpInfo (string teamId);
@@ -1018,7 +1018,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task TeamsTeamIdImageGetAsync (string teamId);
@@ -1029,17 +1029,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TeamsTeamIdImageGetAsyncWithHttpInfo (string teamId);
+        System.Threading.Tasks.Task<ApiResponse<object>> TeamsTeamIdImageGetAsyncWithHttpInfo (string teamId);
         /// <summary>
         /// Sets the team icon
         /// </summary>
         /// <remarks>
         /// Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
@@ -1051,7 +1051,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1062,7 +1062,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -1076,7 +1076,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -1089,7 +1089,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>Task of StatusOK</returns>
@@ -1101,7 +1101,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1112,7 +1112,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
@@ -1124,7 +1124,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
@@ -1135,7 +1135,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
@@ -1148,7 +1148,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
@@ -1160,7 +1160,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
@@ -1172,7 +1172,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
@@ -1183,7 +1183,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -1197,20 +1197,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TeamsTeamIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<object>> TeamsTeamIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null);
         /// <summary>
         /// Add user to team
         /// </summary>
         /// <remarks>
         /// Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of TeamMember</returns>
@@ -1222,7 +1222,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
@@ -1233,7 +1233,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
@@ -1245,7 +1245,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1256,7 +1256,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of TeamMember</returns>
@@ -1268,7 +1268,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
@@ -1279,7 +1279,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1292,7 +1292,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1304,7 +1304,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1317,7 +1317,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
@@ -1329,7 +1329,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
@@ -1341,7 +1341,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
@@ -1352,7 +1352,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
@@ -1364,7 +1364,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
@@ -1375,7 +1375,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of Team</returns>
         System.Threading.Tasks.Task<Team> TeamsTeamIdRegenerateInviteIdPostAsync (string teamId);
@@ -1386,7 +1386,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdRegenerateInviteIdPostAsyncWithHttpInfo (string teamId);
@@ -1396,7 +1396,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
@@ -1408,7 +1408,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
@@ -1419,7 +1419,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of TeamStats</returns>
         System.Threading.Tasks.Task<TeamStats> TeamsTeamIdStatsGetAsync (string teamId);
@@ -1430,7 +1430,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (TeamStats)</returns>
         System.Threading.Tasks.Task<ApiResponse<TeamStats>> TeamsTeamIdStatsGetAsyncWithHttpInfo (string teamId);
@@ -1440,7 +1440,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         System.Threading.Tasks.Task<List<Team>> UsersUserIdTeamsGetAsync (string userId);
@@ -1451,7 +1451,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Team>>> UsersUserIdTeamsGetAsyncWithHttpInfo (string userId);
@@ -1461,7 +1461,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
         System.Threading.Tasks.Task<List<TeamMember>> UsersUserIdTeamsMembersGetAsync (string userId);
@@ -1472,7 +1472,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<TeamMember>>> UsersUserIdTeamsMembersGetAsyncWithHttpInfo (string userId);
@@ -1482,7 +1482,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of TeamUnread</returns>
@@ -1494,7 +1494,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (TeamUnread)</returns>
@@ -1505,7 +1505,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>Task of List&lt;TeamUnread&gt;</returns>
@@ -1517,7 +1517,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>Task of ApiResponse (List&lt;TeamUnread&gt;)</returns>
@@ -1538,7 +1538,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class TeamsApi : ITeamsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsApi"/> class.
@@ -1552,14 +1552,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="TeamsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TeamsApi(String basePath)
+        public TeamsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -1569,7 +1569,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TeamsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public TeamsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -1577,8 +1577,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -1589,7 +1589,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public TeamsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public TeamsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -1604,18 +1604,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -1624,12 +1624,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -1645,32 +1645,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get teams For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Team&gt;</returns>
         public List<Team> TeamsGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = TeamsGetWithHttpInfo(page, perPage);
+            ApiResponse<List<Team>> localVarResponse = TeamsGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get teams For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Team> > TeamsGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<Team>> TeamsGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1718,13 +1718,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get teams For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         public async System.Threading.Tasks.Task<List<Team>> TeamsGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = await TeamsGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<Team>> localVarResponse = await TeamsGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1732,20 +1732,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get teams For regular users only returns open teams. Users with the \&quot;manage_system\&quot; permission will return teams regardless of type. The result is based on query string parameters - page and per_page. ##### Permissions Must be authenticated. \&quot;manage_system\&quot; permission is required to show all teams. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of teams per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>>> TeamsGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Team>>> TeamsGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1793,34 +1793,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get invite info for a team Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>InlineResponse2005</returns>
         public InlineResponse2005 TeamsInviteInviteIdGet (string inviteId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2005> localVarResponse = TeamsInviteInviteIdGetWithHttpInfo(inviteId);
+            ApiResponse<InlineResponse2005> localVarResponse = TeamsInviteInviteIdGetWithHttpInfo(inviteId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get invite info for a team Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>ApiResponse of InlineResponse2005</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2005 > TeamsInviteInviteIdGetWithHttpInfo (string inviteId)
+        public ApiResponse<InlineResponse2005> TeamsInviteInviteIdGetWithHttpInfo (string inviteId)
         {
             // verify the required parameter 'inviteId' is set
             if (inviteId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'inviteId' when calling TeamsApi->TeamsInviteInviteIdGet");
+                throw new ApiException(400, "Missing required parameter 'inviteId' when calling TeamsApi->TeamsInviteInviteIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1850,12 +1850,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get invite info for a team Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>Task of InlineResponse2005</returns>
         public async System.Threading.Tasks.Task<InlineResponse2005> TeamsInviteInviteIdGetAsync (string inviteId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2005> localVarResponse = await TeamsInviteInviteIdGetAsyncWithHttpInfo(inviteId);
+            ApiResponse<InlineResponse2005> localVarResponse = await TeamsInviteInviteIdGetAsyncWithHttpInfo(inviteId);
              return localVarResponse.Data;
 
         }
@@ -1863,23 +1863,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get invite info for a team Get the &#x60;name&#x60;, &#x60;display_name&#x60;, &#x60;description&#x60; and &#x60;id&#x60; for a team from the invite id.  __Minimum server version__: 4.0  ##### Permissions No authentication required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteId">Invite id for a team</param>
         /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2005>> TeamsInviteInviteIdGetAsyncWithHttpInfo (string inviteId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> TeamsInviteInviteIdGetAsyncWithHttpInfo (string inviteId)
         {
             // verify the required parameter 'inviteId' is set
             if (inviteId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'inviteId' when calling TeamsApi->TeamsInviteInviteIdGet");
+                throw new ApiException(400, "Missing required parameter 'inviteId' when calling TeamsApi->TeamsInviteInviteIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1909,28 +1909,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate active email invitations Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsInvitesEmailDelete ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsInvitesEmailDeleteWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = TeamsInvitesEmailDeleteWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Invalidate active email invitations Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsInvitesEmailDeleteWithHttpInfo ()
+        public ApiResponse<StatusOK> TeamsInvitesEmailDeleteWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1958,11 +1958,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate active email invitations Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsInvitesEmailDeleteAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsInvitesEmailDeleteAsyncWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = await TeamsInvitesEmailDeleteAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1970,18 +1970,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate active email invitations Invalidate active email invitations that have not been accepted by the user. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsInvitesEmailDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsInvitesEmailDeleteAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2009,34 +2009,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team from invite Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>TeamMember</returns>
         public TeamMember TeamsMembersInvitePost (string token)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = TeamsMembersInvitePostWithHttpInfo(token);
+            ApiResponse<TeamMember> localVarResponse = TeamsMembersInvitePostWithHttpInfo(token);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Add user to team from invite Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>ApiResponse of TeamMember</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamMember > TeamsMembersInvitePostWithHttpInfo (string token)
+        public ApiResponse<TeamMember> TeamsMembersInvitePostWithHttpInfo (string token)
         {
             // verify the required parameter 'token' is set
             if (token == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'token' when calling TeamsApi->TeamsMembersInvitePost");
+                throw new ApiException(400, "Missing required parameter 'token' when calling TeamsApi->TeamsMembersInvitePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2074,12 +2074,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team from invite Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>Task of TeamMember</returns>
         public async System.Threading.Tasks.Task<TeamMember> TeamsMembersInvitePostAsync (string token)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = await TeamsMembersInvitePostAsyncWithHttpInfo(token);
+            ApiResponse<TeamMember> localVarResponse = await TeamsMembersInvitePostAsyncWithHttpInfo(token);
              return localVarResponse.Data;
 
         }
@@ -2087,23 +2087,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team from invite Using either an invite id or hash/data pair from an email invite link, add a user to a team. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">Token id from the invitation</param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember>> TeamsMembersInvitePostAsyncWithHttpInfo (string token)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamMember>> TeamsMembersInvitePostAsyncWithHttpInfo (string token)
         {
             // verify the required parameter 'token' is set
             if (token == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'token' when calling TeamsApi->TeamsMembersInvitePost");
+                throw new ApiException(400, "Missing required parameter 'token' when calling TeamsApi->TeamsMembersInvitePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2141,34 +2141,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check if team exists Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>TeamExists</returns>
         public TeamExists TeamsNameNameExistsGet (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamExists> localVarResponse = TeamsNameNameExistsGetWithHttpInfo(name);
+            ApiResponse<TeamExists> localVarResponse = TeamsNameNameExistsGetWithHttpInfo(name);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Check if team exists Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>ApiResponse of TeamExists</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamExists > TeamsNameNameExistsGetWithHttpInfo (string name)
+        public ApiResponse<TeamExists> TeamsNameNameExistsGetWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameExistsGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameExistsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2198,12 +2198,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check if team exists Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of TeamExists</returns>
         public async System.Threading.Tasks.Task<TeamExists> TeamsNameNameExistsGetAsync (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamExists> localVarResponse = await TeamsNameNameExistsGetAsyncWithHttpInfo(name);
+            ApiResponse<TeamExists> localVarResponse = await TeamsNameNameExistsGetAsyncWithHttpInfo(name);
              return localVarResponse.Data;
 
         }
@@ -2211,23 +2211,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check if team exists Check if the team exists based on a team name. ##### Permissions Must be authenticated. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of ApiResponse (TeamExists)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamExists>> TeamsNameNameExistsGetAsyncWithHttpInfo (string name)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamExists>> TeamsNameNameExistsGetAsyncWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameExistsGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameExistsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2257,34 +2257,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team by name Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Team</returns>
         public Team TeamsNameNameGet (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsNameNameGetWithHttpInfo(name);
+            ApiResponse<Team> localVarResponse = TeamsNameNameGetWithHttpInfo(name);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a team by name Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsNameNameGetWithHttpInfo (string name)
+        public ApiResponse<Team> TeamsNameNameGetWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2314,12 +2314,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team by name Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsNameNameGetAsync (string name)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsNameNameGetAsyncWithHttpInfo(name);
+            ApiResponse<Team> localVarResponse = await TeamsNameNameGetAsyncWithHttpInfo(name);
              return localVarResponse.Data;
 
         }
@@ -2327,23 +2327,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team by name Get a team based on provided name string ##### Permissions Must be authenticated, team type is open and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Team Name</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsNameNameGetAsyncWithHttpInfo (string name)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsNameNameGetAsyncWithHttpInfo (string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameGet");
+                throw new ApiException(400, "Missing required parameter 'name' when calling TeamsApi->TeamsNameNameGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2373,35 +2373,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a team Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Team</returns>
         public Team TeamsPost (InlineObject23 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsPostWithHttpInfo(body);
+            ApiResponse<Team> localVarResponse = TeamsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a team Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsPostWithHttpInfo (InlineObject23 body)
+        public ApiResponse<Team> TeamsPostWithHttpInfo (InlineObject23 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2430,12 +2430,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a team Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsPostAsync (InlineObject23 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsPostAsyncWithHttpInfo(body);
+            ApiResponse<Team> localVarResponse = await TeamsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2443,24 +2443,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a team Create a new team on the system. ##### Permissions Must be authenticated and have the &#x60;create_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsPostAsyncWithHttpInfo (InlineObject23 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsPostAsyncWithHttpInfo (InlineObject23 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2489,35 +2489,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search teams Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>List&lt;Team&gt;</returns>
         public List<Team> TeamsSearchPost (InlineObject26 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = TeamsSearchPostWithHttpInfo(body);
+            ApiResponse<List<Team>> localVarResponse = TeamsSearchPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Search teams Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Team> > TeamsSearchPostWithHttpInfo (InlineObject26 body)
+        public ApiResponse<List<Team>> TeamsSearchPostWithHttpInfo (InlineObject26 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsSearchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2546,12 +2546,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search teams Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         public async System.Threading.Tasks.Task<List<Team>> TeamsSearchPostAsync (InlineObject26 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = await TeamsSearchPostAsyncWithHttpInfo(body);
+            ApiResponse<List<Team>> localVarResponse = await TeamsSearchPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2559,24 +2559,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Search teams Search teams based on search term provided in the request body. ##### Permissions Logged in user only shows open teams Logged in user with \&quot;manage_system\&quot; permission shows all teams 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>>> TeamsSearchPostAsyncWithHttpInfo (InlineObject26 body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Team>>> TeamsSearchPostAsyncWithHttpInfo (InlineObject26 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsSearchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsSearchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2605,36 +2605,36 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a team Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdDelete (string teamId, bool? permanent = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdDeleteWithHttpInfo(teamId, permanent);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdDeleteWithHttpInfo(teamId, permanent);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a team Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdDeleteWithHttpInfo (string teamId, bool? permanent = null)
+        public ApiResponse<StatusOK> TeamsTeamIdDeleteWithHttpInfo (string teamId, bool? permanent = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2674,13 +2674,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a team Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdDeleteAsync (string teamId, bool? permanent = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdDeleteAsyncWithHttpInfo(teamId, permanent);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdDeleteAsyncWithHttpInfo(teamId, permanent);
              return localVarResponse.Data;
 
         }
@@ -2688,24 +2688,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a team Soft deletes a team, by marking the team as deleted in the database. Soft deleted teams will not be accessible in the user interface.  Optionally use the permanent query parameter to hard delete the team for compliance reasons. As of server version 5.0, to use this feature &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="permanent">Permanently delete the team, to be used for compliance reasons only. As of server version 5.0, &#x60;ServiceSettings.EnableAPITeamDeletion&#x60; must be set to &#x60;true&#x60; in the server&#39;s configuration. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdDeleteAsyncWithHttpInfo (string teamId, bool? permanent = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdDeleteAsyncWithHttpInfo (string teamId, bool? permanent = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2745,34 +2745,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Team</returns>
         public Team TeamsTeamIdGet (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsTeamIdGetWithHttpInfo(teamId);
+            ApiResponse<Team> localVarResponse = TeamsTeamIdGetWithHttpInfo(teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a team Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsTeamIdGetWithHttpInfo (string teamId)
+        public ApiResponse<Team> TeamsTeamIdGetWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2802,12 +2802,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsTeamIdGetAsync (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsTeamIdGetAsyncWithHttpInfo(teamId);
+            ApiResponse<Team> localVarResponse = await TeamsTeamIdGetAsyncWithHttpInfo(teamId);
              return localVarResponse.Data;
 
         }
@@ -2815,23 +2815,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team Get a team on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsTeamIdGetAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdGetAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2861,34 +2861,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove the team icon Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdImageDelete (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdImageDeleteWithHttpInfo(teamId);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdImageDeleteWithHttpInfo(teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Remove the team icon Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdImageDeleteWithHttpInfo (string teamId)
+        public ApiResponse<StatusOK> TeamsTeamIdImageDeleteWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2918,12 +2918,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove the team icon Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdImageDeleteAsync (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdImageDeleteAsyncWithHttpInfo(teamId);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdImageDeleteAsyncWithHttpInfo(teamId);
              return localVarResponse.Data;
 
         }
@@ -2931,23 +2931,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove the team icon Remove the team icon for the team.  __Minimum server version__: 4.10  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdImageDeleteAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdImageDeleteAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2977,7 +2977,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the team icon Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns></returns>
         public void TeamsTeamIdImageGet (string teamId)
@@ -2988,22 +2988,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the team icon Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> TeamsTeamIdImageGetWithHttpInfo (string teamId)
+        public ApiResponse<object> TeamsTeamIdImageGetWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3019,7 +3019,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/teams/{team_id}/image", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/teams/{team_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -3033,7 +3033,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the team icon Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task TeamsTeamIdImageGetAsync (string teamId)
@@ -3045,23 +3045,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get the team icon Get the team icon of the team.  __Minimum server version__: 4.9  ##### Permissions User must be authenticated. In addition, team must be open or the user must have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> TeamsTeamIdImageGetAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> TeamsTeamIdImageGetAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImageGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3077,7 +3077,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/teams/{team_id}/image", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/teams/{team_id}/image", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -3091,41 +3091,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Sets the team icon Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdImagePost (string teamId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdImagePostWithHttpInfo(teamId, image);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdImagePostWithHttpInfo(teamId, image);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Sets the team icon Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdImagePostWithHttpInfo (string teamId, System.IO.Stream image)
+        public ApiResponse<StatusOK> TeamsTeamIdImagePostWithHttpInfo (string teamId, System.IO.Stream image)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImagePost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling TeamsApi->TeamsTeamIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling TeamsApi->TeamsTeamIdImagePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3159,13 +3159,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Sets the team icon Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdImagePostAsync (string teamId, System.IO.Stream image)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdImagePostAsyncWithHttpInfo(teamId, image);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdImagePostAsyncWithHttpInfo(teamId, image);
              return localVarResponse.Data;
 
         }
@@ -3173,29 +3173,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Sets the team icon Sets the team icon for the team.  __Minimum server version__: 4.9  ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="image">The image to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdImagePostAsyncWithHttpInfo (string teamId, System.IO.Stream image)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdImagePostAsyncWithHttpInfo (string teamId, System.IO.Stream image)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImagePost");
 
             // verify the required parameter 'image' is set
             if (image == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'image' when calling TeamsApi->TeamsTeamIdImagePost");
+                throw new ApiException(400, "Missing required parameter 'image' when calling TeamsApi->TeamsTeamIdImagePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3229,7 +3229,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Import a Team from other application Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -3237,45 +3237,45 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>InlineResponse2004</returns>
         public InlineResponse2004 TeamsTeamIdImportPost (string teamId, System.IO.Stream file, int filesize, string importFrom)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2004> localVarResponse = TeamsTeamIdImportPostWithHttpInfo(teamId, file, filesize, importFrom);
+            ApiResponse<InlineResponse2004> localVarResponse = TeamsTeamIdImportPostWithHttpInfo(teamId, file, filesize, importFrom);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Import a Team from other application Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
         /// <param name="importFrom">String that defines from which application the team was exported to be imported into Mattermost.</param>
         /// <returns>ApiResponse of InlineResponse2004</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2004 > TeamsTeamIdImportPostWithHttpInfo (string teamId, System.IO.Stream file, int filesize, string importFrom)
+        public ApiResponse<InlineResponse2004> TeamsTeamIdImportPostWithHttpInfo (string teamId, System.IO.Stream file, int filesize, string importFrom)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'file' is set
             if (file == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'file' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'file' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'filesize' is set
             if (filesize == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'filesize' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'filesize' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'importFrom' is set
             if (importFrom == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'importFrom' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'importFrom' when calling TeamsApi->TeamsTeamIdImportPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3317,7 +3317,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Import a Team from other application Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
@@ -3325,7 +3325,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of InlineResponse2004</returns>
         public async System.Threading.Tasks.Task<InlineResponse2004> TeamsTeamIdImportPostAsync (string teamId, System.IO.Stream file, int filesize, string importFrom)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2004> localVarResponse = await TeamsTeamIdImportPostAsyncWithHttpInfo(teamId, file, filesize, importFrom);
+            ApiResponse<InlineResponse2004> localVarResponse = await TeamsTeamIdImportPostAsyncWithHttpInfo(teamId, file, filesize, importFrom);
              return localVarResponse.Data;
 
         }
@@ -3333,39 +3333,39 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Import a Team from other application Import a team into a existing team. Import users, channels, posts, hooks. ##### Permissions Must have &#x60;permission_import_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="file">A file to be uploaded in zip format.</param>
         /// <param name="filesize">The size of the zip file to be imported.</param>
         /// <param name="importFrom">String that defines from which application the team was exported to be imported into Mattermost.</param>
         /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2004>> TeamsTeamIdImportPostAsyncWithHttpInfo (string teamId, System.IO.Stream file, int filesize, string importFrom)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> TeamsTeamIdImportPostAsyncWithHttpInfo (string teamId, System.IO.Stream file, int filesize, string importFrom)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'file' is set
             if (file == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'file' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'file' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'filesize' is set
             if (filesize == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'filesize' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'filesize' when calling TeamsApi->TeamsTeamIdImportPost");
 
             // verify the required parameter 'importFrom' is set
             if (importFrom == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'importFrom' when calling TeamsApi->TeamsTeamIdImportPost");
+                throw new ApiException(400, "Missing required parameter 'importFrom' when calling TeamsApi->TeamsTeamIdImportPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3407,41 +3407,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invite users to the team by email Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdInviteEmailPost (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdInviteEmailPostWithHttpInfo(teamId, body);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdInviteEmailPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Invite users to the team by email Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdInviteEmailPostWithHttpInfo (string teamId, List<string> body)
+        public ApiResponse<StatusOK> TeamsTeamIdInviteEmailPostWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3472,13 +3472,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invite users to the team by email Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdInviteEmailPostAsync (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdInviteEmailPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdInviteEmailPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -3486,29 +3486,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invite users to the team by email Invite users to the existing team usign the user&#39;s email. ##### Permissions Must have &#x60;invite_to_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user&#39;s email</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdInviteEmailPostAsyncWithHttpInfo (string teamId, List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdInviteEmailPostAsyncWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdInviteEmailPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3539,41 +3539,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add multiple users to team Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;TeamMember&gt;</returns>
         public List<TeamMember> TeamsTeamIdMembersBatchPost (string teamId, List<TeamMember> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersBatchPostWithHttpInfo(teamId, body);
+            ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersBatchPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Add multiple users to team Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<TeamMember> > TeamsTeamIdMembersBatchPostWithHttpInfo (string teamId, List<TeamMember> body)
+        public ApiResponse<List<TeamMember>> TeamsTeamIdMembersBatchPostWithHttpInfo (string teamId, List<TeamMember> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3604,13 +3604,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add multiple users to team Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<TeamMember>> TeamsTeamIdMembersBatchPostAsync (string teamId, List<TeamMember> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersBatchPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersBatchPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -3618,29 +3618,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add multiple users to team Add a number of users to the team by user_id. ##### Permissions Must be authenticated. Authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>>> TeamsTeamIdMembersBatchPostAsyncWithHttpInfo (string teamId, List<TeamMember> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TeamMember>>> TeamsTeamIdMembersBatchPostAsyncWithHttpInfo (string teamId, List<TeamMember> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersBatchPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3671,38 +3671,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;TeamMember&gt;</returns>
         public List<TeamMember> TeamsTeamIdMembersGet (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersGetWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersGetWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get team members Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<TeamMember> > TeamsTeamIdMembersGetWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public ApiResponse<List<TeamMember>> TeamsTeamIdMembersGetWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3752,14 +3752,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<TeamMember>> TeamsTeamIdMembersGetAsync (string teamId, string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersGetAsyncWithHttpInfo(teamId, page, perPage);
+            ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersGetAsyncWithHttpInfo(teamId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -3767,25 +3767,25 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members Get a page team members list based on query string parameters - team id, page and per page. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>>> TeamsTeamIdMembersGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TeamMember>>> TeamsTeamIdMembersGetAsyncWithHttpInfo (string teamId, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3835,41 +3835,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members by ids Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>List&lt;TeamMember&gt;</returns>
         public List<TeamMember> TeamsTeamIdMembersIdsPost (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersIdsPostWithHttpInfo(teamId, body);
+            ApiResponse<List<TeamMember>> localVarResponse = TeamsTeamIdMembersIdsPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get team members by ids Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<TeamMember> > TeamsTeamIdMembersIdsPostWithHttpInfo (string teamId, List<string> body)
+        public ApiResponse<List<TeamMember>> TeamsTeamIdMembersIdsPostWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -3900,13 +3900,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members by ids Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<TeamMember>> TeamsTeamIdMembersIdsPostAsync (string teamId, List<string> body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersIdsPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<List<TeamMember>> localVarResponse = await TeamsTeamIdMembersIdsPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -3914,29 +3914,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members by ids Get a list of team members based on a provided array of user ids. ##### Permissions Must have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body">List of user ids</param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>>> TeamsTeamIdMembersIdsPostAsyncWithHttpInfo (string teamId, List<string> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TeamMember>>> TeamsTeamIdMembersIdsPostAsyncWithHttpInfo (string teamId, List<string> body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersIdsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -3967,7 +3967,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Team members minus group members. Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -3981,29 +3981,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Team members minus group members. Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> TeamsTeamIdMembersMinusGroupMembersGetWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null)
+        public ApiResponse<object> TeamsTeamIdMembersMinusGroupMembersGetWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
 
             // verify the required parameter 'groupIds' is set
             if (groupIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'groupIds' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'groupIds' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4049,7 +4049,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/teams/{team_id}/members_minus_group_members", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/teams/{team_id}/members_minus_group_members", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4063,7 +4063,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Team members minus group members. Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
@@ -4078,30 +4078,30 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Team members minus group members. Get the set of users who are members of the team minus the set of users who are members of the given groups. Each user object contains an array of group objects representing the group memberships for that user. Each user object contains the boolean fields &#x60;scheme_guest&#x60;, &#x60;scheme_user&#x60;, and &#x60;scheme_admin&#x60; representing the roles that user has for the given team.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.14 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="groupIds">A comma-separated list of group ids.</param>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of users per page. (optional, default to &quot;0&quot;)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> TeamsTeamIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> TeamsTeamIdMembersMinusGroupMembersGetAsyncWithHttpInfo (string teamId, string groupIds, string page = null, string perPage = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
 
             // verify the required parameter 'groupIds' is set
             if (groupIds == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'groupIds' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
+                throw new ApiException(400, "Missing required parameter 'groupIds' when calling TeamsApi->TeamsTeamIdMembersMinusGroupMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4147,7 +4147,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/teams/{team_id}/members_minus_group_members", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/teams/{team_id}/members_minus_group_members", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -4161,41 +4161,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>TeamMember</returns>
         public TeamMember TeamsTeamIdMembersPost (string teamId, InlineObject27 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = TeamsTeamIdMembersPostWithHttpInfo(teamId, body);
+            ApiResponse<TeamMember> localVarResponse = TeamsTeamIdMembersPostWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Add user to team Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of TeamMember</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamMember > TeamsTeamIdMembersPostWithHttpInfo (string teamId, InlineObject27 body)
+        public ApiResponse<TeamMember> TeamsTeamIdMembersPostWithHttpInfo (string teamId, InlineObject27 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4226,13 +4226,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of TeamMember</returns>
         public async System.Threading.Tasks.Task<TeamMember> TeamsTeamIdMembersPostAsync (string teamId, InlineObject27 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = await TeamsTeamIdMembersPostAsyncWithHttpInfo(teamId, body);
+            ApiResponse<TeamMember> localVarResponse = await TeamsTeamIdMembersPostAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -4240,29 +4240,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add user to team Add user to the team by user_id. ##### Permissions Must be authenticated and team be open to add self. For adding another user, authenticated user must have the &#x60;add_user_to_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember>> TeamsTeamIdMembersPostAsyncWithHttpInfo (string teamId, InlineObject27 body)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamMember>> TeamsTeamIdMembersPostAsyncWithHttpInfo (string teamId, InlineObject27 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersPost");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4293,40 +4293,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from team Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdMembersUserIdDelete (string teamId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdDeleteWithHttpInfo(teamId, userId);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdDeleteWithHttpInfo(teamId, userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Remove user from team Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdMembersUserIdDeleteWithHttpInfo (string teamId, string userId)
+        public ApiResponse<StatusOK> TeamsTeamIdMembersUserIdDeleteWithHttpInfo (string teamId, string userId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4358,13 +4358,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from team Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdMembersUserIdDeleteAsync (string teamId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdDeleteAsyncWithHttpInfo(teamId, userId);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdDeleteAsyncWithHttpInfo(teamId, userId);
              return localVarResponse.Data;
 
         }
@@ -4372,28 +4372,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove user from team Delete the team member object for a user, effectively removing them from a team. ##### Permissions Must be logged in as the user or have the &#x60;remove_user_from_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdDeleteAsyncWithHttpInfo (string teamId, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdDeleteAsyncWithHttpInfo (string teamId, string userId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4425,40 +4425,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team member Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>TeamMember</returns>
         public TeamMember TeamsTeamIdMembersUserIdGet (string teamId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = TeamsTeamIdMembersUserIdGetWithHttpInfo(teamId, userId);
+            ApiResponse<TeamMember> localVarResponse = TeamsTeamIdMembersUserIdGetWithHttpInfo(teamId, userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a team member Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of TeamMember</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamMember > TeamsTeamIdMembersUserIdGetWithHttpInfo (string teamId, string userId)
+        public ApiResponse<TeamMember> TeamsTeamIdMembersUserIdGetWithHttpInfo (string teamId, string userId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4490,13 +4490,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team member Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of TeamMember</returns>
         public async System.Threading.Tasks.Task<TeamMember> TeamsTeamIdMembersUserIdGetAsync (string teamId, string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember> localVarResponse = await TeamsTeamIdMembersUserIdGetAsyncWithHttpInfo(teamId, userId);
+            ApiResponse<TeamMember> localVarResponse = await TeamsTeamIdMembersUserIdGetAsyncWithHttpInfo(teamId, userId);
              return localVarResponse.Data;
 
         }
@@ -4504,28 +4504,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team member Get a team member on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (TeamMember)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamMember>> TeamsTeamIdMembersUserIdGetAsyncWithHttpInfo (string teamId, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamMember>> TeamsTeamIdMembersUserIdGetAsyncWithHttpInfo (string teamId, string userId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4557,47 +4557,47 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team member roles Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdMembersUserIdRolesPut (string teamId, string userId, InlineObject28 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdRolesPutWithHttpInfo(teamId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdRolesPutWithHttpInfo(teamId, userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a team member roles Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdMembersUserIdRolesPutWithHttpInfo (string teamId, string userId, InlineObject28 body)
+        public ApiResponse<StatusOK> TeamsTeamIdMembersUserIdRolesPutWithHttpInfo (string teamId, string userId, InlineObject28 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4630,14 +4630,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team member roles Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdMembersUserIdRolesPutAsync (string teamId, string userId, InlineObject28 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdRolesPutAsyncWithHttpInfo(teamId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdRolesPutAsyncWithHttpInfo(teamId, userId, body);
              return localVarResponse.Data;
 
         }
@@ -4645,34 +4645,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team member roles Update a team member roles. Valid team roles are \&quot;team_user\&quot;, \&quot;team_admin\&quot; or both of them. Overwrites any previously assigned team roles. ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdRolesPutAsyncWithHttpInfo (string teamId, string userId, InlineObject28 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdRolesPutAsyncWithHttpInfo (string teamId, string userId, InlineObject28 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdRolesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4705,47 +4705,47 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a team member. Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdMembersUserIdSchemeRolesPut (string teamId, string userId, InlineObject29 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdSchemeRolesPutWithHttpInfo(teamId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdMembersUserIdSchemeRolesPutWithHttpInfo(teamId, userId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update the scheme-derived roles of a team member. Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdMembersUserIdSchemeRolesPutWithHttpInfo (string teamId, string userId, InlineObject29 body)
+        public ApiResponse<StatusOK> TeamsTeamIdMembersUserIdSchemeRolesPutWithHttpInfo (string teamId, string userId, InlineObject29 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4778,14 +4778,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a team member. Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdMembersUserIdSchemeRolesPutAsync (string teamId, string userId, InlineObject29 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo(teamId, userId, body);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo(teamId, userId, body);
              return localVarResponse.Data;
 
         }
@@ -4793,34 +4793,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update the scheme-derived roles of a team member. Update a team member&#39;s scheme_admin/scheme_user properties. Typically this should either be &#x60;scheme_admin&#x3D;false, scheme_user&#x3D;true&#x60; for ordinary team member, or &#x60;scheme_admin&#x3D;true, scheme_user&#x3D;true&#x60; for a team admin.  __Minimum server version__: 5.0  ##### Permissions Must be authenticated and have the &#x60;manage_team_roles&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="userId">User GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo (string teamId, string userId, InlineObject29 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdMembersUserIdSchemeRolesPutAsyncWithHttpInfo (string teamId, string userId, InlineObject29 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdMembersUserIdSchemeRolesPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4853,41 +4853,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a team Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Team</returns>
         public Team TeamsTeamIdPatchPut (string teamId, InlineObject25 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsTeamIdPatchPutWithHttpInfo(teamId, body);
+            ApiResponse<Team> localVarResponse = TeamsTeamIdPatchPutWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Patch a team Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsTeamIdPatchPutWithHttpInfo (string teamId, InlineObject25 body)
+        public ApiResponse<Team> TeamsTeamIdPatchPutWithHttpInfo (string teamId, InlineObject25 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPatchPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -4918,13 +4918,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a team Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsTeamIdPatchPutAsync (string teamId, InlineObject25 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsTeamIdPatchPutAsyncWithHttpInfo(teamId, body);
+            ApiResponse<Team> localVarResponse = await TeamsTeamIdPatchPutAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -4932,29 +4932,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Patch a team Partially update a team by providing only the fields you want to update. Omitted fields will not be updated. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsTeamIdPatchPutAsyncWithHttpInfo (string teamId, InlineObject25 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdPatchPutAsyncWithHttpInfo (string teamId, InlineObject25 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPatchPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPatchPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPatchPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -4985,41 +4985,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Team</returns>
         public Team TeamsTeamIdPut (string teamId, InlineObject24 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsTeamIdPutWithHttpInfo(teamId, body);
+            ApiResponse<Team> localVarResponse = TeamsTeamIdPutWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a team Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsTeamIdPutWithHttpInfo (string teamId, InlineObject24 body)
+        public ApiResponse<Team> TeamsTeamIdPutWithHttpInfo (string teamId, InlineObject24 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5050,13 +5050,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsTeamIdPutAsync (string teamId, InlineObject24 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsTeamIdPutAsyncWithHttpInfo(teamId, body);
+            ApiResponse<Team> localVarResponse = await TeamsTeamIdPutAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -5064,29 +5064,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a team Update a team by providing the team object. The fields that can be updated are defined in the request body, all other provided fields will be ignored. ##### Permissions Must have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsTeamIdPutAsyncWithHttpInfo (string teamId, InlineObject24 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdPutAsyncWithHttpInfo (string teamId, InlineObject24 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5117,34 +5117,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the Invite ID from a Team Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Team</returns>
         public Team TeamsTeamIdRegenerateInviteIdPost (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = TeamsTeamIdRegenerateInviteIdPostWithHttpInfo(teamId);
+            ApiResponse<Team> localVarResponse = TeamsTeamIdRegenerateInviteIdPostWithHttpInfo(teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Regenerate the Invite ID from a Team Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of Team</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Team > TeamsTeamIdRegenerateInviteIdPostWithHttpInfo (string teamId)
+        public ApiResponse<Team> TeamsTeamIdRegenerateInviteIdPostWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdRegenerateInviteIdPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdRegenerateInviteIdPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5174,12 +5174,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the Invite ID from a Team Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of Team</returns>
         public async System.Threading.Tasks.Task<Team> TeamsTeamIdRegenerateInviteIdPostAsync (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team> localVarResponse = await TeamsTeamIdRegenerateInviteIdPostAsyncWithHttpInfo(teamId);
+            ApiResponse<Team> localVarResponse = await TeamsTeamIdRegenerateInviteIdPostAsyncWithHttpInfo(teamId);
              return localVarResponse.Data;
 
         }
@@ -5187,23 +5187,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Regenerate the Invite ID from a Team Regenerates the invite ID used in invite links of a team ##### Permissions Must be authenticated and have the &#x60;manage_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Team>> TeamsTeamIdRegenerateInviteIdPostAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<Team>> TeamsTeamIdRegenerateInviteIdPostAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdRegenerateInviteIdPost");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdRegenerateInviteIdPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5233,41 +5233,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a team&#39;s scheme Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>StatusOK</returns>
         public StatusOK TeamsTeamIdSchemePut (string teamId, InlineObject30 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = TeamsTeamIdSchemePutWithHttpInfo(teamId, body);
+            ApiResponse<StatusOK> localVarResponse = TeamsTeamIdSchemePutWithHttpInfo(teamId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Set a team&#39;s scheme Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > TeamsTeamIdSchemePutWithHttpInfo (string teamId, InlineObject30 body)
+        public ApiResponse<StatusOK> TeamsTeamIdSchemePutWithHttpInfo (string teamId, InlineObject30 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdSchemePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdSchemePut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5298,13 +5298,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a team&#39;s scheme Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> TeamsTeamIdSchemePutAsync (string teamId, InlineObject30 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdSchemePutAsyncWithHttpInfo(teamId, body);
+            ApiResponse<StatusOK> localVarResponse = await TeamsTeamIdSchemePutAsyncWithHttpInfo(teamId, body);
              return localVarResponse.Data;
 
         }
@@ -5312,29 +5312,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Set a team&#39;s scheme Set a team&#39;s scheme, more specifically sets the scheme_id value of a team record.  ##### Permissions Must have &#x60;manage_system&#x60; permission.  __Minimum server version__: 5.0 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> TeamsTeamIdSchemePutAsyncWithHttpInfo (string teamId, InlineObject30 body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> TeamsTeamIdSchemePutAsyncWithHttpInfo (string teamId, InlineObject30 body)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdSchemePut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdSchemePut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->TeamsTeamIdSchemePut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5365,34 +5365,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team stats Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>TeamStats</returns>
         public TeamStats TeamsTeamIdStatsGet (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamStats> localVarResponse = TeamsTeamIdStatsGetWithHttpInfo(teamId);
+            ApiResponse<TeamStats> localVarResponse = TeamsTeamIdStatsGetWithHttpInfo(teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a team stats Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of TeamStats</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamStats > TeamsTeamIdStatsGetWithHttpInfo (string teamId)
+        public ApiResponse<TeamStats> TeamsTeamIdStatsGetWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdStatsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5422,12 +5422,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team stats Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of TeamStats</returns>
         public async System.Threading.Tasks.Task<TeamStats> TeamsTeamIdStatsGetAsync (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamStats> localVarResponse = await TeamsTeamIdStatsGetAsyncWithHttpInfo(teamId);
+            ApiResponse<TeamStats> localVarResponse = await TeamsTeamIdStatsGetAsyncWithHttpInfo(teamId);
              return localVarResponse.Data;
 
         }
@@ -5435,23 +5435,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a team stats Get a team stats on the system. ##### Permissions Must be authenticated and have the &#x60;view_team&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (TeamStats)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamStats>> TeamsTeamIdStatsGetAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamStats>> TeamsTeamIdStatsGetAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdStatsGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->TeamsTeamIdStatsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5481,34 +5481,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user&#39;s teams Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;Team&gt;</returns>
         public List<Team> UsersUserIdTeamsGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = UsersUserIdTeamsGetWithHttpInfo(userId);
+            ApiResponse<List<Team>> localVarResponse = UsersUserIdTeamsGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a user&#39;s teams Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;Team&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Team> > UsersUserIdTeamsGetWithHttpInfo (string userId)
+        public ApiResponse<List<Team>> UsersUserIdTeamsGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5538,12 +5538,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user&#39;s teams Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;Team&gt;</returns>
         public async System.Threading.Tasks.Task<List<Team>> UsersUserIdTeamsGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>> localVarResponse = await UsersUserIdTeamsGetAsyncWithHttpInfo(userId);
+            ApiResponse<List<Team>> localVarResponse = await UsersUserIdTeamsGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5551,23 +5551,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a user&#39;s teams Get a list of teams that a user is on. ##### Permissions Must be authenticated as the user or have the &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Team&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Team>>> UsersUserIdTeamsGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Team>>> UsersUserIdTeamsGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5597,34 +5597,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members for a user Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>List&lt;TeamMember&gt;</returns>
         public List<TeamMember> UsersUserIdTeamsMembersGet (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = UsersUserIdTeamsMembersGetWithHttpInfo(userId);
+            ApiResponse<List<TeamMember>> localVarResponse = UsersUserIdTeamsMembersGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get team members for a user Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>ApiResponse of List&lt;TeamMember&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<TeamMember> > UsersUserIdTeamsMembersGetWithHttpInfo (string userId)
+        public ApiResponse<List<TeamMember>> UsersUserIdTeamsMembersGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsMembersGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5654,12 +5654,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members for a user Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of List&lt;TeamMember&gt;</returns>
         public async System.Threading.Tasks.Task<List<TeamMember>> UsersUserIdTeamsMembersGetAsync (string userId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>> localVarResponse = await UsersUserIdTeamsMembersGetAsyncWithHttpInfo(userId);
+            ApiResponse<List<TeamMember>> localVarResponse = await UsersUserIdTeamsMembersGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -5667,23 +5667,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team members for a user Get a list of team members for a user. Useful for getting the ids of teams the user is on and the roles they have in those teams. ##### Permissions Must be logged in as the user or have the &#x60;edit_other_users&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <returns>Task of ApiResponse (List&lt;TeamMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamMember>>> UsersUserIdTeamsMembersGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TeamMember>>> UsersUserIdTeamsMembersGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsMembersGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsMembersGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5713,40 +5713,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unreads for a team Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>TeamUnread</returns>
         public TeamUnread UsersUserIdTeamsTeamIdUnreadGet (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamUnread> localVarResponse = UsersUserIdTeamsTeamIdUnreadGetWithHttpInfo(userId, teamId);
+            ApiResponse<TeamUnread> localVarResponse = UsersUserIdTeamsTeamIdUnreadGetWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get unreads for a team Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of TeamUnread</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< TeamUnread > UsersUserIdTeamsTeamIdUnreadGetWithHttpInfo (string userId, string teamId)
+        public ApiResponse<TeamUnread> UsersUserIdTeamsTeamIdUnreadGetWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5778,13 +5778,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unreads for a team Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of TeamUnread</returns>
         public async System.Threading.Tasks.Task<TeamUnread> UsersUserIdTeamsTeamIdUnreadGetAsync (string userId, string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamUnread> localVarResponse = await UsersUserIdTeamsTeamIdUnreadGetAsyncWithHttpInfo(userId, teamId);
+            ApiResponse<TeamUnread> localVarResponse = await UsersUserIdTeamsTeamIdUnreadGetAsyncWithHttpInfo(userId, teamId);
              return localVarResponse.Data;
 
         }
@@ -5792,28 +5792,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get unreads for a team Get the unread mention and message counts for a team for the specified user. ##### Permissions Must be the user or have &#x60;edit_other_users&#x60; permission and have &#x60;view_team&#x60; permission for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (TeamUnread)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<TeamUnread>> UsersUserIdTeamsTeamIdUnreadGetAsyncWithHttpInfo (string userId, string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamUnread>> UsersUserIdTeamsTeamIdUnreadGetAsyncWithHttpInfo (string userId, string teamId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
 
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->UsersUserIdTeamsTeamIdUnreadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -5845,40 +5845,40 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team unreads for a user Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>List&lt;TeamUnread&gt;</returns>
         public List<TeamUnread> UsersUserIdTeamsUnreadGet (string userId, string excludeTeam)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamUnread>> localVarResponse = UsersUserIdTeamsUnreadGetWithHttpInfo(userId, excludeTeam);
+            ApiResponse<List<TeamUnread>> localVarResponse = UsersUserIdTeamsUnreadGetWithHttpInfo(userId, excludeTeam);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get team unreads for a user Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>ApiResponse of List&lt;TeamUnread&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<TeamUnread> > UsersUserIdTeamsUnreadGetWithHttpInfo (string userId, string excludeTeam)
+        public ApiResponse<List<TeamUnread>> UsersUserIdTeamsUnreadGetWithHttpInfo (string userId, string excludeTeam)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
 
             // verify the required parameter 'excludeTeam' is set
             if (excludeTeam == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'excludeTeam' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'excludeTeam' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -5918,13 +5918,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team unreads for a user Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>Task of List&lt;TeamUnread&gt;</returns>
         public async System.Threading.Tasks.Task<List<TeamUnread>> UsersUserIdTeamsUnreadGetAsync (string userId, string excludeTeam)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamUnread>> localVarResponse = await UsersUserIdTeamsUnreadGetAsyncWithHttpInfo(userId, excludeTeam);
+            ApiResponse<List<TeamUnread>> localVarResponse = await UsersUserIdTeamsUnreadGetAsyncWithHttpInfo(userId, excludeTeam);
              return localVarResponse.Data;
 
         }
@@ -5932,28 +5932,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get team unreads for a user Get the count for unread messages and mentions in the teams the user is a member of. ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User GUID</param>
         /// <param name="excludeTeam">Optional team id to be excluded from the results</param>
         /// <returns>Task of ApiResponse (List&lt;TeamUnread&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<TeamUnread>>> UsersUserIdTeamsUnreadGetAsyncWithHttpInfo (string userId, string excludeTeam)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TeamUnread>>> UsersUserIdTeamsUnreadGetAsyncWithHttpInfo (string userId, string excludeTeam)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
 
             // verify the required parameter 'excludeTeam' is set
             if (excludeTeam == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'excludeTeam' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
+                throw new ApiException(400, "Missing required parameter 'excludeTeam' when calling TeamsApi->UsersUserIdTeamsUnreadGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

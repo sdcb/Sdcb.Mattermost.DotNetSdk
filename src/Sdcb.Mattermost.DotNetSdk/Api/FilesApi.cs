@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         void FilesFileIdGet (string fileId);
@@ -44,17 +44,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FilesFileIdGetWithHttpInfo (string fileId);
+        ApiResponse<object> FilesFileIdGetWithHttpInfo (string fileId);
         /// <summary>
         /// Get metadata for a file
         /// </summary>
         /// <remarks>
         /// Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>FileInfo</returns>
         FileInfo FilesFileIdInfoGet (string fileId);
@@ -65,7 +65,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>ApiResponse of FileInfo</returns>
         ApiResponse<FileInfo> FilesFileIdInfoGetWithHttpInfo (string fileId);
@@ -75,7 +75,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>InlineResponse2007</returns>
         InlineResponse2007 FilesFileIdLinkGet (string fileId);
@@ -86,7 +86,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>ApiResponse of InlineResponse2007</returns>
         ApiResponse<InlineResponse2007> FilesFileIdLinkGetWithHttpInfo (string fileId);
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         void FilesFileIdPreviewGet (string fileId);
@@ -107,17 +107,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FilesFileIdPreviewGetWithHttpInfo (string fileId);
+        ApiResponse<object> FilesFileIdPreviewGetWithHttpInfo (string fileId);
         /// <summary>
         /// Get a file&#39;s thumbnail
         /// </summary>
         /// <remarks>
         /// Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         void FilesFileIdThumbnailGet (string fileId);
@@ -128,17 +128,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FilesFileIdThumbnailGetWithHttpInfo (string fileId);
+        ApiResponse<object> FilesFileIdThumbnailGetWithHttpInfo (string fileId);
         /// <summary>
         /// Upload a file
         /// </summary>
         /// <remarks>
         /// Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -153,7 +153,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -176,7 +176,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task FilesFileIdGetAsync (string fileId);
@@ -187,17 +187,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilesFileIdGetAsyncWithHttpInfo (string fileId);
+        System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdGetAsyncWithHttpInfo (string fileId);
         /// <summary>
         /// Get metadata for a file
         /// </summary>
         /// <remarks>
         /// Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>Task of FileInfo</returns>
         System.Threading.Tasks.Task<FileInfo> FilesFileIdInfoGetAsync (string fileId);
@@ -208,7 +208,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>Task of ApiResponse (FileInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<FileInfo>> FilesFileIdInfoGetAsyncWithHttpInfo (string fileId);
@@ -218,7 +218,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>Task of InlineResponse2007</returns>
         System.Threading.Tasks.Task<InlineResponse2007> FilesFileIdLinkGetAsync (string fileId);
@@ -229,7 +229,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> FilesFileIdLinkGetAsyncWithHttpInfo (string fileId);
@@ -239,7 +239,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task FilesFileIdPreviewGetAsync (string fileId);
@@ -250,17 +250,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilesFileIdPreviewGetAsyncWithHttpInfo (string fileId);
+        System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdPreviewGetAsyncWithHttpInfo (string fileId);
         /// <summary>
         /// Get a file&#39;s thumbnail
         /// </summary>
         /// <remarks>
         /// Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task FilesFileIdThumbnailGetAsync (string fileId);
@@ -271,17 +271,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilesFileIdThumbnailGetAsyncWithHttpInfo (string fileId);
+        System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdThumbnailGetAsyncWithHttpInfo (string fileId);
         /// <summary>
         /// Upload a file
         /// </summary>
         /// <remarks>
         /// Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -296,7 +296,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -320,7 +320,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class FilesApi : IFilesApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FilesApi"/> class.
@@ -334,14 +334,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="FilesApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public FilesApi(String basePath)
+        public FilesApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -351,7 +351,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FilesApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public FilesApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -359,8 +359,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -371,7 +371,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public FilesApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public FilesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -386,18 +386,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -406,12 +406,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -427,7 +427,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         public void FilesFileIdGet (string fileId)
@@ -438,38 +438,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> FilesFileIdGetWithHttpInfo (string fileId)
+        public ApiResponse<object> FilesFileIdGetWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/files/{file_id}", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/files/{file_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -483,7 +483,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task FilesFileIdGetAsync (string fileId)
@@ -495,23 +495,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file Gets a file that has been uploaded previously. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> FilesFileIdGetAsyncWithHttpInfo (string fileId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdGetAsyncWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -522,12 +522,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 requestOptions.HeaderParameters.Add("Accept", accept);
             
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/files/{file_id}", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/files/{file_id}", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -541,45 +541,45 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get metadata for a file Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>FileInfo</returns>
         public FileInfo FilesFileIdInfoGet (string fileId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<FileInfo> localVarResponse = FilesFileIdInfoGetWithHttpInfo(fileId);
+            ApiResponse<FileInfo> localVarResponse = FilesFileIdInfoGetWithHttpInfo(fileId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get metadata for a file Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>ApiResponse of FileInfo</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< FileInfo > FilesFileIdInfoGetWithHttpInfo (string fileId)
+        public ApiResponse<FileInfo> FilesFileIdInfoGetWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdInfoGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdInfoGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
@@ -598,12 +598,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get metadata for a file Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>Task of FileInfo</returns>
         public async System.Threading.Tasks.Task<FileInfo> FilesFileIdInfoGetAsync (string fileId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<FileInfo> localVarResponse = await FilesFileIdInfoGetAsyncWithHttpInfo(fileId);
+            ApiResponse<FileInfo> localVarResponse = await FilesFileIdInfoGetAsyncWithHttpInfo(fileId);
              return localVarResponse.Data;
 
         }
@@ -611,23 +611,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get metadata for a file Gets a file&#39;s info. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file info to get</param>
         /// <returns>Task of ApiResponse (FileInfo)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<FileInfo>> FilesFileIdInfoGetAsyncWithHttpInfo (string fileId)
+        public async System.Threading.Tasks.Task<ApiResponse<FileInfo>> FilesFileIdInfoGetAsyncWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdInfoGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdInfoGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -638,7 +638,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 requestOptions.HeaderParameters.Add("Accept", accept);
             
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
@@ -657,45 +657,45 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a public file link Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>InlineResponse2007</returns>
         public InlineResponse2007 FilesFileIdLinkGet (string fileId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2007> localVarResponse = FilesFileIdLinkGetWithHttpInfo(fileId);
+            ApiResponse<InlineResponse2007> localVarResponse = FilesFileIdLinkGetWithHttpInfo(fileId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a public file link Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>ApiResponse of InlineResponse2007</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2007 > FilesFileIdLinkGetWithHttpInfo (string fileId)
+        public ApiResponse<InlineResponse2007> FilesFileIdLinkGetWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdLinkGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdLinkGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
@@ -714,12 +714,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a public file link Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>Task of InlineResponse2007</returns>
         public async System.Threading.Tasks.Task<InlineResponse2007> FilesFileIdLinkGetAsync (string fileId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2007> localVarResponse = await FilesFileIdLinkGetAsyncWithHttpInfo(fileId);
+            ApiResponse<InlineResponse2007> localVarResponse = await FilesFileIdLinkGetAsyncWithHttpInfo(fileId);
              return localVarResponse.Data;
 
         }
@@ -727,23 +727,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a public file link Gets a public link for a file that can be accessed without logging into Mattermost. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get a link for</param>
         /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2007>> FilesFileIdLinkGetAsyncWithHttpInfo (string fileId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> FilesFileIdLinkGetAsyncWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdLinkGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdLinkGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -754,7 +754,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 requestOptions.HeaderParameters.Add("Accept", accept);
             
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
@@ -773,7 +773,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s preview Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         public void FilesFileIdPreviewGet (string fileId)
@@ -784,38 +784,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s preview Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> FilesFileIdPreviewGetWithHttpInfo (string fileId)
+        public ApiResponse<object> FilesFileIdPreviewGetWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdPreviewGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdPreviewGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/files/{file_id}/preview", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/files/{file_id}/preview", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -829,7 +829,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s preview Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task FilesFileIdPreviewGetAsync (string fileId)
@@ -841,23 +841,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s preview Gets a file&#39;s preview. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> FilesFileIdPreviewGetAsyncWithHttpInfo (string fileId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdPreviewGetAsyncWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdPreviewGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdPreviewGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -868,12 +868,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 requestOptions.HeaderParameters.Add("Accept", accept);
             
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/files/{file_id}/preview", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/files/{file_id}/preview", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -887,7 +887,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s thumbnail Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns></returns>
         public void FilesFileIdThumbnailGet (string fileId)
@@ -898,38 +898,38 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s thumbnail Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> FilesFileIdThumbnailGetWithHttpInfo (string fileId)
+        public ApiResponse<object> FilesFileIdThumbnailGetWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdThumbnailGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdThumbnailGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/files/{file_id}/thumbnail", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/files/{file_id}/thumbnail", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -943,7 +943,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s thumbnail Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task FilesFileIdThumbnailGetAsync (string fileId)
@@ -955,23 +955,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get a file&#39;s thumbnail Gets a file&#39;s thumbnail. ##### Permissions Must have &#x60;read_channel&#x60; permission or be uploader of the file. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId">The ID of the file to get</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> FilesFileIdThumbnailGetAsyncWithHttpInfo (string fileId)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> FilesFileIdThumbnailGetAsyncWithHttpInfo (string fileId)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdThumbnailGet");
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->FilesFileIdThumbnailGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -982,12 +982,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 requestOptions.HeaderParameters.Add("Accept", accept);
             
             if (fileId != null)
-                requestOptions.PathParameters.Add("file_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(fileId)); // path parameter
+                requestOptions.PathParameters.Add("file_id", ClientUtils.ParameterToString(fileId)); // path parameter
 
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/files/{file_id}/thumbnail", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/files/{file_id}/thumbnail", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1001,7 +1001,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload a file Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -1010,42 +1010,42 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>InlineResponse201</returns>
         public InlineResponse201 FilesPost (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = FilesPostWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
+            ApiResponse<InlineResponse201> localVarResponse = FilesPostWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Upload a file Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
         /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse201 > FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
+        public ApiResponse<InlineResponse201> FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data", 
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
-            var localVarContentType = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderContentType(@contentTypes);
+            var localVarContentType = ClientUtils.SelectHeaderContentType(@contentTypes);
             if (localVarContentType != null) requestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
-            var localVarAccept = Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.SelectHeaderAccept(@accepts);
+            var localVarAccept = ClientUtils.SelectHeaderAccept(@accepts);
             if (localVarAccept != null) requestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             if (channelId != null)
             {
-                foreach (var kvp in Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToMultiMap("", "channel_id", channelId))
+                foreach (var kvp in ClientUtils.ParameterToMultiMap("", "channel_id", channelId))
                 {
                     foreach (var value in kvp.Value)
                     {
@@ -1055,7 +1055,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
             }
             if (filename != null)
             {
-                foreach (var kvp in Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToMultiMap("", "filename", filename))
+                foreach (var kvp in ClientUtils.ParameterToMultiMap("", "filename", filename))
                 {
                     foreach (var value in kvp.Value)
                     {
@@ -1069,11 +1069,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
             }
             if (channelId != null)
             {
-                requestOptions.FormParameters.Add("channel_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(channelId)); // form parameter
+                requestOptions.FormParameters.Add("channel_id", ClientUtils.ParameterToString(channelId)); // form parameter
             }
             if (clientIds != null)
             {
-                requestOptions.FormParameters.Add("client_ids", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(clientIds)); // form parameter
+                requestOptions.FormParameters.Add("client_ids", ClientUtils.ParameterToString(clientIds)); // form parameter
             }
 
 
@@ -1093,7 +1093,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload a file Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
@@ -1102,7 +1102,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <returns>Task of InlineResponse201</returns>
         public async System.Threading.Tasks.Task<InlineResponse201> FilesPostAsync (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = await FilesPostAsyncWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
+            ApiResponse<InlineResponse201> localVarResponse = await FilesPostAsyncWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
              return localVarResponse.Data;
 
         }
@@ -1110,24 +1110,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload a file Uploads a file that can later be attached to a post.  This request can either be a multipart/form-data request with a channel_id, files and optional client_ids defined in the FormData, or it can be a request with the channel_id and filename defined as query parameters with the contents of a single file in the body of the request.  Only multipart/form-data requests are supported by server versions up to and including 4.7. Server versions 4.8 and higher support both types of requests.  ##### Permissions Must have &#x60;upload_file&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
         /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data", 
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1139,7 +1139,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
             
             if (channelId != null)
             {
-                foreach (var kvp in Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToMultiMap("", "channel_id", channelId))
+                foreach (var kvp in ClientUtils.ParameterToMultiMap("", "channel_id", channelId))
                 {
                     foreach (var value in kvp.Value)
                     {
@@ -1149,7 +1149,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
             }
             if (filename != null)
             {
-                foreach (var kvp in Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToMultiMap("", "filename", filename))
+                foreach (var kvp in ClientUtils.ParameterToMultiMap("", "filename", filename))
                 {
                     foreach (var value in kvp.Value)
                     {
@@ -1163,11 +1163,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
             }
             if (channelId != null)
             {
-                requestOptions.FormParameters.Add("channel_id", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(channelId)); // form parameter
+                requestOptions.FormParameters.Add("channel_id", ClientUtils.ParameterToString(channelId)); // form parameter
             }
             if (clientIds != null)
             {
-                requestOptions.FormParameters.Add("client_ids", Sdcb.Mattermost.DotNetSdk.Client.ClientUtils.ParameterToString(clientIds)); // form parameter
+                requestOptions.FormParameters.Add("client_ids", ClientUtils.ParameterToString(clientIds)); // form parameter
             }
 
 

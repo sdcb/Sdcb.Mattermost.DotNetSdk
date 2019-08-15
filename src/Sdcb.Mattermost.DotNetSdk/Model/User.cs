@@ -56,7 +56,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="timezone">timezone.</param>
         /// <param name="termsOfServiceId">ID of accepted terms of service, if any. This field is not present if empty..</param>
         /// <param name="termsOfServiceCreateAt">The time in milliseconds the user accepted the terms of service.</param>
-        public User(string id = default(string), long createAt = default(long), long updateAt = default(long), long deleteAt = default(long), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string email = default(string), bool emailVerified = default(bool), string authService = default(string), string roles = default(string), string locale = default(string), UserNotifyProps notifyProps = default(UserNotifyProps), Object props = default(Object), int lastPasswordUpdate = default(int), int lastPictureUpdate = default(int), int failedAttempts = default(int), bool mfaActive = default(bool), Timezone timezone = default(Timezone), string termsOfServiceId = default(string), long termsOfServiceCreateAt = default(long))
+        public User(string id = default(string), long createAt = default(long), long updateAt = default(long), long deleteAt = default(long), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string email = default(string), bool emailVerified = default(bool), string authService = default(string), string roles = default(string), string locale = default(string), UserNotifyProps notifyProps = default(UserNotifyProps), object props = default(object), int lastPasswordUpdate = default(int), int lastPictureUpdate = default(int), int failedAttempts = default(int), bool mfaActive = default(bool), Timezone timezone = default(Timezone), string termsOfServiceId = default(string), long termsOfServiceCreateAt = default(long))
         {
             this.Id = id;
             this.CreateAt = createAt;
@@ -173,7 +173,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// Gets or Sets Props
         /// </summary>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPasswordUpdate
@@ -439,7 +439,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

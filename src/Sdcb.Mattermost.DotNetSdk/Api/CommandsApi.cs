@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>StatusOK</returns>
         StatusOK CommandsCommandIdDelete (string commandId);
@@ -44,7 +44,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> CommandsCommandIdDeleteWithHttpInfo (string commandId);
@@ -54,7 +54,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Command</returns>
@@ -66,7 +66,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Command</returns>
@@ -77,7 +77,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>InlineResponse2008</returns>
         InlineResponse2008 CommandsCommandIdRegenTokenPut (string commandId);
@@ -88,7 +88,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>ApiResponse of InlineResponse2008</returns>
         ApiResponse<InlineResponse2008> CommandsCommandIdRegenTokenPutWithHttpInfo (string commandId);
@@ -98,7 +98,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>CommandResponse</returns>
         CommandResponse CommandsExecutePost (InlineObject54 body);
@@ -109,7 +109,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of CommandResponse</returns>
         ApiResponse<CommandResponse> CommandsExecutePostWithHttpInfo (InlineObject54 body);
@@ -119,7 +119,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>List&lt;Command&gt;</returns>
@@ -131,7 +131,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>ApiResponse of List&lt;Command&gt;</returns>
@@ -142,7 +142,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Command</returns>
         Command CommandsPost (InlineObject53 body);
@@ -153,7 +153,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Command</returns>
         ApiResponse<Command> CommandsPostWithHttpInfo (InlineObject53 body);
@@ -163,7 +163,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;Command&gt;</returns>
         List<Command> TeamsTeamIdCommandsAutocompleteGet (string teamId);
@@ -174,7 +174,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;Command&gt;</returns>
         ApiResponse<List<Command>> TeamsTeamIdCommandsAutocompleteGetWithHttpInfo (string teamId);
@@ -193,7 +193,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> CommandsCommandIdDeleteAsync (string commandId);
@@ -204,7 +204,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> CommandsCommandIdDeleteAsyncWithHttpInfo (string commandId);
@@ -214,7 +214,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Task of Command</returns>
@@ -226,7 +226,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Command)</returns>
@@ -237,7 +237,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>Task of InlineResponse2008</returns>
         System.Threading.Tasks.Task<InlineResponse2008> CommandsCommandIdRegenTokenPutAsync (string commandId);
@@ -248,7 +248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> CommandsCommandIdRegenTokenPutAsyncWithHttpInfo (string commandId);
@@ -258,7 +258,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of CommandResponse</returns>
         System.Threading.Tasks.Task<CommandResponse> CommandsExecutePostAsync (InlineObject54 body);
@@ -269,7 +269,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (CommandResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CommandResponse>> CommandsExecutePostAsyncWithHttpInfo (InlineObject54 body);
@@ -279,7 +279,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>Task of List&lt;Command&gt;</returns>
@@ -291,7 +291,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Command&gt;)</returns>
@@ -302,7 +302,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Command</returns>
         System.Threading.Tasks.Task<Command> CommandsPostAsync (InlineObject53 body);
@@ -313,7 +313,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Command)</returns>
         System.Threading.Tasks.Task<ApiResponse<Command>> CommandsPostAsyncWithHttpInfo (InlineObject53 body);
@@ -323,7 +323,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;Command&gt;</returns>
         System.Threading.Tasks.Task<List<Command>> TeamsTeamIdCommandsAutocompleteGetAsync (string teamId);
@@ -334,7 +334,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Command&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Command>>> TeamsTeamIdCommandsAutocompleteGetAsyncWithHttpInfo (string teamId);
@@ -354,7 +354,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class CommandsApi : ICommandsApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandsApi"/> class.
@@ -368,14 +368,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="CommandsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CommandsApi(String basePath)
+        public CommandsApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -385,7 +385,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public CommandsApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public CommandsApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -393,8 +393,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -405,7 +405,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public CommandsApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public CommandsApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -420,18 +420,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -440,12 +440,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -461,34 +461,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a command Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>StatusOK</returns>
         public StatusOK CommandsCommandIdDelete (string commandId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = CommandsCommandIdDeleteWithHttpInfo(commandId);
+            ApiResponse<StatusOK> localVarResponse = CommandsCommandIdDeleteWithHttpInfo(commandId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Delete a command Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > CommandsCommandIdDeleteWithHttpInfo (string commandId)
+        public ApiResponse<StatusOK> CommandsCommandIdDeleteWithHttpInfo (string commandId)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdDelete");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdDelete");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -518,12 +518,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a command Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> CommandsCommandIdDeleteAsync (string commandId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await CommandsCommandIdDeleteAsyncWithHttpInfo(commandId);
+            ApiResponse<StatusOK> localVarResponse = await CommandsCommandIdDeleteAsyncWithHttpInfo(commandId);
              return localVarResponse.Data;
 
         }
@@ -531,23 +531,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Delete a command Delete a command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to delete</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> CommandsCommandIdDeleteAsyncWithHttpInfo (string commandId)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> CommandsCommandIdDeleteAsyncWithHttpInfo (string commandId)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdDelete");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdDelete");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -577,41 +577,41 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a command Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Command</returns>
         public Command CommandsCommandIdPut (string commandId, Command body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command> localVarResponse = CommandsCommandIdPutWithHttpInfo(commandId, body);
+            ApiResponse<Command> localVarResponse = CommandsCommandIdPutWithHttpInfo(commandId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update a command Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Command</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Command > CommandsCommandIdPutWithHttpInfo (string commandId, Command body)
+        public ApiResponse<Command> CommandsCommandIdPutWithHttpInfo (string commandId, Command body)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdPut");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsCommandIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsCommandIdPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -642,13 +642,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a command Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Task of Command</returns>
         public async System.Threading.Tasks.Task<Command> CommandsCommandIdPutAsync (string commandId, Command body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command> localVarResponse = await CommandsCommandIdPutAsyncWithHttpInfo(commandId, body);
+            ApiResponse<Command> localVarResponse = await CommandsCommandIdPutAsyncWithHttpInfo(commandId, body);
              return localVarResponse.Data;
 
         }
@@ -656,29 +656,29 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update a command Update a single command based on command id string and Command struct. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to update</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Command)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command>> CommandsCommandIdPutAsyncWithHttpInfo (string commandId, Command body)
+        public async System.Threading.Tasks.Task<ApiResponse<Command>> CommandsCommandIdPutAsyncWithHttpInfo (string commandId, Command body)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdPut");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdPut");
 
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsCommandIdPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsCommandIdPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -709,34 +709,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate a new token Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>InlineResponse2008</returns>
         public InlineResponse2008 CommandsCommandIdRegenTokenPut (string commandId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2008> localVarResponse = CommandsCommandIdRegenTokenPutWithHttpInfo(commandId);
+            ApiResponse<InlineResponse2008> localVarResponse = CommandsCommandIdRegenTokenPutWithHttpInfo(commandId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Generate a new token Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>ApiResponse of InlineResponse2008</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse2008 > CommandsCommandIdRegenTokenPutWithHttpInfo (string commandId)
+        public ApiResponse<InlineResponse2008> CommandsCommandIdRegenTokenPutWithHttpInfo (string commandId)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdRegenTokenPut");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdRegenTokenPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -766,12 +766,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate a new token Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>Task of InlineResponse2008</returns>
         public async System.Threading.Tasks.Task<InlineResponse2008> CommandsCommandIdRegenTokenPutAsync (string commandId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2008> localVarResponse = await CommandsCommandIdRegenTokenPutAsyncWithHttpInfo(commandId);
+            ApiResponse<InlineResponse2008> localVarResponse = await CommandsCommandIdRegenTokenPutAsyncWithHttpInfo(commandId);
              return localVarResponse.Data;
 
         }
@@ -779,23 +779,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Generate a new token Generate a new token for the command based on command id string. ##### Permissions Must have &#x60;manage_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="commandId">ID of the command to generate the new token</param>
         /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse2008>> CommandsCommandIdRegenTokenPutAsyncWithHttpInfo (string commandId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> CommandsCommandIdRegenTokenPutAsyncWithHttpInfo (string commandId)
         {
             // verify the required parameter 'commandId' is set
             if (commandId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdRegenTokenPut");
+                throw new ApiException(400, "Missing required parameter 'commandId' when calling CommandsApi->CommandsCommandIdRegenTokenPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -825,35 +825,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Execute a command Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>CommandResponse</returns>
         public CommandResponse CommandsExecutePost (InlineObject54 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<CommandResponse> localVarResponse = CommandsExecutePostWithHttpInfo(body);
+            ApiResponse<CommandResponse> localVarResponse = CommandsExecutePostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Execute a command Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of CommandResponse</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< CommandResponse > CommandsExecutePostWithHttpInfo (InlineObject54 body)
+        public ApiResponse<CommandResponse> CommandsExecutePostWithHttpInfo (InlineObject54 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsExecutePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsExecutePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -882,12 +882,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Execute a command Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of CommandResponse</returns>
         public async System.Threading.Tasks.Task<CommandResponse> CommandsExecutePostAsync (InlineObject54 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<CommandResponse> localVarResponse = await CommandsExecutePostAsyncWithHttpInfo(body);
+            ApiResponse<CommandResponse> localVarResponse = await CommandsExecutePostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -895,24 +895,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Execute a command Execute a command on a team. ##### Permissions Must have &#x60;use_slash_commands&#x60; permission for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (CommandResponse)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<CommandResponse>> CommandsExecutePostAsyncWithHttpInfo (InlineObject54 body)
+        public async System.Threading.Tasks.Task<ApiResponse<CommandResponse>> CommandsExecutePostAsyncWithHttpInfo (InlineObject54 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsExecutePost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsExecutePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -941,32 +941,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List commands for a team List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>List&lt;Command&gt;</returns>
         public List<Command> CommandsGet (string teamId = null, string customOnly = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>> localVarResponse = CommandsGetWithHttpInfo(teamId, customOnly);
+            ApiResponse<List<Command>> localVarResponse = CommandsGetWithHttpInfo(teamId, customOnly);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// List commands for a team List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>ApiResponse of List&lt;Command&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Command> > CommandsGetWithHttpInfo (string teamId = null, string customOnly = null)
+        public ApiResponse<List<Command>> CommandsGetWithHttpInfo (string teamId = null, string customOnly = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1014,13 +1014,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List commands for a team List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>Task of List&lt;Command&gt;</returns>
         public async System.Threading.Tasks.Task<List<Command>> CommandsGetAsync (string teamId = null, string customOnly = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>> localVarResponse = await CommandsGetAsyncWithHttpInfo(teamId, customOnly);
+            ApiResponse<List<Command>> localVarResponse = await CommandsGetAsyncWithHttpInfo(teamId, customOnly);
              return localVarResponse.Data;
 
         }
@@ -1028,20 +1028,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List commands for a team List commands for a team. ##### Permissions &#x60;manage_slash_commands&#x60; if need list custom commands. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">The team id. (optional)</param>
         /// <param name="customOnly">To get only the custom commands. If set to false will get the custom if the user have access plus the system commands, otherwise just the system commands.  (optional, default to &quot;false&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Command&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>>> CommandsGetAsyncWithHttpInfo (string teamId = null, string customOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Command>>> CommandsGetAsyncWithHttpInfo (string teamId = null, string customOnly = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1089,35 +1089,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a command Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Command</returns>
         public Command CommandsPost (InlineObject53 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command> localVarResponse = CommandsPostWithHttpInfo(body);
+            ApiResponse<Command> localVarResponse = CommandsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create a command Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Command</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Command > CommandsPostWithHttpInfo (InlineObject53 body)
+        public ApiResponse<Command> CommandsPostWithHttpInfo (InlineObject53 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1146,12 +1146,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a command Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Command</returns>
         public async System.Threading.Tasks.Task<Command> CommandsPostAsync (InlineObject53 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command> localVarResponse = await CommandsPostAsyncWithHttpInfo(body);
+            ApiResponse<Command> localVarResponse = await CommandsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1159,24 +1159,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Create a command Create a command for a team. ##### Permissions &#x60;manage_slash_commands&#x60; for the team the command is in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Command)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Command>> CommandsPostAsyncWithHttpInfo (InlineObject53 body)
+        public async System.Threading.Tasks.Task<ApiResponse<Command>> CommandsPostAsyncWithHttpInfo (InlineObject53 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling CommandsApi->CommandsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1205,34 +1205,34 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List autocomplete commands List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>List&lt;Command&gt;</returns>
         public List<Command> TeamsTeamIdCommandsAutocompleteGet (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>> localVarResponse = TeamsTeamIdCommandsAutocompleteGetWithHttpInfo(teamId);
+            ApiResponse<List<Command>> localVarResponse = TeamsTeamIdCommandsAutocompleteGetWithHttpInfo(teamId);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// List autocomplete commands List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>ApiResponse of List&lt;Command&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Command> > TeamsTeamIdCommandsAutocompleteGetWithHttpInfo (string teamId)
+        public ApiResponse<List<Command>> TeamsTeamIdCommandsAutocompleteGetWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling CommandsApi->TeamsTeamIdCommandsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling CommandsApi->TeamsTeamIdCommandsAutocompleteGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1262,12 +1262,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List autocomplete commands List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of List&lt;Command&gt;</returns>
         public async System.Threading.Tasks.Task<List<Command>> TeamsTeamIdCommandsAutocompleteGetAsync (string teamId)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>> localVarResponse = await TeamsTeamIdCommandsAutocompleteGetAsyncWithHttpInfo(teamId);
+            ApiResponse<List<Command>> localVarResponse = await TeamsTeamIdCommandsAutocompleteGetAsyncWithHttpInfo(teamId);
              return localVarResponse.Data;
 
         }
@@ -1275,23 +1275,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// List autocomplete commands List autocomplete commands in the team. ##### Permissions &#x60;view_team&#x60; for the team. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="teamId">Team GUID</param>
         /// <returns>Task of ApiResponse (List&lt;Command&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Command>>> TeamsTeamIdCommandsAutocompleteGetAsyncWithHttpInfo (string teamId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Command>>> TeamsTeamIdCommandsAutocompleteGetAsyncWithHttpInfo (string teamId)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'teamId' when calling CommandsApi->TeamsTeamIdCommandsAutocompleteGet");
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling CommandsApi->TeamsTeamIdCommandsAutocompleteGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

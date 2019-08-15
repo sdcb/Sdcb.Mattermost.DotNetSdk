@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
     /// <summary>
     /// Allows RestSharp to Serialize/Deserialize JSON using our custom logic, but only when ContentType is JSON. 
     /// </summary>
-    internal class CustomJsonCodec : RestSharp.Serializers.ISerializer, RestSharp.Deserializers.IDeserializer
+    internal class CustomJsonCodec : RestSharp.Serializers.ISerializer, IDeserializer
     {
         private readonly IReadableConfiguration _configuration;
         private readonly JsonSerializer _serializer;
@@ -67,7 +67,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
 
         public string Serialize(object obj)
         {
-            String result = JsonConvert.SerializeObject(obj, _serializerSettings);
+            string result = JsonConvert.SerializeObject(obj, _serializerSettings);
             return result;
         }
 
@@ -96,7 +96,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
             {
                 if (headers != null)
                 {
-                    var filePath = String.IsNullOrEmpty(_configuration.TempFolderPath)
+                    var filePath = string.IsNullOrEmpty(_configuration.TempFolderPath)
                         ? Path.GetTempPath()
                         : _configuration.TempFolderPath;
                     var regex = new Regex(@"Content-Disposition=.*filename=['""]?([^'""\s]+)['""]?$");
@@ -120,7 +120,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
                 return DateTime.Parse(response.Content,  null, System.Globalization.DateTimeStyles.RoundtripKind);
             }
 
-            if (type == typeof(String) || type.Name.StartsWith("System.Nullable")) // return primitive type
+            if (type == typeof(string) || type.Name.StartsWith("System.Nullable")) // return primitive type
             {
                 return ClientUtils.ConvertType(response.Content, type);
             }
@@ -152,7 +152,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
     /// </summary>
     public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     {
-        private readonly String _baseUrl;
+        private readonly string _baseUrl;
 
         /// <summary>
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
@@ -180,9 +180,9 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// </summary>
         /// <param name="basePath">The target service's base path in URL format.</param>
         /// <exception cref="ArgumentException"></exception>
-        public ApiClient(String basePath)
+        public ApiClient(string basePath)
         {
-           if (String.IsNullOrEmpty(basePath))
+           if (string.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
 
             _baseUrl = basePath;
@@ -241,7 +241,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <exception cref="ArgumentNullException"></exception>
         private RestRequest newRequest(
             HttpMethod method,
-            String path,
+            string path,
             RequestOptions options,
             IReadableConfiguration configuration)
         {
@@ -249,7 +249,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
             if (options == null) throw new ArgumentNullException("options");
             if (configuration == null) throw new ArgumentNullException("configuration");
             
-            RestRequest request = new RestRequest(Method(method))
+            var request = new RestRequest(Method(method))
             {
                 Resource = path,
                 JsonSerializer = new CustomJsonCodec(configuration)
@@ -384,7 +384,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
 
         private async Task<ApiResponse<T>> Exec<T>(RestRequest req, IReadableConfiguration configuration)
         {
-            RestClient client = new RestClient(_baseUrl);
+            var client = new RestClient(_baseUrl);
 
             client.ClearHandlers();
             var existingDeserializer = req.JsonSerializer as IDeserializer;

@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject2" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject2() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject2" /> class.
@@ -49,7 +49,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="position">position.</param>
         /// <param name="props">props.</param>
         /// <param name="notifyProps">notifyProps.</param>
-        public InlineObject2(string id = default(string), string email = default(string), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string locale = default(string), string position = default(string), Object props = default(Object), UserNotifyProps notifyProps = default(UserNotifyProps))
+        public InlineObject2(string id = default(string), string email = default(string), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string locale = default(string), string position = default(string), object props = default(object), UserNotifyProps notifyProps = default(UserNotifyProps))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -124,7 +124,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// Gets or Sets Props
         /// </summary>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Gets or Sets NotifyProps
@@ -274,7 +274,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

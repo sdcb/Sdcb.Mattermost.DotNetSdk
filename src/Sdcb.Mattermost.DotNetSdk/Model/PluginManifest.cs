@@ -43,7 +43,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="server">server.</param>
         /// <param name="webapp">webapp.</param>
         /// <param name="settingsSchema">Settings schema used to define the System Console UI for the plugin..</param>
-        public PluginManifest(string id = default(string), string name = default(string), string description = default(string), string version = default(string), string minServerVersion = default(string), PluginManifestBackend backend = default(PluginManifestBackend), PluginManifestServer server = default(PluginManifestServer), PluginManifestWebapp webapp = default(PluginManifestWebapp), Object settingsSchema = default(Object))
+        public PluginManifest(string id = default(string), string name = default(string), string description = default(string), string version = default(string), string minServerVersion = default(string), PluginManifestBackend backend = default(PluginManifestBackend), PluginManifestServer server = default(PluginManifestServer), PluginManifestWebapp webapp = default(PluginManifestWebapp), object settingsSchema = default(object))
         {
             this.Id = id;
             this.Name = name;
@@ -114,7 +114,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>Settings schema used to define the System Console UI for the plugin.</value>
         [DataMember(Name="settings_schema", EmitDefaultValue=false)]
-        public Object SettingsSchema { get; set; }
+        public object SettingsSchema { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -250,7 +250,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

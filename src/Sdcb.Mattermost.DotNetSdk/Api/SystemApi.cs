@@ -33,7 +33,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns></returns>
@@ -45,18 +45,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AnalyticsOldGetWithHttpInfo (string name = null, string teamId = null);
+        ApiResponse<object> AnalyticsOldGetWithHttpInfo (string name = null, string teamId = null);
         /// <summary>
         /// Get audits
         /// </summary>
         /// <remarks>
         /// Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Audit&gt;</returns>
@@ -68,7 +68,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Audit&gt;</returns>
@@ -79,7 +79,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         StatusOK CachesInvalidatePost ();
 
@@ -89,7 +89,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> CachesInvalidatePostWithHttpInfo ();
         /// <summary>
@@ -98,7 +98,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns></returns>
         void ConfigClientGet (string format);
@@ -109,17 +109,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConfigClientGetWithHttpInfo (string format);
+        ApiResponse<object> ConfigClientGetWithHttpInfo (string format);
         /// <summary>
         /// Get configuration made through environment variables
         /// </summary>
         /// <remarks>
         /// Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>EnvironmentConfig</returns>
         EnvironmentConfig ConfigEnvironmentGet ();
 
@@ -129,7 +129,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EnvironmentConfig</returns>
         ApiResponse<EnvironmentConfig> ConfigEnvironmentGetWithHttpInfo ();
         /// <summary>
@@ -138,7 +138,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Config</returns>
         Config ConfigGet ();
 
@@ -148,7 +148,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Config</returns>
         ApiResponse<Config> ConfigGetWithHttpInfo ();
         /// <summary>
@@ -157,7 +157,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Config</returns>
         Config ConfigPut (Config body);
@@ -168,7 +168,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of Config</returns>
         ApiResponse<Config> ConfigPutWithHttpInfo (Config body);
@@ -178,7 +178,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         StatusOK ConfigReloadPost ();
 
@@ -188,7 +188,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> ConfigReloadPostWithHttpInfo ();
         /// <summary>
@@ -197,7 +197,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         StatusOK DatabaseRecyclePost ();
 
@@ -207,7 +207,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> DatabaseRecyclePostWithHttpInfo ();
         /// <summary>
@@ -216,7 +216,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>StatusOK</returns>
         StatusOK EmailTestPost (Config body);
@@ -227,7 +227,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> EmailTestPostWithHttpInfo (Config body);
@@ -237,7 +237,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>StatusOK</returns>
         StatusOK FileS3TestPost (Config body);
@@ -248,7 +248,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> FileS3TestPostWithHttpInfo (Config body);
@@ -258,7 +258,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns></returns>
         void LicenseClientGet (string format);
@@ -269,17 +269,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> LicenseClientGetWithHttpInfo (string format);
+        ApiResponse<object> LicenseClientGetWithHttpInfo (string format);
         /// <summary>
         /// Remove license file
         /// </summary>
         /// <remarks>
         /// Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         void LicenseDelete ();
 
@@ -289,16 +289,16 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> LicenseDeleteWithHttpInfo ();
+        ApiResponse<object> LicenseDeleteWithHttpInfo ();
         /// <summary>
         /// Upload license file
         /// </summary>
         /// <remarks>
         /// Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>StatusOK</returns>
         StatusOK LicensePost (System.IO.Stream license);
@@ -309,7 +309,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> LicensePostWithHttpInfo (System.IO.Stream license);
@@ -319,7 +319,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>List&lt;string&gt;</returns>
@@ -331,7 +331,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -342,10 +342,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Object</returns>
-        Object LogsPost (InlineObject47 body);
+        object LogsPost (InlineObject47 body);
 
         /// <summary>
         /// Add log message
@@ -353,17 +353,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> LogsPostWithHttpInfo (InlineObject47 body);
+        ApiResponse<object> LogsPostWithHttpInfo (InlineObject47 body);
         /// <summary>
         /// Check system health
         /// </summary>
         /// <remarks>
         /// Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         StatusOK SystemPingGet ();
 
@@ -373,7 +373,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
         ApiResponse<StatusOK> SystemPingGetWithHttpInfo ();
         #endregion Synchronous Operations
@@ -391,7 +391,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>Task of void</returns>
@@ -403,18 +403,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsOldGetAsyncWithHttpInfo (string name = null, string teamId = null);
+        System.Threading.Tasks.Task<ApiResponse<object>> AnalyticsOldGetAsyncWithHttpInfo (string name = null, string teamId = null);
         /// <summary>
         /// Get audits
         /// </summary>
         /// <remarks>
         /// Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Audit&gt;</returns>
@@ -426,7 +426,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Audit&gt;)</returns>
@@ -437,7 +437,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> CachesInvalidatePostAsync ();
 
@@ -447,7 +447,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> CachesInvalidatePostAsyncWithHttpInfo ();
         /// <summary>
@@ -456,7 +456,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ConfigClientGetAsync (string format);
@@ -467,17 +467,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConfigClientGetAsyncWithHttpInfo (string format);
+        System.Threading.Tasks.Task<ApiResponse<object>> ConfigClientGetAsyncWithHttpInfo (string format);
         /// <summary>
         /// Get configuration made through environment variables
         /// </summary>
         /// <remarks>
         /// Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EnvironmentConfig</returns>
         System.Threading.Tasks.Task<EnvironmentConfig> ConfigEnvironmentGetAsync ();
 
@@ -487,7 +487,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EnvironmentConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<EnvironmentConfig>> ConfigEnvironmentGetAsyncWithHttpInfo ();
         /// <summary>
@@ -496,7 +496,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Config</returns>
         System.Threading.Tasks.Task<Config> ConfigGetAsync ();
 
@@ -506,7 +506,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Config)</returns>
         System.Threading.Tasks.Task<ApiResponse<Config>> ConfigGetAsyncWithHttpInfo ();
         /// <summary>
@@ -515,7 +515,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of Config</returns>
         System.Threading.Tasks.Task<Config> ConfigPutAsync (Config body);
@@ -526,7 +526,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (Config)</returns>
         System.Threading.Tasks.Task<ApiResponse<Config>> ConfigPutAsyncWithHttpInfo (Config body);
@@ -536,7 +536,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> ConfigReloadPostAsync ();
 
@@ -546,7 +546,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> ConfigReloadPostAsyncWithHttpInfo ();
         /// <summary>
@@ -555,7 +555,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> DatabaseRecyclePostAsync ();
 
@@ -565,7 +565,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> DatabaseRecyclePostAsyncWithHttpInfo ();
         /// <summary>
@@ -574,7 +574,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> EmailTestPostAsync (Config body);
@@ -585,7 +585,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> EmailTestPostAsyncWithHttpInfo (Config body);
@@ -595,7 +595,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> FileS3TestPostAsync (Config body);
@@ -606,7 +606,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> FileS3TestPostAsyncWithHttpInfo (Config body);
@@ -616,7 +616,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task LicenseClientGetAsync (string format);
@@ -627,17 +627,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LicenseClientGetAsyncWithHttpInfo (string format);
+        System.Threading.Tasks.Task<ApiResponse<object>> LicenseClientGetAsyncWithHttpInfo (string format);
         /// <summary>
         /// Remove license file
         /// </summary>
         /// <remarks>
         /// Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task LicenseDeleteAsync ();
 
@@ -647,16 +647,16 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LicenseDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<object>> LicenseDeleteAsyncWithHttpInfo ();
         /// <summary>
         /// Upload license file
         /// </summary>
         /// <remarks>
         /// Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> LicensePostAsync (System.IO.Stream license);
@@ -667,7 +667,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> LicensePostAsyncWithHttpInfo (System.IO.Stream license);
@@ -677,7 +677,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
@@ -689,7 +689,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
@@ -700,10 +700,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LogsPostAsync (InlineObject47 body);
+        System.Threading.Tasks.Task<object> LogsPostAsync (InlineObject47 body);
 
         /// <summary>
         /// Add log message
@@ -711,17 +711,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LogsPostAsyncWithHttpInfo (InlineObject47 body);
+        System.Threading.Tasks.Task<ApiResponse<object>> LogsPostAsyncWithHttpInfo (InlineObject47 body);
         /// <summary>
         /// Check system health
         /// </summary>
         /// <remarks>
         /// Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         System.Threading.Tasks.Task<StatusOK> SystemPingGetAsync ();
 
@@ -731,7 +731,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <remarks>
         /// Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </remarks>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
         System.Threading.Tasks.Task<ApiResponse<StatusOK>> SystemPingGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
@@ -750,7 +750,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
     /// </summary>
     public partial class SystemApi : ISystemApi
     {
-        private Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemApi"/> class.
@@ -764,14 +764,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Initializes a new instance of the <see cref="SystemApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public SystemApi(String basePath)
+        public SystemApi(string basePath)
         {
             this.Configuration = Sdcb.Mattermost.DotNetSdk.Client.Configuration.MergeConfigurations(
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
-                new Sdcb.Mattermost.DotNetSdk.Client.Configuration { BasePath = basePath }
+                new Configuration { BasePath = basePath }
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -781,7 +781,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SystemApi(Sdcb.Mattermost.DotNetSdk.Client.Configuration configuration)
+        public SystemApi(Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -789,8 +789,8 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
                 Sdcb.Mattermost.DotNetSdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Sdcb.Mattermost.DotNetSdk.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = new ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = Sdcb.Mattermost.DotNetSdk.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -801,7 +801,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public SystemApi(Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient client,Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient asyncClient, Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration configuration)
+        public SystemApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if(client == null) throw new ArgumentNullException("client");
             if(asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -816,18 +816,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ISynchronousClient Client { get; set; }
+        public ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -836,12 +836,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Sdcb.Mattermost.DotNetSdk.Client.IReadableConfiguration Configuration {get; set;}
+        public IReadableConfiguration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Sdcb.Mattermost.DotNetSdk.Client.ExceptionFactory ExceptionFactory
+        public ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -857,7 +857,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get analytics Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns></returns>
@@ -869,19 +869,19 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get analytics Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> AnalyticsOldGetWithHttpInfo (string name = null, string teamId = null)
+        public ApiResponse<object> AnalyticsOldGetWithHttpInfo (string name = null, string teamId = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -915,7 +915,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/analytics/old", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/analytics/old", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -929,7 +929,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get analytics Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>Task of void</returns>
@@ -942,20 +942,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get analytics Get some analytics data about the system. This endpoint uses the old format, the &#x60;/analytics&#x60; route is reserved for the new format when it gets implemented.  The returned JSON changes based on the &#x60;name&#x60; query parameter but is always key/value pairs.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Possible values are \&quot;standard\&quot;, \&quot;post_counts_day\&quot;, \&quot;user_counts_with_posts_day\&quot; or \&quot;extra_counts\&quot; (optional, default to &quot;standard&quot;)</param>
         /// <param name="teamId">The team ID to filter the data by (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> AnalyticsOldGetAsyncWithHttpInfo (string name = null, string teamId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> AnalyticsOldGetAsyncWithHttpInfo (string name = null, string teamId = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -989,7 +989,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/analytics/old", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/analytics/old", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1003,32 +1003,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get audits Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>List&lt;Audit&gt;</returns>
         public List<Audit> AuditsGet (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>> localVarResponse = AuditsGetWithHttpInfo(page, perPage);
+            ApiResponse<List<Audit>> localVarResponse = AuditsGetWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get audits Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>ApiResponse of List&lt;Audit&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<Audit> > AuditsGetWithHttpInfo (string page = null, string perPage = null)
+        public ApiResponse<List<Audit>> AuditsGetWithHttpInfo (string page = null, string perPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1076,13 +1076,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get audits Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of List&lt;Audit&gt;</returns>
         public async System.Threading.Tasks.Task<List<Audit>> AuditsGetAsync (string page = null, string perPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>> localVarResponse = await AuditsGetAsyncWithHttpInfo(page, perPage);
+            ApiResponse<List<Audit>> localVarResponse = await AuditsGetAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1090,20 +1090,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get audits Get a page of audits for all users on the system, selected with &#x60;page&#x60; and &#x60;per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="perPage">The number of audits per page. (optional, default to &quot;60&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;Audit&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<Audit>>> AuditsGetAsyncWithHttpInfo (string page = null, string perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Audit>>> AuditsGetAsyncWithHttpInfo (string page = null, string perPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1151,28 +1151,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate all the caches Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         public StatusOK CachesInvalidatePost ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = CachesInvalidatePostWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = CachesInvalidatePostWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Invalidate all the caches Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > CachesInvalidatePostWithHttpInfo ()
+        public ApiResponse<StatusOK> CachesInvalidatePostWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1200,11 +1200,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate all the caches Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> CachesInvalidatePostAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await CachesInvalidatePostAsyncWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = await CachesInvalidatePostAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1212,18 +1212,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Invalidate all the caches Purge all the in-memory caches for the Mattermost server. This can have a temporary negative effect on performance while the caches are re-populated. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> CachesInvalidatePostAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> CachesInvalidatePostAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1251,7 +1251,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client configuration Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns></returns>
         public void ConfigClientGet (string format)
@@ -1262,22 +1262,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client configuration Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> ConfigClientGetWithHttpInfo (string format)
+        public ApiResponse<object> ConfigClientGetWithHttpInfo (string format)
         {
             // verify the required parameter 'format' is set
             if (format == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'format' when calling SystemApi->ConfigClientGet");
+                throw new ApiException(400, "Missing required parameter 'format' when calling SystemApi->ConfigClientGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1301,7 +1301,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/config/client", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/config/client", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1315,7 +1315,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client configuration Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ConfigClientGetAsync (string format)
@@ -1327,23 +1327,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client configuration Get a subset of the server configuration needed by the client. ##### Permissions No permission required. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> ConfigClientGetAsyncWithHttpInfo (string format)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> ConfigClientGetAsyncWithHttpInfo (string format)
         {
             // verify the required parameter 'format' is set
             if (format == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'format' when calling SystemApi->ConfigClientGet");
+                throw new ApiException(400, "Missing required parameter 'format' when calling SystemApi->ConfigClientGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1367,7 +1367,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/config/client", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/config/client", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1381,28 +1381,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration made through environment variables Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>EnvironmentConfig</returns>
         public EnvironmentConfig ConfigEnvironmentGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<EnvironmentConfig> localVarResponse = ConfigEnvironmentGetWithHttpInfo();
+            ApiResponse<EnvironmentConfig> localVarResponse = ConfigEnvironmentGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get configuration made through environment variables Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EnvironmentConfig</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< EnvironmentConfig > ConfigEnvironmentGetWithHttpInfo ()
+        public ApiResponse<EnvironmentConfig> ConfigEnvironmentGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1430,11 +1430,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration made through environment variables Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EnvironmentConfig</returns>
         public async System.Threading.Tasks.Task<EnvironmentConfig> ConfigEnvironmentGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<EnvironmentConfig> localVarResponse = await ConfigEnvironmentGetAsyncWithHttpInfo();
+            ApiResponse<EnvironmentConfig> localVarResponse = await ConfigEnvironmentGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1442,18 +1442,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration made through environment variables Retrieve a json object mirroring the server configuration where fields are set to true if the corresponding config setting is set through an environment variable. Settings that haven&#39;t been set through environment variables will be missing from the object.  __Minimum server version__: 4.10  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EnvironmentConfig)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<EnvironmentConfig>> ConfigEnvironmentGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<EnvironmentConfig>> ConfigEnvironmentGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1481,28 +1481,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Config</returns>
         public Config ConfigGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config> localVarResponse = ConfigGetWithHttpInfo();
+            ApiResponse<Config> localVarResponse = ConfigGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get configuration Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Config</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Config > ConfigGetWithHttpInfo ()
+        public ApiResponse<Config> ConfigGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1530,11 +1530,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Config</returns>
         public async System.Threading.Tasks.Task<Config> ConfigGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config> localVarResponse = await ConfigGetAsyncWithHttpInfo();
+            ApiResponse<Config> localVarResponse = await ConfigGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1542,18 +1542,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get configuration Retrieve the current server configuration ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Config)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config>> ConfigGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Config>> ConfigGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1581,35 +1581,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update configuration Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Config</returns>
         public Config ConfigPut (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config> localVarResponse = ConfigPutWithHttpInfo(body);
+            ApiResponse<Config> localVarResponse = ConfigPutWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update configuration Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of Config</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Config > ConfigPutWithHttpInfo (Config body)
+        public ApiResponse<Config> ConfigPutWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->ConfigPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->ConfigPut");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1638,12 +1638,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update configuration Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of Config</returns>
         public async System.Threading.Tasks.Task<Config> ConfigPutAsync (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config> localVarResponse = await ConfigPutAsyncWithHttpInfo(body);
+            ApiResponse<Config> localVarResponse = await ConfigPutAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1651,24 +1651,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Update configuration Submit a new configuration for the server to use. As of server version 4.8, the &#x60;PluginSettings.EnableUploads&#x60; setting cannot be modified by this endpoint. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (Config)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Config>> ConfigPutAsyncWithHttpInfo (Config body)
+        public async System.Threading.Tasks.Task<ApiResponse<Config>> ConfigPutAsyncWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->ConfigPut");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->ConfigPut");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1697,28 +1697,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reload configuration Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         public StatusOK ConfigReloadPost ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = ConfigReloadPostWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = ConfigReloadPostWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Reload configuration Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > ConfigReloadPostWithHttpInfo ()
+        public ApiResponse<StatusOK> ConfigReloadPostWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1746,11 +1746,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reload configuration Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> ConfigReloadPostAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await ConfigReloadPostAsyncWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = await ConfigReloadPostAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1758,18 +1758,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Reload configuration Reload the configuration file to pick up on any changes made to it. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> ConfigReloadPostAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> ConfigReloadPostAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1797,28 +1797,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Recycle database connections Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         public StatusOK DatabaseRecyclePost ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = DatabaseRecyclePostWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = DatabaseRecyclePostWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Recycle database connections Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > DatabaseRecyclePostWithHttpInfo ()
+        public ApiResponse<StatusOK> DatabaseRecyclePostWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1846,11 +1846,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Recycle database connections Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> DatabaseRecyclePostAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await DatabaseRecyclePostAsyncWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = await DatabaseRecyclePostAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1858,18 +1858,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Recycle database connections Recycle database connections by closing and reconnecting all connections to master and read replica databases. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> DatabaseRecyclePostAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> DatabaseRecyclePostAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -1897,35 +1897,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send a test email Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>StatusOK</returns>
         public StatusOK EmailTestPost (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = EmailTestPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = EmailTestPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Send a test email Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > EmailTestPostWithHttpInfo (Config body)
+        public ApiResponse<StatusOK> EmailTestPostWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->EmailTestPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->EmailTestPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -1954,12 +1954,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send a test email Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> EmailTestPostAsync (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await EmailTestPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await EmailTestPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1967,24 +1967,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Send a test email Send a test email to make sure you have your email settings configured correctly. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> EmailTestPostAsyncWithHttpInfo (Config body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> EmailTestPostAsyncWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->EmailTestPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->EmailTestPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2013,35 +2013,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Test AWS S3 connection Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>StatusOK</returns>
         public StatusOK FileS3TestPost (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = FileS3TestPostWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = FileS3TestPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Test AWS S3 connection Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > FileS3TestPostWithHttpInfo (Config body)
+        public ApiResponse<StatusOK> FileS3TestPostWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->FileS3TestPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->FileS3TestPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2070,12 +2070,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Test AWS S3 connection Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> FileS3TestPostAsync (Config body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await FileS3TestPostAsyncWithHttpInfo(body);
+            ApiResponse<StatusOK> localVarResponse = await FileS3TestPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2083,24 +2083,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Test AWS S3 connection Send a test to validate if can connect to AWS S3. Optionally provide a configuration in the request body to test. If no valid configuration is present in the request body the current server configuration will be tested. ##### Permissions Must have &#x60;manage_system&#x60; permission. __Minimum server version__: 4.8 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Mattermost configuration</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> FileS3TestPostAsyncWithHttpInfo (Config body)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> FileS3TestPostAsyncWithHttpInfo (Config body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->FileS3TestPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->FileS3TestPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2129,7 +2129,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client license Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns></returns>
         public void LicenseClientGet (string format)
@@ -2140,22 +2140,22 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client license Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> LicenseClientGetWithHttpInfo (string format)
+        public ApiResponse<object> LicenseClientGetWithHttpInfo (string format)
         {
             // verify the required parameter 'format' is set
             if (format == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'format' when calling SystemApi->LicenseClientGet");
+                throw new ApiException(400, "Missing required parameter 'format' when calling SystemApi->LicenseClientGet");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2179,7 +2179,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Get<Object>("/license/client", requestOptions, this.Configuration);
+            var response = this.Client.Get<object>("/license/client", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2193,7 +2193,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client license Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task LicenseClientGetAsync (string format)
@@ -2205,23 +2205,23 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get client license Get a subset of the server license needed by the client. ##### Permissions No permission required but having the &#x60;manage_system&#x60; permission returns more information. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Must be &#x60;old&#x60;, other formats not implemented yet</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> LicenseClientGetAsyncWithHttpInfo (string format)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> LicenseClientGetAsyncWithHttpInfo (string format)
         {
             // verify the required parameter 'format' is set
             if (format == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'format' when calling SystemApi->LicenseClientGet");
+                throw new ApiException(400, "Missing required parameter 'format' when calling SystemApi->LicenseClientGet");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2245,7 +2245,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.GetAsync<Object>("/license/client", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.GetAsync<object>("/license/client", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2259,7 +2259,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove license file Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         public void LicenseDelete ()
         {
@@ -2269,17 +2269,17 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove license file Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> LicenseDeleteWithHttpInfo ()
+        public ApiResponse<object> LicenseDeleteWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2293,7 +2293,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Delete<Object>("/license", requestOptions, this.Configuration);
+            var response = this.Client.Delete<object>("/license", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2307,7 +2307,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove license file Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task LicenseDeleteAsync ()
         {
@@ -2318,18 +2318,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Remove license file Remove the license file from the server. This will disable all enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> LicenseDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<object>> LicenseDeleteAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2343,7 +2343,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/license", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.DeleteAsync<object>("/license", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2357,35 +2357,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload license file Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>StatusOK</returns>
         public StatusOK LicensePost (System.IO.Stream license)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = LicensePostWithHttpInfo(license);
+            ApiResponse<StatusOK> localVarResponse = LicensePostWithHttpInfo(license);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Upload license file Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > LicensePostWithHttpInfo (System.IO.Stream license)
+        public ApiResponse<StatusOK> LicensePostWithHttpInfo (System.IO.Stream license)
         {
             // verify the required parameter 'license' is set
             if (license == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'license' when calling SystemApi->LicensePost");
+                throw new ApiException(400, "Missing required parameter 'license' when calling SystemApi->LicensePost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2417,12 +2417,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload license file Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> LicensePostAsync (System.IO.Stream license)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await LicensePostAsyncWithHttpInfo(license);
+            ApiResponse<StatusOK> localVarResponse = await LicensePostAsyncWithHttpInfo(license);
              return localVarResponse.Data;
 
         }
@@ -2430,24 +2430,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Upload license file Upload a license to enable enterprise features.  __Minimum server version__: 4.0  ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="license">The license to be uploaded</param>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> LicensePostAsyncWithHttpInfo (System.IO.Stream license)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> LicensePostAsyncWithHttpInfo (System.IO.Stream license)
         {
             // verify the required parameter 'license' is set
             if (license == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'license' when calling SystemApi->LicensePost");
+                throw new ApiException(400, "Missing required parameter 'license' when calling SystemApi->LicensePost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "multipart/form-data"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2479,32 +2479,32 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get logs Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>List&lt;string&gt;</returns>
         public List<string> LogsGet (string page = null, string logsPerPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>> localVarResponse = LogsGetWithHttpInfo(page, logsPerPage);
+            ApiResponse<List<string>> localVarResponse = LogsGetWithHttpInfo(page, logsPerPage);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get logs Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< List<string> > LogsGetWithHttpInfo (string page = null, string logsPerPage = null)
+        public ApiResponse<List<string>> LogsGetWithHttpInfo (string page = null, string logsPerPage = null)
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2552,13 +2552,13 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get logs Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<List<string>> LogsGetAsync (string page = null, string logsPerPage = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>> localVarResponse = await LogsGetAsyncWithHttpInfo(page, logsPerPage);
+            ApiResponse<List<string>> localVarResponse = await LogsGetAsyncWithHttpInfo(page, logsPerPage);
              return localVarResponse.Data;
 
         }
@@ -2566,20 +2566,20 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Get logs Get a page of server logs, selected with &#x60;page&#x60; and &#x60;logs_per_page&#x60; query parameters. ##### Permissions Must have &#x60;manage_system&#x60; permission. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The page to select. (optional, default to &quot;0&quot;)</param>
         /// <param name="logsPerPage">The number of logs per page. There is a maximum limit of 10000 logs per page. (optional, default to &quot;10000&quot;)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<List<string>>> LogsGetAsyncWithHttpInfo (string page = null, string logsPerPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> LogsGetAsyncWithHttpInfo (string page = null, string logsPerPage = null)
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2627,35 +2627,35 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add log message Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Object</returns>
-        public Object LogsPost (InlineObject47 body)
+        public object LogsPost (InlineObject47 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> localVarResponse = LogsPostWithHttpInfo(body);
+            ApiResponse<object> localVarResponse = LogsPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Add log message Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< Object > LogsPostWithHttpInfo (InlineObject47 body)
+        public ApiResponse<object> LogsPostWithHttpInfo (InlineObject47 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->LogsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->LogsPost");
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2670,7 +2670,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = this.Client.Post< Object >("/logs", requestOptions, this.Configuration);
+            var response = this.Client.Post<object>("/logs", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2684,12 +2684,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add log message Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LogsPostAsync (InlineObject47 body)
+        public async System.Threading.Tasks.Task<object> LogsPostAsync (InlineObject47 body)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object> localVarResponse = await LogsPostAsyncWithHttpInfo(body);
+            ApiResponse<object> localVarResponse = await LogsPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2697,24 +2697,24 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Add log message Add log messages to the server logs. ##### Permissions Users with &#x60;manage_system&#x60; permission can log ERROR or DEBUG messages. Logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; or just DEBUG messages when &#x60;false&#x60;. Non-logged in users can log ERROR or DEBUG messages when &#x60;ServiceSettings.EnableDeveloper&#x60; is &#x60;true&#x60; and cannot log when &#x60;false&#x60;. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<Object>> LogsPostAsyncWithHttpInfo (InlineObject47 body)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> LogsPostAsyncWithHttpInfo (InlineObject47 body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new Sdcb.Mattermost.DotNetSdk.Client.ApiException(400, "Missing required parameter 'body' when calling SystemApi->LogsPost");
+                throw new ApiException(400, "Missing required parameter 'body' when calling SystemApi->LogsPost");
 
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             
@@ -2729,7 +2729,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
 
             // make the HTTP request
 
-            var response = await this.AsynchronousClient.PostAsync<Object>("/logs", requestOptions, this.Configuration);
+            var response = await this.AsynchronousClient.PostAsync<object>("/logs", requestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -2743,28 +2743,28 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check system health Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>StatusOK</returns>
         public StatusOK SystemPingGet ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = SystemPingGetWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = SystemPingGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Check system health Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StatusOK</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< StatusOK > SystemPingGetWithHttpInfo ()
+        public ApiResponse<StatusOK> SystemPingGetWithHttpInfo ()
         {
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
 
@@ -2792,11 +2792,11 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check system health Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StatusOK</returns>
         public async System.Threading.Tasks.Task<StatusOK> SystemPingGetAsync ()
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK> localVarResponse = await SystemPingGetAsyncWithHttpInfo();
+            ApiResponse<StatusOK> localVarResponse = await SystemPingGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -2804,18 +2804,18 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <summary>
         /// Check system health Check if the server is up and healthy based on the configuration setting &#x60;GoRoutineHealthThreshold&#x60;. If &#x60;GoRoutineHealthThreshold&#x60; and the number of goroutines on the server exceeds that threshold the server is considered unhealthy. If &#x60;GoRoutineHealthThreshold&#x60; is not set or the number of goroutines is below the threshold the server is considered healthy. __Minimum server version__: 3.10 ##### Permissions Must be logged in. 
         /// </summary>
-        /// <exception cref="Sdcb.Mattermost.DotNetSdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StatusOK)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<StatusOK>> SystemPingGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<StatusOK>> SystemPingGetAsyncWithHttpInfo ()
         {
 
-            Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
+            var requestOptions = new RequestOptions();
 
-            String[] @contentTypes = new String[] {
+            string[] @contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] @accepts = new String[] {
+            string[] @accepts = new string[] {
                 "application/json"
             };
             

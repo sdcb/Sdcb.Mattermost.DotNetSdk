@@ -42,7 +42,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="status">The status of the job.</param>
         /// <param name="progress">The progress (as a percentage) of the job.</param>
         /// <param name="data">A freeform data field containing additional information about the job.</param>
-        public Job(string id = default(string), string type = default(string), long createAt = default(long), long startAt = default(long), long lastActivityAt = default(long), string status = default(string), int progress = default(int), Object data = default(Object))
+        public Job(string id = default(string), string type = default(string), long createAt = default(long), long startAt = default(long), long lastActivityAt = default(long), string status = default(string), int progress = default(int), object data = default(object))
         {
             this.Id = id;
             this.Type = type;
@@ -108,7 +108,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>A freeform data field containing additional information about the job</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Object Data { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -228,7 +228,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

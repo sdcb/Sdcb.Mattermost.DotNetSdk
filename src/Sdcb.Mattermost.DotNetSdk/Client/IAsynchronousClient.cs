@@ -30,7 +30,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> GetAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the POST http verb.
@@ -40,7 +40,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PostAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the PUT http verb.
@@ -50,7 +50,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PutAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the DELETE http verb.
@@ -60,7 +60,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> DeleteAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the HEAD http verb.
@@ -70,7 +70,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> HeadAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the OPTIONS http verb.
@@ -80,7 +80,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> OptionsAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
         
         /// <summary>
         /// Executes a non-blocking call to some <paramref name="path"/> using the PATCH http verb.
@@ -90,7 +90,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Client
         /// <param name="configuration">Per-request configurable settings.</param>
         /// <typeparam name="T">The return type.</typeparam>
         /// <returns>A task eventually representing the response data, decorated with <see cref="ApiResponse{T}"/></returns>
-        Task<ApiResponse<T>> PatchAsync<T>(String path, RequestOptions options, IReadableConfiguration configuration = null);
+        Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null);
     }
 }
 

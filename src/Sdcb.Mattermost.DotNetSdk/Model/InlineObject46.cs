@@ -34,14 +34,14 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject46" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject46() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject46" /> class.
         /// </summary>
         /// <param name="type">The type of job to create (required).</param>
         /// <param name="data">An object containing any additional data required for this job type.</param>
-        public InlineObject46(string type = default(string), Object data = default(Object))
+        public InlineObject46(string type = default(string), object data = default(object))
         {
             // to ensure "type" is required (not null)
             if (type == null)
@@ -68,7 +68,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <value>An object containing any additional data required for this job type</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Object Data { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -148,7 +148,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

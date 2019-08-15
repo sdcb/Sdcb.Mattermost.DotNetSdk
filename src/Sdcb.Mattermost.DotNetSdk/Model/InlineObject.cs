@@ -34,7 +34,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
+        [JsonConstructor]
         protected InlineObject() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineObject" /> class.
@@ -50,7 +50,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// <param name="locale">locale.</param>
         /// <param name="props">props.</param>
         /// <param name="notifyProps">notifyProps.</param>
-        public InlineObject(string email = default(string), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string authData = default(string), string authService = default(string), string password = default(string), string locale = default(string), Object props = default(Object), UserNotifyProps notifyProps = default(UserNotifyProps))
+        public InlineObject(string email = default(string), string username = default(string), string firstName = default(string), string lastName = default(string), string nickname = default(string), string authData = default(string), string authService = default(string), string password = default(string), string locale = default(string), object props = default(object), UserNotifyProps notifyProps = default(UserNotifyProps))
         {
             // to ensure "email" is required (not null)
             if (email == null)
@@ -144,7 +144,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// Gets or Sets Props
         /// </summary>
         [DataMember(Name="props", EmitDefaultValue=false)]
-        public Object Props { get; set; }
+        public object Props { get; set; }
 
         /// <summary>
         /// Gets or Sets NotifyProps
@@ -302,7 +302,7 @@ namespace Sdcb.Mattermost.DotNetSdk.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
