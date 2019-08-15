@@ -184,4 +184,4 @@ $RECYCLE.BIN/
 
 # Visual Studio 2014 CTP
 **/*.sln.ide
-/.vs/Sdcb.Mattermost.DotNetSdk/v16/Server/sqlite3
+/.vs

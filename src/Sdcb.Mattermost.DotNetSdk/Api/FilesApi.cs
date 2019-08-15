@@ -142,10 +142,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>InlineResponse201</returns>
-        InlineResponse201 FilesPost (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null);
+        InlineResponse201 FilesPost (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null);
 
         /// <summary>
         /// Upload a file
@@ -157,10 +157,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null);
+        ApiResponse<InlineResponse201> FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null);
         #endregion Synchronous Operations
     }
 
@@ -285,10 +285,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> FilesPostAsync (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null);
+        System.Threading.Tasks.Task<InlineResponse201> FilesPostAsync (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null);
 
         /// <summary>
         /// Upload a file
@@ -300,10 +300,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null);
         #endregion Asynchronous Operations
     }
 
@@ -1008,9 +1008,9 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>InlineResponse201</returns>
-        public InlineResponse201 FilesPost (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null)
+        public InlineResponse201 FilesPost (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = FilesPostWithHttpInfo(channelId, filename, files, channelId, clientIds);
+             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = FilesPostWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
              return localVarResponse.Data;
         }
 
@@ -1021,10 +1021,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse201 > FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null)
+        public Sdcb.Mattermost.DotNetSdk.Client.ApiResponse< InlineResponse201 > FilesPostWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
             Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
 
@@ -1097,12 +1097,12 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> FilesPostAsync (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null)
+        public async System.Threading.Tasks.Task<InlineResponse201> FilesPostAsync (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
-             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = await FilesPostAsyncWithHttpInfo(channelId, filename, files, channelId, clientIds);
+             Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201> localVarResponse = await FilesPostAsyncWithHttpInfo(channelId, filename, files, channelIdInBody, clientIds);
              return localVarResponse.Data;
 
         }
@@ -1114,10 +1114,10 @@ namespace Sdcb.Mattermost.DotNetSdk.Api
         /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="filename">The name of the file to be uploaded (optional)</param>
         /// <param name="files">A file to be uploaded (optional)</param>
-        /// <param name="channelId">The ID of the channel that this file will be uploaded to (optional)</param>
+        /// <param name="channelIdInBody">The ID of the channel that this file will be uploaded to (optional)</param>
         /// <param name="clientIds">A unique identifier for the file that will be returned in the response (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelId = null, string clientIds = null)
+        public async System.Threading.Tasks.Task<Sdcb.Mattermost.DotNetSdk.Client.ApiResponse<InlineResponse201>> FilesPostAsyncWithHttpInfo (string channelId = null, string filename = null, System.IO.Stream files = null, string channelIdInBody = null, string clientIds = null)
         {
 
             Sdcb.Mattermost.DotNetSdk.Client.RequestOptions requestOptions = new Sdcb.Mattermost.DotNetSdk.Client.RequestOptions();
